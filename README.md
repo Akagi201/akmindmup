@@ -1,0 +1,4 @@
+akmindmup
+=========
+
+My personal mindmups
