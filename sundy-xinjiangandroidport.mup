@@ -1,0 +1,525 @@
+{
+  "title": "新疆广电Android开发培训",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "schedule",
+      "id": 27,
+      "ideas": {
+        "1": {
+          "title": "Day1",
+          "id": 28,
+          "ideas": {
+            "1": {
+              "title": "说在前面的话",
+              "id": 29
+            },
+            "2": {
+              "title": "广电行业嵌入式产品研发流程及团队结构",
+              "id": 30
+            },
+            "3": {
+              "title": "HelloWorld开发板",
+              "id": 31
+            }
+          }
+        },
+        "2": {
+          "title": "Day2",
+          "id": 32,
+          "ideas": {
+            "1": {
+              "title": "简单演示一下Linux命令",
+              "id": 33
+            },
+            "2": {
+              "title": "GNU开发环境基础",
+              "id": 34,
+              "ideas": {
+                "1": {
+                  "title": "x86",
+                  "id": 36,
+                  "ideas": {
+                    "1": {
+                      "title": "helloworld",
+                      "id": 38,
+                      "ideas": {
+                        "1": {
+                          "title": "上层与kernel代码的关系",
+                          "id": 40
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Cross-for ARM",
+                  "id": 37
+                }
+              }
+            },
+            "3": {
+              "title": "电路元件, 电路, ARM寄存器, 寻址方式, 常用汇编命令等.",
+              "id": 35,
+              "ideas": {
+                "1": {
+                  "title": "ARM汇编",
+                  "id": 41,
+                  "ideas": {
+                    "1": {
+                      "title": "指令条件",
+                      "id": 43
+                    },
+                    "2": {
+                      "title": "跳转指令",
+                      "id": 44
+                    },
+                    "3": {
+                      "title": "数据处理(ALU OP)",
+                      "id": 45
+                    },
+                    "4": {
+                      "title": "内存访问",
+                      "id": 46
+                    },
+                    "5": {
+                      "title": "伪指令",
+                      "id": 47,
+                      "ideas": {
+                        "1": {
+                          "title": "控制命令",
+                          "id": 48
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "C与汇编的混合编程",
+                      "id": 49
+                    }
+                  }
+                },
+                "2": {
+                  "title": "sample",
+                  "id": 42
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "Day3 - Day4",
+          "id": 50,
+          "ideas": {
+            "1": {
+              "title": "U-Boot",
+              "id": 51,
+              "ideas": {
+                "1": {
+                  "title": "U-Boot源码下载及分析",
+                  "id": 53,
+                  "ideas": {
+                    "1": {
+                      "title": "目录结构",
+                      "id": 59
+                    }
+                  }
+                },
+                "2": {
+                  "title": "U-Boot工作过程",
+                  "id": 54,
+                  "ideas": {
+                    "1": {
+                      "title": "第一阶段启动",
+                      "id": 60
+                    },
+                    "2": {
+                      "title": "第二阶段启动",
+                      "id": 61
+                    }
+                  }
+                },
+                "3": {
+                  "title": "U-Boot编译",
+                  "id": 55
+                },
+                "4": {
+                  "title": "U-Boot移植",
+                  "id": 56,
+                  "ideas": {
+                    "1": {
+                      "title": "写一个cmd_menu",
+                      "id": 62
+                    },
+                    "2": {
+                      "title": "执行u-boot命令进行配置",
+                      "id": 63
+                    },
+                    "3": {
+                      "title": "修改u-boot启动界面(logo)",
+                      "id": 64
+                    }
+                  }
+                },
+                "5": {
+                  "title": "再编译",
+                  "id": 57
+                },
+                "6": {
+                  "title": "跑到Tiny210开发板上",
+                  "id": 58
+                }
+              }
+            },
+            "2": {
+              "title": "Kernel",
+              "id": 52,
+              "ideas": {
+                "1": {
+                  "title": "linux内核概要图",
+                  "id": 65
+                },
+                "2": {
+                  "title": "linux kernel源码下载, 介绍及编译",
+                  "id": 66,
+                  "ideas": {
+                    "1": {
+                      "title": "官方下载编译方式",
+                      "id": 67
+                    },
+                    "2": {
+                      "title": "修改的特定编译版本",
+                      "id": 68
+                    }
+                  }
+                },
+                "3": {
+                  "title": "编译Android源码",
+                  "id": 69,
+                  "ideas": {
+                    "1": {
+                      "title": "标准版 - 根据官网来(看看官网)",
+                      "id": 70
+                    },
+                    "2": {
+                      "title": "编译我修改的",
+                      "id": 71,
+                      "ideas": {
+                        "1": {
+                          "title": "注意剩余空间至少10G以上",
+                          "id": 72
+                        }
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "根文件系统制作及挂载流程介绍",
+                  "id": 73,
+                  "ideas": {
+                    "1": {
+                      "title": "没有busybox的情况下",
+                      "id": 74
+                    },
+                    "2": {
+                      "title": "有busybox情况",
+                      "id": 75,
+                      "ideas": {
+                        "1": {
+                          "title": "标准Busybox编译",
+                          "id": 77
+                        },
+                        "2": {
+                          "title": "厂家提供的Busybox配置",
+                          "id": 78
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "根文件系统制作流程",
+                      "id": 76
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "title": "Day5",
+          "id": 79,
+          "ideas": {
+            "1": {
+              "title": "Kernel Module(内核模块)",
+              "id": 80
+            },
+            "2": {
+              "title": "驱动模型及驱动开发",
+              "id": 81,
+              "ideas": {
+                "1": {
+                  "title": "linux驱动类型",
+                  "id": 82
+                },
+                "2": {
+                  "title": "像文件一样操作驱动",
+                  "id": 83,
+                  "ideas": {
+                    "1": {
+                      "title": "linux中的文件基本操作",
+                      "id": 84
+                    }
+                  }
+                },
+                "3": {
+                  "title": "驱动开发流程",
+                  "id": 85
+                },
+                "4": {
+                  "title": "sample: 写一个hello驱动(提供), 上层调用",
+                  "id": 86
+                },
+                "5": {
+                  "title": "来看看kernel中的代码和上层调用",
+                  "id": 87
+                }
+              }
+            },
+            "3": {
+              "title": "NDK初步",
+              "id": 88,
+              "ideas": {
+                "1": {
+                  "title": "JNI",
+                  "id": 89,
+                  "ideas": {
+                    "1": {
+                      "title": "sample",
+                      "id": 91
+                    }
+                  }
+                },
+                "2": {
+                  "title": "NDK",
+                  "id": 90
+                }
+              }
+            }
+          }
+        },
+        "5": {
+          "title": "Day6",
+          "id": 92,
+          "ideas": {
+            "1": {
+              "title": "Framework层的定制和编译",
+              "id": 93
+            },
+            "2": {
+              "title": "网络",
+              "id": 94
+            }
+          }
+        },
+        "6": {
+          "title": "Day7",
+          "id": 95,
+          "ideas": {
+            "1": {
+              "title": "StageFright多媒体",
+              "id": 96
+            },
+            "2": {
+              "title": "Optimize",
+              "id": 97,
+              "ideas": {
+                "1": {
+                  "title": "TBox机顶盒需求",
+                  "id": 98
+                },
+                "2": {
+                  "title": "大图片优化",
+                  "id": 99
+                }
+              }
+            }
+          }
+        },
+        "7": {
+          "title": "Day8",
+          "id": 100,
+          "ideas": {
+            "1": {
+              "title": "UML & Rational",
+              "id": 101
+            }
+          }
+        }
+      }
+    },
+    "-6": {
+      "title": "大纲",
+      "id": 26,
+      "ideas": {
+        "1": {
+          "title": "10. Android上层应用的定制及统一接口设计",
+          "id": 24,
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.5": {
+          "title": "6. 网络影音应用方案",
+          "id": 20,
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.75": {
+          "title": "7. Android网络及协议 - socket",
+          "id": 21,
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.875": {
+          "title": "8. Android多媒体核心 - OpenCore - StageFright",
+          "id": 22,
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.9375": {
+          "title": "9. UML Soft management",
+          "id": 23,
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.25": {
+          "title": "0. 说在前面的话",
+          "id": 2,
+          "ideas": {
+            "1": {
+              "title": "自我介绍",
+              "id": 3
+            },
+            "2": {
+              "title": "了解大家的基础",
+              "id": 4
+            },
+            "3": {
+              "title": "先收集现有问题",
+              "id": 5
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.375": {
+          "title": "1. 广电行业研发产品的技术团队大致结构",
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "数字机顶盒",
+              "id": 7
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.4375": {
+          "title": "2. Android机顶盒类似嵌入式设备研制国产",
+          "id": 8,
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.46875": {
+          "title": "3. Android系统移植基础",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "HelloWorld",
+              "id": 10,
+              "ideas": {
+                "1": {
+                  "title": "通过开发板来识别我们的硬件",
+                  "id": 12
+                },
+                "2": {
+                  "title": "刷ROM",
+                  "id": 13
+                },
+                "3": {
+                  "title": "自己写个helloworld",
+                  "id": 14
+                },
+                "4": {
+                  "title": "修改OS",
+                  "id": 15
+                }
+              }
+            },
+            "2": {
+              "title": "搭建交叉编译环境",
+              "id": 11
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.484375": {
+          "title": "4. Android系统移植及ROM编译",
+          "id": 16,
+          "ideas": {
+            "1": {
+              "title": "编译Android Kernel, Android ROM",
+              "id": 17
+            },
+            "2": {
+              "title": "NDK操作",
+              "id": 18
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        },
+        "0.4921875": {
+          "title": "5. Android行业性专有Framework定制",
+          "id": 19,
+          "attr": {
+            "style": {
+              "background": "#E0E0E0"
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": []
+}
