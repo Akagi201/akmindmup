@@ -1,0 +1,1203 @@
+{
+  "title": "Wireless Penetration",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "11": {
+      "title": "WLAN discovery",
+      "id": 3,
+      "ideas": {
+        "1": {
+          "title": "Unencrypted WLAN",
+          "id": 61,
+          "ideas": {
+            "1": {
+              "title": "Visible SSID",
+              "id": 67,
+              "ideas": {
+                "1": {
+                  "title": "Sniff for IP range",
+                  "id": 69,
+                  "ideas": {
+                    "1": {
+                      "title": "MAC authorised",
+                      "id": 71
+                    },
+                    "2": {
+                      "title": "MAC filtering",
+                      "id": 72,
+                      "ideas": {
+                        "1": {
+                          "title": "Spoof valid MAC",
+                          "id": 73,
+                          "ideas": {
+                            "1": {
+                              "title": "Linux",
+                              "id": 74,
+                              "ideas": {},
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "ifconfig [interface] hw ether [MAC]"
+                                },
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "macchanger",
+                              "id": 75,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "Random MAC Address: - macchanger -r eth0"
+                                },
+                                "style": {}
+                              }
+                            },
+                            "3": {
+                              "title": "mac address changer for windows",
+                              "id": 76
+                            },
+                            "4": {
+                              "title": "madmacs",
+                              "id": 77
+                            },
+                            "5": {
+                              "title": "TMAC",
+                              "id": 78
+                            },
+                            "6": {
+                              "title": "SMAC",
+                              "id": 79
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "Hidden SSID",
+              "id": 68,
+              "ideas": {
+                "1": {
+                  "title": "Deauth  client",
+                  "id": 70,
+                  "ideas": {
+                    "1": {
+                      "title": "Aireplay-ng",
+                      "id": 82,
+                      "ideas": {},
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "aireplay -0 1 -a [Access Point MAC] -c [CLient MAC] [interface]"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Commonview",
+                      "id": 83,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "Tools &gt; Node reassociation"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Void11",
+                      "id": 84,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "void11_penetration wlan0 -D -t 1 -B [MAC]"
+                        },
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "WEP encrypted WLAN",
+          "id": 62,
+          "ideas": {
+            "1": {
+              "title": "Visible SSID",
+              "id": 86,
+              "ideas": {
+                "1": {
+                  "title": "WEP attack",
+                  "id": 88,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "wepattack -f [dumpfile] -m [mode] -w [wordlist] -n [network]"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Capture / Inject packets",
+                      "id": 90,
+                      "ideas": {
+                        "1": {
+                          "title": "Break WEP",
+                          "id": 91,
+                          "ideas": {
+                            "1": {
+                              "title": "Aircrack-ptw",
+                              "id": 92,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "aircrack-ptw [pcap file]"
+                                },
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "Aircrack-ng",
+                              "id": 93,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "aircrack -q -n [WEP key length] -b [BSSID] [pcap file]"
+                                },
+                                "style": {}
+                              }
+                            },
+                            "3": {
+                              "title": "Airsnort",
+                              "id": 94,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "Channel &gt; Start"
+                                },
+                                "style": {}
+                              }
+                            },
+                            "4": {
+                              "title": "WEPcrack",
+                              "id": 95,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "* perl WEP Crack.pl<div>* ./pcap-getIV.pl -b 13 -i wlan0</div>"
+                                },
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Hidden SSID",
+              "id": 87,
+              "ideas": {
+                "1": {
+                  "title": "Deauth client",
+                  "id": 89,
+                  "ideas": {
+                    "1": {
+                      "title": "Aireplay-ng",
+                      "id": 96,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "aireplay -0 1 -a [Access Point MAC] -c [CLient MAC] [interface]"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Commview",
+                      "id": 97,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "Tools &gt; Node reassociation"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Void 11",
+                      "id": 98,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "* void11_hopper<div>* void11_penetration [interface] -D -s [type of attack] -s [station MAC] -S [SSID] -B [BSSID]</div>"
+                        },
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "WPA/WPA2 encrypted  WLAN",
+          "id": 63,
+          "ideas": {
+            "1": {
+              "title": "Deauth client",
+              "id": 99,
+              "ideas": {
+                "1": {
+                  "title": "Capture EAPOL handshake",
+                  "id": 100,
+                  "ideas": {
+                    "1": {
+                      "title": "WPA / WPA2 dictionary attack",
+                      "id": 101,
+                      "ideas": {
+                        "1": {
+                          "title": "coWP Atty",
+                          "id": 102,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "* ./cowpatty -r [pcap file] -f [wordlist] -s [SSID]<div>* ./genpmk -f dictionary_file -d hashfile_name -s ssid</div><div>* ./cowpatty -r capture_file.cap -d hashfile_name -s ssid</div>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "Aircrack-ng",
+                          "id": 103,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "aircrack-ng -a 2 -w [wordlist] [pcap file]"
+                            },
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "LEAP encrypted WLAN",
+          "id": 64,
+          "ideas": {
+            "1": {
+              "title": "Deauth client",
+              "id": 104,
+              "ideas": {
+                "1": {
+                  "title": "Break LEAP",
+                  "id": 105,
+                  "ideas": {
+                    "1": {
+                      "title": "asleap",
+                      "id": 106,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "* ./asleap -r data/libpcap_packet_capture_file.dump -f output_pass + hash file.dat -n output_index_filename.idx<div>* ./genkeys -r dictionary_file -f output_pass+hash file.dat -n output_index_filename.idx</div>"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "THC-LEAPcracker",
+                      "id": 107,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "leap-cracker -f [wordlist] -t [NT challenge response] -c [challenge]"
+                        },
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "802.1x WLAN",
+          "id": 65,
+          "ideas": {
+            "1": {
+              "title": "Create Rogue Access Point",
+              "id": 109,
+              "ideas": {
+                "1": {
+                  "title": "Airsnarf",
+                  "id": 110,
+                  "ideas": {
+                    "1": {
+                      "title": "Deauth client",
+                      "id": 115
+                    }
+                  }
+                },
+                "2": {
+                  "title": "fake ap",
+                  "id": 111,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "* perl fakeap.pl --interface wlan0<div>* perl fakeap.pl --interface wlan0 --channel 11 --essid fake_name --wep 1 --key [WEP KEY]</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Hotspotter",
+                  "id": 112,
+                  "ideas": {
+                    "1": {
+                      "title": "Deauth client",
+                      "id": 116,
+                      "ideas": {
+                        "1": {
+                          "title": "Associate client",
+                          "id": 118,
+                          "ideas": {
+                            "1": {
+                              "title": "Compromise client",
+                              "id": 119,
+                              "ideas": {
+                                "1": {
+                                  "title": "Acquire passphrase / certificate",
+                                  "id": 120,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "wzcook",
+                                      "id": 121
+                                    },
+                                    "2": {
+                                      "title": "Obtain user's certificate",
+                                      "id": 122
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Kama",
+                  "id": 113,
+                  "ideas": {
+                    "1": {
+                      "title": "Deauth client",
+                      "id": 123,
+                      "ideas": {
+                        "1": {
+                          "title": "Associate client",
+                          "id": 124,
+                          "ideas": {
+                            "1": {
+                              "title": "Compromise client",
+                              "id": 125,
+                              "ideas": {
+                                "1": {
+                                  "title": "Acquire passphrase / certificate",
+                                  "id": 126,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "wzcook",
+                                      "id": 127
+                                    },
+                                    "2": {
+                                      "title": "Obtain user's Certificate",
+                                      "id": 128
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "./bin/karma etc/karma-lan.xml"
+                    },
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "Linux Rogue AP",
+                  "id": 114,
+                  "ideas": {
+                    "1": {
+                      "title": "Deauth client",
+                      "id": 129,
+                      "ideas": {
+                        "1": {
+                          "title": "Associate client",
+                          "id": 130,
+                          "ideas": {
+                            "1": {
+                              "title": "Compromise client",
+                              "id": 131,
+                              "ideas": {
+                                "1": {
+                                  "title": "Acquire passphrase / certificate",
+                                  "id": 132,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "wzcook",
+                                      "id": 133
+                                    },
+                                    "2": {
+                                      "title": "Obtain user's certificate",
+                                      "id": 134
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "Resources",
+          "id": 66,
+          "ideas": {
+            "1": {
+              "title": "URL's",
+              "id": 135,
+              "ideas": {
+                "1": {
+                  "title": "http://wirelessdefence.org",
+                  "id": 138
+                },
+                "2": {
+                  "title": "http://wardrive.net",
+                  "id": 140
+                },
+                "3": {
+                  "title": "Wireless Vulnerabilities and Exploits(WVE)",
+                  "id": 141
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "White Papers",
+              "id": 136,
+              "ideas": {
+                "1": {
+                  "title": "Breaking 104 bit WEP in less than 60 seconds",
+                  "id": 142
+                },
+                "2": {
+                  "title": "Weaknesses in the Key Scheduling Algorithm of RC4",
+                  "id": 143
+                },
+                "3": {
+                  "title": "802.11b Firmware-Level Attacks",
+                  "id": 144
+                },
+                "4": {
+                  "title": "Wireless Attacks from an Intrusion Detection Perspective",
+                  "id": 145
+                },
+                "5": {
+                  "title": "Implementing a Secure Wireless Network for a WIndows Environment",
+                  "id": 146
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Common Vulnerabilities and Exploits(CVE)",
+              "id": 137,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "Vulnerabilties and exploit information relating to these products can be found here: http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=wireless"
+                },
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "2007",
+                  "id": 147,
+                  "ideas": {
+                    "1": {
+                      "title": "Multiple cross-site scripting(XSS) vulnerabilities in Cisco Secure Access Control Server(ACS)",
+                      "id": 149
+                    },
+                    "2": {
+                      "title": "Aruba Mobility Controllers and Alcatel-Lucent OmniAccess Wireless do not properly implement authentication and privilege assignment for the guest account",
+                      "id": 150
+                    },
+                    "3": {
+                      "title": "Heap-based buffer overflow in the management interfaces in Aruba Mobility Controllers and Alcatel-Lucent OmniAccess Wireless",
+                      "id": 151
+                    },
+                    "4": {
+                      "title": "Intel 2200BG802.11 Wireless Mini-PCI driver allows remote attackers to cause a denial of service",
+                      "id": 152
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "21": {
+      "title": "Wireless Assessment",
+      "id": 4,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "The following information should ideally be obtained/enumerated when carrying out your wireless assessment. All this information is needed to give the tester, (and hence, the customer), a clear and concise picture of the network you are assessing. A brief overview of the network during a pre-site meeting with the customer should allow you to estimate the timescales required to carry the assessment out."
+        },
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Site Map",
+          "id": 153,
+          "ideas": {
+            "1": {
+              "title": "RF Map",
+              "id": 155,
+              "ideas": {
+                "1": {
+                  "title": "Lines of Sight",
+                  "id": 157
+                },
+                "2": {
+                  "title": "Signal Coverage",
+                  "id": 158,
+                  "ideas": {
+                    "1": {
+                      "title": "Standard Antenna",
+                      "id": 159
+                    },
+                    "2": {
+                      "title": "Directional Antenna",
+                      "id": 160
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Physical Map",
+              "id": 156,
+              "ideas": {
+                "1": {
+                  "title": "Triangulate APs",
+                  "id": 161
+                },
+                "2": {
+                  "title": "Satellite Imagery",
+                  "id": 162
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "Network Map",
+          "id": 154,
+          "ideas": {
+            "1": {
+              "title": "MAC Filter",
+              "id": 163,
+              "ideas": {
+                "1": {
+                  "title": "Authorised MAC Addresses",
+                  "id": 167
+                },
+                "2": {
+                  "title": "Reaction to Non-Authorised MAC addresses",
+                  "id": 168
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Encryption Keys utilised",
+              "id": 164,
+              "ideas": {
+                "1": {
+                  "title": "WEP",
+                  "id": 169,
+                  "ideas": {
+                    "1": {
+                      "title": "Key Length",
+                      "id": 172,
+                      "ideas": {
+                        "1": {
+                          "title": "Crack Time",
+                          "id": 173
+                        },
+                        "2": {
+                          "title": "Key",
+                          "id": 174
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "WPA/PSK",
+                  "id": 170,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "Pre-Shared Key. (PSK)where every user is given the same pass-phrase. WiFi Protected Access, (WPA / WPA2) improved authentication and encryption."
+                    },
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Temporal Key Integrity Protocol(TKIP)",
+                      "id": 175,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "TKIP. The Interim solution to replace the notoriously weak WEP."
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Advanced Encryption Standard(AES)",
+                      "id": 176,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "AKE(a.k.a WPA2 and 802.11i). The preferred standard for the encryption for securing sensitive data."
+                        },
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Key",
+                          "id": 177
+                        },
+                        "2": {
+                          "title": "Attack Time",
+                          "id": 178
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "802.1x",
+                  "id": 171,
+                  "ideas": {
+                    "1": {
+                      "title": "Derivative of 802.1x in use",
+                      "id": 179
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Access Points",
+              "id": 165,
+              "ideas": {
+                "1": {
+                  "title": "ESSID",
+                  "id": 180,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "Extended Service Set Identifier"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "BSSIDs",
+                  "id": 181,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "Basic Service Set Identifier"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Vendor",
+                      "id": 182
+                    },
+                    "2": {
+                      "title": "Channel",
+                      "id": 183
+                    },
+                    "3": {
+                      "title": "Associations",
+                      "id": 184
+                    },
+                    "4": {
+                      "title": "Rogue AP Activity",
+                      "id": 185
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "Wireless Clients",
+              "id": 166,
+              "ideas": {
+                "1": {
+                  "title": "MAC Addresses",
+                  "id": 186,
+                  "ideas": {
+                    "1": {
+                      "title": "Vendor",
+                      "id": 188
+                    },
+                    "2": {
+                      "title": "Adhoc or Infrastructure Mode",
+                      "id": 189
+                    },
+                    "3": {
+                      "title": "ESSID Probes",
+                      "id": 190
+                    },
+                    "4": {
+                      "title": "Associations",
+                      "id": 191
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Intercepted Traffic",
+                  "id": 187,
+                  "ideas": {
+                    "1": {
+                      "title": "Encrypted",
+                      "id": 192
+                    },
+                    "2": {
+                      "title": "Clear Text",
+                      "id": 193
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "-20": {
+      "title": "Wireless Toolkit",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Wireless Discovery",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "Aerosol",
+              "id": 14
+            },
+            "2": {
+              "title": "AIrfart",
+              "id": 16
+            },
+            "3": {
+              "title": "Aphopper",
+              "id": 17
+            },
+            "4": {
+              "title": "Apradar",
+              "id": 18
+            },
+            "5": {
+              "title": "karma",
+              "id": 19
+            },
+            "6": {
+              "title": "Kismet",
+              "id": 20
+            },
+            "7": {
+              "title": "MiniStumbler",
+              "id": 21
+            },
+            "8": {
+              "title": "NetStumbler",
+              "id": 22
+            },
+            "9": {
+              "title": "Wellenreiter",
+              "id": 23
+            },
+            "10": {
+              "title": "Wifi Hopper",
+              "id": 24
+            },
+            "11": {
+              "title": "WirelessMon",
+              "id": 25
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Packet Capture",
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "Airopeek",
+              "id": 26
+            },
+            "2": {
+              "title": "Airtraf",
+              "id": 27
+            },
+            "3": {
+              "title": "Apsniff",
+              "id": 28
+            },
+            "4": {
+              "title": "Cain",
+              "id": 29
+            },
+            "5": {
+              "title": "Wireshark",
+              "id": 30
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "WEP/WPA Password Attack Tools",
+          "id": 7,
+          "ideas": {
+            "1": {
+              "title": "Aircrack-ptw",
+              "id": 31
+            },
+            "2": {
+              "title": "Aircrack-ng",
+              "id": 33
+            },
+            "3": {
+              "title": "Aircrack",
+              "id": 34
+            },
+            "4": {
+              "title": "Airsnort",
+              "id": 35
+            },
+            "5": {
+              "title": "cowpatty",
+              "id": 36
+            },
+            "6": {
+              "title": "wep attack",
+              "id": 37
+            },
+            "7": {
+              "title": "wep crack",
+              "id": 38
+            },
+            "8": {
+              "title": "Airbase",
+              "id": 39
+            },
+            "9": {
+              "title": "wzcook",
+              "id": 40
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Leap Attack Tools",
+          "id": 8,
+          "ideas": {
+            "1": {
+              "title": "asleap",
+              "id": 41
+            },
+            "2": {
+              "title": "the leap cracker",
+              "id": 42
+            },
+            "3": {
+              "title": "anwrap",
+              "id": 43
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Frame Generation Software",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "Airgobbler",
+              "id": 44
+            },
+            "2": {
+              "title": "airpwn",
+              "id": 45
+            },
+            "3": {
+              "title": "Airsnarf",
+              "id": 46
+            },
+            "4": {
+              "title": "Commview",
+              "id": 47
+            },
+            "5": {
+              "title": "fake ap",
+              "id": 48
+            },
+            "6": {
+              "title": "void 11",
+              "id": 49
+            },
+            "7": {
+              "title": "wifi tap",
+              "id": 50,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "wifitap -b &lt;BSSID&gt; [-o &lt;iface&gt;] [-i &lt;iface&gt;] [-p] [-w &lt;WEP key&gt; [-k &lt;key id&gt;]] [-d [-v]] [-h]"
+                },
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "Mapping Software",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "Knsgem",
+              "id": 51
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "7": {
+          "title": "File Format Conversion Tools",
+          "id": 12,
+          "ideas": {
+            "1": {
+              "title": "ns1 recovery and  conversion tool",
+              "id": 52
+            },
+            "2": {
+              "title": "warbable",
+              "id": 53
+            },
+            "3": {
+              "title": "warkizniz",
+              "id": 54,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "warkizniz04b.exe [kismet.csv] [kismet.gps] [ns1 filename]"
+                },
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "ivstools",
+              "id": 55
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "8": {
+          "title": "IDS Tools",
+          "id": 13,
+          "ideas": {
+            "1": {
+              "title": "WIDZ",
+              "id": 56
+            },
+            "2": {
+              "title": "War Scanner",
+              "id": 57
+            },
+            "3": {
+              "title": "Snort-Wireless",
+              "id": 58
+            },
+            "4": {
+              "title": "AirDefense",
+              "id": 59
+            },
+            "5": {
+              "title": "AirMagnet",
+              "id": 60
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    }
+  },
+  "links": [],
+  "attr": {
+    "attachment": {
+      "contentType": "text/html",
+      "content": "http://www.wirelessdefence.org/Contents/Wireless%20Pen%20Test%20Framework_001.html#FMFreemind_Link_295339164FM"
+    },
+    "style": {}
+  }
+}
