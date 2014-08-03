@@ -1,0 +1,382 @@
+{
+  "title": "在线课程录制规范",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "0. 我们的课程与众不同",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "教育是开智过程",
+          "id": 3
+        },
+        "2": {
+          "title": "在线教育要的是研究, 优化, 抽离, 信息化教学习惯的流程",
+          "id": 4,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "因此我们把我们在线教育分为4个阶段",
+              "id": 5,
+              "ideas": {
+                "1": {
+                  "title": "愿景",
+                  "id": 6
+                },
+                "2": {
+                  "title": "课程",
+                  "id": 7
+                },
+                "3": {
+                  "title": "过程",
+                  "id": 8
+                },
+                "4": {
+                  "title": "结果",
+                  "id": 9
+                }
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "1. 指定课程教学大纲",
+      "id": 10,
+      "attr": {
+        "style": {},
+        "collapsed": true
+      },
+      "ideas": {
+        "1": {
+          "title": "大纲的作用及要素",
+          "id": 11,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "* 谁适合学<div>* 学什么</div><div>* 学完了能做什么</div><div>* 老师是谁</div><div>* 如何学</div><div>* 学习周期及频率</div><div>* 具体课程和章节</div><div>* 总课时, 1课时=1小时</div>"
+            },
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "大纲原则",
+          "id": 12,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "* 老师介绍要牛<div>* 以职业为导向的系统课程</div><div>* 分阶段拆分, 一个阶段就是一套小课程</div><div>* 每个章节就是对应一个5 - 20分钟的视频</div>"
+            },
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "评估录制周期的方法",
+          "id": 13,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "* 全职老师: 一周录制5小时<div>* 兼职老师: 一周录制 1 - 2小时</div><div>* 备课录课比: 3-5:1 是正常的.</div>"
+            },
+            "style": {}
+          }
+        }
+      }
+    },
+    "21": {
+      "title": "2. 视频录制规范",
+      "id": 14,
+      "attr": {
+        "style": {},
+        "collapsed": true
+      },
+      "ideas": {
+        "1": {
+          "title": "视频录制分类",
+          "id": 15,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "## 我们分为3类<div>* 软件操作类课程, 录屏</div><div>* 硬件操作类课程, 录制操作台</div><div>* 非技术类课程, 录人, 人入境+后期剪辑</div><div><br></div><div>Sample</div>"
+            },
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "选择操作系统",
+          "id": 16,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "* Windows<div>* Mac OS X</div><div>* Linux</div>"
+            },
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "视频分辨率",
+          "id": 17,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "历史: 1024*768.<div>现在宽屏时代: 1280*720, 1280*800, Mac OS X除外.</div><div><br></div><div>原则: 尽可能大的屏幕区域又不占满, 我们一般的桌面分辨率是1440</div>"
+            },
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "录制环境要求",
+          "id": 18,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<div>电脑的选择: 内录功能比较强或者外接麦克风, 避免电流声</div><div><br></div><div>麦克风的选择与测试: 电脑内录或者外接</div><div><br></div><div>分贝增强的设定: win上有设定, 不要打开, 会有电流声</div><div><br></div><div>录制环境的背景音: 晚上, 家里或者录音棚</div><div><br></div><div>录制时间的选择</div><div><br></div><div>准备手写板(电子白板)</div><div><br></div><div>准备录屏软件</div>"
+            },
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "录制时长的要求",
+          "id": 19,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "5 - 20分钟"
+            },
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "录制区域的要求",
+          "id": 20
+        },
+        "7": {
+          "title": "每节视频的起承转合",
+          "id": 21,
+          "ideas": {
+            "1": {
+              "title": "视频开始要说subject",
+              "id": 22
+            },
+            "2": {
+              "title": "视频结束要布置homework",
+              "id": 23
+            },
+            "3": {
+              "title": "课程资料以及demo code等需要和视频一一对应",
+              "id": 25
+            }
+          }
+        }
+      }
+    },
+    "31": {
+      "title": "3. 备课工具和形式的选择",
+      "id": 26,
+      "ideas": {
+        "1": {
+          "title": "技术课程PPT不是个好的选择",
+          "id": 27
+        },
+        "2": {
+          "title": "思维导图MindMap的应用",
+          "id": 28
+        },
+        "3": {
+          "title": "记事本和EverNote的应用",
+          "id": 29
+        },
+        "4": {
+          "title": "绘画笔/电子白板的使用",
+          "id": 30
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "41": {
+      "title": "4. 录屏软件的选择和基本使用",
+      "id": 31,
+      "ideas": {
+        "1": {
+          "title": "Windows下录屏软件",
+          "id": 32
+        },
+        "2": {
+          "title": "Mac OS X下录屏软件",
+          "id": 33,
+          "ideas": {
+            "1": {
+              "title": "screen flow",
+              "id": 35
+            },
+            "2": {
+              "title": "quick time",
+              "id": 36
+            },
+            "3": {
+              "title": "音量调到还差2格最大",
+              "id": 37
+            }
+          }
+        },
+        "3": {
+          "title": "Linux下录屏软件",
+          "id": 34
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "-10": {
+      "title": "6. 如何出来更好的效果",
+      "id": 46,
+      "ideas": {
+        "1": {
+          "title": "你讲的内容市面没有, 或者你的讲法市面没有",
+          "id": 47
+        },
+        "2": {
+          "title": "专业的录音设备",
+          "id": 48,
+          "ideas": {
+            "1": {
+              "title": "电容声卡",
+              "id": 57
+            },
+            "2": {
+              "title": "电容麦克风",
+              "id": 58
+            }
+          }
+        },
+        "3": {
+          "title": "专业的剪辑和后期",
+          "id": 49
+        },
+        "4": {
+          "title": "新颖的授课方式: 结对授课, 对话式授课, 情景剧授课",
+          "id": 50
+        },
+        "5": {
+          "title": "有独具一格的授课风格",
+          "id": 51
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "-20": {
+      "title": "7. 关于更新频率和精力",
+      "id": 52,
+      "ideas": {
+        "1": {
+          "title": "我们了解一下备课比",
+          "id": 53,
+          "ideas": {
+            "1": {
+              "title": "3-5:1",
+              "id": 61
+            },
+            "2": {
+              "title": "6-10小时备课, 2小时的课程录制",
+              "id": 62
+            }
+          }
+        },
+        "2": {
+          "title": "全职老师",
+          "id": 54,
+          "ideas": {
+            "1": {
+              "title": "一周录制4小时",
+              "id": 59
+            }
+          }
+        },
+        "3": {
+          "title": "兼职老师",
+          "id": 55,
+          "ideas": {
+            "1": {
+              "title": "一周录制1-2小时",
+              "id": 60
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "-30": {
+      "title": "8. 有诚信的人才能做老师",
+      "id": 56,
+      "attr": {
+        "position": [
+          140,
+          100,
+          5
+        ],
+        "style": {}
+      }
+    },
+    "-5": {
+      "title": "5. 讲师录课技巧",
+      "id": 38,
+      "ideas": {
+        "1": {
+          "title": "录屏和线下讲课不同, 假想你面前有一堆学员在听",
+          "id": 39
+        },
+        "2": {
+          "title": "清楚的知道有个适应期, 不要急",
+          "id": 40
+        },
+        "3": {
+          "title": "形成自己的风格, 养成自己的习惯",
+          "id": 41
+        },
+        "4": {
+          "title": "假想你是学员, 给自己讲课打分",
+          "id": 42
+        },
+        "5": {
+          "title": "清晰的目标, 可考核的homework",
+          "id": 43
+        },
+        "6": {
+          "title": "阶段性的项目",
+          "id": 44
+        },
+        "7": {
+          "title": "使用电子笔",
+          "id": 45
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true,
+        "position": [
+          167,
+          -106,
+          6
+        ]
+      }
+    }
+  }
+}

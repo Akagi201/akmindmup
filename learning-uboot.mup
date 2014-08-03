@@ -1,0 +1,161 @@
+{
+  "title": "learning-uboot",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "1. u-boot的版本选择",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "linux内核源代码情景分析",
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "i386指令架构",
+              "id": 8,
+              "ideas": {
+                "1": {
+                  "title": "理解系统原理",
+                  "id": 9,
+                  "ideas": {
+                    "1": {
+                      "title": "移植到ARM体系",
+                      "id": 10
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "ARM指令架构",
+          "id": 11,
+          "ideas": {
+            "2": {
+              "title": "通过uboot等开源软件",
+              "id": 13,
+              "ideas": {
+                "1": {
+                  "title": "直接理解系统原理",
+                  "id": 12,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "SOC与源码结构",
+          "id": 15,
+          "ideas": {
+            "2": {
+              "title": "SOC的核心ARM IP内核: uboot中称为CPU",
+              "id": 17,
+              "ideas": {
+                "1": {
+                  "title": "arch/arm/cpu",
+                  "id": 18
+                },
+                "2": {
+                  "title": "高速, 类似PC的北桥",
+                  "id": 19
+                }
+              }
+            },
+            "3": {
+              "title": "SOC的外围部分外设: uboot中称为board",
+              "id": 20,
+              "ideas": {
+                "1": {
+                  "title": "低速, 类似PC的南桥",
+                  "id": 21
+                }
+              }
+            },
+            "13": {
+              "title": "uboot/arch/arm/cpu/armv7",
+              "id": 16,
+              "attr": {
+                "position": [
+                  82,
+                  151,
+                  1
+                ],
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "很多不同公司的芯片目录",
+                  "id": 22
+                },
+                "2": {
+                  "title": "大部分代码共用, 每个公司加一些小特性, 代码量非常少, 只需关注自己的SOC的目录即可",
+                  "id": 23,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "start.S 整个uboot的总入口",
+                  "id": 24
+                }
+              }
+            },
+            "14": {
+              "title": "uboot/board/samsung",
+              "id": 25
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "2. u-boot的异常向量表, V210的启动机制原理",
+      "id": 27,
+      "ideas": {
+        "1": {
+          "title": "start.S 头文件位置",
+          "id": 28,
+          "ideas": {
+            "1": {
+              "title": "u-boot/include",
+              "id": 29
+            },
+            "2": {
+              "title": "u-boot/arch/arm/include",
+              "id": 30
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "异常的优先级高于中断",
+          "id": 31,
+          "ideas": {
+            "1": {
+              "title": "中断可以屏蔽, 异常不行",
+              "id": 32
+            }
+          }
+        },
+        "3": {
+          "title": "SPL",
+          "id": 33
+        }
+      }
+    }
+  },
+  "attr": {
+    "style": {}
+  }
+}

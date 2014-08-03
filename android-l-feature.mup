@@ -1,0 +1,118 @@
+{
+  "title": "浅析Android L系统新特性",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Material Design",
+      "id": 2,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "设计风格: 简洁, 扁平化(Flat Design), 多彩但不严厉, 卡片式(环动式风格, 使用图形), 方形, 三角形这些常用的几何图形.<div><br></div><div>1. 虚拟机</div><div>2. 官网: &lt;https://www.google.com/design/&gt; &lt;https://developer.android.com/preview/material/index.html&gt;<br><div><br></div></div>"
+        },
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "性能",
+      "id": 3,
+      "ideas": {
+        "1": {
+          "title": "ART",
+          "id": 7,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "ART: Ahead-of-time 预先编译, 在之前的Android系统中采用的是Dalvik虚拟机, 在App运行是对Java Byte Code进行解释执行或是进行Junt-In-Time的编译, 而ART模式会在App安装的时候, 预先将dex文件编译成执行文件, 在App运行的时候直接执行二进制指令.<div><br></div><div>另外, 配合ART模式, Android L 优化了垃圾回收机制: ART里垃圾回收占用的开销比Dalvik少50%以上. 减少了垃圾回收时对应用带来的卡顿, 使应用运行流畅.</div><div><br></div><div>预估ART将带来性能15%到80%之间提升.</div>"
+            },
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "支持 64bit",
+          "id": 8,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "Android的竞争对手IOS已经支持64bit系统, Android L系统当然不能落后, 64bit系统将提供更快的运算速度和更多的内存管理."
+            },
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Android Extension Pack 游戏API",
+          "id": 9,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "Android Extension Pack为Android的全新游戏API, Android L系统将支持他, 为高端的Android设备带来PC级别的游戏画面."
+            },
+            "style": {}
+          }
+        }
+      }
+    },
+    "21": {
+      "title": "移动无处不在 | 生态圈",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "Android Wear",
+          "id": 10,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "Android Wear是Google新发布的专用于智能穿戴设备的特制安卓系统, 他可以和Android L无缝结合, 当在Android L设备上安装一个App, Android Wear将会出现相应副本, 那么, Android L上的一些操作将自然的一直到Android Wear上, 比如: 接听电话, 阅读短消息, 看视频等.<div><br></div><div>LG G Watch, 三星Gear Live和MOTO 360三款Android Wear.</div>"
+            },
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Android TV",
+          "id": 11,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "Android TV是谷歌公司推出的只能电视平台, Android TV比Google TV更简单, 运行更快速, 更流畅, 它也能和Android L设备相互结合. Android L设备将出现一个Android TV投影的快捷方式, 非常方便的将用户的视频在只能电视平台上播放. 这种方便, 快捷, 友好的操作方式被谷歌称为: Cast Screen Android TV模式, 三星, Nexus, HTC, LG等厂商均会支持Cast Screen Android TV投影功能."
+            },
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Android Auto",
+          "id": 12,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "Android Auto是谷歌针对车载设备发布了特制安卓系统, 它一样能喝Android L系统完美结合, 当您在驾驶的时候, Android Auto将代替Android L设备, 接听电话, 语音回复短消息等等, 另外, Android Auto还提供了导航, 音乐, 语音控制等功能. 目前已经有大量骑车厂商加入到Google的骑车开放联盟, 将来这些厂商都会推出支持Android Auto的汽车."
+            },
+            "style": {}
+          }
+        }
+      }
+    },
+    "31": {
+      "title": "Battery",
+      "id": 5,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "续航能力一直是移动设备非常重要的指标参数. 采用Android L系统的移动设备将会提升电池的续航能力.<div><br></div><div>* 引入新的\"JobScheduler\" API, 分批处理数据清理和日志上传灯不重要的应用.</div><div>* 增强了电量跟踪工具: Battery Historian</div><div>* ART</div><div>* \"省电器\"(battery saver)功能, 可以在手机电量仅剩下15%的情况下降低设备性能, 切断后台数据, 降低屏幕亮度.</div>"
+        },
+        "style": {}
+      }
+    },
+    "41": {
+      "title": "Enhanced Notifications",
+      "id": 6,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "Android L增强了通知效果, 当您再锁屏状态下, 通知会出现在屏幕正中, 而不是先前的通知栏, 用户可以和你方便的查看内容, 另外, 用户双击屏幕中的通知就可以解锁, 直接打开通知事项."
+        },
+        "style": {}
+      }
+    }
+  }
+}
