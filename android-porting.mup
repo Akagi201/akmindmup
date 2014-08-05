@@ -1,0 +1,38 @@
+{
+  "title": "Android-Porting",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "1. 开场白及如何学习开发Android",
+      "id": 3,
+      "ideas": {
+        "1": {
+          "title": "Android 4.x移植基础训练",
+          "id": 5
+        },
+        "0.5": {
+          "title": "钟文昌(Mask)",
+          "id": 7,
+          "ideas": {
+            "1": {
+              "title": "mask.chung@gmail.com",
+              "id": 8
+            },
+            "2": {
+              "title": "http://www.mask.org.tw",
+              "id": 9
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    },
+    "11": {
+      "title": "2. 产品开发思维因应市场策略及趋势",
+      "id": 10
+    }
+  }
+}
