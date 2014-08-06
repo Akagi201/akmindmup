@@ -251,7 +251,8 @@
         "attachment": {
           "contentType": "text/html",
           "content": "## 课程目标<div>* 结合Android案例讲解常用的java语言特性</div><div>* 深入剖析为何Android要用到这些特性.</div><div>* 给出Android面试中常常问到的Java语言面试题.</div><div><br></div><div>## 重点难点</div><div>* 这些特性的熟练掌握及使用</div><div><br></div><div>## 考核目标</div><div>* 对面试题的回答</div><div><br></div><div>## 课后练习</div><div>* 练习这些语言特点</div><div><br></div><div>## 参考课时</div><div>* 3h</div><div><br></div><div>## 参考书籍</div><div>* &lt;Learn Java For Android Development&gt;</div>"
-        }
+        },
+        "collapsed": true
       },
       "ideas": {
         "1": {
@@ -423,6 +424,10 @@
                     "style": {}
                   }
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
             "2": {
@@ -438,9 +443,20 @@
               "id": 80,
               "ideas": {
                 "1": {
-                  "title": "Android中合适会用到?",
-                  "id": 81
+                  "title": "Android中何时会用到?",
+                  "id": 81,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "我们知道, Android类也都是典型的面向对象的类继承关系.<div><br></div><div>比如控件元素, 继承View类的有Button - TextView CheckBox, 我们可能需要用instanceof来进行类型判断.</div><div><br></div><div>Sample自动生成界面组件, 并且给不同类型的组件设定不同的监听器.</div>"
+                    },
+                    "style": {}
+                  }
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
             "5": {
@@ -449,8 +465,19 @@
               "ideas": {
                 "1": {
                   "title": "Android中何时用到?",
-                  "id": 86
+                  "id": 86,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div><br></div>最常见的数据集合的时候, 比如在显示的时候ListVIew.<div><br></div><div>例子:</div><div>在配置文件中定义一堆颜色, 把这些颜色加载到数组, 遍历数组, 把颜色显示出来.</div><div><br></div><div>动态生成和设置界面组件的属性.</div>"
+                    },
+                    "style": {}
+                  }
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
             "6": {
@@ -459,7 +486,14 @@
               "ideas": {
                 "1": {
                   "title": "为何要用反射?",
-                  "id": 87
+                  "id": 87,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "很多时候, java程序运行中, 我们需要在运行时了解类的信息, 得到类实例, 并且进而继续得到类的方法, 构造, 权限, 变量以及其他信息.<div><br></div><div>这时候我们就会用到反射.</div><div><br></div><div>比如依赖注入这样典型的应用.</div><div><br></div><div>有个故事, 皇帝选妃.</div>"
+                    },
+                    "style": {}
+                  }
                 },
                 "2": {
                   "title": "Android中合适用到反射?",
@@ -469,6 +503,10 @@
                   "title": "思考一下我们的配置文件中如何实例化的?",
                   "id": 89
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
             "7": {
@@ -483,6 +521,10 @@
                   "title": "Android中合适用到反射?",
                   "id": 91
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
             "8": {
@@ -493,6 +535,489 @@
                   "title": "Cursor与Android中数据库操作的应用",
                   "id": 93
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "Inner Classes 内部类",
+              "id": 95,
+              "ideas": {
+                "1": {
+                  "title": "内部类在android中应用",
+                  "id": 96,
+                  "ideas": {
+                    "1": {
+                      "title": "成员内部类",
+                      "id": 120
+                    },
+                    "2": {
+                      "title": "局部内部类",
+                      "id": 121
+                    },
+                    "3": {
+                      "title": "静态内部类",
+                      "id": 122
+                    },
+                    "4": {
+                      "title": "匿名内部类",
+                      "id": 123
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "10": {
+              "title": "Javadoc代码文档",
+              "id": 97,
+              "ideas": {
+                "1": {
+                  "title": "什么是javadoc?",
+                  "id": 98,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "Javadoc是Java SDK提供的一个自动生成代码文档的一个工具. 我们按照规范化写注释, 会自动生成我们希望的代码帮助文档.<div><br></div><div>&lt;http://developer.android.com/reference/packages.html&gt;</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Javadoc如何工作?",
+                  "id": 99,
+                  "ideas": {
+                    "1": {
+                      "title": "Javadoc Style样式",
+                      "id": 124
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "按照Javadoc样式将注释放到代码之前, 并且用如下的这些关键词.<div><br></div><div>@author - who wrote this code</div><div>@version - when was it changed</div><div>@param - describe method parameters</div><div>@return - describe method return values</div><div>@throws - describe exceptions thrown</div><div>@see - link to other, related items (e.g. \"See also...\")</div><div>@since - describe when code was introduced(e.g. API Level)</div><div>@deprecated - describe deprecatd item and what alternative to use instead.</div><div><br></div><div>当然, 也可以自定义标签.</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "如何在代码中生存Javadoc模板?",
+                  "id": 100,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "选中你需要注释的类或者方法.<div>按 Alt+shift+j, (mac上按cmd+shift+j)</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "生成Javadoc html",
+                  "id": 101
+                },
+                "5": {
+                  "title": "Sundy, 你的思路?",
+                  "id": 102,
+                  "ideas": {
+                    "1": {
+                      "title": "官网",
+                      "id": 125
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "11": {
+              "title": "String基础",
+              "id": 104,
+              "ideas": {
+                "1": {
+                  "title": "String我们没有必要学了吧?",
+                  "id": 105
+                },
+                "2": {
+                  "title": "使用Android字符串资源",
+                  "id": 106,
+                  "ideas": {
+                    "1": {
+                      "title": "昨天修改Color案例",
+                      "id": 107
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "12": {
+              "title": "Date & Time基础",
+              "id": 108,
+              "ideas": {
+                "1": {
+                  "title": "Android使用Date&Time的地方",
+                  "id": 109,
+                  "ideas": {
+                    "1": {
+                      "title": "FAQ: 为何TimeDisplay组件不提供setTime方法?",
+                      "id": 126
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "1. 最典型的日期组件<div>2. 显示时间给用户</div>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "13": {
+              "title": "Generics泛型",
+              "id": 110,
+              "ideas": {
+                "1": {
+                  "title": "Android中泛型用的多吗?",
+                  "id": 111
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "14": {
+              "title": "Java Thread基础",
+              "id": 112,
+              "ideas": {
+                "1": {
+                  "title": "Android多线程用的多吗?",
+                  "id": 113
+                },
+                "2": {
+                  "title": "熟悉Android线程的常见用法",
+                  "id": 114
+                },
+                "3": {
+                  "title": "线程同步",
+                  "id": 115,
+                  "ideas": {
+                    "1": {
+                      "title": "阻塞(lock)",
+                      "id": 135,
+                      "ideas": {
+                        "1": {
+                          "title": "synchronized(this){ f(); }",
+                          "id": 138
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "互斥",
+                      "id": 136
+                    },
+                    "3": {
+                      "title": "信号量",
+                      "id": 137
+                    }
+                  }
+                },
+                "4": {
+                  "title": "ANR",
+                  "id": 127,
+                  "ideas": {
+                    "1": {
+                      "title": "用到大量异步任务",
+                      "id": 128,
+                      "ideas": {
+                        "1": {
+                          "title": "thread",
+                          "id": 129,
+                          "ideas": {
+                            "1": {
+                              "title": "Runnable",
+                              "id": 133,
+                              "ideas": {
+                                "1": {
+                                  "title": "不要跟界面有关系, 界面需要同步",
+                                  "id": 134
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "handler",
+                          "id": 130,
+                          "ideas": {
+                            "1": {
+                              "title": "消息队列",
+                              "id": 132
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "asynctask",
+                          "id": 131
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "15": {
+              "title": "网络http编程基础",
+              "id": 116,
+              "ideas": {
+                "1": {
+                  "title": "Android http编程",
+                  "id": 117
+                },
+                "2": {
+                  "title": "android没有提供, 而是J2SE提供",
+                  "id": 139
+                }
+              }
+            },
+            "16": {
+              "title": "IO编程基础",
+              "id": 118,
+              "ideas": {
+                "1": {
+                  "title": "文件存储操作何时用?",
+                  "id": 119
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "0.75": {
+      "title": "lesson3-eclipse IDE提高详细介绍",
+      "id": 140,
+      "ideas": {
+        "1": {
+          "title": "我的地盘我做主, 工作空间",
+          "id": 141,
+          "ideas": {
+            "1": {
+              "title": "建立, 切换不同的工作空间",
+              "id": 142
+            },
+            "2": {
+              "title": "拷贝工作空间配置",
+              "id": 143
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "键盘小快手, 代码辅助",
+          "id": 144,
+          "ideas": {
+            "1": {
+              "title": "显示行号",
+              "id": 145
+            },
+            "2": {
+              "title": "打造更强大的代码提示",
+              "id": 146
+            },
+            "3": {
+              "title": "快速注释",
+              "id": 147
+            },
+            "4": {
+              "title": "快速切换编辑窗口",
+              "id": 148
+            },
+            "5": {
+              "title": "快速大写字符,小写字母",
+              "id": 149
+            },
+            "6": {
+              "title": "快速处理处理行代码",
+              "id": 150
+            },
+            "7": {
+              "title": "快速覆写超类方法",
+              "id": 151
+            },
+            "8": {
+              "title": "批量生成Get, Set方法",
+              "id": 152
+            },
+            "9": {
+              "title": "快速生成构造函数",
+              "id": 153
+            },
+            "10": {
+              "title": "快速Import",
+              "id": 154
+            },
+            "11": {
+              "title": "快速添加Javadoc注释",
+              "id": 155
+            },
+            "12": {
+              "title": "使用代码摸吧",
+              "id": 156
+            },
+            "13": {
+              "title": "操作编辑窗口",
+              "id": 157
+            },
+            "14": {
+              "title": "重命名",
+              "id": 158
+            },
+            "15": {
+              "title": "回到上次编辑点",
+              "id": 159
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "要速度更要质量, 代码之美",
+          "id": 160,
+          "ideas": {
+            "1": {
+              "title": "格式化代码",
+              "id": 161
+            },
+            "2": {
+              "title": "成员排序",
+              "id": 162
+            },
+            "3": {
+              "title": "整理导入",
+              "id": 163
+            },
+            "4": {
+              "title": "代码重构",
+              "id": 164
+            },
+            "5": {
+              "title": "程序模块化",
+              "id": 165
+            }
+          }
+        },
+        "4": {
+          "title": "火眼金睛, 代码阅读",
+          "id": 166,
+          "ideas": {
+            "1": {
+              "title": "改变包的显示层次",
+              "id": 167
+            },
+            "2": {
+              "title": "快速查看代码定义",
+              "id": 168
+            },
+            "3": {
+              "title": "快速进入代码定义",
+              "id": 169
+            },
+            "4": {
+              "title": "列出类纲要",
+              "id": 170
+            },
+            "5": {
+              "title": "查看集成层次",
+              "id": 171
+            },
+            "6": {
+              "title": "代码查看回退",
+              "id": 172
+            },
+            "7": {
+              "title": "查看调用层次",
+              "id": 173
+            },
+            "8": {
+              "title": "快速定位类",
+              "id": 174
+            },
+            "9": {
+              "title": "快速定位选中词",
+              "id": 175
+            },
+            "10": {
+              "title": "快速定位到匹配符",
+              "id": 176
+            },
+            "11": {
+              "title": "增量查找",
+              "id": 177
+            },
+            "12": {
+              "title": "快速跳转到某行",
+              "id": 178
+            },
+            "13": {
+              "title": "快速比较",
+              "id": 179
+            },
+            "14": {
+              "title": "添加书签和任务",
+              "id": 180
+            },
+            "15": {
+              "title": "搜索",
+              "id": 181
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "5": {
+          "title": "望闻问切, 代码调试",
+          "id": 182,
+          "ideas": {
+            "1": {
+              "title": "使用Watch查看修改变量",
+              "id": 183
+            },
+            "2": {
+              "title": "跳过断点",
+              "id": 184
+            },
+            "3": {
+              "title": "条件断点",
+              "id": 185,
+              "attr": {
+                "style": {}
               }
             }
           }
