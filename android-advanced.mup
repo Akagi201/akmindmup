@@ -823,7 +823,14 @@
           "ideas": {
             "1": {
               "title": "建立, 切换不同的工作空间",
-              "id": 142
+              "id": 142,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "File -&gt; Switch Workspace -&gt; Others"
+                },
+                "style": {}
+              }
             },
             "2": {
               "title": "拷贝工作空间配置",
@@ -831,8 +838,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "2": {
@@ -849,27 +856,117 @@
             },
             "3": {
               "title": "快速注释",
-              "id": 147
+              "id": 147,
+              "ideas": {
+                "1": {
+                  "title": "行/块注释 cmd + /",
+                  "id": 188
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "4": {
               "title": "快速切换编辑窗口",
-              "id": 148
+              "id": 148,
+              "ideas": {
+                "1": {
+                  "title": "cmd + f6",
+                  "id": 193
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "5": {
               "title": "快速大写字符,小写字母",
-              "id": 149
+              "id": 149,
+              "ideas": {
+                "1": {
+                  "title": "转大写: cmd+ shift +x",
+                  "id": 194,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "转小写: cmd + shift + y",
+                  "id": 195,
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "6": {
               "title": "快速处理处理行代码",
-              "id": 150
+              "id": 150,
+              "ideas": {
+                "1": {
+                  "title": "删除当前行: cmd + d",
+                  "id": 198,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "复制当前行到上/下一行(可选中多行)",
+                  "id": 200,
+                  "ideas": {
+                    "1": {
+                      "title": "cmd + alt +   ↑ / ↓",
+                      "id": 201
+                    }
+                  }
+                },
+                "3": {
+                  "title": "快速提取某行到上/下边指定位置",
+                  "id": 202,
+                  "ideas": {
+                    "1": {
+                      "title": "alt + ↑ / ↓",
+                      "id": 203
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "7": {
               "title": "快速覆写超类方法",
-              "id": 151
+              "id": 151,
+              "ideas": {
+                "1": {
+                  "title": "Override Implement Methods",
+                  "id": 204
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "8": {
               "title": "批量生成Get, Set方法",
-              "id": 152
+              "id": 152,
+              "ideas": {
+                "1": {
+                  "title": "Generate Getter and Setter",
+                  "id": 205
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "9": {
               "title": "快速生成构造函数",
@@ -884,7 +981,7 @@
               "id": 155
             },
             "12": {
-              "title": "使用代码摸吧",
+              "title": "使用代码模板",
               "id": 156
             },
             "13": {
@@ -901,8 +998,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "3": {
@@ -927,8 +1024,22 @@
             },
             "5": {
               "title": "程序模块化",
-              "id": 165
+              "id": 165,
+              "ideas": {
+                "1": {
+                  "title": "Android Library方式",
+                  "id": 206
+                },
+                "2": {
+                  "title": "Java Jar包方式",
+                  "id": 207
+                }
+              }
             }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
           }
         },
         "4": {
@@ -939,53 +1050,172 @@
               "title": "改变包的显示层次",
               "id": 167
             },
-            "2": {
-              "title": "快速查看代码定义",
-              "id": 168
-            },
             "3": {
               "title": "快速进入代码定义",
-              "id": 169
+              "id": 169,
+              "ideas": {
+                "1": {
+                  "title": "cmd + 左键",
+                  "id": 209
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "4": {
               "title": "列出类纲要",
-              "id": 170
+              "id": 170,
+              "ideas": {
+                "1": {
+                  "title": "cmd + o",
+                  "id": 208
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "5": {
-              "title": "查看集成层次",
-              "id": 171
+              "title": "查看继承层次",
+              "id": 171,
+              "attr": {
+                "style": {}
+              }
             },
             "6": {
               "title": "代码查看回退",
-              "id": 172
+              "id": 172,
+              "ideas": {
+                "1": {
+                  "title": "cmd + [",
+                  "id": 211
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "7": {
               "title": "查看调用层次",
-              "id": 173
+              "id": 173,
+              "ideas": {
+                "1": {
+                  "title": "cmd + alt + h",
+                  "id": 210
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "8": {
               "title": "快速定位类",
-              "id": 174
+              "id": 174,
+              "ideas": {
+                "1": {
+                  "title": "cmd + shift + t",
+                  "id": 212
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "9": {
               "title": "快速定位选中词",
-              "id": 175
+              "id": 175,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "cmd + k",
+                  "id": 213
+                }
+              }
             },
             "10": {
               "title": "快速定位到匹配符",
-              "id": 176
+              "id": 176,
+              "ideas": {
+                "1": {
+                  "title": "cmd + shift + p",
+                  "id": 214
+                },
+                "2": {
+                  "title": "双击其中一个匹配符",
+                  "id": 215
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "11": {
               "title": "增量查找",
-              "id": 177
+              "id": 177,
+              "ideas": {
+                "1": {
+                  "title": "正向",
+                  "id": 216,
+                  "ideas": {
+                    "1": {
+                      "title": "cmd + j",
+                      "id": 218
+                    }
+                  }
+                },
+                "2": {
+                  "title": "反向",
+                  "id": 217,
+                  "ideas": {
+                    "1": {
+                      "title": "cmd + shift + j",
+                      "id": 219
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "12": {
               "title": "快速跳转到某行",
-              "id": 178
+              "id": 178,
+              "ideas": {
+                "1": {
+                  "title": "cmd + l",
+                  "id": 220
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
             },
             "13": {
               "title": "快速比较",
-              "id": 179
+              "id": 179,
+              "ideas": {
+                "1": {
+                  "title": "quick diff",
+                  "id": 221
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "14": {
               "title": "添加书签和任务",
@@ -993,7 +1223,22 @@
             },
             "15": {
               "title": "搜索",
-              "id": 181
+              "id": 181,
+              "ideas": {
+                "1": {
+                  "title": "文件内容搜索",
+                  "id": 222,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "C / C++搜索",
+                  "id": 225
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             }
           },
           "attr": {
@@ -1019,9 +1264,24 @@
               "attr": {
                 "style": {}
               }
+            },
+            "4": {
+              "title": "异常断点",
+              "id": 226
             }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
           }
         }
+      },
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "## 课程目标<div>* 学习工作空间的配置与使用习惯</div><div>* 学习代码辅助技巧的使用, 提高编程速度</div><div>* 学习如何整理代码, 美化代码, 提高代码质量</div><div>* 学习阅读工程代码的技巧</div><div>* 学习复杂的调试技巧</div><div><br></div><div>## 重点难点</div><div>* 这些技巧的熟练掌握及使用</div><div><br></div><div>## 考核目标</div><div>* 能否熟练使用这些技巧</div><div><br></div><div>## 课后练习</div><div>* 练习这些技巧</div><div><br></div><div>## 参考课时</div><div>* 1h</div><div><br></div><div>## 汉化包</div><div>* &lt;http://www.eclipse.org/babel/downloads.php&gt;</div>"
+        },
+        "style": {}
       }
     }
   },
