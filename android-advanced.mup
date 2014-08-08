@@ -2011,8 +2011,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "4": {
@@ -2044,7 +2044,14 @@
             },
             "3": {
               "title": "我们来讲述一下SVN工作的一天",
-              "id": 350
+              "id": 350,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "1. 从服务器下载项目组最新代码.<div><br></div><div>2. 进入自己的分支, 进行工作, 每隔一个小时向服务器自己的分支提交一次代码(很多人开发者, 都有这个习惯. 因为有时候自己对代码改来改去, 最后又想还原到前一个小时的版本, 或者看看前一个小时自己修改了哪些代码, 就需要这样做了).</div><div><br></div><div>3. 下班时间快到了, 把自己的分支合并到服务器主分支上, 一天的工作完成, 并反映给服务器.</div>"
+                },
+                "style": {}
+              }
             },
             "4": {
               "title": "SVN的架构",
@@ -2101,8 +2108,8 @@
                 }
               },
               "attr": {
-                "collapsed": true,
-                "style": {}
+                "style": {},
+                "collapsed": true
               }
             },
             "5": {
@@ -2126,7 +2133,61 @@
             },
             "8": {
               "title": "最常用的工作",
-              "id": 355
+              "id": 355,
+              "ideas": {
+                "1": {
+                  "title": "导入(import)",
+                  "id": 375
+                },
+                "2": {
+                  "title": "导出(export)",
+                  "id": 376
+                },
+                "3": {
+                  "title": "检出(checkout)",
+                  "id": 377
+                },
+                "4": {
+                  "title": "检入(checkin)",
+                  "id": 378
+                },
+                "5": {
+                  "title": "修改(edit)",
+                  "id": 379
+                },
+                "6": {
+                  "title": "提交(commit)",
+                  "id": 380
+                },
+                "7": {
+                  "title": "更新(update)",
+                  "id": 381
+                },
+                "8": {
+                  "title": "新增目录和文件(add)",
+                  "id": 382
+                },
+                "9": {
+                  "title": "删除目录和文件(delete)",
+                  "id": 383
+                },
+                "10": {
+                  "title": "清理(cleanup)",
+                  "id": 384
+                },
+                "11": {
+                  "title": "锁定(lock)",
+                  "id": 385
+                },
+                "12": {
+                  "title": "解锁(unlock)",
+                  "id": 386
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "9": {
               "title": "查看日志, 版本, 比较等",
@@ -2134,15 +2195,47 @@
             },
             "10": {
               "title": "分支的创建和发布",
-              "id": 357
+              "id": 357,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "何时用到分支<div>分支的利与弊</div><div>分支的创建</div><div>分支的切换</div><div>分支的合并</div><div>发布导出</div>"
+                },
+                "style": {}
+              }
             },
             "11": {
               "title": "出现问题怎么办?",
-              "id": 358
+              "id": 358,
+              "ideas": {
+                "1": {
+                  "title": "上传冲突",
+                  "id": 387
+                },
+                "2": {
+                  "title": "提交冲突",
+                  "id": 388
+                },
+                "3": {
+                  "title": "合并冲突",
+                  "id": 389
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "12": {
               "title": "备份和恢复",
-              "id": 359
+              "id": 359,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 直接备份(buanq )<div>Copy SVNRoot</div><div><br></div><div>## 完整式备份与恢复</div><div><br></div><div>## 渐进式备份与恢复</div><div><br></div><div>具体命令不用机器, 参考官网.</div>"
+                },
+                "style": {}
+              }
             },
             "13": {
               "title": "高级应用",
@@ -2168,8 +2261,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "5": {
@@ -2178,23 +2271,551 @@
           "ideas": {
             "1": {
               "title": "Git的历史",
-              "id": 370
-            },
-            "2": {
-              "title": "Git的特性",
-              "id": 371
+              "id": 370,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "Git是Linux的创始人Linus Torvalds开发的开源和免费的版本管理系统, 也称源代码管理系统(Source Code Manage, SCM). 他的官网是 &lt;http://git-scm.com&gt;.<div><br></div><div>2005年的时候 Linux核心开发小组和当时的他们的版本管理系统提供商产生了分歧. 他们不能再使用原有的版本管理系统了. 当时, Linux环顾宇宙之内竟然没有一个能满足自己需求的版本管理系统可用. 于是他毅然决定自己动手开发一个! 这就是Git. 时至今日, Git已经成为许多著名系统的版本管理系统. 比如: Linux内核, Eclipse, Android, Ruby on Rails, PostgreSQL, jQuery ... &lt;http://en.wikipedia.org/wiki/Git_(software)&gt;</div><div><br></div><div>Linus对这个版本控制开发时的思考:</div><div>* Speed</div><div>* Simple design</div><div>* Strong support for non-linear development (thousands of parallel branches).</div><div>* Fully distributed</div><div>* Able to handle large projects like the Linux Kernel efficiently (speed and data size)</div>"
+                },
+                "style": {}
+              }
             },
             "3": {
               "title": "我们来讲讲Git工作的一天",
-              "id": 372
+              "id": 372,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>简单的来说我们使用Git的一天是这样的:</div><div>clone or pull blessed repo</div><div>branch work</div><div>add, commit</div><div>merge</div><div>push</div><div><br></div><div>一般开发者, 我就是Google Source Code使用者</div><div>1. 从服务器上克隆数据库(包含代码和版本信息)到单机上.</div><div>2. 在自己的机器上创建分支, 修改代码.</div><div>3. 在单机上自己创建的分支上提交代码.</div><div>4. 在单机上合并代码.</div><div>5. 新建一个分支, 把服务器上最新版的代码fetch下来, 然后跟自己的主分支合并.</div><div>6. 生成补丁(patch), 把补丁发送给主开发者.</div><div>7. 看主开发者的反馈, 如果主开发者发现两个一般开发者之间有冲突(他们之间可以合作解决的冲突), 就会要求他们先解决冲突, 然后再由其中的一个人提交. 如果主开发者可以自己解决, 或者没有冲突, 就通过.</div><div>8. 一般开发者之间解决冲突的方法, 开发者之间可以使用pull命令解决冲突, 解决完冲突后再向主开发者提交补丁.</div><div><br></div><div>主开发者的角度(假设主开发者不用开发代码): 我就是Google Source Code管理员.</div><div>1. 查看邮件或者通过其他方式查看一般开发者的提交状态.</div><div>2. 打上补丁, 解决冲突(可以自己解决, 也可以要求开发者之间解决以后再重新提交, 如果是开源项目, 还要决定哪些补丁有用, 哪些没用).</div><div>3. 向公共服务器提交结果, 然后通知所有开发人员.</div>"
+                },
+                "style": {}
+              }
             },
             "4": {
               "title": "Git的架构原理",
-              "id": 373
+              "id": 373,
+              "ideas": {
+                "1": {
+                  "title": "基本概念",
+                  "id": 390,
+                  "ideas": {
+                    "1": {
+                      "title": "快照而不是比不同",
+                      "id": 391
+                    },
+                    "2": {
+                      "title": "几乎所有的操作都是本地的",
+                      "id": 392
+                    },
+                    "3": {
+                      "title": "Git文件的3个状态",
+                      "id": 393,
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "working directory",
+                          "id": 411
+                        },
+                        "2": {
+                          "title": "staging area",
+                          "id": 412
+                        },
+                        "3": {
+                          "title": "git directory(repository)",
+                          "id": 413
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "文件状态生命周期",
+                      "id": 394,
+                      "ideas": {
+                        "1": {
+                          "title": "untracked",
+                          "id": 414
+                        },
+                        "2": {
+                          "title": "unmodified",
+                          "id": 415,
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "modified",
+                          "id": 416
+                        },
+                        "4": {
+                          "title": "staged",
+                          "id": 417
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
             },
             "5": {
               "title": "安装Git及Helloworld",
-              "id": 374
+              "id": 374,
+              "ideas": {
+                "1": {
+                  "title": "安装上官网",
+                  "id": 395
+                },
+                "2": {
+                  "title": "First time",
+                  "id": 396,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "1. 了解系统环境变量<div>`/etc/gitconfig`</div><div>`.gitconfig`</div><div><br></div><div>2. 设置身份</div><div>`git config --global usre.name \"Akagi201\"</div><div>`git config --global user.email akagi201@gmail.com`</div><div><br></div><div>3. 设置编辑器(可选)</div><div>`gitconfig --global core.editor vim`</div><div><br></div><div>4. 设置你的比较工具(可选)</div><div>`git config --global merge.tool vimdiff`</div><div><br></div><div>5. 检查你的配置(可选)</div><div>`git config --list`</div><div><br></div><div>6. 帮助</div><div>`git help &lt;verb&gt;`</div><div>`git &lt;verb&gt; --help`</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "开始前理解需要理解的概念",
+                  "id": 397,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "* blessed(remote) repository<div>* local repository</div><div>* stage area</div><div>* work are</div><div><br></div><div>能告诉我这4个区域分别在哪儿吗?</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "Subtopic",
+                  "id": 398
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "作为Git的个体工作者",
+              "id": 399,
+              "ideas": {
+                "1": {
+                  "title": "基本操作",
+                  "id": 400,
+                  "ideas": {
+                    "1": {
+                      "title": "初始化建立项目",
+                      "id": 401,
+                      "ideas": {
+                        "1": {
+                          "title": "init",
+                          "id": 418
+                        },
+                        "2": {
+                          "title": "clone",
+                          "id": 419
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "add & commit",
+                      "id": 404
+                    },
+                    "3": {
+                      "title": "status",
+                      "id": 405
+                    },
+                    "4": {
+                      "title": "ignore file",
+                      "id": 406
+                    },
+                    "5": {
+                      "title": "diff",
+                      "id": 407,
+                      "ideas": {
+                        "1": {
+                          "title": "git diff --staged(默认)",
+                          "id": 437,
+                          "ideas": {
+                            "1": {
+                              "title": "workspace vs staged",
+                              "id": 439
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "git diff --cached",
+                          "id": 438,
+                          "ideas": {
+                            "1": {
+                              "title": "staged vs local repo",
+                              "id": 440
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "6": {
+                      "title": "reset",
+                      "id": 408,
+                      "ideas": {
+                        "1": {
+                          "title": "3种模式",
+                          "id": 441
+                        }
+                      }
+                    },
+                    "7": {
+                      "title": "rm, mv",
+                      "id": 409
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "共享及更新项目",
+                  "id": 410,
+                  "ideas": {
+                    "1": {
+                      "title": "fetch, pull",
+                      "id": 420,
+                      "ideas": {
+                        "1": {
+                          "title": "git fetch origin",
+                          "id": 442
+                        },
+                        "2": {
+                          "title": "git  pull origin ",
+                          "id": 443
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "push",
+                      "id": 421,
+                      "ideas": {
+                        "1": {
+                          "title": "git push origin master",
+                          "id": 444
+                        },
+                        "2": {
+                          "title": "git format-patch origin/master",
+                          "id": 445
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "remote",
+                      "id": 422,
+                      "ideas": {
+                        "1": {
+                          "title": "git remote  -v",
+                          "id": 446
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "观察和比较",
+                  "id": 423,
+                  "ideas": {
+                    "1": {
+                      "title": "log",
+                      "id": 424
+                    },
+                    "2": {
+                      "title": "diff",
+                      "id": 425
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "作为Git的仓库管理员",
+              "id": 426,
+              "ideas": {
+                "1": {
+                  "title": "初始化和建立项目",
+                  "id": 427,
+                  "ideas": {
+                    "1": {
+                      "title": "init",
+                      "id": 428
+                    },
+                    "2": {
+                      "title": "clone",
+                      "id": 429
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "分支管理及合并",
+                  "id": 430,
+                  "ideas": {
+                    "1": {
+                      "title": "branch",
+                      "id": 431,
+                      "ideas": {
+                        "1": {
+                          "title": "git branch <name>",
+                          "id": 454
+                        },
+                        "2": {
+                          "title": "git checkout -b  <name>",
+                          "id": 455
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "checkout",
+                      "id": 432,
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "git checkout <name>",
+                          "id": 456
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "merge",
+                      "id": 433,
+                      "ideas": {
+                        "1": {
+                          "title": "git merge \"merge branch1 to master\" HEAD branch1",
+                          "id": 461
+                        },
+                        "2": {
+                          "title": "另一种做法",
+                          "id": 462,
+                          "ideas": {
+                            "1": {
+                              "title": "git checkout master",
+                              "id": 463
+                            },
+                            "2": {
+                              "title": "git pull branch1",
+                              "id": 464
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "log",
+                      "id": 434
+                    },
+                    "5": {
+                      "title": "tag",
+                      "id": 435,
+                      "ideas": {
+                        "1": {
+                          "title": "git tag -a ver1.0 -m \"my version 1.0\"",
+                          "id": 465
+                        },
+                        "2": {
+                          "title": "git show ver1.0",
+                          "id": 466
+                        },
+                        "3": {
+                          "title": "git tag ver1.0",
+                          "id": 467
+                        }
+                      }
+                    },
+                    "2.5": {
+                      "title": "查看",
+                      "id": 457,
+                      "ideas": {
+                        "1": {
+                          "title": "git show-branch",
+                          "id": 458
+                        },
+                        "2": {
+                          "title": "git diff branch1 branch2",
+                          "id": 459
+                        },
+                        "3": {
+                          "title": "git whatchanged",
+                          "id": 460
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "8": {
+              "title": "Git的项目协作",
+              "id": 447,
+              "ideas": {
+                "1": {
+                  "title": "工欲善其事必先利其器",
+                  "id": 448
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "Git与Repo",
+              "id": 449,
+              "ideas": {
+                "1": {
+                  "title": "Repo是什么?",
+                  "id": 450,
+                  "ideas": {
+                    "1": {
+                      "title": "python写的脚本, 方便不会git的程序员",
+                      "id": 476
+                    }
+                  }
+                },
+                "2": {
+                  "title": "如何用Repo?",
+                  "id": 451
+                },
+                "3": {
+                  "title": "结合Android源码下载来看一下repo的作用",
+                  "id": 452
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "10": {
+              "title": "我的工作习惯",
+              "id": 468,
+              "ideas": {
+                "1": {
+                  "title": "先认识开源站点",
+                  "id": 469,
+                  "ideas": {
+                    "1": {
+                      "title": "SourceForge",
+                      "id": 470
+                    },
+                    "2": {
+                      "title": "Google Code",
+                      "id": 471
+                    },
+                    "3": {
+                      "title": "codeplex",
+                      "id": 472
+                    },
+                    "4": {
+                      "title": "Github",
+                      "id": 474
+                    },
+                    "5": {
+                      "title": "建立Blessed Repository",
+                      "id": 475
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "11": {
+              "title": "我们从GoogleCode上提交以及更新我们的课程内容及练习",
+              "id": 477
+            },
+            "12": {
+              "title": "我们去Android官网下载源代码",
+              "id": 478
+            },
+            "13": {
+              "title": "善于总结是我们提升的阶梯",
+              "id": 479,
+              "ideas": {
+                "1": {
+                  "title": "SVN与Git在概念和特性上区别",
+                  "id": 480,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "SVN | GIT<div>-----|--------</div><div>C/S结构 | 分布式</div><div>客户端只有工作区域 | 客户端有工作区域和本地仓库</div><div>SVN不方便离线操作 | Git你可以一直离线操作</div><div>SVN速度慢 | Git速度快</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "SVN与Git在操作上的区别",
+                  "id": 481,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "SVN | Git<div>checkout | clone, pull fetch</div><div>svn branch 建立新目录 | git branch 不是</div><div>svn update | checkout</div><div>delete | rm</div><div>commit | push</div>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "7.5": {
+              "title": "试试官网started的例子",
+              "id": 453
             }
           }
         },
@@ -2226,8 +2847,7 @@
           "contentType": "text/html",
           "content": "## 课程目标<div>* 了解我们目前常用版本控制的一个演变史.</div><div>* 学会使用SVN GUI工具, 理解SVN架构, 不要求对SVN做很深入的理解, 使用万岁.</div><div>* 学会使用Git工具, 并且了解Git的网络结构, 使用万岁.</div><div>* 理解各个版本控制工具的区别, 以及Git的优势所在.</div><div>* 熟练使用Git来进行版本控制管理, 但不要求成为Git版本仓库管理员.</div><div>* 基于Git的Android源码下载理解.</div><div>* 4大开源站点.</div><div>* 学会用Git下载课程资料, 上传自己的练习代码.</div><div><br></div><div>## 重点难点</div><div>* SVN原子提交的理解.</div><div>* Git分布式版本的概念理解.</div><div><br></div><div>## 考核目标</div><div>* 说出常见的版本控制系统及其区别.</div><div>* 说说SVN与Git孰优孰劣, 为何?</div><div>* 说说Mercurial和Git孰优孰劣, 为何?</div><div>* 说说Git如何进行权限管理?</div><div>* Git如何建立版本仓库.</div><div>* 根据Android源码下载过程介绍一下Git.</div><div>* Repo与Git关系.</div><div><br></div><div>## 课后练习</div><div>* 自我尝试下载Android源码.</div><div>* 在GoogleCOde上自建开源项目, 使用Git版本控制, checkin你的项目.</div><div>* 在本机自建Git仓库, 与GoogleCode项目分值及合并.</div><div><br></div><div>## 参考课时</div><div>* 4h</div>"
         },
-        "style": {},
-        "collapsed": true
+        "style": {}
       }
     }
   },
