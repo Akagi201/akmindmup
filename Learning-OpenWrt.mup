@@ -1,0 +1,415 @@
+{
+  "title": "Learning OpenWrt",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Chapter1 Before OpenWrt",
+      "id": 2,
+      "ideas": {
+        "2": {
+          "title": "Lesson1  The composition of the embedded system",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "CPU",
+              "id": 12,
+              "ideas": {
+                "1": {
+                  "title": "ARM",
+                  "id": 16,
+                  "ideas": {
+                    "1": {
+                      "title": "pcduino",
+                      "id": 23
+                    },
+                    "2": {
+                      "title": "Allwinner A10",
+                      "id": 24,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Allwinner A20",
+                      "id": 25
+                    }
+                  }
+                },
+                "2": {
+                  "title": "MIPS",
+                  "id": 17,
+                  "ideas": {
+                    "1": {
+                      "title": "Arduino Yun",
+                      "id": 20
+                    },
+                    "2": {
+                      "title": "dragino2",
+                      "id": 21
+                    }
+                  }
+                },
+                "3": {
+                  "title": "x86",
+                  "id": 19,
+                  "ideas": {
+                    "1": {
+                      "title": "Intel Galileo",
+                      "id": 22
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "boorloader",
+              "id": 13,
+              "ideas": {
+                "1": {
+                  "title": "u-boot",
+                  "id": 57
+                },
+                "2": {
+                  "title": "barebox",
+                  "id": 58
+                }
+              }
+            },
+            "3": {
+              "title": "root filesystem",
+              "id": 14
+            },
+            "2.5": {
+              "title": "kernel",
+              "id": 15
+            }
+          }
+        },
+        "12": {
+          "title": "Lesson2 Build analysis environment",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "linux configuration",
+              "id": 6,
+              "ideas": {
+                "1": {
+                  "title": "ssh",
+                  "id": 9
+                },
+                "2": {
+                  "title": "samba",
+                  "id": 10
+                },
+                "3": {
+                  "title": "git",
+                  "id": 59
+                }
+              }
+            },
+            "2": {
+              "title": "vim configuration",
+              "id": 7,
+              "ideas": {
+                "1": {
+                  "title": "spf13-vim",
+                  "id": 55
+                },
+                "2": {
+                  "title": "ctags+cscope",
+                  "id": 56
+                }
+              }
+            },
+            "3": {
+              "title": "eclipse configuration",
+              "id": 8
+            }
+          },
+          "attr": {
+            "position": [
+              176.5,
+              138.5,
+              1
+            ],
+            "style": {}
+          }
+        },
+        "13": {
+          "title": "Lesson3 Programming Basic",
+          "id": 26,
+          "ideas": {
+            "1": {
+              "title": "Perl",
+              "id": 27
+            },
+            "2": {
+              "title": "Makefile",
+              "id": 28
+            },
+            "3": {
+              "title": "Lua",
+              "id": 45
+            },
+            "4": {
+              "title": "C/C++",
+              "id": 46
+            },
+            "5": {
+              "title": "git",
+              "id": 81
+            },
+            "6": {
+              "title": "patches",
+              "id": 82
+            },
+            "1.5": {
+              "title": "Bash",
+              "id": 29
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "Chapter2 OpenWrt Build time",
+      "id": 30,
+      "ideas": {
+        "1": {
+          "title": "OpenWrt Build Steps",
+          "id": 38
+        },
+        "2": {
+          "title": "Understand Build Process",
+          "id": 39
+        },
+        "3": {
+          "title": "Improve Buildroot",
+          "id": 40
+        },
+        "4": {
+          "title": "Using Buildroot",
+          "id": 41,
+          "ideas": {
+            "1": {
+              "title": "external toolchain",
+              "id": 60
+            },
+            "2": {
+              "title": "external kernel tree",
+              "id": 62
+            }
+          }
+        },
+        "5": {
+          "title": "compile application package",
+          "id": 42
+        },
+        "6": {
+          "title": "compile kernel module package",
+          "id": 43
+        },
+        "7": {
+          "title": "porting OpenWrt",
+          "id": 75,
+          "ideas": {}
+        },
+        "8": {
+          "title": "patches",
+          "id": 80
+        },
+        "2.5": {
+          "title": "Feeds",
+          "id": 72
+        },
+        "2.75": {
+          "title": "Image Generator",
+          "id": 73
+        },
+        "2.875": {
+          "title": "SDK",
+          "id": 74
+        }
+      }
+    },
+    "-10": {
+      "title": "Chapter3 OpenWrt Runtime",
+      "id": 31,
+      "attr": {
+        "position": [
+          166.5,
+          -173,
+          1
+        ],
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "OpenWrt boot process",
+          "id": 37,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "preinit",
+              "id": 89
+            },
+            "2": {
+              "title": "init scripts",
+              "id": 90
+            },
+            "3": {
+              "title": "hotplug",
+              "id": 91
+            }
+          }
+        },
+        "0.5": {
+          "title": "OpenWrt Basic use",
+          "id": 44,
+          "attr": {
+            "position": [
+              189,
+              -78,
+              1
+            ],
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "SSH",
+              "id": 47
+            },
+            "2": {
+              "title": "web",
+              "id": 48
+            },
+            "3": {
+              "title": "Serial",
+              "id": 50
+            }
+          }
+        },
+        "0.25": {
+          "title": "flash openwrt",
+          "id": 63,
+          "attr": {
+            "position": [
+              162,
+              -139,
+              2
+            ],
+            "style": {}
+          }
+        }
+      }
+    },
+    "-11": {
+      "title": "Chapter5 OpenWrt Applications",
+      "id": 32,
+      "ideas": {
+        "1": {
+          "title": "Arduino yun",
+          "id": 33
+        },
+        "2": {
+          "title": "mesh网络",
+          "id": 34
+        },
+        "3": {
+          "title": "Capative Portal",
+          "id": 35,
+          "ideas": {
+            "1": {
+              "title": "HTTP",
+              "id": 53
+            },
+            "2": {
+              "title": "RADIUS",
+              "id": 54
+            }
+          }
+        },
+        "4": {
+          "title": "TR069",
+          "id": 36
+        },
+        "5": {
+          "title": "WDS",
+          "id": 51
+        },
+        "6": {
+          "title": "usb-dongle",
+          "id": 76
+        },
+        "7": {
+          "title": "3g/4g-dongle",
+          "id": 77
+        },
+        "8": {
+          "title": "voip",
+          "id": 78
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "-21": {
+      "title": "Chapter6 OpenWrt + Arduino",
+      "id": 64,
+      "ideas": {
+        "1": {
+          "title": "Arduino Yun",
+          "id": 67
+        },
+        "2": {
+          "title": "Pcduino",
+          "id": 68
+        }
+      }
+    },
+    "-31": {
+      "title": "Chapter7 OpenWrt + Security",
+      "id": 69,
+      "ideas": {
+        "1": {
+          "title": "kismet",
+          "id": 70
+        },
+        "2": {
+          "title": "aircrack-ng",
+          "id": 71
+        }
+      }
+    },
+    "-10.5": {
+      "title": "chapter4 OpenWrt Developing",
+      "id": 83,
+      "ideas": {
+        "1": {
+          "title": "debugging",
+          "id": 84
+        },
+        "2": {
+          "title": "luci",
+          "id": 85
+        },
+        "3": {
+          "title": "uci-lua",
+          "id": 86
+        },
+        "4": {
+          "title": "config scripting",
+          "id": 87
+        }
+      }
+    }
+  },
+  "links": []
+}
