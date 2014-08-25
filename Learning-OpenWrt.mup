@@ -394,7 +394,21 @@
       "ideas": {
         "1": {
           "title": "debugging",
-          "id": 84
+          "id": 84,
+          "ideas": {
+            "1": {
+              "title": "port mirroring",
+              "id": 92
+            },
+            "2": {
+              "title": "wireshark",
+              "id": 93
+            },
+            "3": {
+              "title": "gdb server",
+              "id": 94
+            }
+          }
         },
         "2": {
           "title": "luci",
