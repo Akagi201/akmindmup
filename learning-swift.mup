@@ -1,0 +1,159 @@
+{
+  "title": "Learning Swift",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "学习新编程语言的方法-纯经验分享",
+      "id": 2,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "## 学习目标<div>学会一种新方法, 适用于各种计算机语言的学习.</div><div><br></div><div>## 重点难点</div><div>理解纵横坐标轴</div><div><br></div><div>## 课后练习</div><div>选择一门你没有接触过的新语言, 画出坐标图, 比如Java, Python, Ruby等等.</div>"
+        },
+        "style": {},
+        "collapsed": true
+      },
+      "ideas": {
+        "1": {
+          "title": "Sundy坐标系学习法 - 专利哦",
+          "id": 3
+        },
+        "2": {
+          "title": "两句话学会新语言",
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "程序=数据结构+算法",
+              "id": 5
+            },
+            "2": {
+              "title": "从面向过程到面向对象",
+              "id": 6
+            }
+          }
+        },
+        "3": {
+          "title": "Swift语言坐标系",
+          "id": 7
+        }
+      }
+    },
+    "11": {
+      "title": "1. 为何要学习Swift?",
+      "id": 8,
+      "ideas": {
+        "1": {
+          "title": "是因为简单易学吗?",
+          "id": 9
+        },
+        "2": {
+          "title": "说说WWDC2014开发者大会",
+          "id": 10,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "1. 输入法支持第三方, 只是开放的第一步<div>2. iCloud</div><div>3. HealthKit, HomeKit</div><div>4. Swift</div>"
+            },
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "猜猜Apple的意图",
+          "id": 11
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "21": {
+      "title": "2. 爱因斯坦小板凳HelloWorld开发环境搭建",
+      "id": 12,
+      "ideas": {
+        "1": {
+          "title": "目前是Beta3版本, 需要什么条件才能安装呢?",
+          "id": 13,
+          "ideas": {
+            "1": {
+              "title": "OS X v10.9.3(Mavericks) Later",
+              "id": 16
+            },
+            "2": {
+              "title": "Developer Account",
+              "id": 17
+            }
+          }
+        },
+        "2": {
+          "title": "开发者账号注册",
+          "id": 14
+        },
+        "3": {
+          "title": "下载和安装XCode6 & iOS SDK",
+          "id": 15,
+          "ideas": {
+            "1": {
+              "title": "运行第一个自己的HelloWorld程序",
+              "id": 18
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "3. Swift坐标系图谱",
+      "id": 19,
+      "ideas": {
+        "1": {
+          "title": "1. 面向过程-数据结构",
+          "id": 20,
+          "ideas": {
+            "1": {
+              "title": "常量",
+              "id": 22,
+              "ideas": {
+                "1": {
+                  "title": "声明",
+                  "id": 26
+                },
+                "2": {
+                  "title": "类型标定, 指定强类型",
+                  "id": 27
+                },
+                "3": {
+                  "title": "命名和值的字符",
+                  "id": 28
+                },
+                "4": {
+                  "title": "输出",
+                  "id": 29
+                }
+              }
+            },
+            "2": {
+              "title": "注释",
+              "id": 23
+            },
+            "3": {
+              "title": "分号的使用",
+              "id": 24
+            },
+            "4": {
+              "title": "基本数据类型",
+              "id": 25
+            }
+          }
+        },
+        "2": {
+          "title": "2. 面向过程-算法",
+          "id": 21
+        }
+      }
+    }
+  }
+}
