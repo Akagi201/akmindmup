@@ -1,0 +1,239 @@
+{
+  "title": "TypeScript",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "什么是JavaScript",
+      "id": 3,
+      "ideas": {
+        "1": {
+          "title": "JavaScript是一种解释型脚本语言, 是一种动态类型, 弱类型.",
+          "id": 4
+        },
+        "2": {
+          "title": "广泛的应用于各种开发场景中",
+          "id": 5
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "JavaScript的缺点",
+      "id": 6,
+      "ideas": {
+        "1": {
+          "title": "弱类型, 缺乏必要的类型检查",
+          "id": 7
+        },
+        "2": {
+          "title": "编程不够语义化, 代码可读性差",
+          "id": 8
+        },
+        "3": {
+          "title": "代码不可分割, 可维护性差",
+          "id": 9
+        },
+        "4": {
+          "title": "开发工具不够智能",
+          "id": 10
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "21": {
+      "title": "什么是TypeScript http://www.typescriptlang.org",
+      "id": 11,
+      "ideas": {
+        "1": {
+          "title": "由微软开发的自由和开源的编程语言. 它是JavaScript的一个超集, 而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程",
+          "id": 12
+        },
+        "2": {
+          "title": "Starts from JavaScript, Ends with JavaScript",
+          "id": 13
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "语言特点",
+      "id": 15,
+      "ideas": {
+        "1": {
+          "title": "近似静态, 编译语言",
+          "id": 16
+        },
+        "2": {
+          "title": "强类型语言",
+          "id": 17
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "41": {
+      "title": "TypeScript解决的问题",
+      "id": 18,
+      "ideas": {
+        "1": {
+          "title": "强类型",
+          "id": 19
+        },
+        "2": {
+          "title": "智能感知和重构",
+          "id": 20
+        },
+        "3": {
+          "title": "完全兼容Javascript",
+          "id": 21
+        },
+        "4": {
+          "title": "语义化编程和面向对象",
+          "id": 22
+        },
+        "5": {
+          "title": "集成简便",
+          "id": 23
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "51": {
+      "title": "TypeScript未来发展趋势",
+      "id": 24,
+      "ideas": {
+        "1": {
+          "title": "替代JavaScript",
+          "id": 25
+        },
+        "2": {
+          "title": "更多的IDE支持",
+          "id": 26
+        },
+        "3": {
+          "title": "不断丰富的JavaScript库支持",
+          "id": 27
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "61": {
+      "title": "TypeScript基础数据类型",
+      "id": 28,
+      "ideas": {
+        "1": {
+          "title": "布尔类型",
+          "id": 29
+        },
+        "2": {
+          "title": "数字型",
+          "id": 30
+        },
+        "3": {
+          "title": "字符型",
+          "id": 31
+        },
+        "4": {
+          "title": "数组(集合)",
+          "id": 32
+        },
+        "5": {
+          "title": "枚举类型",
+          "id": 33
+        },
+        "6": {
+          "title": "any类型",
+          "id": 34
+        },
+        "7": {
+          "title": "void类型",
+          "id": 35
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "71": {
+      "title": "TypeScript与JavaScript比较",
+      "id": 36,
+      "ideas": {
+        "1": {
+          "title": "TypeScript完全符合JavaScript语法和语义",
+          "id": 37
+        },
+        "2": {
+          "title": "TypeScript强类型, JavaScript弱类型",
+          "id": 38
+        },
+        "3": {
+          "title": "TypeScript语义化编程",
+          "id": 39
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "81": {
+      "title": "使用VS开发TypeScript程序",
+      "id": 40,
+      "ideas": {
+        "1": {
+          "title": "如何获取TypeScript",
+          "id": 41,
+          "ideas": {
+            "1": {
+              "title": "Visual Studio 2012/2013",
+              "id": 42
+            },
+            "2": {
+              "title": "Node.js",
+              "id": 43,
+              "ideas": {
+                "1": {
+                  "title": "npm install -g typescript",
+                  "id": 44
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "在VS中使用TypeScript",
+          "id": 45,
+          "ideas": {
+            "1": {
+              "title": "新建HTML Application with TypeScript",
+              "id": 46
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    }
+  }
+}
