@@ -1,0 +1,641 @@
+{
+  "title": "streaming protocols",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Streaming",
+      "id": 2,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "Streaming means sending data, usually audio or video, in a way that allows it to start being processed before it's completely received.<div><br></div><div>Video clips on Web pages are a familiar example.</div>"
+        },
+        "style": {},
+        "position": [
+          151.5,
+          -522,
+          6
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Progressive streaming",
+          "id": 3,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "aka progressive downloading,&nbsp;<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">means receiving an ordinary</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;file and starting to process it before it's completely downloaded.&nbsp;</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">It requires no special protocols, but it requires a format that can be processed based on partial content.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+            },
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "interleaved images",
+              "id": 4,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">interleaved</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;images, where the odd-numbered pixel rows are received and displayed before any of the even ones, are a familiar example.&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">They're displayed at half resolution before the remaining rows fill in the full resolution.</span>"
+                },
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "shortcoming",
+              "id": 5,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Progressive streaming doesn't have the flexibility of true streaming, since the data rate can't be adjusted on the fly and the transmission can't be separated into multiple streams.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">If it delivers a whole file quickly and the user listens to or watches just the beginning, it wastes bandwidth. The user is given the whole file and can copy it without any effort.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+                },
+                "style": {}
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "\"True\" streaming",
+          "id": 6,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">\"True\" streaming uses a streaming protocol to control the transfer.&nbsp;</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The packets received don't add up to a file.&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+            },
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "copy protection",
+              "id": 7,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Don't mistake streaming for copy protection, though; unless there's server-to-application encryption, it's not hard to reconstruct a file from the data.</span>"
+                },
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "adaptive",
+              "id": 8,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">True streaming may be&nbsp;</span><strong style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">adaptive</strong><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">. This means that the rate of transfer will automatically change in response to the transfer conditions.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">If the receiver isn't able to keep up with a higher data rate, the sender will drop to a lower data rate and quality. This may be done by changes within the stream, or by switching the client to a different stream, possibly from another server. Streamingmedia.com has a&nbsp;</span><a href=\"http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-Adaptive-Streaming-75195.aspx\" style=\"font-family: Times; font-size: medium; line-height: normal;\">discussion of adaptive streaming</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+                },
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "category",
+              "id": 9,
+              "ideas": {
+                "1": {
+                  "title": "on-demand",
+                  "id": 10,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">With on-demand streaming, the client requests a recording or movie and receives it; normally no one else will receive the same recording at the same time.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">\"On-demand\" doesn't necessarily imply a request by a human; if a Web page starts playing a movie or song when it's opened, that's on-demand even if it's annoying and unwanted.&nbsp;</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "complication",
+                      "id": 12,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">With on-demand streaming, the service has to open files as they're requested and keep streams going to each client. If the system load is heavy, it may have to juggle</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;a lot of separate streams. It may fall behind, so that the clients are sometimes forced to pause. This is annoying but acceptable, as long as it doesn't happen too much.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;</span>"
+                        },
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "real-time",
+                  "id": 11,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">With real-time streaming, the sender determines what to send, and the receiver plays it back as it's sent, with a slight and consistent delay.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">If it picks up a broadcast in progress, that's real time. \"Real-time\" doesn't mean \"simultaneous</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;with the source\"; at a minimum, there's always a speed-of-light delay. Buffering helps to keep a real-time transmission from skipping, and a delay of a significant fraction of a minute may be an acceptable price for this.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "complication",
+                      "id": 13,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">With real-time streaming, the service is usually managing a known number of channels, but it has to keep them going at the speed at which they're played back. If it can't keep up, it's usually better to skip rather than pause. Real-time streaming can be point-to-point (one sender, one receiver) or broadcast (one sender, many receivers). A VOIP conversation is an example of two-way point-to-point streaming.</span>"
+                        },
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "streaming servers",
+          "id": 14,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<p style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Streaming servers commonly support more than one protocol, falling back on alternatives if the first choice doesn't work.</p><p style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">There's a&nbsp;<a href=\"http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-Is-a-Streaming-Media-Protocol-84496.aspx\">general discussion of streaming protocols</a>&nbsp;on Streamingmedia.com.</p>"
+            },
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "streaming vs encoding",
+          "id": 15,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Streaming and encoding are two separate issues. Streaming deals with how bytes get from one place to another; encoding deals with how sounds and images are converted to bytes and back.</span>"
+            },
+            "style": {}
+          }
+        }
+      }
+    },
+    "11": {
+      "title": "the protocol stack",
+      "id": 16,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Streaming involves protocols at several different layers of the OSI Reference Model. The lower levels (physical, data link, and network) are generally taken as given.&nbsp;</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Real-time streaming puts a premium on timely delivery, so it often uses UDP (User Datagram Protocol). UDP is lightweight compared with TCP and will keep delivering information rather than put extra effort into re-sending lost packets. Some firewalls may block UDP because they're tailored only for TCP communications.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Support for the right streaming protocol doesn't necessarily mean that software will play a particular stream. You need software that supports both the appropriate streaming protocol and the appropriate encoding.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+        },
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "transport layer",
+          "id": 17,
+          "ideas": {
+            "1": {
+              "title": "responsible for getting data from one end to the other",
+              "id": 21
+            }
+          }
+        },
+        "2": {
+          "title": "session layer",
+          "id": 18,
+          "ideas": {
+            "1": {
+              "title": "organizes streaming activity into ongoing units such as movies and broadcasts",
+              "id": 22
+            }
+          }
+        },
+        "3": {
+          "title": "presentation layer",
+          "id": 19,
+          "ideas": {
+            "1": {
+              "title": "manages the bridge between information as seen by the application and information as sent over the network",
+              "id": 23
+            }
+          }
+        },
+        "4": {
+          "title": "application layer",
+          "id": 20,
+          "attr": {
+            "position": [
+              137.5,
+              151.5,
+              1
+            ],
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "the level at which an application talks to the network",
+              "id": 24
+            }
+          }
+        }
+      }
+    },
+    "21": {
+      "title": "the RTP family",
+      "id": 25,
+      "ideas": {
+        "1": {
+          "title": "RTP",
+          "id": 26,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The Real Time Transport Protocol (RTP) has been around for a long time and is often used for streaming. It's defined by</span><a href=\"http://tools.ietf.org/html/rfc3550\" style=\"font-family: Times; font-size: medium; line-height: normal;\" target=\"_blank\">IETF RFC 3550</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">. It's a transport protocol which is built on UDP and designed specifically for real-time transfers. It's possible but unusual to use RTP with TCP. Although it sits on top of UDP (or TCP), it's still considered part of the transport layer.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">An RTP session may contain multiple streams to be combined at the receiver's end; for example, audio and video may be on separate channels.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+            },
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "RTCP",
+          "id": 27,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">RTP is closely associated with the Real Time Control Protocol (RTCP), which operates at the session layer. The primary function of RTCP is \"to provide feedback on the quality of the data distribution,\" allowing actions such as adjusting the data rate.</span>"
+            },
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "RTSP",
+          "id": 28,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Some other protocols are typically used with RTP but aren't tightly coupled to it. The Real Time Streaming Protocol (RTSP), defined by&nbsp;</span><a href=\"http://www.ietf.org/rfc/rfc2326.txt\" style=\"font-family: Times; font-size: medium; line-height: normal;\" target=\"_blank\">IETF RFC 2326</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">, is a presentation-layer protocol that is described as a \"network remote control.\" It resemble</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">s HTTP in some ways, and it carries requests to initiate activities such as playing, pausing, and recording.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The protocol stack of RTP, RTCP, and RTSP is sometimes referred to as \"RTSP.\"</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+            },
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "RSVP",
+          "id": 29,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Resource Reservation Protocol, with the strained</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;abbreviation RSVP and a spec at&nbsp;</span><a href=\"http://www.ietf.org/rfc/rfc2205.txt\" style=\"font-family: Times; font-size: medium; line-height: normal;\">RFC 2205</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">, operates at the transport level though it's used in setting up sessions.</span>"
+            },
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "UDP URL",
+          "id": 30,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">UDP URLs aren't widely supported by browsers, so a plug-in is needed to do RTP/UDP streaming to a browser. Flash is the one that's most commonly used. RTP is also used by standalone players such as RealPlayer, Windows Media Player, and QuickTime Player.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Android and iOS devices don't have RTP-compatible players as delivered. There are various third-party applications, including RealPlayer for Android.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+            },
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">RTP, RTCP, and RTSP all operate on different ports. Usually when RTP is on port N, RTCP is on port N+1.</span>"
+        },
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "RTMP",
+      "id": 31,
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Real Time Messaging Protocol (RTMP) is a proprietary protocol used primarily by Flash, but implemented by some other software as well. Adobe has released a&nbsp;</span><a href=\"http://www.adobe.com/devnet/rtmp.html\" style=\"font-family: Times; font-size: medium; line-height: normal;\" target=\"_blank\">specification</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;for it, but it's incomplete in some important respects. It's usually used over TCP, though this isn't a requirement. It operates in the application through session layers. Its importance is a direct result of the ubiquity</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;of Flash, and it will decline</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;as the use of Flash does. Apple's iOS doesn't support RTMP or Flash, so iPhones, iPods, and iPads won't accept RTMP streams except through third-party code. Some RTMP implementations (e.g., JW Player) rely on the availability of the Flash plugin.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><p style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Although Flash is commonly associated with proprietary file formats, RTMP works with all media formats.</p><p style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">RTMP can be tunneled through HTTP (RTMPT), which may allow it to be used behind firewalls where straight RTMP is blocked. Other variants are RTMPE (with lightweight encryption), RTMPTE (tunneling and lightweight encryption), and RTMPS (encrypted over SSL).</p></div>"
+        },
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "proprietary protocol used primarily by Flash",
+          "id": 44
+        },
+        "2": {
+          "title": "over TCP",
+          "id": 45
+        },
+        "3": {
+          "title": "session layers",
+          "id": 46
+        },
+        "4": {
+          "title": "rely on Flash Plugin",
+          "id": 47
+        },
+        "5": {
+          "title": "works with all media formats",
+          "id": 48
+        },
+        "6": {
+          "title": "RTMPT",
+          "id": 49,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">RTMP can be tunneled through HTTP (RTMPT), which may allow it to be used behind firewalls where straight RTMP is blocked.&nbsp;</span>"
+            },
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "tunneled through HTTP",
+              "id": 57
+            }
+          }
+        },
+        "7": {
+          "title": "RTMPE",
+          "id": 50,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "with lightweight encryption",
+              "id": 56
+            }
+          }
+        },
+        "8": {
+          "title": "RTMPTE",
+          "id": 51,
+          "ideas": {
+            "1": {
+              "title": "tunneling and lightweight encryption",
+              "id": 54
+            }
+          }
+        },
+        "9": {
+          "title": "RTMPS",
+          "id": 53,
+          "ideas": {
+            "1": {
+              "title": "encrypted over SSL",
+              "id": 55
+            }
+          }
+        }
+      }
+    },
+    "-10": {
+      "title": "Shoutcast",
+      "id": 63,
+      "ideas": {
+        "1": {
+          "title": "broadcast streaming",
+          "id": 64
+        },
+        "2": {
+          "title": "ICY",
+          "id": 65
+        }
+      },
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<p style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The Shoutcast server is a popular way to deliver broadcast streaming. It uses its own protocols, and finding any decentdocumentation is difficult. Shoutcast's protocol was originally known as ICY; the name Ultravox is currently used for Shoutcast 2. A superset of HTTP is used, with additional headers that don't follow the \"X-\" convention. Shoutcast's protocols can be used over either TCP or UDP. Metadata and streaming content are mixed in the same stream. The ICY scheme (\"icy://\") was used in some early versions of the protocol and is still sometimes found. I've also encountered the schema \"icyxp://\", which seems to be proprietary to one software creator; a search for information about it turns up nothing.</p><p style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The Icecast server uses a protocol similar to Shoutcast, but there are some compatibility issues.</p><p style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Shoutcast protocols are used only for broadcasting, not for on-demand delivery.</p>"
+        },
+        "style": {},
+        "position": [
+          276.5,
+          -272,
+          1
+        ]
+      }
+    },
+    "-20": {
+      "title": "BitTorrent Live Streaming",
+      "id": 66,
+      "ideas": {
+        "1": {
+          "title": "peer-to-peer protocol",
+          "id": 67
+        }
+      },
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<a href=\"http://torrentfreak.com/bittorrent-s-bram-cohen-patents-revolutionary-live-streaming-protocol-130326/\" style=\"font-family: Times; font-size: medium; line-height: normal;\">BitTorrent Live Streaming</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;is a newcomer among streaming protocols, currently (May 2013) in open beta. It's a peer-to-peer protocol</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;that can scale to very large numbers of users; \"each user becomes a miniature broadcaster and amplifies your broadcast across the Web.\" This relieves the original sender of the burden of talking to large numbers of clients. I can't find any technical information on it.</span>"
+        },
+        "style": {},
+        "position": [
+          262.5,
+          -37,
+          2
+        ]
+      }
+    },
+    "-30": {
+      "title": "HTML5",
+      "id": 69,
+      "ideas": {
+        "1": {
+          "title": "<audio> and <video> tags",
+          "id": 70
+        },
+        "2": {
+          "title": "DOM properties",
+          "id": 71
+        },
+        "3": {
+          "title": "application-layer protocol",
+          "id": 72
+        },
+        "4": {
+          "title": "keep downloading",
+          "id": 73
+        },
+        "3.5": {
+          "title": "download the content progressively",
+          "id": 74
+        }
+      },
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">HTML5 needs to be mentioned here, mostly for what it isn't. HTML5 provides the &lt;audio&gt; and &lt;video&gt; tags</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">, along with DOM</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;properties</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;that allow JavaScript to control the playing of the content that these elements specify. This is an application-layer protocol</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;only, with no definition of the lower layers. HTML5 implementations can specify formats which they process. The server is expected to download the content progressively</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">, and it will keep downloading</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;it completely even if paused, unless the browser completely eliminates the element. The Web Audio API allows detailed programmatic control of playback.</span>"
+        },
+        "style": {},
+        "position": [
+          287.5,
+          346,
+          5
+        ]
+      }
+    },
+    "-5": {
+      "title": "HTTP Streaming",
+      "id": 62,
+      "ideas": {
+        "1": {
+          "title": "HLS(HTTP Live Streaming)",
+          "id": 32,
+          "ideas": {
+            "1": {
+              "title": "theoretically a bad fit",
+              "id": 33,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">HTTP with TCP/IP is designed for reliable delivery rather than keeping up a steady flow, but with the prevalence</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;of high-speed connections these days it doesn't matter so much.&nbsp;</span>"
+                },
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Apple",
+              "id": 34,
+              "ideas": {
+                "1": {
+                  "title": "Cupertino streaming",
+                  "id": 35,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Apple's entry</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;is HTTP Live Streaming, aka HLS or Cupertino</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">streaming.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">It was developed by Apple for iOS and isn't widely supported outside of Apple's products.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "3": {
+              "title": "browser testing page http://www.jwplayer.com/html5/hls/",
+              "id": 36,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Long Tail Video provides a&nbsp;</span><a href=\"http://www.longtailvideo.com/html5/hls/\" style=\"font-family: Times; font-size: medium; line-height: normal;\">testing page</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;to determine whether a browser supports HLS.</span>"
+                },
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "specification http://tools.ietf.org/html/draft-pantos-http-live-streaming-11",
+              "id": 37,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Its specification</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;is available as an&nbsp;</span><a href=\"http://tools.ietf.org/html/draft-pantos-http-live-streaming-11\" style=\"font-family: Times; font-size: medium; line-height: normal;\" target=\"_blank\">Internet Draft</a>.<div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The draft contains proprietary material, and publishing derivative works is prohibited.</span><br></div>"
+                },
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "M3U",
+              "id": 38,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The only playlist format allowed is M3U Extended (.m3u or .m3u8), but the format of the streams is restricted only by the implementation.</span>"
+                },
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The new trend in streaming is the use of HTTP with protocols that support adaptive</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;bitrates.&nbsp;</span>"
+            },
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "HDS(Adobe HTTP Dynamic Streaming)",
+          "id": 39,
+          "attr": {
+            "style": {},
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">HTTP is more likely to be allowed through than other protocols, and HDS is less of a kludge</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;than RTMP over HTTP. The&nbsp;</span><a href=\"http://www.adobe.com/products/hds-dynamic-streaming/tech-specs.html\" style=\"font-family: Times; font-size: medium; line-height: normal;\">technical specs</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;say that Flash is required for playback, so its use is mainly in desktop environments.</span>"
+            }
+          },
+          "ideas": {
+            "1": {
+              "title": "aka, San Jose streaming",
+              "id": 40
+            },
+            "2": {
+              "title": "over HTTP",
+              "id": 41,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Like Apple's HLS, it operates over HTTP.&nbsp;</span>"
+                },
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "associated with Flash",
+              "id": 42,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Like RTMP, it's associated with Flash.</span>"
+                },
+                "style": {}
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "Microsoft Smooth Streaming",
+          "id": 43,
+          "ideas": {
+            "2": {
+              "title": "MS's HTTP streaming",
+              "id": 59,
+              "ideas": {}
+            },
+            "3": {
+              "title": "used with Silverlight and IIS",
+              "id": 58,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">Smooth Streaming is Microsoft's piece of the very fragmented world of HTTP streaming</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">.&nbsp;</span>"
+            },
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "DASH(Dynamic Streaming over HTTP)",
+          "id": 60,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">DASH, for Dynamic Streaming over HTTP, is MPEG's offering in the HTTP streaming Babel</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">.&nbsp;</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">DASH's creators insist it's not a protocol but an \"enabler,\" but that claim violates</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">&nbsp;the \"looks like a duck\" principle.&nbsp;</span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">It's specified by ISO/IEC 23009-1:2012.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
+            },
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "MPEG",
+              "id": 61
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    }
+  },
+  "attr": {
+    "attachment": {
+      "contentType": "text/html",
+      "content": "http://www.garymcgath.com/streamingprotocols.html"
+    },
+    "style": {}
+  },
+  "links": []
+}
