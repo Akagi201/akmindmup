@@ -241,6 +241,51 @@
               "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">The Real Time Transport Protocol (RTP) has been around for a long time and is often used for streaming. It's defined by</span><a href=\"http://tools.ietf.org/html/rfc3550\" style=\"font-family: Times; font-size: medium; line-height: normal;\" target=\"_blank\">IETF RFC 3550</a><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">. It's a transport protocol which is built on UDP and designed specifically for real-time transfers. It's possible but unusual to use RTP with TCP. Although it sits on top of UDP (or TCP), it's still considered part of the transport layer.</span><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div><div><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">An RTP session may contain multiple streams to be combined at the receiver's end; for example, audio and video may be on separate channels.</span><span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\"><br></span></div>"
             },
             "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "used for transfer of multimedia data",
+              "id": 75
+            },
+            "0.5": {
+              "title": "data transfer protocol",
+              "id": 77,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "timestamps",
+                  "id": 78,
+                  "ideas": {
+                    "1": {
+                      "title": "for synchronization",
+                      "id": 79
+                    }
+                  }
+                },
+                "2": {
+                  "title": "sequence numbers",
+                  "id": 80,
+                  "ideas": {
+                    "1": {
+                      "title": "for packet loss and recordering detection",
+                      "id": 81
+                    }
+                  }
+                },
+                "3": {
+                  "title": "payload format",
+                  "id": 82,
+                  "ideas": {
+                    "1": {
+                      "title": "indicates the encoded format of the data",
+                      "id": 83
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "2": {
@@ -252,6 +297,39 @@
               "content": "<span style=\"color: rgb(0, 0, 0); font-family: Times; font-size: medium; line-height: normal;\">RTP is closely associated with the Real Time Control Protocol (RTCP), which operates at the session layer. The primary function of RTCP is \"to provide feedback on the quality of the data distribution,\" allowing actions such as adjusting the data rate.</span>"
             },
             "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "used to periodically send control information and QoS parameters",
+              "id": 76
+            },
+            "0.5": {
+              "title": "control protocol",
+              "id": 84,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "used to specify QoS feedback",
+                  "id": 85
+                },
+                "2": {
+                  "title": "synchronization between the media streams",
+                  "id": 87
+                },
+                "3": {
+                  "title": "bandwidth of RTCP vs RTP",
+                  "id": 88,
+                  "ideas": {
+                    "1": {
+                      "title": "5%",
+                      "id": 89
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "3": {
@@ -286,6 +364,128 @@
             },
             "style": {}
           }
+        },
+        "2.5": {
+          "title": "optional signaling protocol",
+          "id": 90,
+          "ideas": {
+            "1": {
+              "title": "H.323",
+              "id": 91
+            },
+            "2": {
+              "title": "SIP",
+              "id": 92
+            },
+            "3": {
+              "title": "Jingle(XMPP)",
+              "id": 93
+            }
+          }
+        },
+        "2.75": {
+          "title": "optional media description protocol",
+          "id": 94,
+          "ideas": {
+            "1": {
+              "title": "SDP(Session Description Protocol)",
+              "id": 95
+            }
+          }
+        },
+        "2.875": {
+          "title": "Sessions",
+          "id": 96,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">An RTP Session is established for each multimedia stream.&nbsp;</span><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">A session consists of an&nbsp;</span><a href=\"http://en.wikipedia.org/wiki/IP_address\" title=\"IP address\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">IP address</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;with a pair of ports for RTP and RTCP. For example, audio and video streams will have separate RTP sessions, enabling a receiver to deselect</span><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;a particular stream.</span><sup id=\"cite_ref-Zurawski_28_10-0\" class=\"reference\" style=\"line-height: 1; unicode-bidi: -webkit-isolate; font-size: 11.1999998092651px; color: rgb(37, 37, 37); font-family: sans-serif;\"><a href=\"http://en.wikipedia.org/wiki/Real-time_Transport_Protocol#cite_note-Zurawski_28-10\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[10]</a></sup><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;The ports which form a session are negotiated</span><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;using other protocols such as&nbsp;</span><a href=\"http://en.wikipedia.org/wiki/RTSP\" title=\"RTSP\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">RTSP</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;(using&nbsp;</span><a href=\"http://en.wikipedia.org/wiki/Session_Description_Protocol\" title=\"Session Description Protocol\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">SDP</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;in the setup method)</span><sup id=\"cite_ref-11\" class=\"reference\" style=\"line-height: 1; unicode-bidi: -webkit-isolate; font-size: 11.1999998092651px; color: rgb(37, 37, 37); font-family: sans-serif;\"><a href=\"http://en.wikipedia.org/wiki/Real-time_Transport_Protocol#cite_note-11\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[11]</a></sup><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;and SIP. According to the specification, an RTP port&nbsp;</span><i style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">should</i><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;be even</span><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;and the RTCP port is the next higher odd port number.</span><sup id=\"cite_ref-RFC3550_12-0\" class=\"reference\" style=\"line-height: 1; unicode-bidi: -webkit-isolate; font-size: 11.1999998092651px; color: rgb(37, 37, 37); font-family: sans-serif;\"><a href=\"http://en.wikipedia.org/wiki/Real-time_Transport_Protocol#cite_note-RFC3550-12\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[12]</a></sup><sup class=\"reference\" style=\"line-height: 1; unicode-bidi: -webkit-isolate; font-size: 11.1999998092651px; color: rgb(37, 37, 37); font-family: sans-serif; white-space: nowrap;\">:68</sup><sup id=\"cite_ref-14\" class=\"reference\" style=\"line-height: 1; unicode-bidi: -webkit-isolate; font-size: 11.1999998092651px; color: rgb(37, 37, 37); font-family: sans-serif;\"><a href=\"http://en.wikipedia.org/wiki/Real-time_Transport_Protocol#cite_note-14\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[a]</a></sup><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;RTP and RTCP typically use unprivileged</span><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;UDP ports (1024 to 65535),</span><sup id=\"cite_ref-Collins_47_15-0\" class=\"reference\" style=\"line-height: 1; unicode-bidi: -webkit-isolate; font-size: 11.1999998092651px; color: rgb(37, 37, 37); font-family: sans-serif;\"><a href=\"http://en.wikipedia.org/wiki/Real-time_Transport_Protocol#cite_note-Collins_47-15\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[14]</a></sup><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;but may use other transport protocols (most notably,&nbsp;</span><a href=\"http://en.wikipedia.org/wiki/SCTP\" title=\"SCTP\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">SCTP</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;and&nbsp;</span><a href=\"http://en.wikipedia.org/wiki/DCCP\" title=\"DCCP\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">DCCP</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">) as well, as the protocol design is transport independent.</span>"
+            },
+            "style": {}
+          }
+        },
+        "2.9375": {
+          "title": "RTP profiles and payload formats",
+          "id": 97,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;The design of RTP is based on the architectural principle known as</span><a href=\"http://en.wikipedia.org/wiki/Application_level_framing\" title=\"Application level framing\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\" target=\"_blank\">application level framing</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;(ALF). The information required by a specific application's needs is not included in the generic RTP header, but is instead provided through RTP profiles and payload formats</span><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">.</span><div><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\"><br></span></div><div><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">For each class of application (e.g., audio, video), RTP defines a&nbsp;</span><i style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">profile</i><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">&nbsp;and one or more associated&nbsp;</span><i style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">payload formats</i><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">.</span><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\"><br></span></div><div><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\"><br></span></div><div><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\">A complete specification of RTP for a particular application usage will require a profile and payload format specification(s).</span><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14.3999996185303px; line-height: 17.9200000762939px;\"><br></span></div>"
+            },
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "profile",
+              "id": 98,
+              "ideas": {
+                "1": {
+                  "title": "defines the codecs used to encode the payload data and their mapping to payload format codes in the Payload Type (PT) field of the RTP header",
+                  "id": 99
+                }
+              }
+            },
+            "2": {
+              "title": "audio payload formats",
+              "id": 100,
+              "ideas": {
+                "1": {
+                  "title": "G.711",
+                  "id": 102
+                },
+                "2": {
+                  "title": "G.723",
+                  "id": 103
+                },
+                "3": {
+                  "title": "G.726",
+                  "id": 104
+                },
+                "4": {
+                  "title": "G.729",
+                  "id": 105
+                },
+                "5": {
+                  "title": "GSM",
+                  "id": 106
+                },
+                "6": {
+                  "title": "QCELP",
+                  "id": 107
+                },
+                "7": {
+                  "title": "MP3",
+                  "id": 108
+                },
+                "8": {
+                  "title": "DTMF",
+                  "id": 109
+                }
+              }
+            },
+            "3": {
+              "title": " video payload formats",
+              "id": 101,
+              "ideas": {
+                "1": {
+                  "title": "H.261",
+                  "id": 110
+                },
+                "2": {
+                  "title": "H.263",
+                  "id": 111
+                },
+                "3": {
+                  "title": "H.264",
+                  "id": 112
+                },
+                "4": {
+                  "title": "MPEG-4",
+                  "id": 113
+                }
+              }
+            }
+          }
         }
       },
       "attr": {
@@ -309,7 +509,16 @@
       "ideas": {
         "1": {
           "title": "proprietary protocol used primarily by Flash",
-          "id": 44
+          "id": 44,
+          "ideas": {
+            "1": {
+              "title": "developed by Macromedia(owned by Adobe)",
+              "id": 115,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
         },
         "2": {
           "title": "over TCP",
