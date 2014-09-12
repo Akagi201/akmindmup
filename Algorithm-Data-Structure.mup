@@ -1,0 +1,217 @@
+{
+  "title": "Algorithm & Data Structure",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "List of algorithms http://en.wikipedia.org/wiki/List_of_algorithms",
+      "id": 9,
+      "ideas": {
+        "1": {
+          "title": "Combinatorial algorithms",
+          "id": 13
+        },
+        "2": {
+          "title": "Computational mathematics",
+          "id": 14
+        },
+        "3": {
+          "title": "Computational science",
+          "id": 15
+        },
+        "4": {
+          "title": "Computer science",
+          "id": 16
+        },
+        "5": {
+          "title": "Information theory and signal processing",
+          "id": 17
+        },
+        "6": {
+          "title": "Software engineering",
+          "id": 18
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "12": {
+      "title": "List of algorithm general topics http://en.wikipedia.org/wiki/List_of_algorithm_general_topics",
+      "id": 12
+    },
+    "13": {
+      "title": "Online judge",
+      "id": 35,
+      "ideas": {
+        "1": {
+          "title": "LeetCode",
+          "id": 36,
+          "ideas": {
+            "1": {
+              "title": "http://answer.ninechapter.com/",
+              "id": 37
+            },
+            "0.5": {
+              "title": "http://leetcode.com/",
+              "id": 39,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "USACO",
+          "id": 40,
+          "ideas": {
+            "1": {
+              "title": "http://usaco.org",
+              "id": 41
+            }
+          }
+        },
+        "3": {
+          "title": "Codeforces",
+          "id": 42,
+          "ideas": {
+            "1": {
+              "title": "http://codeforces.com/",
+              "id": 43
+            }
+          }
+        },
+        "4": {
+          "title": "Topcoder",
+          "id": 44,
+          "ideas": {
+            "1": {
+              "title": "http://www.topcoder.com/",
+              "id": 45
+            }
+          }
+        }
+      }
+    },
+    "23": {
+      "title": "Book http://book.douban.com/doulist/13279720/",
+      "id": 46
+    },
+    "33": {
+      "title": "MOOC",
+      "id": 47
+    },
+    "43": {
+      "title": "Tools",
+      "id": 48
+    },
+    "53": {
+      "title": "Codes",
+      "id": 49
+    },
+    "63": {
+      "title": "Sites",
+      "id": 50,
+      "ideas": {
+        "1": {
+          "title": "Data Structure Visualizations http://www.cs.usfca.edu/~galles/visualization/Algorithms.html",
+          "id": 51
+        },
+        "2": {
+          "title": "程序员编程艺术 — 面试和算法心得 https://github.com/julycoding/The-Art-Of-Programming-By-July",
+          "id": 53
+        },
+        "3": {
+          "title": "July http://blog.csdn.net/v_JULY_v",
+          "id": 54
+        }
+      }
+    },
+    "-1": {
+      "title": "List of data structures http://en.wikipedia.org/wiki/List_of_data_structures",
+      "id": 10,
+      "ideas": {
+        "1": {
+          "title": "Data types",
+          "id": 30
+        },
+        "2": {
+          "title": "Linear data structures",
+          "id": 31
+        },
+        "3": {
+          "title": "Trees",
+          "id": 32
+        },
+        "4": {
+          "title": "Hashes",
+          "id": 33
+        },
+        "5": {
+          "title": "Graphs",
+          "id": 34
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "-11": {
+      "title": "Lists of mathematics topics http://en.wikipedia.org/wiki/Lists_of_mathematics_topics",
+      "id": 11,
+      "attr": {
+        "style": {},
+        "collapsed": true
+      },
+      "ideas": {
+        "1": {
+          "title": "Areas of basic mathematics",
+          "id": 19
+        },
+        "2": {
+          "title": "Areas of advanced mathematics",
+          "id": 20
+        },
+        "3": {
+          "title": "Methodology",
+          "id": 21
+        },
+        "4": {
+          "title": "Mathematical statements",
+          "id": 22
+        },
+        "5": {
+          "title": "General concepts",
+          "id": 23
+        },
+        "6": {
+          "title": "Mathematical objects",
+          "id": 24
+        },
+        "7": {
+          "title": "Equations named after people",
+          "id": 25
+        },
+        "8": {
+          "title": "About mathematics",
+          "id": 26
+        },
+        "9": {
+          "title": "Reference tables",
+          "id": 27
+        },
+        "10": {
+          "title": "Journals",
+          "id": 28
+        },
+        "11": {
+          "title": "Meta-lists",
+          "id": 29
+        }
+      }
+    }
+  },
+  "links": []
+}
