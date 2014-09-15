@@ -1,0 +1,195 @@
+{
+  "title": "ARM Linux Kernel",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "第一部分 ARM Linux内核 - 分析内核前需要做的准备",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "第1章 内核介绍及2.6版和3.2版 之间的差异",
+          "id": 3,
+          "ideas": {
+            "2": {
+              "title": "历史",
+              "id": 10,
+              "ideas": {
+                "1": {
+                  "title": "Linux早期名称Freax, 内核网站管理员提议改为Linux(Linux is not UNIX)",
+                  "id": 8,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "构建Linux的编译器是linux-gcc, 那么linux-gcc有时用什么编译器构建的呢? https://groups.google.com/forum/#!msg/comp.os.linux/5Rcys5xYuJc/Dpv00xjb5koJ",
+                  "id": 7,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "3": {
+              "title": "子系统",
+              "id": 11,
+              "ideas": {
+                "1": {
+                  "title": "结构依赖代码",
+                  "id": 12,
+                  "ideas": {
+                    "1": {
+                      "title": "代码位于arch目录",
+                      "id": 13
+                    }
+                  }
+                },
+                "2": {
+                  "title": "设备驱动程序",
+                  "id": 14,
+                  "ideas": {
+                    "1": {
+                      "title": "代码位于drivers目录",
+                      "id": 15
+                    },
+                    "2": {
+                      "title": "Linux内核中有一半以上是设备驱动程序代码",
+                      "id": 17
+                    },
+                    "3": {
+                      "title": "Linux通常最先封装最新设备",
+                      "id": 18
+                    }
+                  }
+                },
+                "3": {
+                  "title": "进程管理",
+                  "id": 19,
+                  "ideas": {
+                    "1": {
+                      "title": "代码位于kernel目录下",
+                      "id": 20
+                    }
+                  }
+                },
+                "4": {
+                  "title": "内存管理",
+                  "id": 21,
+                  "ideas": {
+                    "1": {
+                      "title": "代码位于mm目录下",
+                      "id": 22
+                    }
+                  }
+                },
+                "5": {
+                  "title": "虚拟文件系统",
+                  "id": 23,
+                  "ideas": {
+                    "1": {
+                      "title": "该系统将多种文件系统抽象化, 从而提供共通的接口.",
+                      "id": 24
+                    }
+                  }
+                },
+                "6": {
+                  "title": "网络子系统",
+                  "id": 25
+                },
+                "7": {
+                  "title": "系统调用接口",
+                  "id": 26,
+                  "ideas": {
+                    "1": {
+                      "title": "代码位于linux/kernel或linux/arch目录下",
+                      "id": 27
+                    }
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "单内核 vs 微内核",
+              "id": 28,
+              "ideas": {
+                "1": {
+                  "title": "单内核",
+                  "id": 29,
+                  "ideas": {
+                    "1": {
+                      "title": "所有内核服务均再内核地址空间中存在并运行. 直接调出内核服务",
+                      "id": 31,
+                      "ideas": {}
+                    }
+                  }
+                },
+                "2": {
+                  "title": "微内核",
+                  "id": 30,
+                  "ideas": {
+                    "1": {
+                      "title": "内核服务中一部分位于用户空间. 利用消息传送方式调用内核服务",
+                      "id": 33
+                    },
+                    "2": {
+                      "title": "跟HAL类似?",
+                      "id": 34
+                    }
+                  }
+                },
+                "3": {
+                  "title": "HAL vs BSP",
+                  "id": 35,
+                  "ideas": {
+                    "1": {
+                      "title": "架构",
+                      "id": 36,
+                      "ideas": {
+                        "1": {
+                          "title": "hardware -> BSP -> OS -> HAL -> Application",
+                          "id": 37
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "HAL就是对OS提供的文件系统进一步的抽象",
+                      "id": 38
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<span style=\"color: rgb(0, 0, 0); font-family: song, Verdana; line-height: 22.3999996185303px;\">HAL指的是hardware abstract layer;是application根据自己的平台配置提供的一层封装，目的是是上层的application能在不同的平台和配置上方便移植。应由用户自己实现，open source 基本上不提供这一层。HAL给application提供的API完全由application决定.没有一个供应商能提供一个HAL让所有或大部分application满意。如果他们为不同application提供不同的 HAL， HAL就显得混乱。 还有一般Application的API，公司也是保密的，不愿意公开。</span><br style=\"word-wrap: break-word; color: rgb(0, 0, 0); font-family: song, Verdana; line-height: 22.3999996185303px;\"><span style=\"color: rgb(0, 0, 0); font-family: song, Verdana; line-height: 22.3999996185303px;\">BSP倒是有一些，这是提供hardware和OS之间的一层，都在open source里。 BSP的出现是为了OS能在不同平台配置之间方便移植。</span><div><span style=\"color: rgb(0, 0, 0); font-family: song, Verdana; line-height: 22.3999996185303px;\"><br></span></div><div><table cellspacing=\"0\" cellpadding=\"0\" style=\"word-wrap: break-word; empty-cells: show; table-layout: fixed; width: 1129px; color: rgb(0, 0, 0); font-family: song, Verdana; font-size: 12px; line-height: normal; background-color: rgb(240, 243, 250);\"><tbody style=\"word-wrap: break-word;\"><tr style=\"word-wrap: break-word;\"><td class=\"t_f\" id=\"postmessage_21915559\" style=\"word-wrap: break-word; font-size: 14px; line-height: 1.6em;\">Android的HAL就是很普通的中间层。它只不过把已经抽象的东西再抽象一次。硬件被操作系统抽象了，在LINUX中大抵体现在FS上。一般的情况是，操作系统对各种硬件作出统一接口设计，驱动程序实现这个接口。应用程序通过文件接口，继而通过驱动程序，操作硬件。所以驱动程序，广义上是让硬件工作的代码，狭义上是实现操作系统为此类硬件设计且期望的接口。<br style=\"word-wrap: break-word;\"><br style=\"word-wrap: break-word;\">应用层看不到硬件或者驱动上的差别，因为它们最终呈现出的接口是一样的。而Android的hal则将这种机制再抽象一层：上层连文件系统接口都看不到了，只看得到Android设计的一套接口。这套接口在Linux上可能是对文件结点操作，如果有可以在其它操作系统上实现，也许会有其它形式。总之，跟之前的抽象一样，由于只看得到接口，因此只使用接口，只假定接口，接口以下的实现就不管了。针对接口操作，针对接口编程。<br style=\"word-wrap: break-word;\"><br style=\"word-wrap: break-word;\">另外，HAL层在用户态的一个好处是，可以以闭源形式发布”驱动”。内核中的驱动代码仅暴露出基本的读写寄存器接口，这部分可以公开。而直正读写寄存器操作硬件的逻辑则在HAL层里实现，这部分则闭源发布二进制。<br><br><span style=\"word-wrap: break-word; font-weight: 700; line-height: 22.3999996185303px; background-color: rgb(255, 255, 255);\">我看过一些android架构介绍文档，基本上驱动都是放在内核态<br style=\"word-wrap: break-word;\"><br style=\"word-wrap: break-word;\">linux本身也支持用户态驱动，比如framne buffer,但是linux的各种设备驱动基本上都是放在内核态中的。把所有驱动都放在用户态，这对linux等OS来说是极大的改动，甚至是成为基本的微内核架构，不是简单一个HAL就能搞定的，如果网卡驱动放到了用户态，那么协议栈是不是也要放到用户态？<br></span><br><span style=\"line-height: 22.3999996185303px;\">我做这个比较少，但恰好见过Marvell某平台的Camera HAL就是如此。内核态驱动就暴露一个文件结点，用IOCTL给它发命令，GET_REG,SET_REG等，所有的逻辑，比如说怎么设分辨率，怎么设曝光补偿，怎么设饱和度，怎么设情景模式，全在HAL层做，或者说在HAL层与驱动层中间那个层做。它确实是一个层了，这个层比Android Camera Framework层还要复杂一点，比这个Camera内核态V4l2的驱动要复杂很多很多很多。</span><br style=\"word-wrap: break-word; line-height: 22.3999996185303px;\"><br style=\"word-wrap: break-word; line-height: 22.3999996185303px;\"><span style=\"line-height: 22.3999996185303px;\">至于不开源是为为了保护什么，我也不知道。像Windows这种大东西，它也不想发布源代码，也不至于用代码加密来保护吧，这可比加密驱动的后果要严重的多。</span><br style=\"word-wrap: break-word; line-height: 22.3999996185303px;\"><br style=\"word-wrap: break-word; line-height: 22.3999996185303px;\"><span style=\"line-height: 22.3999996185303px;\">frame buffer已经不叫用户态驱动了，它内核规划的接口，驱动要实现这些接口功能。所谓用户态驱动，一般是说能在用户态操作硬件的。比如说I2C控制器，在内核态暴露接口，这个跟frame buffer有点像，但我通过这个文件接口可以向设备发消息。比如今天在这个I2C控制器上接了一个EEPROM，我拿着DATASHEET，在用户态就可以向它发命令，读写数据；明天在这个I2C控制器上接一个温度传感器，对着DATASHEET，我又可以在用户态读取温度。操作EEPROM，温度传感器的代码这时可全在用户态，这叫用户态驱动才恰当。甚至USB驱动也可以这样做，那可是万万千千的USB设备啊！我经历过的例子是三星的DNW，最早见到Linux下的版本由内核态驱动与用户态程序组成。可想而知编译内核模块多不方便。后来见到了完全在用户态实现的驱动，用户态编译一下，作为一个普通的用户态程序就可以用了，甚是方便。我自己甚至用Python写了DNW驱动+程序，总代码才40多行，这种层次的跳跃多么便利！</span><br style=\"word-wrap: break-word; line-height: 22.3999996185303px;\"><br style=\"word-wrap: break-word; line-height: 22.3999996185303px;\"><span style=\"line-height: 22.3999996185303px;\">努力使用户态驱动变得可能，只是让人有这种选择而已，似乎不是一种趋势。</span><br style=\"word-wrap: break-word; line-height: 22.3999996185303px;\"><br style=\"word-wrap: break-word; line-height: 22.3999996185303px;\"><span style=\"line-height: 22.3999996185303px;\">我写过Android APP。HAL不是为直接APP服务的，简单的说，Android中间层是Framework层，其大部分代码都是用Java写的。其中一部分类暴露出来可以被APP导入使用，大多数类都在后面经过层层抽象，协助暴露出的接口类完成任务。Framework有一小部分是C++代码，主要是为了和HAL层交互。不管再怎么抽象统一，最终落实下来，不同的硬件肯定要有不同的处理方法。从C++写的Framework到HAL后，路就分叉了。Android的Framework给APP抽象了一套接口，而这些接口的实现，平台无关的部分都已做完，平台相关的就滑到HAL里去了。所以HAL跟APP没有直接关系。<br></span><br><span style=\"line-height: 22.3999996185303px;\">是的，就我举的那个例子而言，每一次IOCTRL自然是要陷入内核的。至于权限问题，我没想过，但Android用的是C/S模式，虽然每个程序(或者说acitiviy)都是一个独立的进程，它使用android提供的类并非直接与HAL层交互。比如camera相关类的拍照方法，sensor相关类得到数据的方法，这些方法无非是些被虚拟机执行的字节码，但字节码引起结果并非直接奔向HAL，而是奔向S。也就是说，APP调用的方法看起来执行了硬件相关操作，其实只是向特定的S发了一条消息而已。不同的硬件有不同的抽象，但肯定会有一个S。这个S可能是一个独立的进程，可能是一个进程内的线程之一。实际上，大部分情况是后者。所以S是非常有限且特定的，HAL以库的形式融于S所在进程之中，那么权限问题仅与几个特定进程有关。<br></span><br><span style=\"line-height: 22.3999996185303px; background-color: rgb(255, 255, 255);\">与操作系统紧密相关的东西不可避免要出现在内核态。我举Marvell某平台应该是个极端例子。话说回来，通行的说法是，HAL层是Google为了响应硬件厂商想绕过GPL作出来的，其实就算没有这种事，总会有个像HAL一样的中间层存在。就像我之前说的，再怎么抽象，最终落实下来，还是要面对不同平台需要不同处理。隔离可变的，平台相关的东西，最简单的方法就是插入中间层。就算是为了便于Android在不同平台上的实现，也一定会有HAL这种东西。</span><br style=\"word-wrap: break-word; line-height: 22.3999996185303px; background-color: rgb(255, 255, 255);\"><br style=\"word-wrap: break-word; line-height: 22.3999996185303px; background-color: rgb(255, 255, 255);\"><span style=\"line-height: 22.3999996185303px; background-color: rgb(255, 255, 255);\">到底有多少厂家真得用HAL来隐藏自己驱动的逻辑呢？我所接触平台不多，但正好碰到一个这样搞的。也做过x86平台的Android，它的HAL层就很干净。<br></span><br>## Refs<br>* &lt;http://bbs.chinaunix.net/thread-3675980-1-1.html&gt;</td></tr></tbody></table></div>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "第2章 内核构建系统",
+          "id": 4
+        },
+        "3": {
+          "title": "第3章 了解ARM处理器",
+          "id": 5
+        },
+        "4": {
+          "title": "第4章 构建分析环境",
+          "id": 6
+        }
+      },
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "Linux 内核源代码即使压缩后也超过了70MB. &lt;https://www.kernel.org&gt; 此时, 3.16.2内核源码压缩包大小76.8MB"
+        },
+        "style": {}
+      }
+    }
+  },
+  "links": []
+}
