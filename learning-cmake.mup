@@ -9,7 +9,25 @@
       "ideas": {
         "1": {
           "title": "For cross platform projects, as a unified build system.",
-          "id": 3
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "the ability to test for machine byte order and other hardware specific characteristics.",
+              "id": 17
+            },
+            "2": {
+              "title": "A single set of build configuration files that work on all platforms.",
+              "id": 18
+            },
+            "3": {
+              "title": "Support for building shared libraries on all platforms that support it.",
+              "id": 19
+            },
+            "4": {
+              "title": "The ability to configure files with system dependent information such as the loation of data files and other information.",
+              "id": 20
+            }
+          }
         },
         "2": {
           "title": "single platform multi-machine development environments",
@@ -41,6 +59,10 @@
                   "title": "These commands are used to generate new source files during the build process that are in turn compiled into the software",
                   "id": 10
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
             "4": {
@@ -50,6 +72,28 @@
             "5": {
               "title": "the ability to automatically generate workspaces and projects from a simple text file",
               "id": 12
+            },
+            "6": {
+              "title": "the ability to easily switch between static and shared builds.",
+              "id": 13,
+              "ideas": {
+                "1": {
+                  "title": "CMake knows how to create shared libraries and modules on all platforms supported.",
+                  "id": 14
+                },
+                "2": {
+                  "title": "Complicated platform-specific linker flags are handled",
+                  "id": 15
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "Automatic generation of file dependencies and support for parallel builds on most platforms.",
+              "id": 16
             }
           },
           "attr": {
@@ -60,11 +104,101 @@
             ],
             "style": {}
           }
+        },
+        "3": {
+          "title": "CTest",
+          "id": 22
+        },
+        "4": {
+          "title": "CPack",
+          "id": 23
         }
       },
       "attr": {
-        "style": {}
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "11": {
+      "title": "Chapter2.  Getting Started",
+      "id": 25,
+      "ideas": {
+        "1": {
+          "title": "command form",
+          "id": 26,
+          "ideas": {
+            "1": {
+              "title": "command (args...)",
+              "id": 27
+            },
+            "2": {
+              "title": "command is case insensitive",
+              "id": 28
+            }
+          }
+        },
+        "2": {
+          "title": "variable",
+          "id": 29,
+          "ideas": {
+            "1": {
+              "title": "string",
+              "id": 30
+            },
+            "2": {
+              "title": "list of string",
+              "id": 31
+            },
+            "3": {
+              "title": "referenced",
+              "id": 32,
+              "ideas": {
+                "1": {
+                  "title": "${VAR}",
+                  "id": 33
+                }
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "Multiple arguments",
+          "id": 34,
+          "ideas": {
+            "1": {
+              "title": "set command",
+              "id": 35
+            }
+          }
+        },
+        "4": {
+          "title": "System environment variables and Windows registry values can be accessed directly in CMake.",
+          "id": 36,
+          "ideas": {
+            "1": {
+              "title": "access system environment variables",
+              "id": 37,
+              "ideas": {
+                "1": {
+                  "title": "$ENV{VAR}",
+                  "id": 38
+                }
+              }
+            },
+            "2": {
+              "title": "reference registry entries",
+              "id": 39,
+              "ideas": {
+                "1": {
+                  "title": "[HKEY_CURRENT_USER\\\\Software\\\\paath1\\\\path2; key]",
+                  "id": 40
+                }
+              }
+            }
+          }
+        }
       }
     }
-  }
+  },
+  "links": []
 }
