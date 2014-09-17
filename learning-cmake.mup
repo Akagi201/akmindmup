@@ -1,0 +1,70 @@
+{
+  "title": "learning cmake",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Chapter 1. Why cmake?",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "For cross platform projects, as a unified build system.",
+          "id": 3
+        },
+        "2": {
+          "title": "single platform multi-machine development environments",
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "the ability to automatically search for programs, libraries, and header files that may be required by the software being built.",
+              "id": 5,
+              "ideas": {
+                "1": {
+                  "title": "the ability to consider environment variables",
+                  "id": 6
+                },
+                "2": {
+                  "title": "Window's registry settings when searching",
+                  "id": 7
+                }
+              }
+            },
+            "2": {
+              "title": "the ability to build in a directory tree outside of the source tree.",
+              "id": 8
+            },
+            "3": {
+              "title": "the ability to create complex custom commands for automatically generated files such as Qt's moc, the insight toolkit's CABLE wrappers and SWIG wrapper generators.",
+              "id": 9,
+              "ideas": {
+                "1": {
+                  "title": "These commands are used to generate new source files during the build process that are in turn compiled into the software",
+                  "id": 10
+                }
+              }
+            },
+            "4": {
+              "title": "the ability to select optional components at configuration time",
+              "id": 11
+            },
+            "5": {
+              "title": "the ability to automatically generate workspaces and projects from a simple text file",
+              "id": 12
+            }
+          },
+          "attr": {
+            "position": [
+              170.5,
+              144.5,
+              1
+            ],
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    }
+  }
+}

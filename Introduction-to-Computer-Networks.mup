@@ -1,0 +1,1039 @@
+{
+  "title": "Introduction to Computer Networks",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "0.5": {
+      "title": "Foundation",
+      "id": 5,
+      "attr": {
+        "position": [
+          132,
+          -105,
+          1
+        ],
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Applications",
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "Application Protocol",
+              "id": 10,
+              "ideas": {
+                "1": {
+                  "title": "URL",
+                  "id": 11,
+                  "ideas": {
+                    "1": {
+                      "title": "Uniform Resource Locater",
+                      "id": 12
+                    },
+                    "2": {
+                      "title": "http://www.sharecourse.net/sharecourse/",
+                      "id": 13
+                    }
+                  }
+                },
+                "2": {
+                  "title": "HTTP",
+                  "id": 14,
+                  "ideas": {
+                    "1": {
+                      "title": "Hyper Text Transfer Protocol",
+                      "id": 15
+                    }
+                  }
+                },
+                "3": {
+                  "title": "TCP",
+                  "id": 16,
+                  "ideas": {
+                    "1": {
+                      "title": "Transmission Control Protocol",
+                      "id": 17
+                    },
+                    "2": {
+                      "title": "建连线",
+                      "id": 18
+                    }
+                  }
+                },
+                "4": {
+                  "title": "17messages for one URL request",
+                  "id": 19,
+                  "ideas": {
+                    "1": {
+                      "title": "6 to find the IP(Internet Protocol) address",
+                      "id": 20
+                    },
+                    "2": {
+                      "title": "3 for connection establishment of TCP",
+                      "id": 21
+                    },
+                    "3": {
+                      "title": "4 for HTTP request and acknowledgement",
+                      "id": 22,
+                      "ideas": {
+                        "1": {
+                          "title": "Request: I got your request and I will send the data.",
+                          "id": 24
+                        },
+                        "2": {
+                          "title": "Reply: Here is the data you requested; I got the data",
+                          "id": 25
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "4 messages for tearing down TCP connection",
+                      "id": 23
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Network Connectivity",
+          "id": 7,
+          "ideas": {
+            "1": {
+              "title": "Important terminologies",
+              "id": 26,
+              "ideas": {
+                "1": {
+                  "title": "Link",
+                  "id": 27,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "Nodes",
+                  "id": 28
+                },
+                "3": {
+                  "title": "Point-to-point",
+                  "id": 29
+                },
+                "4": {
+                  "title": "Multiple access",
+                  "id": 30
+                },
+                "5": {
+                  "title": "Switched Network",
+                  "id": 31,
+                  "ideas": {
+                    "1": {
+                      "title": "Circuit Switched",
+                      "id": 34
+                    },
+                    "2": {
+                      "title": "Packet Switched",
+                      "id": 35
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Packet, message",
+                  "id": 32
+                },
+                "7": {
+                  "title": "Store-and-forward",
+                  "id": 33
+                },
+                "8": {
+                  "title": "Hosts",
+                  "id": 37
+                },
+                "9": {
+                  "title": "Switches",
+                  "id": 38
+                },
+                "10": {
+                  "title": "Spanning tree",
+                  "id": 39
+                },
+                "11": {
+                  "title": "internetwork",
+                  "id": 40
+                },
+                "12": {
+                  "title": "Router/gateway",
+                  "id": 41
+                },
+                "13": {
+                  "title": "Host-to-host connectivity",
+                  "id": 42
+                },
+                "14": {
+                  "title": "Address",
+                  "id": 43
+                },
+                "15": {
+                  "title": "Routing",
+                  "id": 44
+                },
+                "16": {
+                  "title": "Unicast / broadcast / multicast",
+                  "id": 45
+                },
+                "17": {
+                  "title": "LAN(Local Area Networks)",
+                  "id": 46
+                },
+                "18": {
+                  "title": "MAN(Metropolitan Area Networks)",
+                  "id": 47
+                },
+                "19": {
+                  "title": "WAN(Wide Area Networks)",
+                  "id": 48
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Cost-Effective Resource Sharing",
+              "id": 49,
+              "ideas": {
+                "1": {
+                  "title": "Resource: links and nodes",
+                  "id": 50
+                },
+                "2": {
+                  "title": "How to share a link?",
+                  "id": 51,
+                  "ideas": {
+                    "1": {
+                      "title": "Multiplexing",
+                      "id": 52,
+                      "ideas": {
+                        "1": {
+                          "title": "Multiple logical flows over a single physical link",
+                          "id": 54
+                        },
+                        "2": {
+                          "title": "FDM",
+                          "id": 55,
+                          "ideas": {
+                            "1": {
+                              "title": "Frequency Division Multiplexing",
+                              "id": 56
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "TDM",
+                          "id": 57,
+                          "ideas": {
+                            "1": {
+                              "title": "Synchronous Time-division Multiplexing",
+                              "id": 58
+                            },
+                            "2": {
+                              "title": "TIme slots/data transmitted in predetermined slots",
+                              "id": 59
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "Statistical Multiplexing",
+                          "id": 60,
+                          "ideas": {
+                            "1": {
+                              "title": "Data is transmitted based on demand of each flow.",
+                              "id": 61
+                            },
+                            "2": {
+                              "title": "What is a flow?",
+                              "id": 62
+                            },
+                            "3": {
+                              "title": "Packets vs Messages",
+                              "id": 63
+                            },
+                            "4": {
+                              "title": "FIFO, Round-Robin, Priorities(Quality-of-Service (QoS))",
+                              "id": 64
+                            },
+                            "5": {
+                              "title": "Congested?",
+                              "id": 65
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "De-multiplexing",
+                      "id": 53
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Logical Channels",
+              "id": 66,
+              "ideas": {
+                "1": {
+                  "title": "Application-to-Application communication path or a pipe",
+                  "id": 67
+                },
+                "2": {
+                  "title": "Process communicating over an abstract channel",
+                  "id": 68
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "Network Reliability",
+              "id": 69,
+              "ideas": {
+                "1": {
+                  "title": "Network should hide the errors",
+                  "id": 70
+                },
+                "2": {
+                  "title": "Bits are lost",
+                  "id": 71,
+                  "ideas": {
+                    "1": {
+                      "title": "Bit errors(1 to 0, and vice versa)",
+                      "id": 77
+                    },
+                    "2": {
+                      "title": "Burst errors - serveral consecutive errors",
+                      "id": 78
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Packets are lost(Congestion)",
+                  "id": 72
+                },
+                "4": {
+                  "title": "Links and Node failures",
+                  "id": 73
+                },
+                "5": {
+                  "title": "Messages are delayed",
+                  "id": 74
+                },
+                "6": {
+                  "title": "Messages are delivered out-of-order",
+                  "id": 75
+                },
+                "7": {
+                  "title": "Third parties eavesdrop",
+                  "id": 76
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Network Architecture",
+          "id": 8,
+          "ideas": {
+            "1": {
+              "title": "Example of a layered network system",
+              "id": 79,
+              "ideas": {
+                "1": {
+                  "title": "Application Programs",
+                  "id": 80
+                },
+                "2": {
+                  "title": "Process-to-process Channels",
+                  "id": 81
+                },
+                "3": {
+                  "title": "Host-to-Host Connectivity",
+                  "id": 82
+                },
+                "4": {
+                  "title": "Hardware",
+                  "id": 83
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Protocols",
+              "id": 84,
+              "ideas": {
+                "1": {
+                  "title": "Protocol defines the interfaces between",
+                  "id": 85,
+                  "ideas": {
+                    "1": {
+                      "title": "the layers in the same system and with",
+                      "id": 86
+                    },
+                    "2": {
+                      "title": "the layers of peer system",
+                      "id": 87
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Building blocks of a network architecture",
+                  "id": 88
+                },
+                "3": {
+                  "title": "Each protocol objects has two different interfaces",
+                  "id": 89,
+                  "ideas": {
+                    "1": {
+                      "title": "Service interface : operations on this protocol",
+                      "id": 90
+                    },
+                    "2": {
+                      "title": "Peer-to-peer interface: messages exchanged with peer",
+                      "id": 91
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Protocol Specification",
+                  "id": 92,
+                  "ideas": {
+                    "1": {
+                      "title": "pseudo-code, state transition diagram, message format",
+                      "id": 93
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Interoperable",
+                  "id": 95,
+                  "ideas": {
+                    "1": {
+                      "title": "when two or more protocol that implement the specification accurately",
+                      "id": 96
+                    }
+                  }
+                },
+                "6": {
+                  "title": "IETF: Internet Engineering Task Force",
+                  "id": 97,
+                  "ideas": {
+                    "1": {
+                      "title": "Define Internet standard protocols",
+                      "id": 98
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Encapsulation",
+              "id": 99,
+              "ideas": {
+                "1": {
+                  "title": "High-level messages are encapsulated inside of low-level messages.",
+                  "id": 100
+                }
+              }
+            },
+            "4": {
+              "title": "OSI Architecture",
+              "id": 101,
+              "ideas": {
+                "1": {
+                  "title": "Open Systems Interconnection",
+                  "id": 102
+                },
+                "2": {
+                  "title": "The OSI 7-layer Model",
+                  "id": 103,
+                  "ideas": {
+                    "1": {
+                      "title": "Application",
+                      "id": 104,
+                      "ideas": {
+                        "1": {
+                          "title": "Standardize common type of exchanges",
+                          "id": 148
+                        },
+                        "2": {
+                          "title": "FTP / E-mail / DNS / HTTP  / Browsers / FB, ...",
+                          "id": 149
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Presentation",
+                      "id": 105,
+                      "ideas": {
+                        "1": {
+                          "title": "Concerned about the format of data exchanged between peers",
+                          "id": 147
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Session",
+                      "id": 106,
+                      "ideas": {
+                        "1": {
+                          "title": "Provides a name space that is used to tie together the potentially different transport streams that are part of a single application",
+                          "id": 146
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Transport",
+                      "id": 107,
+                      "ideas": {
+                        "1": {
+                          "title": "提供不同主机processes之间的资料传送",
+                          "id": 141
+                        },
+                        "2": {
+                          "title": "Implements a process-to-process channel",
+                          "id": 142
+                        },
+                        "3": {
+                          "title": "Unit of data exchanges in this layer is called a message",
+                          "id": 143
+                        },
+                        "4": {
+                          "title": "TCP(Transmission COntrol Protocol) - Reliable service",
+                          "id": 144
+                        },
+                        "5": {
+                          "title": "UDP(User Datagram Protocol) - Unreliable service",
+                          "id": 145
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "Network",
+                      "id": 108,
+                      "ideas": {
+                        "1": {
+                          "title": "如何将封包透过Internet送给目的地主机",
+                          "id": 130
+                        },
+                        "2": {
+                          "title": "How to transmit frames to a host via the Internet?",
+                          "id": 131
+                        },
+                        "3": {
+                          "title": "Handles routing among nodes within a packet-switched network",
+                          "id": 132
+                        },
+                        "4": {
+                          "title": "Data exchanged between nodes in this layer is called a packet",
+                          "id": 133
+                        },
+                        "5": {
+                          "title": "IP protocol",
+                          "id": 134
+                        },
+                        "6": {
+                          "title": "Routers",
+                          "id": 135
+                        },
+                        "7": {
+                          "title": "Routing protocols",
+                          "id": 136,
+                          "ideas": {
+                            "1": {
+                              "title": "RIP",
+                              "id": 137
+                            },
+                            "2": {
+                              "title": "OSPF",
+                              "id": 138
+                            },
+                            "3": {
+                              "title": "BGP",
+                              "id": 139
+                            }
+                          }
+                        },
+                        "8": {
+                          "title": "Routing Tables",
+                          "id": 140
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "6": {
+                      "title": "Data Link",
+                      "id": 109,
+                      "ideas": {
+                        "1": {
+                          "title": "如何将frame传给直接相连的主机或设备",
+                          "id": 119
+                        },
+                        "2": {
+                          "title": "Collects a stream of bits into a frame",
+                          "id": 120
+                        },
+                        "3": {
+                          "title": "How to transmit a frame to a directly connected host(destination)?",
+                          "id": 121,
+                          "ideas": {
+                            "1": {
+                              "title": "Point-to-point",
+                              "id": 128
+                            },
+                            "2": {
+                              "title": "Multiple access",
+                              "id": 129
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "MAC(Media Access Control Protocol)",
+                          "id": 122,
+                          "ideas": {
+                            "1": {
+                              "title": "CSMA/CD (IEEE 802.3 Ethernet)",
+                              "id": 123
+                            },
+                            "2": {
+                              "title": "CSMA/CA (IEEE 802.11 Wireless LAN)",
+                              "id": 124
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "Layer 2 devices",
+                          "id": 125
+                        },
+                        "6": {
+                          "title": "Switches",
+                          "id": 126
+                        },
+                        "7": {
+                          "title": "Bridges",
+                          "id": 127
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "7": {
+                      "title": "Physics",
+                      "id": 110,
+                      "ideas": {
+                        "1": {
+                          "title": "如何将原始资料在link上传输",
+                          "id": 111
+                        },
+                        "2": {
+                          "title": "Handles the transmission of raw bits over a communication link",
+                          "id": 112,
+                          "ideas": {
+                            "1": {
+                              "title": "Coaxial cable",
+                              "id": 118,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "Twisted pair",
+                              "id": 115
+                            },
+                            "3": {
+                              "title": "Optical Fiber",
+                              "id": 116
+                            },
+                            "4": {
+                              "title": "Air space(wireless radio channel)",
+                              "id": 117
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Different Signal Coding schemes",
+                          "id": 113
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4.5": {
+                      "title": "The transport layer and the higher layers typically run only on end-hosts and not on the intermediate switches and routers",
+                      "id": 150
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "5": {
+              "title": "Internet Architecture",
+              "id": 151,
+              "ideas": {
+                "1": {
+                  "title": "Defined by IETF",
+                  "id": 152
+                },
+                "2": {
+                  "title": "Three main features",
+                  "id": 153,
+                  "ideas": {
+                    "1": {
+                      "title": "Does not imply strict layering.",
+                      "id": 154,
+                      "ideas": {
+                        "1": {
+                          "title": "The application is free to bypass the defined transport layers and to directly use IP or other underlying networks",
+                          "id": 155
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "An hour-glass shape",
+                      "id": 156,
+                      "ideas": {
+                        "1": {
+                          "title": "wide at the top, narrow in the middle and wide at the bottom. IP serves as the focal point for the architecture",
+                          "id": 157
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "In order for a new protocol to be officially included in the architecture, there needs to be both a protocol specification and at least one(and preferably two) representative implementations of the specification",
+                      "id": 158
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Network Performace",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "Bandwidth",
+              "id": 159,
+              "ideas": {
+                "1": {
+                  "title": "Width of the frequency band",
+                  "id": 160
+                },
+                "2": {
+                  "title": "Number of bits per second that can be transmitted over a communication link",
+                  "id": 161
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "1Mbps: 1*10^6 bits/second",
+              "id": 162
+            },
+            "3": {
+              "title": "1*10^-6 seconds to transmit each bit or imagine that a timeline, now each bit occupies 1 micro second space.",
+              "id": 163
+            },
+            "4": {
+              "title": "On a 2 Mbps link the width is 0.5 micro seconds",
+              "id": 164
+            },
+            "5": {
+              "title": "Smaller the width more will be transmission per unit time.",
+              "id": 165
+            },
+            "6": {
+              "title": "Bits transmitted at a particular bandwidth can be regarded as having some width",
+              "id": 166
+            },
+            "7": {
+              "title": "Latency = Propagation time + Transmission time + queuing time",
+              "id": 167
+            },
+            "8": {
+              "title": "Propagation time = distance / speed of light",
+              "id": 168
+            },
+            "9": {
+              "title": "Transmission time  = size / bandwidth",
+              "id": 169
+            },
+            "10": {
+              "title": "One bit transmission => propagation is important",
+              "id": 170,
+              "ideas": {
+                "1": {
+                  "title": "短资料很快就送完, 但需要长时间才能传到对方, 资料送完, 但签到资料还未到达对方",
+                  "id": 171,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "Propagation time >> transmission time",
+                  "id": 173
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "11": {
+              "title": "Large bytes transmission => bandwidth is important",
+              "id": 174,
+              "ideas": {
+                "1": {
+                  "title": "长资料很慢才能送完, 未送完前, 前导资料已到对方",
+                  "id": 175
+                },
+                "2": {
+                  "title": "Transmission time >> Propagation time",
+                  "id": 176
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "12": {
+              "title": "Delay * Bandwidth",
+              "id": 177,
+              "ideas": {
+                "1": {
+                  "title": "The channel between a pair of processes can be viewed as a pipe",
+                  "id": 178
+                },
+                "2": {
+                  "title": "Latency(delay): length of the pipe",
+                  "id": 179
+                },
+                "3": {
+                  "title": "Bandwidth: width of the pipe",
+                  "id": 180
+                },
+                "4": {
+                  "title": "Delay * Bandwidth means how many data can be stored in the pipe",
+                  "id": 181
+                },
+                "5": {
+                  "title": "For example, delay of 80 ms and bandwidth of 100 Mbps",
+                  "id": 182,
+                  "ideas": {
+                    "1": {
+                      "title": "80*10^-3 seconds * 100 * 10^6 bits/second",
+                      "id": 183
+                    },
+                    "2": {
+                      "title": "8*10^6bits = 8M bits = 1MB data",
+                      "id": 184
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "Relative importance of bandwidth and latency depends on application",
+                  "id": 185,
+                  "ideas": {
+                    "1": {
+                      "title": "For large file transfer, bandwidth is critical",
+                      "id": 186
+                    },
+                    "2": {
+                      "title": "For small messages(HTTP, NFS, etc), latency is critical",
+                      "id": 187
+                    },
+                    "3": {
+                      "title": "Variance in latency(jitter) can also affect some applications (e.g. audio/video conferencing)",
+                      "id": 188
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "if the sender keeps the pipe full, delay * bandwidth is the number of bits the sender must transmit before the first bit arrives at the receiver",
+                  "id": 189
+                },
+                "8": {
+                  "title": "Takes another one-way latency to receive a response from the receiver",
+                  "id": 190
+                },
+                "9": {
+                  "title": "The sender will not fully utilize the network if the sender does not fill the pipe",
+                  "id": 191,
+                  "ideas": {
+                    "1": {
+                      "title": "send a whole delay * bandwidth product's worth of data before it stops to wait for a signal",
+                      "id": 192
+                    },
+                    "2": {
+                      "title": "在停下来等对方回应之前应该要传送delay *  bandwidth的资料量",
+                      "id": 193
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "13": {
+              "title": "Throughput",
+              "id": 194,
+              "ideas": {
+                "1": {
+                  "title": "Infinite bandwidth",
+                  "id": 195,
+                  "ideas": {
+                    "1": {
+                      "title": "RTT(Round Trip Time) dominates",
+                      "id": 196
+                    },
+                    "2": {
+                      "title": "Throughput = TransferSize / TransferTime",
+                      "id": 197
+                    },
+                    "3": {
+                      "title": "TransferTime = RTT + TransferSize / Bandwidth",
+                      "id": 198
+                    },
+                    "4": {
+                      "title": "It's all relative",
+                      "id": 199
+                    },
+                    "5": {
+                      "title": "1-MB file to 1-Gbps link looks like a 1 KB packet to 1-Mbps link",
+                      "id": 200
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Summary",
+          "id": 201,
+          "ideas": {
+            "1": {
+              "title": "A layered architecture for computer network",
+              "id": 202,
+              "ideas": {
+                "1": {
+                  "title": "Physical Layer",
+                  "id": 203
+                },
+                "2": {
+                  "title": "Data Link Layer",
+                  "id": 204
+                },
+                "3": {
+                  "title": "Network Layer",
+                  "id": 205
+                },
+                "4": {
+                  "title": "Transport Layer",
+                  "id": 206
+                },
+                "5": {
+                  "title": "Session Layer / Presentation Layer / Application Layer",
+                  "id": 207
+                }
+              }
+            },
+            "2": {
+              "title": "Two performace metrics used to analyze the performance of computer networks",
+              "id": 208,
+              "ideas": {
+                "1": {
+                  "title": "Bandwidth",
+                  "id": 209
+                },
+                "2": {
+                  "title": "Delay",
+                  "id": 210
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": []
+}
