@@ -1,0 +1,1633 @@
+{
+  "title": "Learn Datastructure",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "10": {
+      "title": "前言",
+      "id": 31,
+      "ideas": {
+        "1": {
+          "title": "知识储备",
+          "id": 2,
+          "ideas": {
+            "1": {
+              "title": "C++语言程序设计基础",
+              "id": 3,
+              "ideas": {
+                "1": {
+                  "title": "类",
+                  "id": 6
+                },
+                "2": {
+                  "title": "继承",
+                  "id": 7
+                },
+                "3": {
+                  "title": "重载",
+                  "id": 8
+                },
+                "4": {
+                  "title": "重写",
+                  "id": 9
+                },
+                "5": {
+                  "title": "虚方法",
+                  "id": 10
+                },
+                "6": {
+                  "title": "模板",
+                  "id": 11
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "离散数学基础",
+              "id": 4,
+              "ideas": {
+                "1": {
+                  "title": "集合",
+                  "id": 12
+                },
+                "2": {
+                  "title": "偏序集",
+                  "id": 13
+                },
+                "3": {
+                  "title": "良序",
+                  "id": 14
+                },
+                "4": {
+                  "title": "数学归纳法",
+                  "id": 15
+                },
+                "5": {
+                  "title": "级数",
+                  "id": 16
+                },
+                "6": {
+                  "title": "递归",
+                  "id": 17
+                },
+                "7": {
+                  "title": "递推",
+                  "id": 18,
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "概率基础",
+              "id": 5,
+              "ideas": {
+                "1": {
+                  "title": "随机分布",
+                  "id": 19
+                },
+                "2": {
+                  "title": "概率",
+                  "id": 20
+                },
+                "3": {
+                  "title": "伯努利实验",
+                  "id": 21
+                },
+                "4": {
+                  "title": "数学期望",
+                  "id": 22
+                },
+                "5": {
+                  "title": "期望值的线性率",
+                  "id": 23
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "OJ",
+          "id": 24,
+          "ideas": {
+            "1": {
+              "title": "http://dsa.cs.tsinghua.edu.cn/oj/",
+              "id": 26
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Book",
+          "id": 27,
+          "ideas": {
+            "2": {
+              "title": "数据结构（C++语言版）",
+              "id": 29
+            },
+            "12": {
+              "title": "http://dsa.cs.tsinghua.edu.cn/~deng/ds/dsacpp/",
+              "id": 28,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "20": {
+      "title": "第一章 绪论",
+      "id": 32,
+      "ideas": {
+        "1": {
+          "title": "计算",
+          "id": 33,
+          "ideas": {
+            "1": {
+              "title": "对象",
+              "id": 34,
+              "ideas": {
+                "1": {
+                  "title": "规律",
+                  "id": 35
+                },
+                "2": {
+                  "title": "技巧",
+                  "id": 36
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "目标",
+              "id": 37,
+              "ideas": {
+                "1": {
+                  "title": "高效",
+                  "id": 38
+                },
+                "2": {
+                  "title": "低耗",
+                  "id": 39
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "绳索计算机及其算法",
+              "id": 42,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "绳索计算机",
+                  "id": 47
+                }
+              }
+            },
+            "4": {
+              "title": "尺规计算机及其算法",
+              "id": 43,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "尺规计算机",
+                  "id": 48
+                }
+              }
+            },
+            "5": {
+              "title": "算法",
+              "id": 44,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "计算 = 信息处理",
+                  "id": 45,
+                  "ideas": {
+                    "1": {
+                      "title": "借助某种工具, 遵照一定规则, 以明确而机械的形式进行",
+                      "id": 49
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "计算模型 = 计算机 = 信息处理工具",
+                  "id": 50
+                },
+                "3": {
+                  "title": "所谓算法, 即特定计算模型下, 旨在解决特定问题的指令序列.",
+                  "id": 51,
+                  "ideas": {
+                    "1": {
+                      "title": "输入",
+                      "id": 52,
+                      "ideas": {
+                        "1": {
+                          "title": "待处理的信息(问题)",
+                          "id": 58
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "输出",
+                      "id": 53,
+                      "ideas": {
+                        "1": {
+                          "title": "经处理的信息(答案)",
+                          "id": 59
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "正确性",
+                      "id": 54,
+                      "ideas": {
+                        "1": {
+                          "title": "的确可以解决指定的问题",
+                          "id": 60
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "确定性",
+                      "id": 55,
+                      "ideas": {
+                        "1": {
+                          "title": "任一算法都可以描述为一个由基本操作组成的序列",
+                          "id": 61
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "可行性",
+                      "id": 56,
+                      "ideas": {
+                        "1": {
+                          "title": "每一基本操作都可以实现, 且再常数时间内完成",
+                          "id": 62
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "有穷性",
+                      "id": 57,
+                      "ideas": {
+                        "1": {
+                          "title": "对于任何输入, 经有穷基本操作, 都可以得到输出",
+                          "id": 63,
+                          "ideas": {
+                            "1": {
+                              "title": "序列Hailstone(n)",
+                              "id": 64
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "事实",
+                  "id": 66,
+                  "ideas": {
+                    "1": {
+                      "title": "程序 != 算法",
+                      "id": 67
+                    }
+                  }
+                },
+                "5": {
+                  "title": "回忆",
+                  "id": 68,
+                  "ideas": {
+                    "1": {
+                      "title": "死循环或者栈溢出",
+                      "id": 69
+                    }
+                  }
+                },
+                "6": {
+                  "title": "算法",
+                  "id": 70,
+                  "ideas": {
+                    "1": {
+                      "title": "如何设计, 优化?",
+                      "id": 71
+                    }
+                  }
+                },
+                "7": {
+                  "title": "优劣",
+                  "id": 72,
+                  "ideas": {
+                    "1": {
+                      "title": "如何判断, 比较?",
+                      "id": 73
+                    }
+                  }
+                },
+                "8": {
+                  "title": "好算法",
+                  "id": 74,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "正确",
+                      "id": 75,
+                      "ideas": {
+                        "1": {
+                          "title": "符合语法, 能够编译, 链接",
+                          "id": 76
+                        },
+                        "2": {
+                          "title": "能够正确处理简单的输入",
+                          "id": 77
+                        },
+                        "3": {
+                          "title": "能够正确处理大规模的输入",
+                          "id": 78
+                        },
+                        "4": {
+                          "title": "能够正确处理一般性的输入",
+                          "id": 79
+                        },
+                        "5": {
+                          "title": "能够正确处理退化的输入",
+                          "id": 80
+                        },
+                        "6": {
+                          "title": "能够正确处理任意合法的输入",
+                          "id": 81
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "健壮",
+                      "id": 82,
+                      "ideas": {
+                        "1": {
+                          "title": "能辨别不合法的输入并做适当处理, 而不致非正常退出",
+                          "id": 83
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "可读",
+                      "id": 84,
+                      "ideas": {
+                        "1": {
+                          "title": "结构化+准确命名 + 注释 + ...",
+                          "id": 85
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "效率",
+                      "id": 86,
+                      "ideas": {
+                        "1": {
+                          "title": "速度尽可能快; 存储空间尽可能少",
+                          "id": 87
+                        },
+                        "2": {
+                          "title": "Algorithms + Data Structures = Programs // N.Wirth, 1976",
+                          "id": 88
+                        },
+                        "3": {
+                          "title": "(Algorithms + Data Structures) * Efficiency = Computation",
+                          "id": 89
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "Computer science should be called computing science, for the same reason why surgery is not called knife science. -- E. Dijkstra"
+            },
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "2": {
+          "title": "计算模型",
+          "id": 90,
+          "ideas": {
+            "1": {
+              "title": "Data Structure + Algorithm",
+              "id": 91,
+              "ideas": {
+                "1": {
+                  "title": "DSA",
+                  "id": 92,
+                  "ideas": {
+                    "1": {
+                      "title": "不同的DSA的性能有好坏优劣之别",
+                      "id": 93
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "度量",
+              "id": 94,
+              "ideas": {
+                "1": {
+                  "title": "To measure is to know. If you can not measure it, you can not improve it. - Lord Kelvin",
+                  "id": 95
+                },
+                "2": {
+                  "title": "1) 引入理想, 统一, 分层次的尺度",
+                  "id": 96
+                },
+                "3": {
+                  "title": "2) 运用该尺度, 以测量DSA的性能",
+                  "id": 97
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "算法分析",
+              "id": 98,
+              "ideas": {
+                "1": {
+                  "title": "两个主要方面",
+                  "id": 99,
+                  "ideas": {
+                    "1": {
+                      "title": "正确性",
+                      "id": 100,
+                      "ideas": {
+                        "1": {
+                          "title": "算法功能与问题要求一致?",
+                          "id": 101
+                        },
+                        "2": {
+                          "title": "数学证明? 可不那么简单...",
+                          "id": 104
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "成本",
+                      "id": 102,
+                      "ideas": {
+                        "1": {
+                          "title": "运行时间 + 所需存储空间",
+                          "id": 103
+                        },
+                        "2": {
+                          "title": "如何度量? 如何比较?",
+                          "id": 105
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "考察",
+                  "id": 106,
+                  "ideas": {
+                    "1": {
+                      "title": "TA(P) = 算法A求解问题实例P的计算成本",
+                      "id": 107,
+                      "ideas": {
+                        "1": {
+                          "title": "意义不大, 毕竟..可能出现的问题实例太多",
+                          "id": 109
+                        },
+                        "2": {
+                          "title": "如何归纳概括?",
+                          "id": 110,
+                          "ideas": {
+                            "1": {
+                              "title": "划分等价类",
+                              "id": 111
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "观察",
+                  "id": 112,
+                  "ideas": {
+                    "1": {
+                      "title": "问题实例的规模, 往往是决定计算成本的主要因素",
+                      "id": 113
+                    }
+                  }
+                },
+                "4": {
+                  "title": "通常",
+                  "id": 114,
+                  "ideas": {
+                    "1": {
+                      "title": "规模接近, 计算成本也接近",
+                      "id": 115
+                    },
+                    "2": {
+                      "title": "规模扩大, 计算成本也扩大",
+                      "id": 116
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "特定算法 + 不同实例",
+              "id": 117,
+              "ideas": {
+                "1": {
+                  "title": "令TA(n) = 用算法A求解某一问题规模为n的实例, 所需的计算成本讨论特定算法A(及其对应的问题)时, 简记作T(n)",
+                  "id": 118
+                },
+                "2": {
+                  "title": "然而, 这一定义仍有问题",
+                  "id": 119,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "观察",
+                  "id": 120,
+                  "ideas": {
+                    "1": {
+                      "title": "同一问题等规模的不同实例, 计算成本不尽相同, 甚至有实质差别",
+                      "id": 121
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "既然如此, 又该如何定义T(n)呢?",
+                  "id": 122,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "稳妥起见, 取T(n) = mac {T(P) | |P| = n} 亦即, 在规模同为n的所有实例中, 只关注最坏(成本最高)者",
+                  "id": 123,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "特定问题 + 不同算法",
+              "id": 124,
+              "ideas": {
+                "1": {
+                  "title": "同一问题通常有多种算法, 如何评判其优劣?",
+                  "id": 125
+                },
+                "2": {
+                  "title": "实验统计是最直接的方法, 但足以准确反映算法的真正效率?",
+                  "id": 126
+                },
+                "3": {
+                  "title": "不足够",
+                  "id": 127,
+                  "ideas": {
+                    "1": {
+                      "title": "不同的算法, 可能更适应于不同规模的输入",
+                      "id": 128
+                    },
+                    "2": {
+                      "title": "不同的算法, 可能更适应于不同类型的输入",
+                      "id": 129
+                    },
+                    "3": {
+                      "title": "同一算法, 可能由不同程序员, 用不同程序语言, 经不同编译器实现",
+                      "id": 130
+                    },
+                    "4": {
+                      "title": "同一算法, 可能实现并运行于不同的体系结构, 操作系统...",
+                      "id": 131
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "为给出客观的评判,  需要抽象出一个理想的平台或模型",
+                  "id": 132,
+                  "ideas": {
+                    "1": {
+                      "title": "不再依赖于上述种种具体的因素",
+                      "id": 133
+                    },
+                    "2": {
+                      "title": "从而直接而准确地描述, 测量并评价算法",
+                      "id": 134
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "TM: Turing Machine",
+              "id": 135,
+              "ideas": {
+                "1": {
+                  "title": "Tape",
+                  "id": 136,
+                  "ideas": {
+                    "1": {
+                      "title": "依次均匀地划分为单元格(Cell)",
+                      "id": 137
+                    },
+                    "2": {
+                      "title": "各注有某一字符, 默认为'#'",
+                      "id": 138
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Alphabet",
+                  "id": 139,
+                  "ideas": {
+                    "1": {
+                      "title": "字符的种类有限",
+                      "id": 140
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Head",
+                  "id": 141,
+                  "ideas": {
+                    "1": {
+                      "title": "总是对准某一单元格, 并可读取和改写其中的字符",
+                      "id": 142
+                    },
+                    "2": {
+                      "title": "每经过一个节拍, 可转向左侧或右侧的邻格",
+                      "id": 143
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "State",
+                  "id": 144,
+                  "ideas": {
+                    "1": {
+                      "title": "TM总是处于有限种状态中的某一种",
+                      "id": 145
+                    },
+                    "2": {
+                      "title": "每经过一个节拍, 可(按照规则)转向另一种状态",
+                      "id": 146
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "Transition Function: (q, c; d, L/R, p)",
+                  "id": 147,
+                  "ideas": {
+                    "1": {
+                      "title": "若当前状态为q且当前字符为c, 则将当前字符改写为d; 转向左侧/右侧的邻格; 转入p状态一旦转入特定的状态'h', 则停机",
+                      "id": 148
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "example",
+                  "id": 149,
+                  "ideas": {
+                    "1": {
+                      "title": "Increase",
+                      "id": 151,
+                      "ideas": {
+                        "1": {
+                          "title": "规范 ~ 接口",
+                          "id": 152
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "RAM: Random Access Machine",
+              "id": 153,
+              "ideas": {
+                "1": {
+                  "title": "在可计算领域, 和图灵机完全对等",
+                  "id": 154
+                },
+                "2": {
+                  "title": "寄存器顺序编号, 总数没有限制",
+                  "id": 155,
+                  "ideas": {
+                    "1": {
+                      "title": "R[0], R[1],  R[2], R[3], ...",
+                      "id": 156
+                    },
+                    "0.5": {
+                      "title": "但愿如此",
+                      "id": 157,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "每一基本操作仅需常数时间",
+                  "id": 158,
+                  "ideas": {
+                    "1": {
+                      "title": "循环及子程序本身非基本操作",
+                      "id": 159
+                    },
+                    "2": {
+                      "title": "R[i] <- c",
+                      "id": 160
+                    },
+                    "3": {
+                      "title": "R[i] <- R[j]",
+                      "id": 161
+                    },
+                    "4": {
+                      "title": "R[i] <- R[R[j]]",
+                      "id": 162,
+                      "ideas": {
+                        "1": {
+                          "title": "间接取址",
+                          "id": 163
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "R[R[i]] <- R[j]",
+                      "id": 164
+                    },
+                    "6": {
+                      "title": "R[i] <- R[j] + R[k]",
+                      "id": 165
+                    },
+                    "7": {
+                      "title": "R[i] <- R[j] - R[k]",
+                      "id": 166
+                    },
+                    "8": {
+                      "title": "IF R[i] = 0 GOTO l",
+                      "id": 167
+                    },
+                    "9": {
+                      "title": "IF R[i] > 0 GOTO l",
+                      "id": 168
+                    },
+                    "10": {
+                      "title": "GOTO l",
+                      "id": 169
+                    },
+                    "11": {
+                      "title": "STOP",
+                      "id": 170
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "与TM模型一样, RAM模型也是一般计算工具的简化与抽象",
+                  "id": 171,
+                  "ideas": {
+                    "1": {
+                      "title": "使我们可以独立于具体的平台, 对算法的效率做出可信的比较与评判",
+                      "id": 172
+                    }
+                  }
+                },
+                "5": {
+                  "title": "example",
+                  "id": 177,
+                  "ideas": {
+                    "1": {
+                      "title": "Floor - 向下取整",
+                      "id": 178
+                    },
+                    "2": {
+                      "title": "执行过程",
+                      "id": 179,
+                      "ideas": {
+                        "1": {
+                          "title": "可以记录为一张表",
+                          "id": 180
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "表的行数",
+                      "id": 181,
+                      "ideas": {
+                        "1": {
+                          "title": "即是所执行基本指令的总条数",
+                          "id": 182
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "能够客观度量",
+                      "id": 183,
+                      "ideas": {
+                        "1": {
+                          "title": "算法的执行时间",
+                          "id": 184
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "8": {
+              "title": "在这些模型中",
+              "id": 174,
+              "ideas": {
+                "1": {
+                  "title": "算法的运行时间 正比于 算法需要执行的基本操作次数",
+                  "id": 175
+                },
+                "2": {
+                  "title": "T(n) = 算法为求解规模为n的问题, 所需执行的基本操作次数",
+                  "id": 176
+                },
+                "3": {
+                  "title": "图灵机, RAM等模型为度量算法性能提供了准确的尺度",
+                  "id": 185
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "大O记号",
+          "id": 186,
+          "ideas": {
+            "1": {
+              "title": "Mathematics is more in need of good notations than of new theorems. - Alan Turing",
+              "id": 187
+            },
+            "2": {
+              "title": "好读书不求甚解, 每有会意, 便欣然忘食 - 陶渊明",
+              "id": 188
+            },
+            "3": {
+              "title": "渐进分析: 大O记号",
+              "id": 189,
+              "ideas": {
+                "1": {
+                  "title": "回到原先的问题",
+                  "id": 190,
+                  "ideas": {
+                    "1": {
+                      "title": "随着问题规模的增长, 计算成本如何增长?",
+                      "id": 191
+                    },
+                    "2": {
+                      "title": "注意: 这里更关心足够大的问题, 注重考虑成本的增长趋势",
+                      "id": 192
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "渐进分析",
+                  "id": 193,
+                  "ideas": {
+                    "1": {
+                      "title": "在问题规模足够大后, 计算成本如何增长?",
+                      "id": 194
+                    },
+                    "2": {
+                      "title": "Asymptotic analysis",
+                      "id": 195,
+                      "ideas": {
+                        "1": {
+                          "title": "当n >> 2后, 对于规模为n输入",
+                          "id": 196,
+                          "ideas": {
+                            "1": {
+                              "title": "算法需执行的基本操作次数: T(n) =?",
+                              "id": 197
+                            },
+                            "2": {
+                              "title": "算法需占用的存储单元数: S(n) = ?",
+                              "id": 198,
+                              "ideas": {
+                                "1": {
+                                  "title": "通常可不考虑, 为什么?",
+                                  "id": 199
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "大O记号",
+                  "id": 200,
+                  "ideas": {
+                    "1": {
+                      "title": "big-O notation",
+                      "id": 201,
+                      "ideas": {
+                        "1": {
+                          "title": "Paul bachmann, 1894",
+                          "id": 203
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "T (n) = O(f(n)) iff 存在c >0, 当n >> 2后, 有T(n) < c*f(n)",
+                      "id": 202
+                    },
+                    "3": {
+                      "title": "与T(n)相比, f(n)更为简洁, 但依然反应前者的增长趋势",
+                      "id": 204,
+                      "ideas": {
+                        "1": {
+                          "title": "常系数可忽略",
+                          "id": 205,
+                          "ideas": {
+                            "1": {
+                              "title": "O(f(n)) = O(c * f(n))",
+                              "id": 207
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "低次项可忽略",
+                          "id": 206,
+                          "ideas": {
+                            "1": {
+                              "title": "O(n^a + n^b) = O(n^a), a > b > 0",
+                              "id": 208
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "渐进分析: 其他记号",
+              "id": 209,
+              "ideas": {
+                "1": {
+                  "title": "T(n) =  Ω(f(n))",
+                  "id": 210,
+                  "ideas": {
+                    "1": {
+                      "title": "存在 c > 0, 当n >> 2后, 有T(n) > c * f(n)",
+                      "id": 212
+                    }
+                  }
+                },
+                "2": {
+                  "title": "T(n) =  Θ(f(n))",
+                  "id": 213,
+                  "ideas": {
+                    "1": {
+                      "title": "存在c1 > c2 > 0, 当n >> 2后, 有c1 * f(n) > T(n) > c2 * f(n)",
+                      "id": 214
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "O(1)",
+              "id": 215,
+              "ideas": {
+                "1": {
+                  "title": "常数(constant function)",
+                  "id": 216,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "含RAM各基本操作",
+                  "id": 217,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "这类算法的效率最高",
+                  "id": 218,
+                  "ideas": {
+                    "1": {
+                      "title": "总不能奢望不劳而获吧",
+                      "id": 219
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "什么样的代码段对应于常数执行时间?",
+                  "id": 220,
+                  "ideas": {
+                    "1": {
+                      "title": "一定不含循环?",
+                      "id": 221
+                    },
+                    "2": {
+                      "title": "一定不含分支转向?",
+                      "id": 222
+                    },
+                    "3": {
+                      "title": "一定不能有(递归)调用?",
+                      "id": 223
+                    },
+                    "4": {
+                      "title": "不含转向(循环, 调用, 递归等)",
+                      "id": 224,
+                      "ideas": {
+                        "1": {
+                          "title": "必顺序执行",
+                          "id": 225,
+                          "ideas": {
+                            "1": {
+                              "title": "即是O(1)",
+                              "id": 226
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "O(logn)",
+              "id": 227,
+              "ideas": {
+                "1": {
+                  "title": "对数(logn)",
+                  "id": 228
+                },
+                "2": {
+                  "title": "常底数无所谓",
+                  "id": 229,
+                  "ideas": {}
+                },
+                "3": {
+                  "title": "常数次幂无所谓",
+                  "id": 230
+                },
+                "4": {
+                  "title": "对数多项式",
+                  "id": 231,
+                  "ideas": {
+                    "1": {
+                      "title": "ploy-log function",
+                      "id": 232
+                    }
+                  }
+                },
+                "5": {
+                  "title": "这类算法非常有效, 复杂度无限接近于常数",
+                  "id": 234
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "O(n^c)",
+              "id": 235,
+              "ideas": {
+                "1": {
+                  "title": "多项式(polynomial function)",
+                  "id": 236
+                },
+                "2": {
+                  "title": "线性(linear function)",
+                  "id": 238,
+                  "ideas": {
+                    "1": {
+                      "title": "所有O(n)类函数",
+                      "id": 239
+                    }
+                  }
+                },
+                "3": {
+                  "title": "从O(n)到O(n^2)",
+                  "id": 240,
+                  "ideas": {
+                    "1": {
+                      "title": "编程习题主要覆盖的范围",
+                      "id": 241
+                    }
+                  }
+                },
+                "4": {
+                  "title": "幂",
+                  "id": 242
+                },
+                "5": {
+                  "title": "可解问题",
+                  "id": 243
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "O(2^n)",
+              "id": 244,
+              "ideas": {
+                "1": {
+                  "title": "难解问题",
+                  "id": 245
+                },
+                "2": {
+                  "title": "指数(exponential function) : T(n) = a^n",
+                  "id": 246,
+                  "ideas": {
+                    "1": {
+                      "title": "任何c > 1, n^c = O(2^n)",
+                      "id": 248
+                    }
+                  }
+                },
+                "3": {
+                  "title": "这类算法的计算成本增长极快, 通常被任务不可忍受",
+                  "id": 249
+                },
+                "4": {
+                  "title": "从O(n^c)到O(2^n), 是从有效算法到无效算法的分水岭",
+                  "id": 250,
+                  "ideas": {
+                    "1": {
+                      "title": "O(n^2) < tractable < intractable < incomputable",
+                      "id": 251
+                    }
+                  }
+                },
+                "5": {
+                  "title": "很多问题的O(2^n)算法往往显而易见",
+                  "id": 252,
+                  "ideas": {
+                    "1": {
+                      "title": "然而, 设计出O(n^c)算法却极其不易",
+                      "id": 253
+                    },
+                    "2": {
+                      "title": "甚至, 有时注定地只能是徒劳无功",
+                      "id": 254
+                    }
+                  }
+                },
+                "6": {
+                  "title": "example",
+                  "id": 255,
+                  "ideas": {
+                    "1": {
+                      "title": "2-subset",
+                      "id": 256,
+                      "ideas": {
+                        "1": {
+                          "title": "2-Subset is NP-complete",
+                          "id": 257,
+                          "ideas": {
+                            "1": {
+                              "title": "就此意义而言, 上述的直觉算法已属最优",
+                              "id": 262
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "NPC",
+                          "id": 260,
+                          "ideas": {
+                            "1": {
+                              "title": "就目前的计算模型而言, 不存在可在多项式时间内回答此问题的算法",
+                              "id": 261
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "增长速度",
+              "id": 263
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "4": {
+          "title": "算法分析",
+          "id": 264,
+          "ideas": {
+            "1": {
+              "title": "去粗存精华",
+              "id": 265,
+              "ideas": {
+                "1": {
+                  "title": "估算",
+                  "id": 266
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "夸欧拉: He calculated just as men breathe, as eagles sustain themselves in the air. - Francois Arago",
+              "id": 267
+            },
+            "3": {
+              "title": "两个主要任务 = 正确性(不变性 * 单调性) + 复杂度",
+              "id": 268,
+              "ideas": {
+                "1": {
+                  "title": "为确定后者, 真地需要将算法描述为RAM的基本指令, 再统计累计的执行次数?",
+                  "id": 270,
+                  "ideas": {
+                    "1": {
+                      "title": "不必",
+                      "id": 271
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "C++等高级语言的基本指令, 均等效于常数条RAM的基本指令; 在渐进意义下, 二者大体相当",
+              "id": 272,
+              "ideas": {
+                "1": {
+                  "title": "分支转向: goto",
+                  "id": 273,
+                  "ideas": {
+                    "1": {
+                      "title": "算法的灵魂",
+                      "id": 276
+                    },
+                    "2": {
+                      "title": "出于结构化考虑, 被隐藏了",
+                      "id": 277
+                    }
+                  }
+                },
+                "2": {
+                  "title": "迭代循环: for(), while(), ...",
+                  "id": 274,
+                  "ideas": {
+                    "1": {
+                      "title": "本质上就是\"if + goto\"",
+                      "id": 278
+                    }
+                  }
+                },
+                "3": {
+                  "title": "调用 + 递归(自我调用)",
+                  "id": 275,
+                  "ideas": {
+                    "1": {
+                      "title": "本质上也是goto",
+                      "id": 279
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "复杂度分析的主要方法",
+              "id": 280,
+              "ideas": {
+                "1": {
+                  "title": "迭代",
+                  "id": 281,
+                  "ideas": {
+                    "1": {
+                      "title": "级数求和",
+                      "id": 282
+                    }
+                  }
+                },
+                "2": {
+                  "title": "递归",
+                  "id": 283,
+                  "ideas": {
+                    "1": {
+                      "title": "递归跟踪",
+                      "id": 284
+                    },
+                    "2": {
+                      "title": "递推方程",
+                      "id": 285
+                    }
+                  }
+                },
+                "3": {
+                  "title": "猜测 + 验证",
+                  "id": 286
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "级数",
+              "id": 287,
+              "ideas": {
+                "1": {
+                  "title": "算数级数",
+                  "id": 288,
+                  "ideas": {
+                    "1": {
+                      "title": "与末项平方同阶",
+                      "id": 289
+                    },
+                    "2": {
+                      "title": "T(n) = 1 + 2 + ... + n = n(n+1)/2 = O(n^2)",
+                      "id": 290
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "幂方级数",
+                  "id": 291,
+                  "ideas": {
+                    "1": {
+                      "title": "比幂次高出一阶",
+                      "id": 292
+                    },
+                    "2": {
+                      "title": "T2(n) = 1^2 + 2^2 + ... + n^2 = O(n^3)",
+                      "id": 293
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "集合级数(a > 1)",
+                  "id": 294,
+                  "ideas": {
+                    "1": {
+                      "title": "与末项同阶",
+                      "id": 295
+                    },
+                    "2": {
+                      "title": "Ta(n) = a^0 + a^1 + a^2 + ... + a^n = O(a^n)",
+                      "id": 296
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "收敛级数",
+                  "id": 297,
+                  "ideas": {
+                    "1": {
+                      "title": "O(1)",
+                      "id": 298
+                    },
+                    "2": {
+                      "title": "几何分布",
+                      "id": 299
+                    }
+                  }
+                },
+                "5": {
+                  "title": "可能未必收敛, 然而长度有限",
+                  "id": 300,
+                  "ideas": {
+                    "1": {
+                      "title": "h(n) = 1 + 1/2 + 1/3 + ... + 1/n = O(logn)",
+                      "id": 301,
+                      "ideas": {
+                        "1": {
+                          "title": "调和级数",
+                          "id": 302
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "log1 + log2 + log3 + ... + logn = log(n!) = O(nlogn)",
+                      "id": 303,
+                      "ideas": {
+                        "1": {
+                          "title": "对数级数",
+                          "id": 304
+                        }
+                      }
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Concrete Mathematics",
+                  "id": 305
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": []
+}
