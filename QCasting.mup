@@ -1,0 +1,173 @@
+{
+  "title": "QCasting",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "流媒体服务解决方案综述",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "视频流服务结合云存储提供7*24小时在线视频直播和点播的方案",
+          "id": 3
+        }
+      }
+    },
+    "2": {
+      "title": "厂商接入相关流程",
+      "id": 20,
+      "ideas": {
+        "1": {
+          "title": "用户流程",
+          "id": 21,
+          "ideas": {
+            "1": {
+              "title": "用户注册",
+              "id": 22
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "设备流程",
+          "id": 23,
+          "ideas": {
+            "1": {
+              "title": "注册设备",
+              "id": 24
+            },
+            "2": {
+              "title": "直播",
+              "id": 25
+            },
+            "3": {
+              "title": "点播",
+              "id": 26
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "PSIA请求流程",
+          "id": 27
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "12": {
+      "title": "权限",
+      "id": 28,
+      "attr": {
+        "style": {},
+        "position": [
+          0.5,
+          101.5,
+          1
+        ]
+      }
+    },
+    "22": {
+      "title": "用户接口",
+      "id": 29
+    },
+    "32": {
+      "title": "token接口",
+      "id": 30
+    },
+    "42": {
+      "title": "设备接口",
+      "id": 31
+    },
+    "52": {
+      "title": "PSIA",
+      "id": 32
+    },
+    "62": {
+      "title": "错误信息",
+      "id": 33
+    },
+    "1.5": {
+      "title": "角色",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "Device",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "带控制和联网功能",
+              "id": 6
+            },
+            "2": {
+              "title": "视频采集设备",
+              "id": 7,
+              "ideas": {}
+            }
+          }
+        },
+        "2": {
+          "title": "App Server",
+          "id": 9
+        },
+        "3": {
+          "title": "App Client",
+          "id": 10
+        },
+        "4": {
+          "title": "QCasting",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "流网关",
+              "id": 12
+            },
+            "2": {
+              "title": "提供绝大部分直播云的逻辑",
+              "id": 13
+            },
+            "3": {
+              "title": "通过周边服务完成直播和点播功能",
+              "id": 14
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Streamer",
+          "id": 15,
+          "ideas": {
+            "1": {
+              "title": "流媒体处理",
+              "id": 16
+            },
+            "2": {
+              "title": "提供视频上传编码, 处理功能",
+              "id": 17
+            }
+          }
+        },
+        "6": {
+          "title": "Cloud Storage",
+          "id": 18,
+          "ideas": {}
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    }
+  },
+  "links": []
+}
