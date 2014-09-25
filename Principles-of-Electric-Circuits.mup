@@ -1528,6 +1528,307 @@
         "collapsed": true,
         "style": {}
       }
+    },
+    "101": {
+      "title": "L09 Dependent / controlled elements",
+      "id": 279,
+      "ideas": {
+        "1": {
+          "title": "Controlled resistors",
+          "id": 280,
+          "ideas": {
+            "1": {
+              "title": "An example of controlled resistor: switch",
+              "id": 281,
+              "ideas": {
+                "1": {
+                  "title": "u-i relationship of ideal switches",
+                  "id": 282
+                },
+                "2": {
+                  "title": "u-i relationship of non-ideal switches",
+                  "id": 283
+                }
+              }
+            },
+            "2": {
+              "title": "Another example of controlled resistor: MOSFET",
+              "id": 284,
+              "ideas": {
+                "1": {
+                  "title": "Gate",
+                  "id": 285
+                },
+                "2": {
+                  "title": "Drain",
+                  "id": 286
+                },
+                "3": {
+                  "title": "Source",
+                  "id": 287
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Dependent sources",
+          "id": 288,
+          "ideas": {
+            "1": {
+              "title": "Dependent voltage sources",
+              "id": 289,
+              "ideas": {
+                "1": {
+                  "title": "They have the properties of voltage sources whose voltages are controlled by other voltages or currents in the circuit.",
+                  "id": 290
+                },
+                "2": {
+                  "title": "Linear Current Controlled Voltage Source (CCVS)",
+                  "id": 291
+                },
+                "3": {
+                  "title": "Linear Voltage Controlled Voltage Source (VCVS)",
+                  "id": 292
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Dependent current sources",
+              "id": 293,
+              "ideas": {
+                "1": {
+                  "title": "They have the properties of current sources whose currents are controled by other voltages or currents in the circuit.",
+                  "id": 294
+                },
+                "2": {
+                  "title": "Linear Voltage Controlled Current Source(VCCS)",
+                  "id": 295
+                },
+                "3": {
+                  "title": "Linear Current Controlled Current Source (CCCS)",
+                  "id": 296
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Discussion",
+              "id": 297,
+              "ideas": {
+                "1": {
+                  "title": "Are the dependent sources two-terminal element?",
+                  "id": 298
+                },
+                "2": {
+                  "title": "Comparisons between dependent source and independent source",
+                  "id": 299
+                }
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "111": {
+      "title": "L10 Kirchhoff's Laws",
+      "id": 300,
+      "ideas": {
+        "1": {
+          "title": "Terms",
+          "id": 301,
+          "ideas": {
+            "1": {
+              "title": "A branch is constituted by the end to end connection of several elements without any divarication. (b)",
+              "id": 302
+            },
+            "2": {
+              "title": "A node is the connecting point of 3 or more branches. (n)",
+              "id": 303
+            },
+            "3": {
+              "title": "A path is the branch(es) between two nodes.",
+              "id": 304,
+              "ideas": {
+                "1": {
+                  "title": "For circuits with nodes more than two, path might be the connection of serval branches. Consider this.",
+                  "id": 305
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "A loop is the close path constituted by branches. (l)",
+              "id": 306
+            },
+            "5": {
+              "title": "A mesh is the loop which has no intersections with other branches in the planar circuits.",
+              "id": 307,
+              "ideas": {
+                "1": {
+                  "title": "In some other texts",
+                  "id": 308,
+                  "ideas": {
+                    "1": {
+                      "title": "A two-terminal element constitute a branch",
+                      "id": 309
+                    },
+                    "2": {
+                      "title": "The connecting terminal between two 2 elements constitute a node.",
+                      "id": 310
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "2": {
+          "title": "Kirchhoff's Current Laws(KCL)",
+          "id": 311,
+          "ideas": {
+            "1": {
+              "title": "The algebra sum of the currents flowing out of any node is ZERO.",
+              "id": 312
+            },
+            "2": {
+              "title": "The algebra sum of the currents flowing into any node is ZERO.",
+              "id": 313
+            },
+            "3": {
+              "title": "Σiin(t) = Σiout(t)",
+              "id": 315
+            },
+            "0.5": {
+              "title": "Σi(t) = 0",
+              "id": 314,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Generalized KCL",
+          "id": 316,
+          "ideas": {
+            "1": {
+              "title": "What is the expression of the generalized KCL with n branches?",
+              "id": 317
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Kirchhoff's Voltage Laws(KVL)",
+          "id": 318,
+          "ideas": {
+            "1": {
+              "title": "The algebra sum of the voltage drop through any  loop is ZERO.",
+              "id": 319
+            },
+            "2": {
+              "title": "Σu(t) = 0",
+              "id": 320
+            },
+            "3": {
+              "title": "Two directions: clockwise, counterclockwise",
+              "id": 321
+            },
+            "4": {
+              "title": "Σudrop(t) = Σurise(t)",
+              "id": 322
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Generalized KVL",
+          "id": 323,
+          "ideas": {
+            "1": {
+              "title": "The voltage between any two points in the circuit equals to the algebra sum of the voltages through any path between these two points.",
+              "id": 324
+            },
+            "2": {
+              "title": "Uniqueness of voltages",
+              "id": 325
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "121": {
+      "title": "L11 2b method                       ",
+      "id": 326,
+      "ideas": {
+        "1": {
+          "title": "for any circuits with b branches",
+          "id": 327
+        },
+        "2": {
+          "title": "To find all the branch variables, i.e. b currents and b voltages",
+          "id": 328
+        },
+        "3": {
+          "title": "we can list",
+          "id": 329,
+          "ideas": {
+            "1": {
+              "title": "b independent element constraints",
+              "id": 330
+            },
+            "2": {
+              "title": "n-1 independent KCLs,",
+              "id": 331
+            },
+            "3": {
+              "title": "b-n+1 independent KVLs",
+              "id": 332
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
     }
   },
   "links": []
