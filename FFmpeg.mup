@@ -230,6 +230,182 @@
         },
         "collapsed": true
       }
+    },
+    "11": {
+      "title": "libavformat",
+      "id": 50,
+      "ideas": {
+        "1": {
+          "title": "input and output protocols https://www.ffmpeg.org/ffmpeg-protocols.html",
+          "id": 51,
+          "ideas": {
+            "3": {
+              "title": "默认编译支持所有协议",
+              "id": 56
+            },
+            "4": {
+              "title": "支持某种协议",
+              "id": 57,
+              "ideas": {
+                "1": {
+                  "title": "-enable-protocol=PROTOCOL",
+                  "id": 58
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "去掉某种协议支持",
+              "id": 59,
+              "ideas": {
+                "1": {
+                  "title": "全去掉",
+                  "id": 60,
+                  "ideas": {
+                    "1": {
+                      "title": "-disable-protocols",
+                      "id": 61
+                    },
+                    "2": {
+                      "title": "-disable-protocol = PROTOCOL",
+                      "id": 62
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "bluray",
+              "id": 63,
+              "ideas": {
+                "4": {
+                  "title": "options",
+                  "id": 67,
+                  "ideas": {
+                    "1": {
+                      "title": "angle",
+                      "id": 64,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "chapter",
+                      "id": 65,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "playlist",
+                      "id": 66,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "cache",
+              "id": 68
+            },
+            "8": {
+              "title": "concat",
+              "id": 69
+            },
+            "9": {
+              "title": "crypto",
+              "id": 70
+            },
+            "10": {
+              "title": "data",
+              "id": 71
+            },
+            "11": {
+              "title": "file",
+              "id": 72,
+              "ideas": {
+                "1": {
+                  "title": "options",
+                  "id": 73,
+                  "ideas": {
+                    "1": {
+                      "title": "truncate",
+                      "id": 74
+                    },
+                    "2": {
+                      "title": "blocksize",
+                      "id": 75
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "12": {
+              "title": "ftp",
+              "id": 76,
+              "ideas": {
+                "1": {
+                  "title": "options",
+                  "id": 77,
+                  "ideas": {
+                    "1": {
+                      "title": "timeout",
+                      "id": 78
+                    },
+                    "2": {
+                      "title": "ftp-anonymous-password",
+                      "id": 79
+                    },
+                    "3": {
+                      "title": "ftp-write-seekable",
+                      "id": 80
+                    }
+                  }
+                }
+              }
+            },
+            "1.5": {
+              "title": "显示所有支持的协议",
+              "id": 54,
+              "ideas": {
+                "1": {
+                  "title": "./configure --list-protocols",
+                  "id": 52,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "ff* -protocols",
+                  "id": 55
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          }
+        }
+      }
     }
   },
   "links": []
