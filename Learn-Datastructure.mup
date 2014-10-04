@@ -3417,6 +3417,10 @@
                   "title": "无序向量经预处理转换为有序向量之后, 相关算法多可优化",
                   "id": 607
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
             "12": {
@@ -3428,11 +3432,1163 @@
                   84.25,
                   1
                 ],
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "低效算法",
+                  "id": 608,
+                  "ideas": {
+                    "1": {
+                      "title": "观察",
+                      "id": 609,
+                      "ideas": {
+                        "1": {
+                          "title": "在有序向量中, 重复的元素必然相互紧邻构成一个区间, 因此, 每一区间只需保留单个元素即可",
+                          "id": 610,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#000080;font-weight:bold;\">int </span><span style=\"color:#008080;\">Vector</span>&lt;T&gt;::uniquify() {<br>    <span style=\"color:#000080;font-weight:bold;\">int </span>oldSize = _size;<br>    <span style=\"color:#000080;font-weight:bold;\">int </span>i = <span style=\"color:#0000ff;\">0</span>; <span style=\"color:#808080;font-style:italic;\">// 从首元素开始<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">while </span>(i &lt; _size - <span style=\"color:#0000ff;\">1</span>) {<br>        <span style=\"color:#808080;font-style:italic;\">// 从前向后, 逐一比对各对相邻元素<br></span><span style=\"color:#808080;font-style:italic;\">        // 若雷同, 则删除后者; 否则, 转至后一元素<br></span><span style=\"color:#808080;font-style:italic;\">        </span>(_elem[i] == _elem[i + <span style=\"color:#0000ff;\">1</span>]) ? remove(i + <span style=\"color:#0000ff;\">1</span>) : i++;<br>    }<br><br>    <span style=\"color:#000080;font-weight:bold;\">return </span>oldSize - _size; <span style=\"color:#808080;font-style:italic;\">// 向量规模变化量, 即删除元素总数<br></span>} <span style=\"color:#808080;font-style:italic;\">// 注意: 其中_size的减小, 由remove()隐式地完成</span></pre>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "复杂度",
+                      "id": 611,
+                      "ideas": {
+                        "1": {
+                          "title": "运行时间主要取决于while循环, 次数共计: _size - 1 = n - 1",
+                          "id": 612
+                        },
+                        "2": {
+                          "title": "最坏情况下: 每次都需调用remove(), 耗时O(n - 1) ~ O(1); 累计O(n^2)",
+                          "id": 613,
+                          "ideas": {
+                            "1": {
+                              "title": "尽管省去find(), 总体竟与无序向量的deduplicate()相同",
+                              "id": 614
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "高效算法",
+                  "id": 615,
+                  "ideas": {
+                    "1": {
+                      "title": "反思",
+                      "id": 616,
+                      "ideas": {
+                        "1": {
+                          "title": "低效的根源在于, 同一元素可作为被删除元素的后继也多次前移",
+                          "id": 617
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "启示",
+                      "id": 618,
+                      "ideas": {
+                        "1": {
+                          "title": "若能以重复区间为单位, 成批删除雷同元素, 性能必将改进",
+                          "id": 619
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "复杂度",
+                      "id": 620,
+                      "ideas": {
+                        "1": {
+                          "title": "共计n-1次迭代, 每次常数时间, 累计O(n)时间",
+                          "id": 621
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "v<span style=\"font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; color: rgb(0, 0, 128); font-weight: bold;\">template </span><span style=\"font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; background-color: rgb(245, 245, 245);\">&lt;</span><span style=\"font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; color: rgb(0, 0, 128); font-weight: bold;\">typename </span><span style=\"font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; background-color: rgb(245, 245, 245);\">T&gt; </span><span style=\"font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; color: rgb(0, 0, 128); font-weight: bold;\">int </span><span style=\"font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; color: rgb(0, 128, 128);\">Vector</span><span style=\"font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 13px; white-space: pre-wrap; background-color: rgb(245, 245, 245);\">&lt;T&gt;::uniquify() {</span><pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\">    <span style=\"color:#371f80;\">Rank </span>i = <span style=\"color:#0000ff;\">0</span>; <span style=\"color:#808080;font-style:italic;\">// 各对互异\"相邻\"元素的秩<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#371f80;\">Rank </span>j = <span style=\"color:#0000ff;\">0</span>;<br><br>    <span style=\"color:#000080;font-weight:bold;\">while </span>(++j &lt; _size) {<br>        <span style=\"color:#808080;font-style:italic;\">// 逐一扫描, 直至末元素<br></span><span style=\"color:#808080;font-style:italic;\">        // 跳过雷同者, 发现不同元素时, 向前移至金领域前者右侧<br></span><span style=\"color:#808080;font-style:italic;\">        </span><span style=\"color:#000080;font-weight:bold;\">if </span>(_elem[i] != _elem[j]) {<br>            _elem[++i] = _elem[j];<br>        }<br>    }<br>    _size = ++i;<br>    shrink(); <span style=\"color:#808080;font-style:italic;\">// 直接截除尾部多余元素<br></span><span style=\"color:#808080;font-style:italic;\"><br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">return </span>j - i; <span style=\"color:#808080;font-style:italic;\">// 向量规模变化量, 即被删除元素总数<br></span>} <span style=\"color:#808080;font-style:italic;\">// 注意: 通过remove(lo, hi)批量删除, 依然不能达到高效率</span></pre>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "13": {
+              "title": "二分查找",
+              "id": 622,
+              "ideas": {
+                "1": {
+                  "title": "统一接口",
+                  "id": 623,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#808080;font-style:italic;\">// 查找算法统一接口, 0 &lt;= lo &lt; hi &lt;= _size<br></span><span style=\"color:#371f80;\">Rank </span><span style=\"color:#008080;\">Vector</span>&lt;T&gt;::search(T <span style=\"color:#000080;font-weight:bold;\">const </span>&amp;e, <span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) <span style=\"color:#000080;font-weight:bold;\">const </span>{<br>    <span style=\"color:#000080;font-weight:bold;\">return </span>(<span style=\"background-color:#e4e4ff;\">rand</span>() % <span style=\"color:#0000ff;\">2</span>) <span style=\"color:#808080;font-style:italic;\">/* 按各50%的改了随机选用 */ </span>? binSearch(_elem, e, lo, hi) <span style=\"color:#808080;font-style:italic;\">/* 二分查找算法 */ </span>: fibSearch(_elem, e, lo, hi)<span style=\"color:#808080;font-style:italic;\">/* Fibonacci 查找算法 */</span>;<br>}</pre>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "如何处置特殊情况?",
+                      "id": 624,
+                      "ideas": {
+                        "1": {
+                          "title": "比如, 目标元素不存在; 或者反过来, 目标元素同时存在多个",
+                          "id": 625
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "语义约定",
+                  "id": 626,
+                  "ideas": {
+                    "1": {
+                      "title": "至少, 应该便于有序向量自身的维护",
+                      "id": 627,
+                      "ideas": {
+                        "1": {
+                          "title": "V.insert(1 + V.search(e), e)",
+                          "id": 628
+                        },
+                        "2": {
+                          "title": "即使失败, 也应给出新元素适当的插入位置",
+                          "id": 629
+                        },
+                        "3": {
+                          "title": "若允许重复元素, 则每一组也需按其插入的次序排列",
+                          "id": 630
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "约定, 在有序向量区间V[lo, hi)中, 确定不大于e的最后一个元素(秩)",
+                      "id": 631,
+                      "ideas": {
+                        "1": {
+                          "title": "若 -∞ < e < V[lo], 则返回lo - 1 (左侧哨兵)",
+                          "id": 632
+                        },
+                        "2": {
+                          "title": "若 V[hi - 1] < e < +∞, 则返回hi -1(末元素 = 右侧哨兵左邻)",
+                          "id": 633
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "版本A",
+                  "id": 634,
+                  "ideas": {
+                    "1": {
+                      "title": "原理",
+                      "id": 636,
+                      "ideas": {
+                        "1": {
+                          "title": "减而治之: 以任一元素 x = S[mi]为界, 都可将带查找区间分为三部分",
+                          "id": 637,
+                          "ideas": {
+                            "1": {
+                              "title": "S[lo, mi) <= S[mi] <= S(mi, hi)",
+                              "id": 638,
+                              "ideas": {
+                                "1": {
+                                  "title": "S[mi]称作轴点",
+                                  "id": 639
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "只需将目标元素e与x做一比较, 即可分三种情况进一步处理",
+                          "id": 640,
+                          "ideas": {
+                            "1": {
+                              "title": "1) e < x: 则e若存在必属于左侧子区间S[lo, mi), 故可递归深入",
+                              "id": 641
+                            },
+                            "2": {
+                              "title": "2) x < e: 则e若存在必属于右侧子区间S(mi, hi), 也可递归深入",
+                              "id": 642
+                            },
+                            "3": {
+                              "title": "3) e == x: 已再此处命中, 可随即返回",
+                              "id": 643,
+                              "ideas": {
+                                "1": {
+                                  "title": "若有多个, 返回哪个?",
+                                  "id": 644
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "二分(折半)策略",
+                          "id": 645,
+                          "ideas": {
+                            "1": {
+                              "title": "轴点mi总是取作中点 -- 于是每经过至多两次比较, 或者能够命中, 或者将问题规模缩减一半",
+                              "id": 646
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "代码建议",
+                          "id": 647,
+                          "ideas": {
+                            "1": {
+                              "title": "多用小于号",
+                              "id": 648,
+                              "ideas": {
+                                "1": {
+                                  "title": "左右次序与看到的一致",
+                                  "id": 649
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "复杂度",
+                      "id": 650,
+                      "ideas": {
+                        "1": {
+                          "title": "线性递归: T(n) = T(n / 2) + O(1) = O(logn)",
+                          "id": 651,
+                          "ideas": {
+                            "1": {
+                              "title": "大大优于顺序查找",
+                              "id": 652
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "递归跟踪",
+                          "id": 653,
+                          "ideas": {
+                            "1": {
+                              "title": "轴点总取中点, 递归深度O(logn), 各递归实例均耗时O(1)",
+                              "id": 654
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "查找长度",
+                      "id": 655,
+                      "ideas": {
+                        "1": {
+                          "title": "如何更为精细地评估查找算法的性能?",
+                          "id": 656,
+                          "ideas": {
+                            "1": {
+                              "title": "考察关键码的比较次数, 即查找长度(search length)",
+                              "id": 657,
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "通常, 需分别针对成功与失败查找, 从最好, 最坏, 平均等角度评估",
+                          "id": 658
+                        },
+                        "3": {
+                          "title": "比如, 成功, 失败时的平均查找长度大约为O(1.50logn)",
+                          "id": 659
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#808080;font-style:italic;\">// 在有序向量区间[lo, hi)内查找元素e<br></span><span style=\"color:#000080;font-weight:bold;\">static </span><span style=\"color:#371f80;\">Rank </span>binSearch(T* A, T <span style=\"color:#000080;font-weight:bold;\">const</span>&amp; e, <span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#000080;font-weight:bold;\">while </span>(lo &lt; hi) {<br>        <span style=\"color:#808080;font-style:italic;\">// 每步迭代可能要做两次比较判断, 有三个分支<br></span><span style=\"color:#808080;font-style:italic;\">        </span>While (lo &lt; hi) {<br>            <span style=\"color:#371f80;\">Rank </span>mi = (lo + hi) &gt;&gt; <span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 以中点为轴点<br></span><span style=\"color:#808080;font-style:italic;\">            </span><span style=\"color:#000080;font-weight:bold;\">if </span>(e &lt; A[mi]) {<br>                hi = mi; <span style=\"color:#808080;font-style:italic;\">// 深入前半段[lo, mi)继续查找<br></span><span style=\"color:#808080;font-style:italic;\">            </span>} <span style=\"color:#000080;font-weight:bold;\">else if </span>(A[mi] &lt; e) {<br>                lo = mi + <span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 深入后半段(mi, hi)<br></span><span style=\"color:#808080;font-style:italic;\">            </span>} <span style=\"color:#000080;font-weight:bold;\">else </span>{<br>                <span style=\"color:#000080;font-weight:bold;\">return </span>mi; <span style=\"color:#808080;font-style:italic;\">// 在mi处命中<br></span><span style=\"color:#808080;font-style:italic;\">            </span>}<br>        }<br>    }<br><br>    <span style=\"color:#000080;font-weight:bold;\">return </span>-<span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 查找失败<br></span>}</pre>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
                 "style": {}
+              }
+            },
+            "14": {
+              "title": "Fibonacci查找",
+              "id": 660,
+              "ideas": {
+                "1": {
+                  "title": "思路及原理",
+                  "id": 661,
+                  "ideas": {
+                    "1": {
+                      "title": "二分查找版本A的效率仍有改进余地, 因为不难发现",
+                      "id": 662,
+                      "ideas": {
+                        "1": {
+                          "title": "转向左, 右分支前的关键码比较次数不等, 而递归深度却相同",
+                          "id": 663
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "若能通过递归深度的不均衡, 对转向成本的不均衡进行补偿, 平均查找长度应能进一步缩短...",
+                      "id": 664
+                    },
+                    "3": {
+                      "title": "比如, 若设n = fib(k)  - 1, 则可取mi = fib(k - 1) - 1. 于是, 前, 后子向量的长度分别为fib(k - 1) - 1, fib(k - 2) - 1",
+                      "id": 665
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#808080;font-style:italic;\">// 0 &lt;= lo &lt;= hi &lt;= _size<br></span><span style=\"color:#000080;font-weight:bold;\">static </span><span style=\"color:#371f80;\">Rank </span>fibSearch(T* A, T <span style=\"color:#000080;font-weight:bold;\">const </span>&amp;e, <span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    Fib fib(hi - lo); <span style=\"color:#808080;font-style:italic;\">// 用O(logn) = O(log(hi - lo))时间创建Fib数列<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">while </span>(lo &lt; hi) {<br>        <span style=\"color:#000080;font-weight:bold;\">while </span>(hi - lo &lt; fib.get()) {<br>            fib.prev(); <span style=\"color:#808080;font-style:italic;\">// 至多迭代几次?<br></span><span style=\"color:#808080;font-style:italic;\">        </span>}<br><br>        <span style=\"color:#371f80;\">Rank </span>mi = lo + fib.get() - <span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 按黄金比例切分<br></span><span style=\"color:#808080;font-style:italic;\">        </span><span style=\"color:#000080;font-weight:bold;\">if </span>(e &lt; A[mi]) {<br>            hi = mi; <span style=\"color:#808080;font-style:italic;\">// 深入前半段[lo, mi)继续查找<br></span><span style=\"color:#808080;font-style:italic;\">        </span>} <span style=\"color:#000080;font-weight:bold;\">else if </span>(A[mi] &lt; e) {<br>            lo = mi + <span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 深入后半段(mi, hi)<br></span><span style=\"color:#808080;font-style:italic;\">        </span>} <span style=\"color:#000080;font-weight:bold;\">else </span>{<br>            <span style=\"color:#000080;font-weight:bold;\">return </span>mi; <span style=\"color:#808080;font-style:italic;\">// 在mi处命中<br></span><span style=\"color:#808080;font-style:italic;\">        </span>}<br>    }<br><br>    <span style=\"color:#000080;font-weight:bold;\">return </span>-<span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 查找失败<br></span>}</pre>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "查找长度",
+                  "id": 666,
+                  "ideas": {
+                    "1": {
+                      "title": "Fibonacci查找的ASL, (在常系数的意义上)优于二分查找 ",
+                      "id": 667
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "最优性",
+                  "id": 668,
+                  "ideas": {
+                    "1": {
+                      "title": "通用策略",
+                      "id": 669,
+                      "ideas": {
+                        "1": {
+                          "title": "对于任何的A[0, n), 总是选取A[λn]作为轴点, 0 <= λ < 1",
+                          "id": 670
+                        },
+                        "2": {
+                          "title": "比如, 二分查找对应于λ = 0.5, Fibonacci查找对应于λ = Φ = 0.6180339...",
+                          "id": 671
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "在[0, 1)内, λ如何取值才能达到最优(查找长度最小)? 设平均查找长度为α(λ)*logn, 何时α(λ)最小?",
+                      "id": 672
+                    },
+                    "3": {
+                      "title": "递推式",
+                      "id": 673,
+                      "ideas": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "15": {
+              "title": "二分查找(改进)",
+              "id": 675,
+              "ideas": {
+                "1": {
+                  "title": "版本B: 改进思路",
+                  "id": 676,
+                  "ideas": {
+                    "1": {
+                      "title": "二分查找中, 左右分支转向代价不平衡的问题, 也可直接解决",
+                      "id": 677
+                    },
+                    "2": {
+                      "title": "比如, 每次迭代(或每个递归实例)仅做1次关键码比较",
+                      "id": 678,
+                      "ideas": {
+                        "1": {
+                          "title": "如此, 所有分支只有2个方向, 而不再是3个",
+                          "id": 679
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "同样地, 轴点mi取作中点, 则查找每深入一层, 问题规模也缩减一半",
+                      "id": 680,
+                      "ideas": {
+                        "1": {
+                          "title": "1) e < x",
+                          "id": 681,
+                          "ideas": {
+                            "1": {
+                              "title": "则e若存在必属于左侧子区间S[lo, mi), 故可递归深入",
+                              "id": 682
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "2) x <= e",
+                          "id": 683,
+                          "ideas": {
+                            "1": {
+                              "title": "则e若存在必属于右侧子区间S[mi, hi), 也可递归深入",
+                              "id": 684
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "只有当元素数目hi - lo = 1时, 才判断该元素是否命中",
+                          "id": 685
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#000080;font-weight:bold;\">static </span><span style=\"color:#371f80;\">Rank </span>binSearch(T* A, T <span style=\"color:#000080;font-weight:bold;\">const </span>&amp;e, <span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#000080;font-weight:bold;\">while </span>(<span style=\"color:#0000ff;\">1 </span>&lt; hi - lo) {<br>        <span style=\"color:#808080;font-style:italic;\">// 有效查找区间的宽度缩短至1时, 算法才会终止<br></span><span style=\"color:#808080;font-style:italic;\">        </span><span style=\"color:#371f80;\">Rank </span>mi = (lo + hi) &gt;&gt; <span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 以中点为轴点, 经比较后确定深入<br></span><span style=\"color:#808080;font-style:italic;\">        </span>(e &lt; A[mi]) ? hi = mi : lo = mi; <span style=\"color:#808080;font-style:italic;\">// [lo, mi) 或 [mi, hi)<br></span><span style=\"color:#808080;font-style:italic;\">    </span>} <span style=\"color:#808080;font-style:italic;\">// 出口时hi = lo + 1, 查找区间仅含一个元素A[lo]<br></span><span style=\"color:#808080;font-style:italic;\"><br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">return </span>(e == A[lo]) ? lo : -<span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 返回命中元素的秩或者-1<br></span>} <span style=\"color:#808080;font-style:italic;\">// 相对于版本A, 最好(坏)情况下更坏(好); 各种情况下的SL更加接近, 整体性能更趋稳定</span></pre>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "语义约定",
+                  "id": 686,
+                  "ideas": {
+                    "1": {
+                      "title": "以上二分查找以及Fibonacci查找算法",
+                      "id": 687,
+                      "ideas": {
+                        "1": {
+                          "title": "均未严格地兑现search()接口语义约定",
+                          "id": 688,
+                          "ideas": {
+                            "1": {
+                              "title": "返回不大于e的最后一个元素",
+                              "id": 689
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "只有兑现这一约定, 才可有效支持相关算法",
+                      "id": 690,
+                      "ideas": {
+                        "1": {
+                          "title": "比如",
+                          "id": 691,
+                          "ideas": {
+                            "1": {
+                              "title": "V.insert(1 + V.search(e), e)",
+                              "id": 692
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "1) 当有多个命中元素时, 必须返回最靠后(秩最大)者",
+                          "id": 693
+                        },
+                        "3": {
+                          "title": "2) 失败时, 应返回小于e的最大者(含哨兵[lo - 1])",
+                          "id": 694
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "版本C: 符合语义",
+                  "id": 696,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#000080;font-weight:bold;\">static </span><span style=\"color:#371f80;\">Rank </span>binSearch(T* A, T <span style=\"color:#000080;font-weight:bold;\">const</span>&amp; e, <span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#000080;font-weight:bold;\">while </span>(lo &lt; hi) {<br>        <span style=\"color:#808080;font-style:italic;\">// 不变性: A[0, lo) &lt;= e &lt; A[hi, n)<br></span><span style=\"color:#808080;font-style:italic;\">        </span><span style=\"color:#371f80;\">Rank </span>mi = (lo + hi) &gt;&gt; <span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 以中点为轴点, 经比较后确定深入<br></span><span style=\"color:#808080;font-style:italic;\">        </span>(e &lt; A[mi]) ? hi = mi : lo = mi + <span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// [lo, mi) 或 (mi, hi)<br></span><span style=\"color:#808080;font-style:italic;\">    </span>} <span style=\"color:#808080;font-style:italic;\">// 出口时, A[lo = hi]为大于e的最小元素<br></span><span style=\"color:#808080;font-style:italic;\"><br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">return </span>--lo; <span style=\"color:#808080;font-style:italic;\">// 故lo - 1即不大于e的元素的最大秩<br></span>}</pre>"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "与版本B的差异",
+                      "id": 697,
+                      "ideas": {
+                        "1": {
+                          "title": "1) 待查找区间的宽度缩短至0而非1时, 算法才结束",
+                          "id": 698
+                        },
+                        "2": {
+                          "title": "2) 转入右侧子向量, 左边界取作mi + 1而非mi -- A[mi]会被遗漏?",
+                          "id": 699
+                        },
+                        "3": {
+                          "title": "3) 无论成功与否, 返回的秩严格符合接口的语义约定",
+                          "id": 700
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "正确性",
+                      "id": 701,
+                      "ideas": {
+                        "1": {
+                          "title": "不变性",
+                          "id": 702,
+                          "ideas": {
+                            "1": {
+                              "title": "A[0, lo) <= e < A[hi, n)",
+                              "id": 703,
+                              "ideas": {
+                                "1": {
+                                  "title": "A[hi]总是大于e的最小者",
+                                  "id": 704
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "初始时, lo = 0 且 hi = n, A[0, lo) = A[hi, n) = ∅, 自然成立",
+                              "id": 707
+                            },
+                            "3": {
+                              "title": "数学归纳: 假设不变性一直保持至(a), 一下无非两种情况...",
+                              "id": 708
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "单调性",
+                          "id": 705,
+                          "ideas": {
+                            "1": {
+                              "title": "显然成立",
+                              "id": 706
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "16": {
+              "title": "插值查找",
+              "id": 709,
+              "ideas": {
+                "1": {
+                  "title": "原理与算法",
+                  "id": 710,
+                  "ideas": {
+                    "1": {
+                      "title": "假设: 已知有序向量中各元素随机分布的规律",
+                      "id": 711
+                    },
+                    "2": {
+                      "title": "比如: 均匀且独立的随机分布",
+                      "id": 712
+                    },
+                    "3": {
+                      "title": "于是: [lo, hi) 内各元素应大致按照线性趋势增长",
+                      "id": 713,
+                      "ideas": {}
+                    },
+                    "4": {
+                      "title": "因此, 通过猜测轴点mi, 可以极大地提高收敛速度",
+                      "id": 715
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "实例",
+                  "id": 717
+                },
+                "3": {
+                  "title": "性能",
+                  "id": 718,
+                  "ideas": {
+                    "1": {
+                      "title": "最坏情况",
+                      "id": 719,
+                      "ideas": {
+                        "1": {
+                          "title": "O(hi - lo) = O(n)",
+                          "id": 720,
+                          "ideas": {
+                            "1": {
+                              "title": "不满足均匀独立分布",
+                              "id": 721,
+                              "ideas": {
+                                "1": {
+                                  "title": "病态分布",
+                                  "id": 722
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "最好情况",
+                      "id": 723,
+                      "ideas": {
+                        "1": {
+                          "title": "稍试即中, 初试即中",
+                          "id": 724
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "一般情况",
+                      "id": 725,
+                      "ideas": {
+                        "1": {
+                          "title": "平均而言的查找成本 = ?",
+                          "id": 726
+                        },
+                        "2": {
+                          "title": "平均情况: 每经一次比较, n缩至根号n",
+                          "id": 727,
+                          "ideas": {
+                            "1": {
+                              "title": "[Yao76, PIA78]",
+                              "id": 728
+                            },
+                            "2": {
+                              "title": "习题解析[2-24]",
+                              "id": 729
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "O(loglogn)",
+                          "id": 730,
+                          "ideas": {
+                            "1": {
+                              "title": "通过字宽折半来理解",
+                              "id": 732
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "综合",
+                  "id": 731,
+                  "ideas": {
+                    "1": {
+                      "title": "从O(logn)到O(loglogn), 是否值得?",
+                      "id": 733
+                    },
+                    "2": {
+                      "title": "通常优势不明显",
+                      "id": 734,
+                      "ideas": {
+                        "1": {
+                          "title": "除非查找区间宽度极大, 或者比较操作成本极高",
+                          "id": 735
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "易受小扰动的干扰和\"蒙骗\"",
+                      "id": 736
+                    },
+                    "4": {
+                      "title": "须引入乘法, 除法运算",
+                      "id": 737
+                    },
+                    "5": {
+                      "title": "实际可行的方法",
+                      "id": 738,
+                      "ideas": {
+                        "1": {
+                          "title": "首先通过插值查找, 将查找范围缩小到一定的范围, 然后再进行二分查找",
+                          "id": 739
+                        },
+                        "2": {
+                          "title": "大规模",
+                          "id": 740,
+                          "ideas": {
+                            "1": {
+                              "title": "插值查找",
+                              "id": 741
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "中规模",
+                          "id": 742,
+                          "ideas": {
+                            "1": {
+                              "title": "折半查找",
+                              "id": 743
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "小规模",
+                          "id": 744,
+                          "ideas": {
+                            "1": {
+                              "title": "顺序查找",
+                              "id": 745
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "0.5": {
+                  "title": "Interpolation Search",
+                  "id": 716,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "e. 起泡排序",
+          "id": 746,
+          "ideas": {
+            "1": {
+              "title": "向量元素若有序排列, 计算效率将大大提升",
+              "id": 747,
+              "ideas": {
+                "1": {
+                  "title": "如何实现向量的有序化?",
+                  "id": 749
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "排序器: 统一入口",
+              "id": 750,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt;<br><span style=\"color:#000080;font-weight:bold;\">void </span><span style=\"color:#008080;\">Vector</span>&lt;T&gt;::sort(<span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#808080;font-style:italic;\">// 区间[lo, hi)<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">switch </span>(rand() % <span style=\"color:#0000ff;\">5</span>) {<br>        <span style=\"color:#808080;font-style:italic;\">// 可视具体问题的特点灵活选取或扩充<br></span><span style=\"color:#808080;font-style:italic;\">        </span><span style=\"color:#000080;font-weight:bold;\">case </span><span style=\"color:#0000ff;\">1</span>:<br>            <span style=\"color:#808080;font-style:italic;\">// 起泡排序<br></span><span style=\"color:#808080;font-style:italic;\">            </span>bubbleSort(lo, hi);<br>            <span style=\"color:#000080;font-weight:bold;\">break</span>;<br>        <span style=\"color:#000080;font-weight:bold;\">case </span><span style=\"color:#0000ff;\">2</span>:<br>            <span style=\"color:#808080;font-style:italic;\">// 选择排序<br></span><span style=\"color:#808080;font-style:italic;\">            </span>selectionSort(lo, hi);<br>            <span style=\"color:#000080;font-weight:bold;\">break</span>;<br>        <span style=\"color:#000080;font-weight:bold;\">case </span><span style=\"color:#0000ff;\">3</span>:<br>            <span style=\"color:#808080;font-style:italic;\">// 归并排序<br></span><span style=\"color:#808080;font-style:italic;\">            </span>mergeSort(lo, hi);<br>            <span style=\"color:#000080;font-weight:bold;\">break</span>;<br>        <span style=\"color:#000080;font-weight:bold;\">case </span><span style=\"color:#0000ff;\">4</span>:<br>            <span style=\"color:#808080;font-style:italic;\">// 堆排序<br></span><span style=\"color:#808080;font-style:italic;\">            </span>heapSort(lo, hi);<br>            <span style=\"color:#000080;font-weight:bold;\">break</span>;<br>        <span style=\"color:#000080;font-weight:bold;\">default</span>:<br>            <span style=\"color:#808080;font-style:italic;\">// 快速排序<br></span><span style=\"color:#808080;font-style:italic;\">            </span>quickSort(lo, hi);<br>            <span style=\"color:#000080;font-weight:bold;\">break</span>;<br>    }<br>} <span style=\"color:#808080;font-style:italic;\">// 在此统一接口下, 具体算法的不同实现, 将在后续各章节陆续讲解</span></pre>"
+                },
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "实现",
+              "id": 751,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#000080;font-weight:bold;\">void </span><span style=\"color:#008080;\">Vector</span>&lt;T&gt;::bubbleSort(<span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#000080;font-weight:bold;\">while </span>(!bubble(lo, hi--)); <span style=\"color:#808080;font-style:italic;\">// 逐趟做扫描交换, 直至全序<br></span>}</pre>"
+                },
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "改进",
+                  "id": 752,
+                  "ideas": {
+                    "1": {
+                      "title": "每一趟扫描交换, 都记录下是否存在逆序元素",
+                      "id": 753
+                    },
+                    "2": {
+                      "title": "若存在, 当且当做过交换",
+                      "id": 754
+                    },
+                    "3": {
+                      "title": "无罪推论",
+                      "id": 755,
+                      "ideas": {
+                        "1": {
+                          "title": "先假设都是有序的",
+                          "id": 756
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "利用判断是否有序的判断条件",
+                      "id": 757,
+                      "ideas": {
+                        "1": {
+                          "title": "增加标记, 及时停止扫描交换",
+                          "id": 758
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#000080;font-weight:bold;\">bool </span><span style=\"color:#008080;\">Vector</span>&lt;T&gt;::bubble(<span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#000080;font-weight:bold;\">bool </span>sorted = <span style=\"color:#000080;font-weight:bold;\">true</span>; <span style=\"color:#808080;font-style:italic;\">// 整体有序标志<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">while </span>(++lo &lt; hi) {<br>        <span style=\"color:#808080;font-style:italic;\">// 自左向右, 逐一检查各对相邻元素<br></span><span style=\"color:#808080;font-style:italic;\">        </span><span style=\"color:#000080;font-weight:bold;\">if </span>(_elem[lo - <span style=\"color:#0000ff;\">1</span>] &gt; _elem[lo]) {<br>            <span style=\"color:#808080;font-style:italic;\">// 若逆序, 则<br></span><span style=\"color:#808080;font-style:italic;\">            </span>sorted = <span style=\"color:#000080;font-weight:bold;\">false</span>; <span style=\"color:#808080;font-style:italic;\">// 意味着尚未整体有序, 并需要<br></span><span style=\"color:#808080;font-style:italic;\">            </span>swap(_elem[lo - <span style=\"color:#0000ff;\">1</span>], _elem[lo]); <span style=\"color:#808080;font-style:italic;\">// 交换<br></span><span style=\"color:#808080;font-style:italic;\">        </span>}<br>    }<br><br>    <span style=\"color:#000080;font-weight:bold;\">return </span>sorted; <span style=\"color:#808080;font-style:italic;\">// 返回有序标志<br></span>} <span style=\"color:#808080;font-style:italic;\">// 乱序限于[0, 根号n)时, 仍需O(n^(3/2))时间 -- 按理, O(n)应已足矣</span></pre>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "再改进",
+                  "id": 759,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#000080;font-weight:bold;\">void </span><span style=\"color:#008080;\">Vector</span>::bubbleSort(<span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#000080;font-weight:bold;\">while </span>(lo &lt; (hi = bubble(lo, hi))); <span style=\"color:#808080;font-style:italic;\">// 逐趟扫描交换, 直至全序<br></span>}<br><br><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#371f80;\">Rank </span><span style=\"color:#008080;\">Vector</span>&lt;T&gt;::bubble(<span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#371f80;\">Rank </span>last = lo; <span style=\"color:#808080;font-style:italic;\">// 最右侧的逆序对初始化为[lo - 1, lo]<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">while </span>(++lo &lt; hi) {<br>        <span style=\"color:#808080;font-style:italic;\">// 自左向右, 逐一检查各对相邻元素<br></span><span style=\"color:#808080;font-style:italic;\">        </span><span style=\"color:#000080;font-weight:bold;\">if </span>(_elem[lo - <span style=\"color:#0000ff;\">1</span>] &gt; _elem[lo]) {<br>            <span style=\"color:#808080;font-style:italic;\">// 若逆序, 则<br></span><span style=\"color:#808080;font-style:italic;\">            </span>last = lo; <span style=\"color:#808080;font-style:italic;\">// 更新最右侧逆序对未知记录, 并<br></span><span style=\"color:#808080;font-style:italic;\">            </span>swap(_elem[lo - <span style=\"color:#0000ff;\">1</span>], _elem[lo]); <span style=\"color:#808080;font-style:italic;\">// 交换<br></span><span style=\"color:#808080;font-style:italic;\">        </span>}<br>    }<br><br>    <span style=\"color:#000080;font-weight:bold;\">return </span>last; <span style=\"color:#808080;font-style:italic;\">// 返回最右侧的逆序对位置<br></span>} <span style=\"color:#808080;font-style:italic;\">// 前一版本中的逻辑型标志sorted, 改为秩last</span></pre>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "综合",
+              "id": 760,
+              "ideas": {
+                "1": {
+                  "title": "效率与第一章针对整数数组的版本相同, 最好O(n), 最坏O(n^2)",
+                  "id": 761
+                },
+                "2": {
+                  "title": "输入含重复元素时, 算法的稳定性(stability)是更为细致的要求",
+                  "id": 762,
+                  "ideas": {
+                    "1": {
+                      "title": "重复元素在输入, 输出序列中相对次序, 是否保持不变?",
+                      "id": 764
+                    }
+                  }
+                },
+                "3": {
+                  "title": "起泡排序是稳定的",
+                  "id": 765
+                },
+                "4": {
+                  "title": "在起泡排序中, 元素a和b的相对位置发生变化, 只有一种可能:",
+                  "id": 766,
+                  "ideas": {
+                    "1": {
+                      "title": "经分别与其他元素的交换, 二者互相接近直至相邻",
+                      "id": 767
+                    },
+                    "2": {
+                      "title": "在接下来一轮扫描交换中, 二者因逆序而交换未知",
+                      "id": 768
+                    }
+                  }
+                },
+                "5": {
+                  "title": "在if一句的判断条件中, 若把\">\"换成\">=\", 将有何变化?",
+                  "id": 769
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "f. 归并排序",
+          "id": 770,
+          "ideas": {
+            "1": {
+              "title": "分治策略",
+              "id": 771
+            },
+            "2": {
+              "title": "向量与列表通用",
+              "id": 772
+            },
+            "3": {
+              "title": "J. von Neumann, 1945",
+              "id": 773
+            },
+            "4": {
+              "title": "序列一分为二",
+              "id": 774,
+              "ideas": {
+                "1": {
+                  "title": "O(1)",
+                  "id": 777
+                }
+              }
+            },
+            "5": {
+              "title": "子序列递归排序",
+              "id": 775,
+              "ideas": {
+                "1": {
+                  "title": "2 * T(n/2)",
+                  "id": 778
+                }
+              }
+            },
+            "6": {
+              "title": "合并有序子序列",
+              "id": 776,
+              "ideas": {
+                "1": {
+                  "title": "O(n)",
+                  "id": 779
+                }
+              }
+            },
+            "7": {
+              "title": "O(nlogn)",
+              "id": 780
+            },
+            "8": {
+              "title": "二路归并原理",
+              "id": 781,
+              "ideas": {
+                "1": {
+                  "title": "2-way merge: 将两个有序序列合并为一个有序序列",
+                  "id": 782,
+                  "ideas": {
+                    "1": {
+                      "title": "S[lo, hi) = S[lo, mi) + S[mi, hi)",
+                      "id": 783
+                    }
+                  }
+                }
+              }
+            },
+            "9": {
+              "title": "二路归并基本实现",
+              "id": 784,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt;<br><span style=\"color:#000080;font-weight:bold;\">void </span><span style=\"color:#008080;\">Vector</span>&lt;T&gt;::mergeSort(<span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    <span style=\"color:#808080;font-style:italic;\">// [lo, hi)<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">if </span>(hi - lo &lt; <span style=\"color:#0000ff;\">2</span>) {<br>        <span style=\"color:#000080;font-weight:bold;\">return</span>; <span style=\"color:#808080;font-style:italic;\">// 单元素区间自然有序<br></span><span style=\"color:#808080;font-style:italic;\">    </span>}<br><br>    <span style=\"color:#000080;font-weight:bold;\">int </span>mi = (lo + hi) &gt;&gt; <span style=\"color:#0000ff;\">1</span>; <span style=\"color:#808080;font-style:italic;\">// 以中点为界<br></span><span style=\"color:#808080;font-style:italic;\">    </span>mergeSort(lo, mi); <span style=\"color:#808080;font-style:italic;\">// 对前半段排序<br></span><span style=\"color:#808080;font-style:italic;\">    </span>mergeSort(mi, hi); <span style=\"color:#808080;font-style:italic;\">// 对后半段排序<br></span><span style=\"color:#808080;font-style:italic;\">    </span>merge(lo, mi, hi); <span style=\"color:#808080;font-style:italic;\">// 归并<br></span>}</pre><pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">template </span>&lt;<span style=\"color:#000080;font-weight:bold;\">typename </span>T&gt; <span style=\"color:#000080;font-weight:bold;\">void </span><span style=\"color:#008080;\">Vector</span>&lt;T&gt;::merge(<span style=\"color:#371f80;\">Rank </span>lo, <span style=\"color:#371f80;\">Rank </span>mi, <span style=\"color:#371f80;\">Rank </span>hi) {<br>    T* A = _elem + lo; <span style=\"color:#808080;font-style:italic;\">// 合并后的向量A[0, hi - lo) = _elem[lo, hi)<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">int </span>lb = mi - lo;<br>    T* B = <span style=\"color:#000080;font-weight:bold;\">new </span>T[lb]; <span style=\"color:#808080;font-style:italic;\">// 前子向量B[0, lb) = _elem[lo, mi)<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">for </span>(<span style=\"color:#371f80;\">Rank </span>i = <span style=\"color:#0000ff;\">0</span>; i &lt; lb; B[i] = A[i++]); <span style=\"color:#808080;font-style:italic;\">// 复制前子向量B<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">int </span>lc = hi - mi;<br>    T* C = _elem + mi; <span style=\"color:#808080;font-style:italic;\">// 后子向量C[0, lc) = _elem[mi, hi)<br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">for </span>(<span style=\"color:#371f80;\">Rank </span>i = <span style=\"color:#0000ff;\">0</span>, j = <span style=\"color:#0000ff;\">0</span>, k = <span style=\"color:#0000ff;\">0</span>; (j &lt; lb) || (k &lt; lc); ) {<br>        <span style=\"color:#808080;font-style:italic;\">// B[j]和C[k]中小者转至A的末尾<br></span><span style=\"color:#808080;font-style:italic;\">        </span><span style=\"color:#000080;font-weight:bold;\">if </span>((j &lt; lb) &amp;&amp; (lc &lt;= k || (B[j] &lt;= C[k]))) {<br>            A[i++] = B[j++]; <span style=\"color:#808080;font-style:italic;\">// C[k]已无或不小<br></span><span style=\"color:#808080;font-style:italic;\">        </span>}<br><br>        <span style=\"color:#000080;font-weight:bold;\">if </span>((k &lt; lc) &amp;&amp; (lb &lt;= j || (C[k] &lt; B[j]))) {<br>            A[i++] = C[k++]; <span style=\"color:#808080;font-style:italic;\">// B[j]已无或更大<br></span><span style=\"color:#808080;font-style:italic;\">        </span>}<br>    } <span style=\"color:#808080;font-style:italic;\">// 该循环实现紧凑; 但就效率而言, 不如拆分处理<br></span><span style=\"color:#808080;font-style:italic;\"><br></span><span style=\"color:#808080;font-style:italic;\">    </span><span style=\"color:#000080;font-weight:bold;\">delete </span>[] B; <span style=\"color:#808080;font-style:italic;\">// 释放临时空间B<br></span>}</pre>"
+                },
+                "style": {}
+              }
+            },
+            "10": {
+              "title": "正确性",
+              "id": 785,
+              "ideas": {
+                "1": {
+                  "title": "精简实现",
+                  "id": 786,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"background-color:#ffffff;color:#000000;font-family:'Menlo';font-size:12pt;\"><span style=\"color:#000080;font-weight:bold;\">for </span>(<span style=\"color:#371f80;\">Rank </span>i = <span style=\"color:#0000ff;\">0</span>, j = <span style=\"color:#0000ff;\">0</span>, k = <span style=\"color:#0000ff;\">0</span>; j &lt; lb; ) {<br>    <span style=\"color:#000080;font-weight:bold;\">if </span>((k &lt; lc) &amp;&amp; (C[k] &lt; B[j])) {<br>        A[i++] = C[k++];<br>    }<br><br>    <span style=\"color:#000080;font-weight:bold;\">if </span>(lc &lt;= k || B[j] &lt;= C[k]) {<br>        A[i++] = B[j++];<br>    }<br>} <span style=\"color:#808080;font-style:italic;\">// 交换循环体内两句的次序, 删除冗余逻辑</span></pre>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "11": {
+              "title": "复杂度",
+              "id": 787,
+              "ideas": {
+                "1": {
+                  "title": "算法的运行时间主要消耗于for循环, 共有两个控制变量",
+                  "id": 788,
+                  "ideas": {
+                    "1": {
+                      "title": "初始",
+                      "id": 789,
+                      "ideas": {
+                        "1": {
+                          "title": "j = 0, k = 0",
+                          "id": 790
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "最终",
+                      "id": 791,
+                      "ideas": {
+                        "1": {
+                          "title": "j = lb, k = lc",
+                          "id": 794
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "亦即",
+                      "id": 792,
+                      "ideas": {
+                        "1": {
+                          "title": "j + k = lb + lc = hi - lo = n",
+                          "id": 793
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "观察",
+                  "id": 795,
+                  "ideas": {
+                    "1": {
+                      "title": "每经过一次迭代, j和k至少有一个会加一(j + k也必至少加一)",
+                      "id": 796
+                    }
+                  }
+                },
+                "3": {
+                  "title": "故知, merge()总体迭代不过O(n)次, 累计只需线性时间!",
+                  "id": 797
+                },
+                "4": {
+                  "title": "这一结论与排序算法的O(nlogn)下界并不矛盾",
+                  "id": 798,
+                  "ideas": {
+                    "1": {
+                      "title": "毕竟这里的B和C均已各自有序",
+                      "id": 799
+                    }
+                  }
+                },
+                "5": {
+                  "title": "注意: 待归并子序列不必等长",
+                  "id": 800,
+                  "ideas": {
+                    "1": {
+                      "title": "亦即: 允许lb != lc, mi != (lo + hi) / 2",
+                      "id": 801,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "6": {
+                  "title": "实际上, 这一算法及结论也适用于另一类序列 -- 列表",
+                  "id": 802
+                }
               }
             }
           }
         }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
       }
     }
   },
