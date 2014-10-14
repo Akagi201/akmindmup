@@ -57,7 +57,8 @@
             }
           },
           "attr": {
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "2": {
@@ -86,8 +87,8 @@
                 }
               },
               "attr": {
-                "collapsed": true,
-                "style": {}
+                "style": {},
+                "collapsed": true
               }
             },
             "2": {
@@ -96,7 +97,67 @@
               "ideas": {
                 "1": {
                   "title": "主要存储视音频封装格式中包含的信息",
-                  "id": 25
+                  "id": 25,
+                  "ideas": {
+                    "1": {
+                      "title": "譬如格式和流",
+                      "id": 407
+                    }
+                  }
+                },
+                "2": {
+                  "title": "和mux/dex相关的context",
+                  "id": 406
+                },
+                "3": {
+                  "title": "成员",
+                  "id": 408,
+                  "ideas": {
+                    "1": {
+                      "title": "struct AVInputFormat *iformat;\n",
+                      "id": 409,
+                      "ideas": {
+                        "1": {
+                          "title": "控制格式的, 譬如从文件读取flv格式",
+                          "id": 410
+                        },
+                        "2": {
+                          "title": "set by  avformat_open_input()",
+                          "id": 412
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "struct AVOutputFormat *oformat;",
+                      "id": 411,
+                      "ideas": {
+                        "1": {
+                          "title": "set by the caller before avformat_write_header()",
+                          "id": 413
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "AVIOContext *pb;",
+                      "id": 414,
+                      "ideas": {
+                        "1": {
+                          "title": "处理文件和URL, 有点像IOStream, 读取文件的",
+                          "id": 415
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "AVStream **streams;",
+                      "id": 416,
+                      "ideas": {
+                        "1": {
+                          "title": "媒体流逻辑",
+                          "id": 417
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -149,30 +210,97 @@
                 }
               },
               "attr": {
-                "collapsed": true,
                 "style": {}
               }
             },
-            "2": {
-              "title": "每个AVStream存储一个视频/音频流的相关数据",
-              "id": 37
+            "6": {
+              "title": "AVStream",
+              "id": 429,
+              "ideas": {
+                "1": {
+                  "title": "成员",
+                  "id": 430,
+                  "ideas": {
+                    "1": {
+                      "title": "AVCodecContext *codec;",
+                      "id": 431,
+                      "ideas": {
+                        "1": {
+                          "title": "每个AVStream对应一个AVCodecContext, 存储该视频/音频流使用解码方式的相关数据",
+                          "id": 38,
+                          "ideas": {
+                            "1": {
+                              "title": "每个AVCodecContext中对应一个AVCodec, 包含该视频/音频对应的解码器",
+                              "id": 39,
+                              "attr": {
+                                "style": {}
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "每种解码器都对应一个AVCodec结构",
+                                  "id": 40,
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "0.5": {
+                  "title": "每个AVStream存储一个视频/音频流的相关数据",
+                  "id": 37,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "主要是封装了媒体流的信息, 里面有编码结构",
+                      "id": 432
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
             },
-            "3": {
-              "title": "每个AVStream对应一个AVCodecContext, 存储该视频/音频流使用解码方式的相关数据",
-              "id": 38
-            },
-            "4": {
-              "title": "每个AVCodecContext中对应一个AVCodec, 包含该视频/音频对应的解码器",
-              "id": 39
-            },
-            "5": {
-              "title": "每种解码器都对应一个AVCodec结构",
-              "id": 40
+            "7": {
+              "title": "AVCodecContext",
+              "id": 442,
+              "ideas": {
+                "1": {
+                  "title": "与codec相关, 包含了编解码的一些信息",
+                  "id": 443
+                },
+                "2": {
+                  "title": "成员",
+                  "id": 444,
+                  "ideas": {
+                    "1": {
+                      "title": "enum AVCodecID codec_id;",
+                      "id": 445,
+                      "ideas": {
+                        "1": {
+                          "title": "可以根据codec_id查找对应的编解码器",
+                          "id": 446
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "attr": {
-            "style": {},
-            "collapsed": true
+            "style": {}
           }
         },
         "4": {
@@ -205,7 +333,23 @@
               "ideas": {
                 "1": {
                   "title": "AVPacket",
-                  "id": 47
+                  "id": 47,
+                  "ideas": {
+                    "1": {
+                      "title": "成员",
+                      "id": 453,
+                      "ideas": {
+                        "1": {
+                          "title": "pts",
+                          "id": 454
+                        },
+                        "2": {
+                          "title": "dts",
+                          "id": 455
+                        }
+                      }
+                    }
+                  }
                 }
               }
             },
@@ -229,6 +373,158 @@
           "content": "<img src=\"data:image/jpeg;base64,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\">"
         },
         "collapsed": true
+      }
+    },
+    "6": {
+      "title": "关键函数",
+      "id": 418,
+      "ideas": {
+        "1": {
+          "title": "avformat_open_input()",
+          "id": 419,
+          "ideas": {
+            "1": {
+              "title": "avformat_open_input(&ifmt_ctx, in_filename, NULL, NULL);",
+              "id": 420
+            }
+          }
+        },
+        "2": {
+          "title": "avformat_alloc_output_context2()",
+          "id": 421,
+          "ideas": {
+            "1": {
+              "title": "avformat_alloc_output_context2(&oc, NULL, NULL, filename);",
+              "id": 422
+            }
+          }
+        },
+        "3": {
+          "title": "avformat_close_input()",
+          "id": 423,
+          "ideas": {
+            "1": {
+              "title": "avformat_close_input(&ifmt_ctx);",
+              "id": 424
+            }
+          }
+        },
+        "4": {
+          "title": "avformat_free_context()",
+          "id": 425,
+          "ideas": {
+            "1": {
+              "title": "avformat_free_context(oc);",
+              "id": 426
+            }
+          }
+        },
+        "5": {
+          "title": "avio_open2()",
+          "id": 427,
+          "ideas": {
+            "1": {
+              "title": "avio_open2(&oc->pb, filename, AVIO_FLAG_WRITE, &oc->interrupt_callback, &output_files[nb_output_files - 1]->opts);",
+              "id": 428
+            }
+          }
+        },
+        "6": {
+          "title": "avformat_find_stream_info()",
+          "id": 433,
+          "ideas": {
+            "1": {
+              "title": "input时, 需要先使用这个来读取解码头",
+              "id": 434
+            },
+            "2": {
+              "title": "avformat_find_stream_info(fmt_ctx, NULL);",
+              "id": 435
+            }
+          }
+        },
+        "7": {
+          "title": "av_find_best_stream()",
+          "id": 436,
+          "ideas": {
+            "1": {
+              "title": "stream_idx = av_find_best_stream(fmt_ctx, type, -1, -1, NULL, 0);",
+              "id": 437
+            }
+          }
+        },
+        "8": {
+          "title": "avformat_new_stream()",
+          "id": 438,
+          "ideas": {
+            "1": {
+              "title": "AVStream *st = avformat_new_stream(oc, NULL);",
+              "id": 439
+            }
+          }
+        },
+        "9": {
+          "title": "avformat_free_context()",
+          "id": 440
+        },
+        "10": {
+          "title": "avformat_write_header()",
+          "id": 441
+        },
+        "11": {
+          "title": "avcodec_close()",
+          "id": 447,
+          "ideas": {
+            "1": {
+              "title": "avcodec_close(video_dec_ctx);",
+              "id": 448
+            }
+          }
+        },
+        "12": {
+          "title": "avcodec_find_decoder()",
+          "id": 449,
+          "ideas": {
+            "1": {
+              "title": "dec = avcodec_find_decoder(dec_ctx->codec_id);",
+              "id": 450
+            }
+          }
+        },
+        "13": {
+          "title": "avcodec_open2(AVCodecContext *avctx, const AVCodec *codec, AVDictionary **opeions);",
+          "id": 451,
+          "ideas": {
+            "1": {
+              "title": "avcodec_open2(dec_ctx, dec, NULL);",
+              "id": 452
+            }
+          }
+        },
+        "14": {
+          "title": "av_init_packet()",
+          "id": 456
+        },
+        "15": {
+          "title": "av_read_frame()",
+          "id": 457
+        },
+        "16": {
+          "title": "av_free_packet()",
+          "id": 458
+        },
+        "17": {
+          "title": "av_interleaved_write_frame()",
+          "id": 459
+        },
+        "18": {
+          "title": "avcodec_decode_video2()",
+          "id": 460
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
       }
     },
     "11": {
@@ -401,6 +697,2238 @@
               "attr": {
                 "collapsed": true,
                 "style": {}
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "16": {
+      "title": "Book",
+      "id": 305,
+      "ideas": {
+        "1": {
+          "title": "FFmpeg基础库编程开发 -- czc1009",
+          "id": 308
+        }
+      }
+    },
+    "21": {
+      "title": "第一章 多媒体概念介绍",
+      "id": 81,
+      "ideas": {
+        "1": {
+          "title": "1.1 视频格式",
+          "id": 82,
+          "ideas": {
+            "1": {
+              "title": "适合本地播放的本地影像视频",
+              "id": 83
+            },
+            "2": {
+              "title": "适合在网络中播放的网络流媒体影像视频",
+              "id": 84
+            },
+            "3": {
+              "title": "原始视频数据",
+              "id": 85,
+              "ideas": {
+                "1": {
+                  "title": "usb摄像头输出格式",
+                  "id": 86,
+                  "ideas": {
+                    "4": {
+                      "title": "没有编码的原始数据",
+                      "id": 90,
+                      "ideas": {
+                        "1": {
+                          "title": "RGB24",
+                          "id": 87,
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "YUV2",
+                          "id": 88,
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "YV2",
+                          "id": 89,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "经过编码的数据",
+                      "id": 91,
+                      "ideas": {
+                        "1": {
+                          "title": "MJPEG",
+                          "id": 92
+                        },
+                        "2": {
+                          "title": "H.264",
+                          "id": 93
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "摄像头捕捉的数据也是可以设置的",
+                  "id": 94,
+                  "ideas": {
+                    "1": {
+                      "title": "win下的cap来设置",
+                      "id": 95
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "常见格式",
+              "id": 96,
+              "ideas": {
+                "1": {
+                  "title": "MPEG/MPG/DAT",
+                  "id": 97,
+                  "ideas": {
+                    "1": {
+                      "title": "MPEG",
+                      "id": 98,
+                      "ideas": {
+                        "1": {
+                          "title": "运动图像专家组",
+                          "id": 99
+                        },
+                        "2": {
+                          "title": "Motion Picture Experts Group",
+                          "id": 100
+                        },
+                        "3": {
+                          "title": "这类格式包括了MPEG-1, MPEG-2和MPEG-4在内的多种视频格式",
+                          "id": 101
+                        },
+                        "4": {
+                          "title": "MPEG系列变种已成为国际上影响最大的多媒体技术标准, 其中MPEG-1和MPEG-2是采用相同原理为基础的预测编码, 变换编码, 熵编码及运动补偿等第一代数据压缩编码技术",
+                          "id": 112,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "MPEG-1",
+                      "id": 102,
+                      "ideas": {
+                        "1": {
+                          "title": "广泛地应用在VCD的制作和一些视频片段下载的网络应用上面",
+                          "id": 103
+                        },
+                        "2": {
+                          "title": "大部分的VCD都是用MPEG1格式压缩的",
+                          "id": 104,
+                          "ideas": {
+                            "1": {
+                              "title": "刻录软件自动将MPEG1转换为DAT格式",
+                              "id": 105
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "可以把一部120分钟长的电影压缩到1.2 GB左右大小",
+                          "id": 106
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "MPEG-2",
+                      "id": 107,
+                      "ideas": {
+                        "1": {
+                          "title": "应用在DVD的制作, 同时在一些HDTV(高清晰电视广播)和一些高要求视频编辑处理上也相当多应用",
+                          "id": 108
+                        },
+                        "2": {
+                          "title": "把一部120分钟长的电影压缩到5-8GB",
+                          "id": 110,
+                          "ideas": {
+                            "1": {
+                              "title": "MPEG2的图像质量是MPEG1无法比拟的",
+                              "id": 111
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "MPEG-4",
+                      "id": 113,
+                      "ideas": {
+                        "1": {
+                          "title": "ISO / IEC 14496",
+                          "id": 114
+                        },
+                        "2": {
+                          "title": "基于第二代压缩编码技术指定的国际标准",
+                          "id": 115
+                        },
+                        "3": {
+                          "title": "它以视听媒体对象为基本单元，采用基于内容的压缩编码，以实现数字视音频、图形合成应用及交互式多媒体的集成\n",
+                          "id": 116
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "AVI",
+                  "id": 117,
+                  "ideas": {
+                    "1": {
+                      "title": "音视频交错(Audio Video Interleaved)",
+                      "id": 118
+                    },
+                    "2": {
+                      "title": "由微软公司发表的视频格式",
+                      "id": 119,
+                      "ideas": {
+                        "1": {
+                          "title": "在视频领域可以说是最悠久的格式之一",
+                          "id": 120
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "调用方便, 图像质量好, 压缩标准可任意选择",
+                      "id": 121
+                    },
+                    "4": {
+                      "title": "应用最广泛, 也是应用时间最长的格式之一",
+                      "id": 122
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "MOV",
+                  "id": 123,
+                  "ideas": {
+                    "1": {
+                      "title": "QuickTime",
+                      "id": 124,
+                      "ideas": {
+                        "1": {
+                          "title": "原本是Apple公司用于Mac计算机上的一种图像视频处理软件",
+                          "id": 125
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "QuickTime提供2种标准图像和数字视频格式",
+                      "id": 126,
+                      "ideas": {
+                        "1": {
+                          "title": "可以支持静态的*.PIC和*.JPG图像格式",
+                          "id": 127
+                        },
+                        "2": {
+                          "title": "动态基于Indeo压缩法的*.MOV和基于MPEG压缩法的*.MPG视频格式",
+                          "id": 128,
+                          "ideas": {}
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "ASF",
+                  "id": 130,
+                  "ideas": {
+                    "1": {
+                      "title": "Advanced Streaming Format高级流格式",
+                      "id": 131
+                    },
+                    "2": {
+                      "title": "微软为了和Real Player竞争开发出的一种可以直接在网络上观看视频节目的文件压缩格式",
+                      "id": 132
+                    },
+                    "3": {
+                      "title": "MPEG4压缩算法",
+                      "id": 133,
+                      "ideas": {}
+                    },
+                    "4": {
+                      "title": "图像质量比VCD差一点点, 比同是视频\"流\"格式的RAM格式要好",
+                      "id": 135
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "WMV",
+                  "id": 136,
+                  "ideas": {
+                    "1": {
+                      "title": "独立于编码方式的在Internet上实时传播多媒体的技术标准",
+                      "id": 137
+                    },
+                    "2": {
+                      "title": "微软希望利用他取代QuickTIme之类技术标准以及WAV, AVI之类的文件扩展名",
+                      "id": 138
+                    },
+                    "3": {
+                      "title": "优点",
+                      "id": 139,
+                      "ideas": {
+                        "1": {
+                          "title": "可扩充的媒体类型",
+                          "id": 140
+                        },
+                        "2": {
+                          "title": "本地或网络回放",
+                          "id": 141
+                        },
+                        "3": {
+                          "title": "可伸缩的媒体类型",
+                          "id": 142
+                        },
+                        "4": {
+                          "title": "流的优先级化",
+                          "id": 143
+                        },
+                        "5": {
+                          "title": "多语言支持",
+                          "id": 144
+                        },
+                        "6": {
+                          "title": "扩展性",
+                          "id": 145
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "NAVI",
+                  "id": 146,
+                  "ideas": {
+                    "1": {
+                      "title": "New AVI",
+                      "id": 147
+                    },
+                    "2": {
+                      "title": "一个名为Shadow Realm的地下组织发展起来的一种新视频格式",
+                      "id": 148
+                    },
+                    "3": {
+                      "title": "由微软ASF压缩算法修改而来(并不是想象中的AVI)",
+                      "id": 149,
+                      "ideas": {
+                        "1": {
+                          "title": "视频格式追求的无非时压缩率和图像质量",
+                          "id": 150
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "NAVI是一种去掉视频流特性的改良型ASF格式",
+                      "id": 151
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "3GP",
+                  "id": 152,
+                  "ideas": {
+                    "1": {
+                      "title": "3G流媒体的视频编码格式",
+                      "id": 153,
+                      "ideas": {
+                        "1": {
+                          "title": "主要为了配合3G网络的高传输速度而开发的",
+                          "id": 154,
+                          "ideas": {}
+                        },
+                        "2": {
+                          "title": "目前手机中最为常见的一种视频格式",
+                          "id": 156
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "\"第三代合作伙伴项目\"(3GPP)制定的一种多媒体标准",
+                      "id": 157
+                    },
+                    "3": {
+                      "title": "核心包括",
+                      "id": 158,
+                      "ideas": {
+                        "1": {
+                          "title": "高级音频编码(AAC)",
+                          "id": 159
+                        },
+                        "2": {
+                          "title": "自适应多速率(AMR)",
+                          "id": 160
+                        },
+                        "3": {
+                          "title": "MPEG-4和H.263视频编码解码器",
+                          "id": 161
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "目前大部分支持视频拍摄的手机都支持3GPP格式的视频播放",
+                      "id": 162
+                    },
+                    "5": {
+                      "title": "特点",
+                      "id": 163,
+                      "ideas": {
+                        "1": {
+                          "title": "网速占用较少",
+                          "id": 164
+                        },
+                        "2": {
+                          "title": "画质较差",
+                          "id": 165
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "8": {
+                  "title": "REAL VIDEO",
+                  "id": 166,
+                  "ideas": {
+                    "1": {
+                      "title": "RA, RAM",
+                      "id": 167
+                    },
+                    "2": {
+                      "title": "一开始就是定位在视频流应用方面的",
+                      "id": 168,
+                      "ideas": {
+                        "1": {
+                          "title": "可以说是视频流技术的始创者",
+                          "id": 169
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "可以在用56K MODEM拨号上网的条件实现不间断的视频播放",
+                      "id": 170,
+                      "ideas": {
+                        "1": {
+                          "title": "图像质量比MPEG2, DIVX差",
+                          "id": 171
+                        },
+                        "2": {
+                          "title": "是ASF的有力竞争者",
+                          "id": 172
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "9": {
+                  "title": "MKV",
+                  "id": 173,
+                  "ideas": {
+                    "1": {
+                      "title": "可在一个文件中集成多条不同类型的音轨和字幕轨",
+                      "id": 174
+                    },
+                    "2": {
+                      "title": "视频编码的自由度非常大",
+                      "id": 175,
+                      "ideas": {
+                        "1": {
+                          "title": "DivX",
+                          "id": 176
+                        },
+                        "2": {
+                          "title": "XviD",
+                          "id": 177
+                        },
+                        "3": {
+                          "title": "3IVX",
+                          "id": 178
+                        },
+                        "7": {
+                          "title": "流式视频",
+                          "id": 182,
+                          "ideas": {
+                            "1": {
+                              "title": "RealVideo",
+                              "id": 179,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "QuickTime",
+                              "id": 180,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "3": {
+                              "title": "WMV",
+                              "id": 181,
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "他是一种全称为Matroska的新型多媒体封装格式",
+                      "id": 183
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "10": {
+                  "title": "FLV",
+                  "id": 184,
+                  "ideas": {
+                    "1": {
+                      "title": "FLASH VIDEO",
+                      "id": 185
+                    },
+                    "2": {
+                      "title": "形成的文件极小, 加载速度极快, 使得网络观看视频文件成为可能",
+                      "id": 186
+                    },
+                    "3": {
+                      "title": "有效解决了",
+                      "id": 187,
+                      "ideas": {
+                        "1": {
+                          "title": "视频文件导入Flash后, 使导出的SWF文件体积庞大, 不能在网络上很好的使用等缺点",
+                          "id": 188
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "11": {
+                  "title": "F4V",
+                  "id": 189,
+                  "ideas": {
+                    "1": {
+                      "title": "作为一种更小更清晰, 更利于在网络传播的格式, F4V已经组件取代了传统FLV",
+                      "id": 190,
+                      "ideas": {
+                        "1": {
+                          "title": "也已经被大多数主流播放器兼容播放, 而不需要通过转换等复杂方式",
+                          "id": 191
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "F4V是Adobe公司为了迎接高清时代而推出继FLV格式后的支持H.264的F4V流媒体格式.",
+                      "id": 193
+                    },
+                    "3": {
+                      "title": "与FLV主要的区别",
+                      "id": 194,
+                      "ideas": {
+                        "1": {
+                          "title": "FLV格式采用的是H263编码, 而F4V则支持H.264编码的高清晰视频, 码率最高可达50Mbps",
+                          "id": 195
+                        },
+                        "2": {
+                          "title": "F4V和FLV在同等体积的前提下, 能够实现更高的分辨率, 并支持更高比特率, 就是我们所说的更清晰更流畅",
+                          "id": 197
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "很多主流媒体网站上下载的F4V文件后缀却为FLV, 这是F4V格式的另一特点",
+                      "id": 198
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "12": {
+                  "title": "RMVB",
+                  "id": 199,
+                  "ideas": {
+                    "1": {
+                      "title": "前身为RM格式",
+                      "id": 200
+                    },
+                    "2": {
+                      "title": "Real Networks公司所制定的音频视频压缩规范, 根据不同的网络传输速率, 而制定出不同的压缩比率",
+                      "id": 201,
+                      "ideas": {
+                        "1": {
+                          "title": "从而实现在低速率网络上进行影像数据实时传送和播放",
+                          "id": 202
+                        },
+                        "2": {
+                          "title": "具有体积小, 画质也还不错的有点",
+                          "id": 203
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "为了实现更优化的体积和画面质量, Real Networks公司不久又在RM的基础上, 推出了可变比特率编码的RMVB格式",
+                      "id": 204,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "RMVB的诞生，打破了原先RM格式那种平均压缩采样的方式，在保证平均压缩比的基础上，采用浮动比特率编码的方式，将较高的比特率用于复杂的动态画面（如歌舞、飞车、战争等），而在静态画面中则灵活地转为较低的采样率，从而合理地利用了比特率资源，使RMVB最大限度地压缩了影片的大小，最终拥有了近乎完美的接近于DVD品质的视听效果。\n",
+                          "id": 205
+                        },
+                        "2": {
+                          "title": "一般而言一部120分钟的dvd体积为4GB，而rmvb格式来压缩，仅400MB左右，而且清晰度流畅度并不比原DVD差太远。\n",
+                          "id": 206
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "13": {
+                  "title": "WebM",
+                  "id": 207,
+                  "ideas": {
+                    "1": {
+                      "title": "由Google提出, 是一个开放, 免费的媒体文件格式",
+                      "id": 208
+                    },
+                    "2": {
+                      "title": "WebM影片格式其实是以Matroska(即MKV)容器格式为基础开发的新容器格式",
+                      "id": 209,
+                      "ideas": {
+                        "1": {
+                          "title": "包括了VP8影片轨和Ogg Vorbis音轨",
+                          "id": 210
+                        },
+                        "2": {
+                          "title": "Google将其拥有的VP8视频编码技术以类似BSD授权开源, Ogg Vorbis本来就是开放格式",
+                          "id": 211,
+                          "ideas": {
+                            "1": {
+                              "title": "VP8是Google当年买下一间叫On2的公司的时候取得的Video Codec",
+                              "id": 213
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "WebM标准的网络视频更加偏向于开源并且是基于HTML5标准的",
+                      "id": 212
+                    },
+                    "4": {
+                      "title": "Youtube也会支持WebM播放",
+                      "id": 214
+                    },
+                    "5": {
+                      "title": "来自产品界的支持WebM",
+                      "id": 215,
+                      "ideas": {
+                        "1": {
+                          "title": "Adobe -- Flash Player",
+                          "id": 216
+                        },
+                        "2": {
+                          "title": "AMD",
+                          "id": 217
+                        },
+                        "3": {
+                          "title": "ARM",
+                          "id": 218
+                        },
+                        "4": {
+                          "title": "Broadcom",
+                          "id": 219
+                        },
+                        "5": {
+                          "title": "Freescale",
+                          "id": 220
+                        },
+                        "6": {
+                          "title": "NVIDIA",
+                          "id": 221
+                        },
+                        "7": {
+                          "title": "Qualcomm",
+                          "id": 222
+                        },
+                        "8": {
+                          "title": "TI",
+                          "id": 223
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "6": {
+                      "title": "不支持的",
+                      "id": 224,
+                      "ideas": {
+                        "1": {
+                          "title": "Intel",
+                          "id": 225
+                        }
+                      }
+                    },
+                    "7": {
+                      "title": "支持的Browser",
+                      "id": 226,
+                      "ideas": {
+                        "1": {
+                          "title": "Chrome",
+                          "id": 227
+                        },
+                        "2": {
+                          "title": "Firefox",
+                          "id": 228
+                        },
+                        "3": {
+                          "title": "Opera",
+                          "id": 229
+                        },
+                        "4": {
+                          "title": "IE9",
+                          "id": 230,
+                          "ideas": {
+                            "1": {
+                              "title": "出厂时仅会支持H.264影片播放",
+                              "id": 231
+                            },
+                            "2": {
+                              "title": "但如果你另外下载并安装了VP8, 那当然你也可以播放HTML/VP8影片",
+                              "id": 232
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "1.2 音频格式",
+          "id": 233,
+          "ideas": {
+            "1": {
+              "title": "在计算机内播放或是处理音频文件, 也就是要对声音文件进行数, 模转换, 这个过程同样由采样和量化构成",
+              "id": 234
+            },
+            "2": {
+              "title": "人耳所能听到的声音",
+              "id": 235,
+              "ideas": {
+                "1": {
+                  "title": "20Hz ~ 20KHz",
+                  "id": 236
+                },
+                "2": {
+                  "title": "20KHz以上人耳是听不到的",
+                  "id": 237,
+                  "ideas": {
+                    "1": {
+                      "title": "因此音频文件格式的最大带宽是20KHz",
+                      "id": 238,
+                      "ideas": {
+                        "1": {
+                          "title": "故而采样速率需要介于40~50KHz之间",
+                          "id": 239
+                        },
+                        "2": {
+                          "title": "而且对每个样本需要更多的量化比特数",
+                          "id": 240
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "音频数字化的标准是",
+              "id": 241,
+              "ideas": {
+                "1": {
+                  "title": "每个样本16位-96dB的信噪比",
+                  "id": 242
+                },
+                "2": {
+                  "title": "采用线性脉冲编码调制PCM",
+                  "id": 243
+                },
+                "3": {
+                  "title": "每一量化步长都具有相等的长度",
+                  "id": 244
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "常见格式",
+              "id": 245,
+              "ideas": {
+                "1": {
+                  "title": "CD",
+                  "id": 246,
+                  "ideas": {
+                    "1": {
+                      "title": "音质比较高",
+                      "id": 247
+                    },
+                    "2": {
+                      "title": "*.cda格式, 就是CD音轨",
+                      "id": 248
+                    },
+                    "3": {
+                      "title": "标准CD格式也就是44.1K的采样频率，速率88K/秒，16位量化位数，因为CD音轨可以说是近似无损的，因此它的声音基本上是忠于原声的，因此如果你是一个音响发烧友的话，CD是你的首选。",
+                      "id": 249
+                    },
+                    "4": {
+                      "title": "一个CD音频文件是一个*.cda文件，这只是一个索引信息，并不是真正的包含声音信息，所以不论CD音乐的长短，在电脑上看到的“*.cda文件”都是44字节长。",
+                      "id": 250
+                    },
+                    "5": {
+                      "title": "不能直接的复制CD格式的*.cda文件到硬盘上播放，需要使用象EAC这样的抓音轨软件把CD格式的文件转换成WAV，这个转换过程如果光盘驱动器质量过关而且EAC的参数设置得当的话，可以说是基本上无损抓音频。推荐大家使用这种方法。",
+                      "id": 251
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "WAVE",
+                  "id": 252,
+                  "ideas": {
+                    "1": {
+                      "title": "*.WAV是微软公司开发的一种声音文件格式",
+                      "id": 253,
+                      "ideas": {
+                        "1": {
+                          "title": "符合PIFFResource Interchange File Format 文件规范\n",
+                          "id": 254
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "“*.WAV”格式支持MSADPCM、CCITT A LAW等多种压缩算法，支持多种音频位数、采样频率和声道，标准格式的WAV文件和CD格式一样，也是44.1K的采样频率，速率88K/秒，16位量化位数，看到了吧，WAV格式的声音文件质量和CD相差无几，也是目前PC机上广为流行的声音文件格式，几乎所有的音频编辑软件都“认识”WAV格式。",
+                      "id": 255
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "AIFF",
+                  "id": 256,
+                  "ideas": {
+                    "1": {
+                      "title": "Audio Interchange FIle Format",
+                      "id": 257,
+                      "ideas": {
+                        "1": {
+                          "title": "音频交互文件格式",
+                          "id": 259
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "AIFF格式和AU格式, 他们都和WAV非常相像, 在大多数音频编辑软件中也都支持它们这几种常见的音乐格式",
+                      "id": 258
+                    },
+                    "3": {
+                      "title": "APPLE公司开发",
+                      "id": 260,
+                      "ideas": {
+                        "1": {
+                          "title": "被MACINTOSH平台及其应用程序所支持",
+                          "id": 261
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "NETSCAPE浏览器中LIVEAUDIO也支持AIFF",
+                      "id": 262
+                    },
+                    "5": {
+                      "title": "AIFF是Apple苹果电脑上面标准音频格式, 属于QuickTime技术的一部分",
+                      "id": 263
+                    },
+                    "6": {
+                      "title": "这一格式的特点就是格式本身与数据的意义无关, 因此受到了Microsoft的青睐，并据此搞出来WAV格式。AIFF虽然是一种很优秀的文件格式，但由于它是苹果电脑上的格式，因此在PC平台上并没有得到很大的流行。",
+                      "id": 264
+                    },
+                    "7": {
+                      "title": "由于AIFF的包容特性，所以它支持许多压缩技术。",
+                      "id": 265
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "AU",
+                  "id": 266,
+                  "ideas": {
+                    "1": {
+                      "title": "AUDIO文件是SUN公司推出的一种数字音频格式",
+                      "id": 267
+                    },
+                    "2": {
+                      "title": "AU文件原先是UNIX操作系统下的数字声音文件",
+                      "id": 268
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "MPEG",
+                  "id": 269,
+                  "ideas": {
+                    "1": {
+                      "title": "动态图象专家组的英文缩写",
+                      "id": 271,
+                      "ideas": {
+                        "1": {
+                          "title": "这个专家组始建于1988年，专门负责为CD建立视频和音频压缩标准",
+                          "id": 272
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "MPEG音频文件指的是MPEG标准中的声音部分即MPEG音频层",
+                      "id": 273
+                    },
+                    "3": {
+                      "title": "MPEG含有格式包括：MPEG-1、MPEG-2、MPEG-Layer3、MPEG-4",
+                      "id": 274
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "MP3",
+                  "id": 275,
+                  "ideas": {
+                    "1": {
+                      "title": "诞生于八十年代的德国，所谓的MP3也就是指的是MPEG标准中的音频部分，也就是MPEG音频层。",
+                      "id": 276
+                    },
+                    "2": {
+                      "title": "根据压缩质量和编码处理的不同分为3层，分别对应“*.mp1\"/“*.mp2”/“*.mp3”这3种声音文件。",
+                      "id": 277
+                    },
+                    "3": {
+                      "title": "MPEG音频文件的压缩是一种有损压缩，MPEG3音频编码具有10：1~12：1的高压缩率，同时基本保持低音频部分不失真，但是牺牲了声音文件中12KHz到16KHz高音频这部分的质量来换取文件的尺寸",
+                      "id": 278
+                    },
+                    "4": {
+                      "title": "相同长度的音乐文件，用*.mp3格式来储存，一般只有*.wav文件的1/10，而音质要次于CD格式或WAV格式的声音文件",
+                      "id": 279
+                    },
+                    "5": {
+                      "title": "因为MP3没有版权保护技术，说白了也就是谁都可以用",
+                      "id": 280
+                    },
+                    "6": {
+                      "title": "MP3格式压缩音乐的采样频率有很多种，可以用64Kbps或更低的采样频率节省空间，也可以用320Kbps的标准达到极高的音质。",
+                      "id": 281
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "MPEG-4",
+                  "id": 282
+                },
+                "8": {
+                  "title": "MIDI",
+                  "id": 283,
+                  "ideas": {
+                    "1": {
+                      "title": "Musical Instrument Digital Interface",
+                      "id": 284
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "9": {
+                  "title": "WMA",
+                  "id": 285,
+                  "ideas": {
+                    "1": {
+                      "title": "Windows Media Audio",
+                      "id": 286
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "10": {
+                  "title": "RealAudio",
+                  "id": 287
+                },
+                "11": {
+                  "title": "VQF",
+                  "id": 288
+                },
+                "12": {
+                  "title": "OggVorbis",
+                  "id": 289
+                },
+                "13": {
+                  "title": "AMR",
+                  "id": 290,
+                  "ideas": {
+                    "1": {
+                      "title": "Adaptive Multi-Rate",
+                      "id": 291
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "1.3 字幕格式",
+          "id": 292,
+          "ideas": {
+            "1": {
+              "title": "外挂字幕与内嵌字幕",
+              "id": 293,
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "外挂字幕三种格式",
+              "id": 294,
+              "ideas": {
+                "1": {
+                  "title": "srt格式",
+                  "id": 295
+                },
+                "2": {
+                  "title": "sub + idx",
+                  "id": 296
+                },
+                "3": {
+                  "title": "ass字幕",
+                  "id": 297
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "1.4 采集录制和播放渲染",
+          "id": 298,
+          "ideas": {
+            "1": {
+              "title": "视频采集",
+              "id": 299
+            },
+            "2": {
+              "title": "视频渲染",
+              "id": 300,
+              "ideas": {
+                "1": {
+                  "title": "Render",
+                  "id": 301,
+                  "ideas": {
+                    "1": {
+                      "title": "渲染",
+                      "id": 304
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Shade",
+                  "id": 302,
+                  "ideas": {
+                    "1": {
+                      "title": "着色",
+                      "id": 303
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "1.5 编解码器(codec)",
+          "id": 309,
+          "attr": {
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "1.6 容器和协议",
+          "id": 310
+        },
+        "7": {
+          "title": "1.7 常用概念介绍",
+          "id": 311,
+          "ideas": {
+            "1": {
+              "title": "硬解",
+              "id": 312
+            },
+            "2": {
+              "title": "IBP帧",
+              "id": 313
+            },
+            "3": {
+              "title": "GOP",
+              "id": 314
+            },
+            "4": {
+              "title": "mpeg4视频中IBP的判定",
+              "id": 315
+            },
+            "5": {
+              "title": "DTS和PTS",
+              "id": 316
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "第二章 FFmpeg框架",
+      "id": 317,
+      "ideas": {
+        "1": {
+          "title": "2.1 概述",
+          "id": 318,
+          "ideas": {
+            "1": {
+              "title": "功能",
+              "id": 319,
+              "ideas": {
+                "1": {
+                  "title": "视频采集",
+                  "id": 320
+                },
+                "2": {
+                  "title": "视频格式转换",
+                  "id": 321
+                },
+                "3": {
+                  "title": "视频截图",
+                  "id": 322
+                },
+                "4": {
+                  "title": "给视频加水印",
+                  "id": 323
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "模块组成",
+              "id": 324,
+              "ideas": {
+                "1": {
+                  "title": "libavformat",
+                  "id": 325
+                },
+                "2": {
+                  "title": "libavcodec",
+                  "id": 326
+                },
+                "3": {
+                  "title": "libavdevice",
+                  "id": 327
+                },
+                "4": {
+                  "title": "libavfilter",
+                  "id": 328
+                },
+                "5": {
+                  "title": "libavutil",
+                  "id": 329
+                },
+                "6": {
+                  "title": "libavresample",
+                  "id": 330
+                },
+                "7": {
+                  "title": "libswscale",
+                  "id": 331
+                },
+                "8": {
+                  "title": "libswresample",
+                  "id": 332
+                },
+                "9": {
+                  "title": "libpostproc",
+                  "id": 333
+                },
+                "10": {
+                  "title": "ffmpeg",
+                  "id": 334
+                },
+                "11": {
+                  "title": "ffserver",
+                  "id": 335
+                },
+                "12": {
+                  "title": "ffplay",
+                  "id": 336
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "命令集",
+              "id": 337
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "2.2 媒体播放器三大底层框架",
+          "id": 338,
+          "ideas": {
+            "1": {
+              "title": "MPC / HC架构",
+              "id": 339,
+              "ideas": {
+                "1": {
+                  "title": "Media Player Classic",
+                  "id": 342
+                },
+                "2": {
+                  "title": "KMP",
+                  "id": 343
+                },
+                "3": {
+                  "title": "射手播放器",
+                  "id": 344
+                }
+              }
+            },
+            "2": {
+              "title": "MPlayer架构",
+              "id": 340
+            },
+            "3": {
+              "title": "VLC架构",
+              "id": 341,
+              "ideas": {
+                "1": {
+                  "title": "模块化开发",
+                  "id": 345
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "41": {
+      "title": "第三章 编译及简单应用",
+      "id": 346,
+      "ideas": {
+        "1": {
+          "title": "3.1 FFMpeg库编译和入门介绍",
+          "id": 347
+        },
+        "2": {
+          "title": "3.2 流媒体数据流程讲解",
+          "id": 348
+        },
+        "3": {
+          "title": "3.3 简单应用",
+          "id": 349
+        },
+        "4": {
+          "title": "3.4 SDL(Simple DIrect Layer)",
+          "id": 350,
+          "ideas": {
+            "1": {
+              "title": "SDL显示视频",
+              "id": 351
+            },
+            "2": {
+              "title": "SDL显示音频",
+              "id": 352
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "3.5 ffmpeg程序的使用",
+          "id": 353,
+          "ideas": {
+            "1": {
+              "title": "ffmpeg",
+              "id": 354
+            },
+            "2": {
+              "title": "ffplay",
+              "id": 355
+            },
+            "3": {
+              "title": "ffprobe",
+              "id": 356
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "51": {
+      "title": "第四章 数据结构",
+      "id": 357,
+      "ideas": {
+        "1": {
+          "title": "4.1 AVCodec结构体",
+          "id": 358
+        },
+        "2": {
+          "title": "4.2 AVCodecContext结构体",
+          "id": 359
+        },
+        "3": {
+          "title": "4.3 AVInputFormat结构体",
+          "id": 360
+        },
+        "4": {
+          "title": "4.4 AVFormatContext结构体",
+          "id": 361
+        },
+        "5": {
+          "title": "4.5 MovContext结构体",
+          "id": 362
+        },
+        "6": {
+          "title": "4.6 URLProtocol结构体",
+          "id": 363
+        },
+        "7": {
+          "title": "4.7 URLContext结构体",
+          "id": 364
+        },
+        "8": {
+          "title": "4.8 AVIOContext结构体",
+          "id": 365
+        },
+        "9": {
+          "title": "4.9 AVStream结构体",
+          "id": 366
+        },
+        "10": {
+          "title": "4.10 MOVStreamContext结构体",
+          "id": 367
+        },
+        "11": {
+          "title": "4.11 AVPacket结构体",
+          "id": 368
+        },
+        "12": {
+          "title": "4.12 AVPacketList结构体",
+          "id": 369
+        },
+        "13": {
+          "title": "4.13 AVFrame结构体",
+          "id": 370
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "61": {
+      "title": "第五章 重要模块",
+      "id": 371,
+      "ideas": {
+        "1": {
+          "title": "5.1 libavutil公共模块",
+          "id": 372,
+          "ideas": {
+            "1": {
+              "title": "文件列表",
+              "id": 373
+            }
+          }
+        },
+        "2": {
+          "title": "5.2 libavcodec编解码模块",
+          "id": 375
+        },
+        "3": {
+          "title": "5.3 libavformat容器模块",
+          "id": 376
+        },
+        "4": {
+          "title": "5.4 libswscale视频色彩空间转换",
+          "id": 377
+        },
+        "5": {
+          "title": "5.5 libswresample音频重采样",
+          "id": 378
+        },
+        "6": {
+          "title": "5.6 libavfilter音视频过滤器",
+          "id": 379
+        },
+        "7": {
+          "title": "5.7 libavdevice设备输入和输出容器",
+          "id": 380
+        },
+        "8": {
+          "title": "5.8 libpostproc视频后期处理",
+          "id": 381
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "71": {
+      "title": "第六章 播放器",
+      "id": 382,
+      "ideas": {
+        "1": {
+          "title": "6.1 视频播放器",
+          "id": 383,
+          "ideas": {
+            "1": {
+              "title": "ffmpeg库的配置",
+              "id": 384
+            },
+            "2": {
+              "title": "一个简单的视频播放器",
+              "id": 385
+            }
+          }
+        },
+        "2": {
+          "title": "6.2 音频播放器",
+          "id": 386
+        },
+        "3": {
+          "title": "6.3 一个完整的播放器 -- ffplay",
+          "id": 387
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "81": {
+      "title": "第七章 应用开发",
+      "id": 388,
+      "ideas": {
+        "1": {
+          "title": "7.1 ffmpeg库的使用: 编码",
+          "id": 389,
+          "ideas": {
+            "1": {
+              "title": "YUV编码为视频",
+              "id": 390
+            }
+          }
+        }
+      }
+    },
+    "91": {
+      "title": "第八章 关键函数介绍",
+      "id": 391,
+      "ideas": {
+        "1": {
+          "title": "8.1 avformat_open_input",
+          "id": 392
+        },
+        "2": {
+          "title": "8.2 avcodec_register_all",
+          "id": 393
+        },
+        "3": {
+          "title": "8.3 av_read_frame",
+          "id": 394
+        },
+        "4": {
+          "title": "8.4 avcodec_decode_video2",
+          "id": 395
+        },
+        "5": {
+          "title": "8.5 transcode_init",
+          "id": 396
+        },
+        "6": {
+          "title": "8.6 transcode",
+          "id": 397
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "101": {
+      "title": "第九章 ffmpeg相关工程",
+      "id": 398,
+      "ideas": {
+        "1": {
+          "title": "9.1 ffdshow",
+          "id": 399
+        },
+        "2": {
+          "title": "9.2 LAV filters",
+          "id": 400
+        },
+        "3": {
+          "title": "9.3 MPlayer",
+          "id": 401
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "111": {
+      "title": "第十章 开发实例",
+      "id": 402
+    },
+    "121": {
+      "title": "第十一章 mp4文件封装协议分析",
+      "id": 403
+    },
+    "131": {
+      "title": "第十二章 flv文件格式分析",
+      "id": 404
+    },
+    "18.5": {
+      "title": "Blog",
+      "id": 307,
+      "ideas": {
+        "1": {
+          "title": "http://blog.csdn.net/leixiaohua1020",
+          "id": 405
+        }
+      }
+    },
+    "8.5": {
+      "title": "代码跟踪",
+      "id": 461,
+      "ideas": {
+        "2": {
+          "title": "读取AVPacket的逻辑是, 由AVInputFormat的read_packet读取",
+          "id": 468,
+          "ideas": {
+            "1": {
+              "title": "在find_stream_info时需要读取几个packet",
+              "id": 470,
+              "ideas": {
+                "1": {
+                  "title": "avformat_find_stream_info()",
+                  "id": 463,
+                  "ideas": {
+                    "1": {
+                      "title": "read_frame_internal",
+                      "id": 464,
+                      "ideas": {
+                        "1": {
+                          "title": "ff_read_packet",
+                          "id": 465,
+                          "ideas": {
+                            "1": {
+                              "title": "flv_read_packet",
+                              "id": 466,
+                              "ideas": {
+                                "1": {
+                                  "title": "s->iformat->read_packet()",
+                                  "id": 467
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "读取到Metadata是, 调用flv_read_metabody会设置AVInputFormat的duration等信息",
+          "id": 471,
+          "ideas": {
+            "1": {
+              "title": "avformat_find_stream_info()",
+              "id": 472,
+              "ideas": {
+                "1": {
+                  "title": "read_frame_internal()",
+                  "id": 473,
+                  "ideas": {
+                    "1": {
+                      "title": "ff_read_packet()",
+                      "id": 474,
+                      "ideas": {
+                        "1": {
+                          "title": "flv_read_packet",
+                          "id": 475,
+                          "ideas": {
+                            "1": {
+                              "title": "flv_read_metabody()",
+                              "id": 476,
+                              "ideas": {
+                                "1": {
+                                  "title": "amf_parse_object()",
+                                  "id": 477,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "s->duration = num_val * AV_TIME_BASE;",
+                                      "id": 478
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "4": {
+          "title": "实际上会预读一次文件, 缓存到(差不多是63732字节, 或者1667毫秒的数据)",
+          "id": 479,
+          "ideas": {
+            "1": {
+              "title": "struct AVPacketList *packet_buffer;",
+              "id": 480
+            },
+            "2": {
+              "title": "struct AVPacketList *packet_buffer_end;",
+              "id": 481
+            }
+          }
+        },
+        "5": {
+          "title": "里面, 若缓存读完后, 就会调用mux/demux从文件读取",
+          "id": 482,
+          "ideas": {
+            "1": {
+              "title": "av_read_frame",
+              "id": 483,
+              "ideas": {
+                "1": {
+                  "title": "read_frame_internal",
+                  "id": 484,
+                  "ideas": {
+                    "1": {
+                      "title": "ff_read_packet",
+                      "id": 485,
+                      "ideas": {
+                        "1": {
+                          "title": "flv_read_packet",
+                          "id": 486,
+                          "ideas": {
+                            "1": {
+                              "title": "av_get_packet从文件流读取数据到pkt",
+                              "id": 487
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "6": {
+          "title": "mux",
+          "id": 488,
+          "ideas": {
+            "1": {
+              "title": "首先也是创建一个AVFormatContext, 需要调用avformat_alloc_output_context2",
+              "id": 489
+            }
+          }
+        },
+        "7": {
+          "title": "调试ffmpeg命令: ffmpeg -re -i input.flv -vcodec copy -acodec copy -f flv -y rtmp://xxxx",
+          "id": 490,
+          "ideas": {
+            "1": {
+              "title": "首先是初始化网络",
+              "id": 491,
+              "ideas": {
+                "1": {
+                  "title": "main()",
+                  "id": 492,
+                  "ideas": {
+                    "1": {
+                      "title": "avformat_network_init()",
+                      "id": 493
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "设置断点avformat_alloc_output_context2, 会发现传入的参数",
+              "id": 494
+            },
+            "3": {
+              "title": "然后是打开文件",
+              "id": 495,
+              "ideas": {
+                "1": {
+                  "title": "main",
+                  "id": 496,
+                  "ideas": {
+                    "1": {
+                      "title": "ffmpeg_parse_options",
+                      "id": 497,
+                      "ideas": {
+                        "1": {
+                          "title": "open_files",
+                          "id": 498,
+                          "ideas": {
+                            "1": {
+                              "title": "open_output_file",
+                              "id": 499,
+                              "ideas": {
+                                "1": {
+                                  "title": "avio_open2",
+                                  "id": 500,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "ffio_fdopen",
+                                      "id": 501
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "然后是创建stream",
+              "id": 502,
+              "ideas": {
+                "1": {
+                  "title": "ffmpeg_parse_options",
+                  "id": 503,
+                  "ideas": {
+                    "1": {
+                      "title": "open_files",
+                      "id": 504,
+                      "ideas": {
+                        "1": {
+                          "title": "open_output_file",
+                          "id": 505,
+                          "ideas": {
+                            "1": {
+                              "title": "new_video_stream",
+                              "id": 506,
+                              "ideas": {
+                                "1": {
+                                  "title": "new_output_stream",
+                                  "id": 507,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "avformat_new_stream",
+                                      "id": 508
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "5": {
+              "title": "创建stream后需要设置stream信息",
+              "id": 509,
+              "ideas": {
+                "1": {
+                  "title": "main",
+                  "id": 510,
+                  "ideas": {
+                    "1": {
+                      "title": "transcode",
+                      "id": 511,
+                      "ideas": {
+                        "1": {
+                          "title": "transcode_init",
+                          "id": 512,
+                          "ideas": {
+                            "1": {
+                              "title": "avformat_write_header",
+                              "id": 513
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "6": {
+              "title": "H264和AAC需要将extra data 从input拷贝到output(其他信息也在这里拷贝)",
+              "id": 514,
+              "ideas": {
+                "1": {
+                  "title": "main",
+                  "id": 515,
+                  "ideas": {
+                    "1": {
+                      "title": "transcode",
+                      "id": 516,
+                      "ideas": {
+                        "1": {
+                          "title": "transcode_init",
+                          "id": 517,
+                          "ideas": {
+                            "1": {
+                              "title": "memcopy(codec->extradata, icodec->extradata, icodec->extradata_size)",
+                              "id": 518
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "7": {
+              "title": "写入header时, 会将编码包也写入, 这个很重要",
+              "id": 519,
+              "ideas": {
+                "1": {
+                  "title": "main",
+                  "id": 520,
+                  "ideas": {
+                    "1": {
+                      "title": "transcode",
+                      "id": 521,
+                      "ideas": {
+                        "1": {
+                          "title": "transcode_init",
+                          "id": 522,
+                          "ideas": {
+                            "1": {
+                              "title": "avformat_write_header",
+                              "id": 523,
+                              "ideas": {
+                                "1": {
+                                  "title": "flv_write_header",
+                                  "id": 524
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "8": {
+              "title": "读取包的流程",
+              "id": 525,
+              "ideas": {
+                "1": {
+                  "title": "main",
+                  "id": 526,
+                  "ideas": {
+                    "1": {
+                      "title": "transcode",
+                      "id": 527,
+                      "ideas": {
+                        "1": {
+                          "title": "transcode_step",
+                          "id": 528,
+                          "ideas": {
+                            "1": {
+                              "title": "process_input",
+                              "id": 529,
+                              "ideas": {
+                                "1": {
+                                  "title": "get_input_packet",
+                                  "id": 530,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "av_read_frame",
+                                      "id": 531
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "9": {
+              "title": "修改包的时间戳",
+              "id": 532,
+              "ideas": {
+                "1": {
+                  "title": "main",
+                  "id": 533,
+                  "ideas": {
+                    "1": {
+                      "title": "transcode",
+                      "id": 534,
+                      "ideas": {
+                        "1": {
+                          "title": "transcode_step",
+                          "id": 535,
+                          "ideas": {
+                            "1": {
+                              "title": "process_input",
+                              "id": 536
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "10": {
+              "title": "开始写入数据",
+              "id": 537,
+              "ideas": {
+                "1": {
+                  "title": "main",
+                  "id": 538,
+                  "ideas": {
+                    "1": {
+                      "title": "transcode",
+                      "id": 539,
+                      "ideas": {
+                        "1": {
+                          "title": "transcode_step",
+                          "id": 540,
+                          "ideas": {
+                            "1": {
+                              "title": "process_input",
+                              "id": 541,
+                              "ideas": {
+                                "1": {
+                                  "title": "output_packet",
+                                  "id": 542,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "do_streamcopy",
+                                      "id": 543,
+                                      "ideas": {
+                                        "1": {
+                                          "title": "write_frame",
+                                          "id": 544,
+                                          "ideas": {
+                                            "1": {
+                                              "title": "av_interleaved_write_frame",
+                                              "id": 545,
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "split_write_packet",
+                                                  "id": 546,
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "avio_flush",
+                                                      "id": 547,
+                                                      "ideas": {
+                                                        "1": {
+                                                          "title": "flush_buffer",
+                                                          "id": 548,
+                                                          "ideas": {
+                                                            "1": {
+                                                              "title": "writeout",
+                                                              "id": 549,
+                                                              "ideas": {
+                                                                "1": {
+                                                                  "title": "ffurl_write",
+                                                                  "id": 550,
+                                                                  "ideas": {
+                                                                    "1": {
+                                                                      "title": "retry_transfer_wrapper",
+                                                                      "id": 551,
+                                                                      "ideas": {
+                                                                        "1": {
+                                                                          "title": "rtmp_write",
+                                                                          "id": 552
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "可见是有flv format mux写入, 然后会调用指定的librtmp的写入",
+                  "id": 555
+                }
               }
             }
           }
