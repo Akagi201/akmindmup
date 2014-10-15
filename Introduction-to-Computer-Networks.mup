@@ -2144,6 +2144,1312 @@
         "collapsed": true,
         "style": {}
       }
+    },
+    "20.5": {
+      "title": "IEEE 802.11 Wireless LAN",
+      "id": 404,
+      "ideas": {
+        "1": {
+          "title": "Introduction",
+          "id": 405,
+          "ideas": {
+            "1": {
+              "title": "IEEE 802.11",
+              "id": 412,
+              "ideas": {
+                "1": {
+                  "title": "IEEE 802.11 is designed for a limited geographical area(homes, offices, campuses, stations)",
+                  "id": 413,
+                  "ideas": {
+                    "1": {
+                      "title": "The signals propagating through space",
+                      "id": 414
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Also known as Wi-Fi",
+                  "id": 415
+                },
+                "3": {
+                  "title": "IEEE 802.11 supports additional features",
+                  "id": 416,
+                  "ideas": {
+                    "1": {
+                      "title": "Power management and",
+                      "id": 417
+                    },
+                    "2": {
+                      "title": "Security mechanisms",
+                      "id": 418
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "IEEE 802.11 Physical layer",
+              "id": 419,
+              "ideas": {
+                "1": {
+                  "title": "Original 802.11 standard defined two radio-based physical layer standard",
+                  "id": 420,
+                  "ideas": {
+                    "1": {
+                      "title": "One using the frequency hopping",
+                      "id": 421,
+                      "ideas": {
+                        "1": {
+                          "title": "Over 791-MHz-wide frequency bandwidths",
+                          "id": 424
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "position": [
+                          180,
+                          -73.5,
+                          1
+                        ]
+                      }
+                    },
+                    "2": {
+                      "title": "Second using direct sequence",
+                      "id": 422,
+                      "ideas": {
+                        "1": {
+                          "title": "Using 11-bit chipping sequence",
+                          "id": 425
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Both standards run in the 2.4-GHz and provide up to 2 Mbps",
+                      "id": 423
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "IEEE 802.11 Standards",
+              "id": 426,
+              "ideas": {
+                "1": {
+                  "title": "Then physical layer standard 802.11b was added",
+                  "id": 427,
+                  "ideas": {
+                    "1": {
+                      "title": "Using a variant of direct sequence 802.11b provides up to 11 Mbps",
+                      "id": 428
+                    },
+                    "2": {
+                      "title": "Uses license-exempt 2.4 GHz band",
+                      "id": 429
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Then came 802.11a which delivers up to 54 Mbps using OFDM",
+                  "id": 430,
+                  "ideas": {
+                    "1": {
+                      "title": "802.11a runs on license-exempt 5-GHz band",
+                      "id": 431
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Then came 802.11g which is backward compatible with 802.11b",
+                  "id": 432,
+                  "ideas": {
+                    "1": {
+                      "title": "Uses 2.4 GHz band OFDM and delivers up to 54 Mbps",
+                      "id": 433
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Most recent standard is 802.11n which delivers up to 108Mbps, with multiple wireless signals and antennas, called MIMO technology",
+                  "id": 434
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "IEEE 802.11 - Hidden node problem",
+              "id": 435,
+              "ideas": {
+                "1": {
+                  "title": "Assume each of four nodes is able to send and receive signals that reach just the nodes to its immediate left and right",
+                  "id": 436,
+                  "ideas": {
+                    "1": {
+                      "title": "For example, B can exchange frames with A and C, but it cannot reach D.",
+                      "id": 437
+                    },
+                    "2": {
+                      "title": "C can reach B and D but not A",
+                      "id": 438
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Suppose both A and C want to communicate with B and so they each send it a frame.",
+                  "id": 439,
+                  "ideas": {
+                    "1": {
+                      "title": "A and C are unaware of each other since their signals do not carry that far",
+                      "id": 440
+                    },
+                    "2": {
+                      "title": "These two frames collide with each other at B",
+                      "id": 441,
+                      "ideas": {
+                        "1": {
+                          "title": "But unlike an Ethernet, neither A nor C is aware of this collision",
+                          "id": 443
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "A and C are said to hidden nodes with respect to each other",
+                      "id": 442
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Hidden Node Problem",
+                  "id": 444,
+                  "ideas": {
+                    "1": {
+                      "title": "Although A and C are hidden from each other, their signals can collide at B.",
+                      "id": 445,
+                      "ideas": {
+                        "1": {
+                          "title": "双方虽然听不到对方的信号, 但同时传送给相同的对象会造成冲撞",
+                          "id": 446
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "IEEE802.11 Exposed node problem",
+              "id": 447,
+              "ideas": {
+                "1": {
+                  "title": "Exposed node problem",
+                  "id": 448,
+                  "ideas": {
+                    "1": {
+                      "title": "Suppose B is sending to A. Node C is aware of this communication because it hears B's transmission.",
+                      "id": 449
+                    },
+                    "2": {
+                      "title": "It would be a mistake for C to conclude that it cannot transmit to anyone just because it can hear B's transmission.",
+                      "id": 450
+                    },
+                    "3": {
+                      "title": "Suppose C wants to transmit to node D.",
+                      "id": 451
+                    },
+                    "4": {
+                      "title": "This is not a problem since C's transmission to D will not interfere with A's ability to receive from B.",
+                      "id": 452
+                    },
+                    "5": {
+                      "title": "Exposed Node Problem",
+                      "id": 453,
+                      "ideas": {
+                        "1": {
+                          "title": "Although B and C are exposed to each other's signals, there is no interference if B transmits to A while C transmits to D.",
+                          "id": 454,
+                          "ideas": {
+                            "1": {
+                              "title": "双方虽然听得到对方的信号, 但同时可传送给不同的对象",
+                              "id": 455
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "IEEE 802.11 CSMA/CA",
+              "id": 456,
+              "ideas": {
+                "1": {
+                  "title": "802.11 addresses these two problems with an algorithm called Carrier Sense Multiple Access with Collision Avoidance(CSMA/CA)",
+                  "id": 457
+                },
+                "2": {
+                  "title": "Key Idea",
+                  "id": 458,
+                  "ideas": {
+                    "1": {
+                      "title": "Sender and receiver exchange control frames with each other before the sender actually transmits any data.",
+                      "id": 459
+                    },
+                    "2": {
+                      "title": "This exchange informs all nearby nodes that a transmission is about to begin.",
+                      "id": 460
+                    },
+                    "3": {
+                      "title": "Sender transmits a Request To Send(RTS) frame to the receiver",
+                      "id": 461,
+                      "ideas": {
+                        "1": {
+                          "title": "The RTS frame includes a field that indicates how long the sender wants to hold the medium",
+                          "id": 462,
+                          "ideas": {
+                            "1": {
+                              "title": "Length of the data frame to be transmitted",
+                              "id": 463
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Receiver replies with a Clear To Sender(CTS) frame",
+                      "id": 464,
+                      "ideas": {
+                        "1": {
+                          "title": "This frame echoes this length field back to the sender",
+                          "id": 465
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "RTS / CTS Frames",
+                  "id": 466,
+                  "ideas": {
+                    "1": {
+                      "title": "802.11 using RTS and CTS frames to reserve the wireless channel for a time period(duration field in the RTS and CTS frames)",
+                      "id": 467
+                    },
+                    "2": {
+                      "title": "Any node that sees the CTS frame",
+                      "id": 468,
+                      "ideas": {
+                        "1": {
+                          "title": "it is close to the receiver, therefore",
+                          "id": 469
+                        },
+                        "2": {
+                          "title": "cannot transmit for the period of time specified in the CTS frame",
+                          "id": 470
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Any node that sees the RTS frame but not the CTS frame",
+                      "id": 471,
+                      "ideas": {
+                        "1": {
+                          "title": "is not close enough to the receiver to interfere with it, so is free to transmit",
+                          "id": 472
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "If two or more nodes detect an idle link and try to transmit an RTS frame at the same time",
+                      "id": 473,
+                      "ideas": {
+                        "1": {
+                          "title": "Their RTS frame will collide with each other",
+                          "id": 474
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "5": {
+                      "title": "So the senders realize the collision has happened when they do not receive the CTS frame after a period of time",
+                      "id": 475
+                    },
+                    "6": {
+                      "title": "Each sender waits a random amount of time before trying again.",
+                      "id": 476
+                    },
+                    "7": {
+                      "title": "The amount of time is defined by the same exponential backoff algorithm used on the Ethernet",
+                      "id": 477
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Not Support Collision Detection",
+              "id": 478,
+              "ideas": {
+                "1": {
+                  "title": "802.11 does not support collision detection",
+                  "id": 479
+                },
+                "2": {
+                  "title": "How to know the sent frame was received successfully or?",
+                  "id": 480
+                },
+                "3": {
+                  "title": "We can use CSMA protocol, but the performance is not good enough",
+                  "id": 481
+                },
+                "4": {
+                  "title": "802.11 using ACK frame in CSMA/CA",
+                  "id": 482
+                },
+                "5": {
+                  "title": "Receiver sends an ACK frame to the sender after successfully receiving a frame",
+                  "id": 483
+                },
+                "6": {
+                  "title": "All nodes must wait for this ACK frame before trying to transmit",
+                  "id": 485
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "8": {
+              "title": "802.11 Frame Types",
+              "id": 486,
+              "ideas": {
+                "1": {
+                  "title": "Class 1 frames",
+                  "id": 487,
+                  "ideas": {
+                    "1": {
+                      "title": "Control Frames",
+                      "id": 488,
+                      "ideas": {
+                        "1": {
+                          "title": "RTS",
+                          "id": 490
+                        },
+                        "2": {
+                          "title": "CTS",
+                          "id": 491
+                        },
+                        "3": {
+                          "title": "ACK",
+                          "id": 492
+                        },
+                        "4": {
+                          "title": "Poll",
+                          "id": 493
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Management Frames",
+                      "id": 489,
+                      "ideas": {
+                        "1": {
+                          "title": "Probe Request / Response",
+                          "id": 494
+                        },
+                        "2": {
+                          "title": "Beacon",
+                          "id": 495
+                        },
+                        "3": {
+                          "title": "Authentication",
+                          "id": 496
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Distributed System",
+          "id": 406,
+          "ideas": {
+            "1": {
+              "title": "Nodes are free to move around",
+              "id": 497
+            },
+            "2": {
+              "title": "Directly reachable nodes may change dynamically",
+              "id": 498
+            },
+            "3": {
+              "title": "To deal with mobility and partial connectivity",
+              "id": 499,
+              "ideas": {
+                "1": {
+                  "title": "802.11 defines additional structures on a set of nodes",
+                  "id": 500
+                },
+                "2": {
+                  "title": "some nodes are allowed to roam",
+                  "id": 501
+                },
+                "3": {
+                  "title": "some are connected to a wired network infrastructure",
+                  "id": 502,
+                  "ideas": {
+                    "1": {
+                      "title": "Access Points(Ap) and",
+                      "id": 503
+                    },
+                    "2": {
+                      "title": "connected to each other by a so-called distribution system(DS)",
+                      "id": 504
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "Distribution System",
+              "id": 505,
+              "ideas": {
+                "1": {
+                  "title": "A distribution system that connects many APs",
+                  "id": 506
+                },
+                "2": {
+                  "title": "The distribution network runs at layer 2 of the ISO architecture",
+                  "id": 507
+                },
+                "3": {
+                  "title": "The idea behind this configuration is",
+                  "id": 508,
+                  "ideas": {
+                    "1": {
+                      "title": "Each nodes associates itself with one AP",
+                      "id": 509
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "How do the nodes select their APs?",
+                  "id": 510
+                },
+                "5": {
+                  "title": "How does it work when nodes move from one cell to another?",
+                  "id": 511
+                },
+                "6": {
+                  "title": "The technique for selecting an AP is called scanning",
+                  "id": 512,
+                  "ideas": {
+                    "1": {
+                      "title": "The node sends a Probe frame",
+                      "id": 513
+                    },
+                    "2": {
+                      "title": "All APs within reach reply with a Probe Response frame",
+                      "id": 514
+                    },
+                    "3": {
+                      "title": "The node selects one of the APs and sends that AP an Association Request frame",
+                      "id": 515
+                    },
+                    "4": {
+                      "title": "The AP replies with an Association Response frame",
+                      "id": 516
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "A node runs this protocol whenever",
+                  "id": 517,
+                  "ideas": {
+                    "1": {
+                      "title": "It joins the network, and",
+                      "id": 518
+                    },
+                    "2": {
+                      "title": "when it wants to change another AP(better signal)",
+                      "id": 519
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "8": {
+                  "title": "Active Scanning",
+                  "id": 520,
+                  "ideas": {
+                    "1": {
+                      "title": "When node C moves from the cell serviced by AP-1 to the cell serviced by AP-2",
+                      "id": 521
+                    },
+                    "2": {
+                      "title": "As it moves, it sends Probe frames, which eventually result in the Probe Responses from AP-2",
+                      "id": 522
+                    },
+                    "3": {
+                      "title": "At some point, C prefers AP-2 over AP-1, and so it associates with AP-2.",
+                      "id": 523,
+                      "ideas": {
+                        "1": {
+                          "title": "This is called active scanning since the node is actively searching for an AP",
+                          "id": 524
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "9": {
+                  "title": "Passive Scanning",
+                  "id": 525,
+                  "ideas": {
+                    "1": {
+                      "title": "APs also periodically send a Beacon frame that advertises the capabilities of the AP; these include the transmission rate supported by the AP",
+                      "id": 526,
+                      "ideas": {
+                        "1": {
+                          "title": "This is called passive scanning",
+                          "id": 527
+                        },
+                        "2": {
+                          "title": "A node can change to this AP based on the Beacon frame simply by sending it an Association Request frame back to the AP",
+                          "id": 528
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "IEEE 802.11 Frame format",
+          "id": 407,
+          "ideas": {
+            "1": {
+              "title": "Source and Destinations addresses",
+              "id": 529,
+              "ideas": {
+                "1": {
+                  "title": "each 48 bits",
+                  "id": 530
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Data",
+              "id": 531,
+              "ideas": {
+                "1": {
+                  "title": "up to 2312 bytes",
+                  "id": 532
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "CRC",
+              "id": 533,
+              "ideas": {
+                "1": {
+                  "title": "32bits",
+                  "id": 534
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "Control field",
+              "id": 535,
+              "ideas": {
+                "1": {
+                  "title": "16 bits",
+                  "id": 536
+                },
+                "2": {
+                  "title": "Contains three subfields (of interest)",
+                  "id": 537,
+                  "ideas": {
+                    "1": {
+                      "title": "6 bit Type field",
+                      "id": 538,
+                      "ideas": {
+                        "1": {
+                          "title": "indicates whether the frame is an RTS or CTS frame or being used by the scanning algorithm",
+                          "id": 539
+                        },
+                        "2": {
+                          "title": "A pair of 1 bit fields",
+                          "id": 540,
+                          "ideas": {
+                            "1": {
+                              "title": "called ToDS and FromDS",
+                              "id": 541
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "Frame contains 4 addresses",
+              "id": 542
+            },
+            "6": {
+              "title": "How these addresses are interpreted depends on the settings of the ToDS and FromDS bits in the frame's Control field",
+              "id": 543
+            },
+            "7": {
+              "title": "This is to account for the possibility that the frame had to be forwarded across the Distribution System",
+              "id": 544
+            },
+            "8": {
+              "title": "Simplest case",
+              "id": 545,
+              "ideas": {
+                "1": {
+                  "title": "When one node is sending directly to another, both the DS bits are -, Addr1 identifies the target node, and Addr2 identifies the source node",
+                  "id": 546
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "Most complex case",
+              "id": 547,
+              "ideas": {
+                "1": {
+                  "title": "Both DS bits are set to 1",
+                  "id": 548,
+                  "ideas": {
+                    "1": {
+                      "title": "indicates that the message went from a wireless node -> distribution system -> another wireless node",
+                      "id": 549
+                    }
+                  }
+                },
+                "2": {
+                  "title": "BSSID",
+                  "id": 550,
+                  "ideas": {
+                    "1": {
+                      "title": "MAC address of an AP",
+                      "id": 551
+                    }
+                  }
+                },
+                "3": {
+                  "title": "SA",
+                  "id": 552,
+                  "ideas": {
+                    "1": {
+                      "title": "Original Source address",
+                      "id": 553
+                    }
+                  }
+                },
+                "4": {
+                  "title": "DA",
+                  "id": 554,
+                  "ideas": {
+                    "1": {
+                      "title": "Final Destination address",
+                      "id": 555
+                    }
+                  }
+                },
+                "5": {
+                  "title": "TA",
+                  "id": 556,
+                  "ideas": {
+                    "1": {
+                      "title": "Transmitter address",
+                      "id": 557
+                    }
+                  }
+                },
+                "6": {
+                  "title": "RA",
+                  "id": 558,
+                  "ideas": {
+                    "1": {
+                      "title": "Receiver address",
+                      "id": 559
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "IEEE 802.11 MAC Architecture",
+          "id": 408,
+          "ideas": {
+            "1": {
+              "title": "Distributed Coordination Function(DCF)",
+              "id": 560,
+              "ideas": {
+                "1": {
+                  "title": "The fundamental access method for the 802.11 MAC, known as Carrier Sense Multiple Access with Collision Avoidance(CSMA/CA)",
+                  "id": 561
+                },
+                "2": {
+                  "title": "Shall be implemented in all stations and APs",
+                  "id": 562
+                },
+                "3": {
+                  "title": "Used within both configurations",
+                  "id": 563,
+                  "ideas": {
+                    "1": {
+                      "title": "Ad hoc",
+                      "id": 564
+                    },
+                    "2": {
+                      "title": "Infrastructured",
+                      "id": 565
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Point Coordination Function(PCF)",
+              "id": 566,
+              "ideas": {
+                "1": {
+                  "title": "An alternative access method",
+                  "id": 567
+                },
+                "2": {
+                  "title": "Shall be implemented on top of the DCF",
+                  "id": 568
+                },
+                "3": {
+                  "title": "A point coordinator(polling master) is used to determine which station currently has the right to transmit.",
+                  "id": 569
+                },
+                "4": {
+                  "title": "Shall be built up from the DCF through the use of an access priority mechanism.",
+                  "id": 570
+                },
+                "5": {
+                  "title": "Different accesses of traffic can be defined through the use of different values of IFC(Inter-Frame Space)",
+                  "id": 571
+                },
+                "6": {
+                  "title": "Shall use a Point IFS(PIFS) < Distributed IFS(DIFS)",
+                  "id": 572
+                },
+                "7": {
+                  "title": "Point coordinated traffic shall have higher priority to access the medium, which may be used to provide a contention-free access method",
+                  "id": 573
+                },
+                "8": {
+                  "title": "The priority access of the PIFS allows the point coordinator to seize control of the medium away from the other stations.",
+                  "id": 574
+                },
+                "9": {
+                  "title": "Coexistence of DCF and PCF",
+                  "id": 575,
+                  "ideas": {
+                    "1": {
+                      "title": "Both the DCF and PCF shall coexist without interference.",
+                      "id": 576
+                    },
+                    "2": {
+                      "title": "Superframe: A contention-free burst occurs at the beginning, followed by a contention period.",
+                      "id": 577
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Distributed Coordination Function(DCF)",
+          "id": 409,
+          "ideas": {
+            "1": {
+              "title": "Allows for automatic medium sharing between PHYs through the use of CSMA/CA and a random backoff time following a busy medium condition.",
+              "id": 578
+            },
+            "2": {
+              "title": "All directed traffic uses immediate positive ACK frame",
+              "id": 579
+            },
+            "3": {
+              "title": "Retransmission is scheduled by the sender if no ACK is received.",
+              "id": 580
+            },
+            "4": {
+              "title": "Carrier Sense shall be performed both through physical and virtual mechanisms.",
+              "id": 581
+            },
+            "5": {
+              "title": "The Virtual Carrier Sense mechanism is archieved by distributing medium busy reservation information through an exchange of RTS and CTS frames(contain a duration field) prior to the actual data frame.",
+              "id": 582
+            },
+            "6": {
+              "title": "Unicast only, not used in multicast / broadcast.",
+              "id": 583
+            },
+            "7": {
+              "title": "The use of RTS / CTS is under control of RTS_Threshold (payload length, under which without any RTS / CTS prefix)",
+              "id": 584
+            },
+            "8": {
+              "title": "Physical Carrier Sense Mechanism",
+              "id": 585,
+              "ideas": {
+                "1": {
+                  "title": "A physical carrier sense mechanism shall be provided by the PHY.",
+                  "id": 586
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "Virtual Carrier Sense Mechanism",
+              "id": 588,
+              "ideas": {
+                "1": {
+                  "title": "Provided by the MAC, named Net Allocation Vector(NAV), which maintains a prediction of future traffic based on duration information announced in RTC / CTS frames.",
+                  "id": 589
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "10": {
+              "title": "MAC-Level Ack(Positive Acknowledgement)",
+              "id": 590,
+              "ideas": {
+                "1": {
+                  "title": "To allow detection of a lost or errored frame an ACK frame shall be returned immediately following a successfully received frame.",
+                  "id": 591
+                },
+                "2": {
+                  "title": "The gap between the received frame and ACK frame shall be SIFS",
+                  "id": 592
+                },
+                "3": {
+                  "title": "The frame types should be acknowledged with an ACK frame",
+                  "id": 593,
+                  "ideas": {
+                    "1": {
+                      "title": "Data",
+                      "id": 594
+                    },
+                    "2": {
+                      "title": "Poll",
+                      "id": 595
+                    },
+                    "3": {
+                      "title": "Request",
+                      "id": 596
+                    },
+                    "4": {
+                      "title": "Response",
+                      "id": 597
+                    }
+                  }
+                },
+                "4": {
+                  "title": "The lack of an ACK frame means that an error has occurred.",
+                  "id": 598
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Inter-Frame Space(IFS)",
+              "id": 599,
+              "ideas": {
+                "1": {
+                  "title": "Priority levels",
+                  "id": 600,
+                  "ideas": {
+                    "1": {
+                      "title": "Three different IFS's are defined.",
+                      "id": 601
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Short-IFS(SIFS)",
+                  "id": 602,
+                  "ideas": {
+                    "1": {
+                      "title": "Used for",
+                      "id": 603,
+                      "ideas": {
+                        "1": {
+                          "title": "an ACK frame",
+                          "id": 605
+                        },
+                        "2": {
+                          "title": "a CTS frame",
+                          "id": 606
+                        },
+                        "3": {
+                          "title": "by a station responding to any polling",
+                          "id": 607
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Any STA intending to send only these frame types is allowed to transmit after the SIFS time has elapsed following a busy medium.",
+                      "id": 604
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      165,
+                      118.25,
+                      1
+                    ],
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "PCF-IFS(PIFS)",
+                  "id": 608,
+                  "ideas": {
+                    "1": {
+                      "title": "Used only by the PCF to send any of the Contention Free Period frames.",
+                      "id": 609
+                    },
+                    "2": {
+                      "title": "The PCF shall be allowed to transmit after it detects the medium free for the period PIFS.",
+                      "id": 610
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "DCF-IFS(DIFS)",
+                  "id": 611,
+                  "ideas": {
+                    "1": {
+                      "title": "Used by the DCF to transmit asynchronous MPDUs.",
+                      "id": 612
+                    },
+                    "2": {
+                      "title": "A STA using the DCF is allowed to transmit after it detects the medium free for the period DIFS, as long as it is not in a backoff period.",
+                      "id": 613
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Random Backoff Time",
+              "id": 614,
+              "ideas": {
+                "1": {
+                  "title": "Before transmitting asynchronous MPDUs, a STA shall determine the medium state.",
+                  "id": 615
+                },
+                "2": {
+                  "title": "If busy, the STA  shall defer until after a DIFS gap is detected, and then generate a random backoff period for an additional deferral time(resolve contension).",
+                  "id": 616
+                },
+                "3": {
+                  "title": "Backoff time = INT(CW * Random()) * Slot time",
+                  "id": 617,
+                  "ideas": {
+                    "1": {
+                      "title": "CW",
+                      "id": 618,
+                      "ideas": {
+                        "1": {
+                          "title": "An integer between CWmin and CWmax",
+                          "id": 619
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Random()",
+                      "id": 620,
+                      "ideas": {
+                        "1": {
+                          "title": "a random number",
+                          "id": 621
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Slot Time",
+                      "id": 622,
+                      "ideas": {
+                        "1": {
+                          "title": "Transmitter turn-on delay + medium propagation delay + medium busy detect response time",
+                          "id": 623
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "13": {
+              "title": "DCF Access Procedure",
+              "id": 624,
+              "ideas": {
+                "1": {
+                  "title": "CSMA/CA Protocol",
+                  "id": 625
+                },
+                "2": {
+                  "title": "Used when there is no PCF detected and when in the Contention Period of a Supperframe when using a PCF.",
+                  "id": 626
+                },
+                "3": {
+                  "title": "Basic Access",
+                  "id": 628,
+                  "ideas": {
+                    "1": {
+                      "title": "A STA with a pending MPDU may transmit when it detects a free medium for greater than or equal to a DIFS time.",
+                      "id": 629
+                    },
+                    "2": {
+                      "title": "If the medium is busy when a STA desires to initiate a Data, Poll, Request, or Response MPDU transfer, and only a DCF is being used (or a Contention Period portion of a Superframe is active), the Random Backoff Time algorithm shall be followed.",
+                      "id": 630
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "Backoff Procedure",
+                  "id": 631,
+                  "ideas": {
+                    "1": {
+                      "title": "A backoff time is selected first.",
+                      "id": 632
+                    },
+                    "2": {
+                      "title": "The Backoff Timer shall be frozen while the medium is sensed busy and shall decrement only when the medium is free(resume whenever free period > DIFS)",
+                      "id": 633
+                    },
+                    "3": {
+                      "title": "Transmission shall commence whenever the Backoff Timer reaches zero.",
+                      "id": 634
+                    },
+                    "4": {
+                      "title": "A STA that has just transmitted a frame and has another frame ready to transmit(queued), shall perform the backoff procedure(fairness concern)",
+                      "id": 635
+                    },
+                    "5": {
+                      "title": "Tends toward fair access on a FCFS basis",
+                      "id": 636
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "Settint the NAV Through Use of RTS/CTS Frames",
+                  "id": 637,
+                  "ideas": {
+                    "1": {
+                      "title": "RTS and CTS frames contain a Duration field based on the medium occupancy time of the MPDU from the end of the RTS or CTS frame until the end of the ACK frame.",
+                      "id": 638
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "6": {
+          "title": "Point Coordination Function(PCF)",
+          "id": 410
+        },
+        "7": {
+          "title": "IEEE 802.11 Standards",
+          "id": 411
+        }
+      }
     }
   },
   "links": [],
