@@ -3,199 +3,1671 @@
   "id": 1,
   "formatVersion": 2,
   "ideas": {
-    "1": {
-      "title": "Chapter 1. Why cmake?",
-      "id": 2,
+    "5": {
+      "title": "Mastering CMake",
+      "id": 42,
       "ideas": {
         "1": {
-          "title": "For cross platform projects, as a unified build system.",
-          "id": 3,
+          "title": "Chapter 1. Why cmake?",
+          "id": 2,
           "ideas": {
             "1": {
-              "title": "the ability to test for machine byte order and other hardware specific characteristics.",
-              "id": 17
-            },
-            "2": {
-              "title": "A single set of build configuration files that work on all platforms.",
-              "id": 18
-            },
-            "3": {
-              "title": "Support for building shared libraries on all platforms that support it.",
-              "id": 19
-            },
-            "4": {
-              "title": "The ability to configure files with system dependent information such as the loation of data files and other information.",
-              "id": 20
-            }
-          }
-        },
-        "2": {
-          "title": "single platform multi-machine development environments",
-          "id": 4,
-          "ideas": {
-            "1": {
-              "title": "the ability to automatically search for programs, libraries, and header files that may be required by the software being built.",
-              "id": 5,
+              "title": "For cross platform projects, as a unified build system.",
+              "id": 3,
               "ideas": {
                 "1": {
-                  "title": "the ability to consider environment variables",
-                  "id": 6
+                  "title": "the ability to test for machine byte order and other hardware specific characteristics.",
+                  "id": 17
                 },
                 "2": {
-                  "title": "Window's registry settings when searching",
-                  "id": 7
+                  "title": "A single set of build configuration files that work on all platforms.",
+                  "id": 18
+                },
+                "3": {
+                  "title": "Support for building shared libraries on all platforms that support it.",
+                  "id": 19
+                },
+                "4": {
+                  "title": "The ability to configure files with system dependent information such as the loation of data files and other information.",
+                  "id": 20
                 }
               }
             },
             "2": {
-              "title": "the ability to build in a directory tree outside of the source tree.",
-              "id": 8
-            },
-            "3": {
-              "title": "the ability to create complex custom commands for automatically generated files such as Qt's moc, the insight toolkit's CABLE wrappers and SWIG wrapper generators.",
-              "id": 9,
+              "title": "single platform multi-machine development environments",
+              "id": 4,
               "ideas": {
                 "1": {
-                  "title": "These commands are used to generate new source files during the build process that are in turn compiled into the software",
-                  "id": 10
-                }
-              },
-              "attr": {
-                "collapsed": true,
-                "style": {}
-              }
-            },
-            "4": {
-              "title": "the ability to select optional components at configuration time",
-              "id": 11
-            },
-            "5": {
-              "title": "the ability to automatically generate workspaces and projects from a simple text file",
-              "id": 12
-            },
-            "6": {
-              "title": "the ability to easily switch between static and shared builds.",
-              "id": 13,
-              "ideas": {
-                "1": {
-                  "title": "CMake knows how to create shared libraries and modules on all platforms supported.",
-                  "id": 14
+                  "title": "the ability to automatically search for programs, libraries, and header files that may be required by the software being built.",
+                  "id": 5,
+                  "ideas": {
+                    "1": {
+                      "title": "the ability to consider environment variables",
+                      "id": 6
+                    },
+                    "2": {
+                      "title": "Window's registry settings when searching",
+                      "id": 7
+                    }
+                  }
                 },
                 "2": {
-                  "title": "Complicated platform-specific linker flags are handled",
-                  "id": 15
+                  "title": "the ability to build in a directory tree outside of the source tree.",
+                  "id": 8
+                },
+                "3": {
+                  "title": "the ability to create complex custom commands for automatically generated files such as Qt's moc, the insight toolkit's CABLE wrappers and SWIG wrapper generators.",
+                  "id": 9,
+                  "ideas": {
+                    "1": {
+                      "title": "These commands are used to generate new source files during the build process that are in turn compiled into the software",
+                      "id": 10
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "the ability to select optional components at configuration time",
+                  "id": 11
+                },
+                "5": {
+                  "title": "the ability to automatically generate workspaces and projects from a simple text file",
+                  "id": 12
+                },
+                "6": {
+                  "title": "the ability to easily switch between static and shared builds.",
+                  "id": 13,
+                  "ideas": {
+                    "1": {
+                      "title": "CMake knows how to create shared libraries and modules on all platforms supported.",
+                      "id": 14
+                    },
+                    "2": {
+                      "title": "Complicated platform-specific linker flags are handled",
+                      "id": 15
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "Automatic generation of file dependencies and support for parallel builds on most platforms.",
+                  "id": 16
                 }
               },
               "attr": {
-                "collapsed": true,
+                "position": [
+                  170.5,
+                  144.5,
+                  1
+                ],
                 "style": {}
               }
             },
-            "7": {
-              "title": "Automatic generation of file dependencies and support for parallel builds on most platforms.",
-              "id": 16
+            "3": {
+              "title": "CTest",
+              "id": 22
+            },
+            "4": {
+              "title": "CPack",
+              "id": 23
             }
           },
           "attr": {
-            "position": [
-              170.5,
-              144.5,
-              1
-            ],
-            "style": {}
-          }
-        },
-        "3": {
-          "title": "CTest",
-          "id": 22
-        },
-        "4": {
-          "title": "CPack",
-          "id": 23
-        }
-      },
-      "attr": {
-        "style": {},
-        "collapsed": true
-      }
-    },
-    "11": {
-      "title": "Chapter2.  Getting Started",
-      "id": 25,
-      "ideas": {
-        "1": {
-          "title": "command form",
-          "id": 26,
-          "ideas": {
-            "1": {
-              "title": "command (args...)",
-              "id": 27
-            },
-            "2": {
-              "title": "command is case insensitive",
-              "id": 28
-            }
+            "style": {},
+            "collapsed": true
           }
         },
         "2": {
-          "title": "variable",
-          "id": 29,
+          "title": "Chapter2.  Getting Started",
+          "id": 25,
           "ideas": {
             "1": {
-              "title": "string",
-              "id": 30
-            },
-            "2": {
-              "title": "list of string",
-              "id": 31
-            },
-            "3": {
-              "title": "referenced",
-              "id": 32,
+              "title": "command form",
+              "id": 26,
               "ideas": {
                 "1": {
-                  "title": "${VAR}",
-                  "id": 33
+                  "title": "command (args...)",
+                  "id": 27
+                },
+                "2": {
+                  "title": "command is case insensitive",
+                  "id": 28
+                }
+              }
+            },
+            "2": {
+              "title": "variable",
+              "id": 29,
+              "ideas": {
+                "1": {
+                  "title": "string",
+                  "id": 30
+                },
+                "2": {
+                  "title": "list of string",
+                  "id": 31
+                },
+                "3": {
+                  "title": "referenced",
+                  "id": 32,
+                  "ideas": {
+                    "1": {
+                      "title": "${VAR}",
+                      "id": 33
+                    }
+                  }
+                }
+              }
+            },
+            "3": {
+              "title": "Multiple arguments",
+              "id": 34,
+              "ideas": {
+                "1": {
+                  "title": "set command",
+                  "id": 35
+                }
+              }
+            },
+            "4": {
+              "title": "System environment variables and Windows registry values can be accessed directly in CMake.",
+              "id": 36,
+              "ideas": {
+                "1": {
+                  "title": "access system environment variables",
+                  "id": 37,
+                  "ideas": {
+                    "1": {
+                      "title": "$ENV{VAR}",
+                      "id": 38
+                    }
+                  }
+                },
+                "2": {
+                  "title": "reference registry entries",
+                  "id": 39,
+                  "ideas": {
+                    "1": {
+                      "title": "[HKEY_CURRENT_USER\\\\Software\\\\paath1\\\\path2; key]",
+                      "id": 40
+                    }
+                  }
                 }
               }
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "10": {
+      "title": "CMake Practice",
+      "id": 41,
+      "ideas": {
+        "1": {
+          "title": "cmake常用变量和常用环境变量",
+          "id": 43,
+          "ideas": {
+            "1": {
+              "title": "cmake变量引用方式",
+              "id": 44,
+              "ideas": {
+                "1": {
+                  "title": "使用${}进行变量引用",
+                  "id": 45
+                },
+                "2": {
+                  "title": "在IF等语句中, 是直接使用变量名而不通过${}取值",
+                  "id": 46
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "cmake自定义变量的方式",
+              "id": 47,
+              "ideas": {
+                "1": {
+                  "title": "隐式定义",
+                  "id": 48,
+                  "ideas": {
+                    "1": {
+                      "title": "例子",
+                      "id": 50,
+                      "ideas": {
+                        "1": {
+                          "title": "PROJECT指令会隐式定义<projectname>_BINARY_DIR和<projectname>_SOURCE_DIR两个变量",
+                          "id": 51
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "显示定义",
+                  "id": 49,
+                  "ideas": {
+                    "1": {
+                      "title": "例子",
+                      "id": 53,
+                      "ideas": {
+                        "1": {
+                          "title": "SET指令",
+                          "id": 54
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "cmake常用变量",
+              "id": 55,
+              "ideas": {
+                "1": {
+                  "title": "CMAKE_BINARY_DIR",
+                  "id": 56,
+                  "ideas": {
+                    "1": {
+                      "title": "PROJECT_BINARY_DIR",
+                      "id": 57,
+                      "ideas": {
+                        "1": {
+                          "title": "稍微有区别",
+                          "id": 59
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "<projectname>_BINARY_DIR",
+                      "id": 58,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "CMAKE_SOURCE_DIR",
+                  "id": 60,
+                  "ideas": {
+                    "1": {
+                      "title": "PROJECT_SOURCE_DIR",
+                      "id": 61,
+                      "ideas": {
+                        "1": {
+                          "title": "稍微有区别",
+                          "id": 63
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "<projectname>_SOURCE_DIR",
+                      "id": 62
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "CMAKE_CURRENT_SOURCE_DIR",
+                  "id": 64,
+                  "ideas": {
+                    "1": {
+                      "title": "当前处理的CMakeLists.txt所在路径, 如src子目录",
+                      "id": 65
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "CMAKE_CURRENT_BINARY_DIR",
+                  "id": 66,
+                  "ideas": {
+                    "1": {
+                      "title": "in-source编译",
+                      "id": 67,
+                      "ideas": {
+                        "1": {
+                          "title": "跟CMAKE_CURRENT_SOURCE_DIR一致",
+                          "id": 69
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "out-of-source编译",
+                      "id": 68,
+                      "ideas": {
+                        "1": {
+                          "title": "target编译目录",
+                          "id": 70
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "ADD_SUBDIRECTORY(src bin)可以更改这个变量值",
+                      "id": 71
+                    },
+                    "4": {
+                      "title": "SET(EXECUTABLE_OUTPUT_PATH <新路径>)并不会对这个变量造成影响, 仅仅修改了最终目标文件存放的路径",
+                      "id": 72
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "CMAKE_CURRENT_LIST_FILE",
+                  "id": 73,
+                  "ideas": {
+                    "1": {
+                      "title": "输出调用这个变量的CMakeLists.txt的完整路径",
+                      "id": 74
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "CMAKE_CURRENT_LIST_LINE",
+                  "id": 75,
+                  "ideas": {
+                    "1": {
+                      "title": "输出这个变量所在行",
+                      "id": 76
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "CMAKE_MODULE_PATH",
+                  "id": 77,
+                  "ideas": {
+                    "1": {
+                      "title": "定义自己的cmake模块所在的路径",
+                      "id": 78
+                    },
+                    "2": {
+                      "title": "如果你的工程比较复杂, 有可能会自己编写一些cmake模块, 这些cmake模块是随你的工程发布的",
+                      "id": 79,
+                      "ideas": {
+                        "1": {
+                          "title": "为了让cmake在处理CMakeLists.txt时找到这些模块, 你需要通过SET指令, 将自己的cmake模块路径设置了一下.",
+                          "id": 80
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "例子",
+                      "id": 81,
+                      "ideas": {
+                        "1": {
+                          "title": "SET(CMAKE_MODULE_PAT ${PROJECT_SOURCE_DIR}/cmake)",
+                          "id": 82,
+                          "ideas": {
+                            "1": {
+                              "title": "这时你就可以通过INCLUDE指令来调用自己的模块了",
+                              "id": 83
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "8": {
+                  "title": "EXECUTABLE_OUTPUT_PATH",
+                  "id": 84,
+                  "ideas": {
+                    "1": {
+                      "title": "最终可执行程序存放目录",
+                      "id": 86
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "9": {
+                  "title": "LIBRARY_OUTPUT_PATH",
+                  "id": 85,
+                  "ideas": {
+                    "1": {
+                      "title": "最终库存放目录",
+                      "id": 87
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "10": {
+                  "title": "PROJECT_NAME",
+                  "id": 88,
+                  "ideas": {
+                    "1": {
+                      "title": "通过PROJECT指令定义的项目名称",
+                      "id": 89
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "cmake调用环境变量的方式",
+              "id": 90,
+              "ideas": {
+                "1": {
+                  "title": "使用$ENV{NAME}指令调用系统的环境变量",
+                  "id": 91,
+                  "ideas": {
+                    "1": {
+                      "title": "例子",
+                      "id": 92,
+                      "ideas": {
+                        "1": {
+                          "title": "MESSAGE(STATUS \"HOME dir: $ENV{HOME}\")",
+                          "id": 93
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "设置环境变量",
+                  "id": 96,
+                  "ideas": {
+                    "1": {
+                      "title": "SET(ENV{变量名} 值)",
+                      "id": 97
+                    }
+                  }
+                },
+                "3": {
+                  "title": "CMAKE_INCLUDE_CURRENT_DIR",
+                  "id": 98,
+                  "ideas": {
+                    "1": {
+                      "title": "自动添加CMAKE_CURRENT_BINARY_DIR和CMAKE_CURRENT_SOURCE_DIR到当前处理的CMakeLists.txt",
+                      "id": 99,
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "相当于在每个CMakeLists.txt中加入",
+                      "id": 101,
+                      "ideas": {
+                        "1": {
+                          "title": "INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})",
+                          "id": 102
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE",
+                  "id": 103,
+                  "ideas": {
+                    "1": {
+                      "title": "将工程提供的头文件目录始终置于系统头文件目录前面",
+                      "id": 104
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "CMAKE_INCLUDE_PATH 和 CMAKE_INCLUDE_LIBRARY_PATH",
+                  "id": 105
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "系统信息",
+              "id": 107,
+              "ideas": {
+                "1": {
+                  "title": "CMAKE_MAJOR_VERSION",
+                  "id": 108,
+                  "ideas": {
+                    "1": {
+                      "title": "CMAKE主版本号",
+                      "id": 112,
+                      "ideas": {
+                        "1": {
+                          "title": "比如2.6.8中的2",
+                          "id": 115
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "CMAKE_MINOR_VERSION",
+                  "id": 109,
+                  "ideas": {
+                    "1": {
+                      "title": "CMAKE次版本号",
+                      "id": 113,
+                      "ideas": {
+                        "1": {
+                          "title": "比如2.6.8中的6",
+                          "id": 116
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "CMAKE_PATH_VERSION",
+                  "id": 110,
+                  "ideas": {
+                    "1": {
+                      "title": "CMAKE补丁版本号",
+                      "id": 114,
+                      "ideas": {
+                        "1": {
+                          "title": "比如2.6.8中的8",
+                          "id": 117
+                        }
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "CMAKE_SYSTEM",
+                  "id": 111,
+                  "ideas": {
+                    "1": {
+                      "title": "系统名称",
+                      "id": 118,
+                      "ideas": {
+                        "1": {
+                          "title": "比如Linux-2.6.32",
+                          "id": 119
+                        }
+                      }
+                    }
+                  }
+                },
+                "5": {
+                  "title": "CMAKE_SYSTEM_NAME",
+                  "id": 120,
+                  "ideas": {
+                    "1": {
+                      "title": "不包含版本的系统名",
+                      "id": 122,
+                      "ideas": {
+                        "1": {
+                          "title": "比如Linux",
+                          "id": 123
+                        }
+                      }
+                    }
+                  }
+                },
+                "6": {
+                  "title": "CMAKE_SYSTEM_VERSION",
+                  "id": 124,
+                  "ideas": {
+                    "1": {
+                      "title": "系统版本",
+                      "id": 125,
+                      "ideas": {
+                        "1": {
+                          "title": "比如2.6.32",
+                          "id": 126
+                        }
+                      }
+                    }
+                  }
+                },
+                "7": {
+                  "title": "CMAKE_SYSTEM_PROCESSOR",
+                  "id": 127,
+                  "ideas": {
+                    "1": {
+                      "title": "处理器名称",
+                      "id": 128,
+                      "ideas": {
+                        "1": {
+                          "title": "比如i686",
+                          "id": 129
+                        }
+                      }
+                    }
+                  }
+                },
+                "8": {
+                  "title": "UNIX",
+                  "id": 130,
+                  "ideas": {
+                    "1": {
+                      "title": "在所有的类UNIX平台为TRUE, 包括OS X和cygwin",
+                      "id": 131
+                    }
+                  }
+                },
+                "9": {
+                  "title": "WIN32",
+                  "id": 132,
+                  "ideas": {
+                    "1": {
+                      "title": "在所有win32平台为TRUE, 包括cygwin",
+                      "id": 133
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "主要的开关选项",
+              "id": 134,
+              "ideas": {
+                "1": {
+                  "title": "CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS",
+                  "id": 135,
+                  "ideas": {
+                    "1": {
+                      "title": "用来控制IF ELSE语句的书写方式",
+                      "id": 136
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "BUILD_SHARED_LIBS",
+                  "id": 137,
+                  "ideas": {
+                    "1": {
+                      "title": "控制默认的库编译方式, 如果不进行设置, 使用ADD_LIBRARY并没有指定库类型的情况下, 默认编译生成的库都是静态库",
+                      "id": 138
+                    },
+                    "2": {
+                      "title": "如果SET(BUILD_SHARED_LIBS ON)后, 默认生成的为动态库",
+                      "id": 140
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "CMAKE_C_FLAGS",
+                  "id": 141,
+                  "ideas": {
+                    "1": {
+                      "title": "设置C编译选项, 也可以通过指令ADD_DEFINITIONS()添加",
+                      "id": 142
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "CMAKE_CXX_FLAGS",
+                  "id": 143,
+                  "ideas": {
+                    "1": {
+                      "title": "设置C++编译选项, 也可以通过指令ADD_DEFINITIONS()添加",
+                      "id": 144
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "cmake常用指令",
+          "id": 145,
+          "ideas": {
+            "13": {
+              "title": "INSTALL指令",
+              "id": 194
+            },
+            "14": {
+              "title": "FIND_XXX 指令",
+              "id": 195,
+              "ideas": {
+                "1": {
+                  "title": "FIND_FILE(<VAR> name1 path1 path2 ...)",
+                  "id": 196,
+                  "ideas": {
+                    "1": {
+                      "title": "VAR变量代表找到的文件全路径, 包含文件名",
+                      "id": 197
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "FIND_LIBRARY(<VAR> name1 path1 path2 ...)",
+                  "id": 198,
+                  "ideas": {
+                    "1": {
+                      "title": "VAR变量表示找到的库全路径, 包含库文件名",
+                      "id": 199
+                    },
+                    "2": {
+                      "title": "例子",
+                      "id": 206,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "```<div>FIND_LIBRARY(libX X11 /usr/lib)</div><div>IF (NOT libX)</div><div>MESSAGE(FATAL_ERROR \"libX not found\")</div><div>ENDIF(NOT libx)</div><div><div>```</div></div>"
+                        },
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "FIND_PATH(<VAR> name1 path1 path2 ...)",
+                  "id": 200,
+                  "ideas": {
+                    "1": {
+                      "title": "VAR变量代表包含这个文件的路径",
+                      "id": 201
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "FIND_PROGRAM(<VAR> name1 path1 path2 ...)",
+                  "id": 202,
+                  "ideas": {
+                    "1": {
+                      "title": "VAR变量代表包含这个程序的全路径",
+                      "id": 203
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "FIND_PACKAGE(<name> [major.minor] [QUIET] [NO_MODULE] [[REQUIRED | COMPONENTS] [components...]])",
+                  "id": 204,
+                  "ideas": {
+                    "1": {
+                      "title": "用来调用预定义在CMAKE_MODULE_PATH下的Find<name>.cmake模块, 你也可以自己定义Find<name>模块, 通过SET(CMAKE_MODULE_PATH dir)将其放入工程的某个目录中供工程使用",
+                      "id": 205
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "15": {
+              "title": "控制指令",
+              "id": 207,
+              "ideas": {
+                "1": {
+                  "title": "IF指令",
+                  "id": 209,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "IF(expression)<div># THEN section.</div><div>COMMAND1(ARGS ...)</div><div>COMMAND2(ARGS ...)</div><div>...</div><div>ELSE(expression)</div><div># ELSE section.</div><div>COMMAND1(ARGS ...)</div><div>COMMAND2(ARGS ...)</div><div>...</div><div>ENDIF(expression)</div>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "一个原则",
+                      "id": 210,
+                      "ideas": {
+                        "1": {
+                          "title": "凡是出现IF的地方一定要有对应的ENDIF, 出现ELSEIF的地方, ENDIF是可选的",
+                          "id": 211
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "使用方法",
+                      "id": 212,
+                      "ideas": {
+                        "1": {
+                          "title": "IF(var)",
+                          "id": 213,
+                          "ideas": {
+                            "1": {
+                              "title": "如果变量不是:  空, 0, N, NO, OFF, FALSE, NOTFOUND或<var>_NOTFOUND时, 表达式为真",
+                              "id": 214
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "IF(NOT var)",
+                          "id": 215,
+                          "ideas": {
+                            "1": {
+                              "title": "与上述条件相反",
+                              "id": 216
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "IF(var1 AND var2)",
+                          "id": 217,
+                          "ideas": {
+                            "1": {
+                              "title": "当两个变量都为真时为真",
+                              "id": 218
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "IF(var1 OR var2)",
+                          "id": 219,
+                          "ideas": {
+                            "1": {
+                              "title": "当两个变量其中一个为真时为真",
+                              "id": 220
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "5": {
+                          "title": "IF(COMMAND cmd)",
+                          "id": 221,
+                          "ideas": {
+                            "1": {
+                              "title": "当给定的cmd确实时命令并可以调用时为真",
+                              "id": 222
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "6": {
+                          "title": "IF(EXISTS dir)或者IF(EXISTS file)",
+                          "id": 223,
+                          "ideas": {
+                            "1": {
+                              "title": "当目录名或者文件名存在时为真",
+                              "id": 224
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "7": {
+                          "title": "IF(file1 IS_NEWER_THAN file2)",
+                          "id": 225,
+                          "ideas": {
+                            "1": {
+                              "title": "当file1比file2新, 或者file1 / file2其中有一个不存在时为真, 文件名请使用完整路径",
+                              "id": 226
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "8": {
+                          "title": "IF(IS_DIRECTORY dirname)",
+                          "id": 227,
+                          "ideas": {
+                            "1": {
+                              "title": "当dirname是目录时, 为真",
+                              "id": 228
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "9": {
+                          "title": "IF(variable MATCHES regex)",
+                          "id": 229
+                        },
+                        "10": {
+                          "title": "IF(string MATCHES regex)",
+                          "id": 230,
+                          "ideas": {
+                            "1": {
+                              "title": "当给定的字符串能够匹配正则表达式regex时为真",
+                              "id": 231
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {},
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "```<div>IF(\"hello\" MATCHES \"ell\")</div><div>MESSAGE(\"true\")</div><div>ENDIF(\"hello\" MATCHES \"ell\")<br><div>```</div></div>"
+                            }
+                          }
+                        },
+                        "17": {
+                          "title": "数字比较表达式",
+                          "id": 238,
+                          "ideas": {
+                            "1": {
+                              "title": "IF(variable LESS number)",
+                              "id": 232,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "IF(string LESS number)",
+                              "id": 233,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "3": {
+                              "title": "IF(variable GREATER number)",
+                              "id": 234,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "4": {
+                              "title": "IF(string GREATER number)",
+                              "id": 235,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "5": {
+                              "title": "IF (variable EQUAL number)",
+                              "id": 236,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "6": {
+                              "title": "IF (string EQUAL number)",
+                              "id": 237,
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "18": {
+                          "title": "字母序比较表达式",
+                          "id": 239,
+                          "ideas": {
+                            "1": {
+                              "title": "IF(variable STRLESS string)",
+                              "id": 240
+                            },
+                            "2": {
+                              "title": "IF(string STRLESS string)",
+                              "id": 241
+                            },
+                            "3": {
+                              "title": "IF(variable STRGREATER string)",
+                              "id": 242
+                            },
+                            "4": {
+                              "title": "IF(string STRGREATER string)",
+                              "id": 243
+                            },
+                            "5": {
+                              "title": "IF(variable STREQUAL string)",
+                              "id": 244
+                            },
+                            "6": {
+                              "title": "IF(string STREQUAL string)",
+                              "id": 245
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "19": {
+                          "title": "IF(DEFINED variable)",
+                          "id": 246,
+                          "ideas": {
+                            "1": {
+                              "title": "如果变量被定义, 为真",
+                              "id": 247
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "20": {
+                          "title": "例子, 判断平台差异",
+                          "id": 248,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "```<div>IF (WIN32)</div><div>MESSAGE(STATUS \"This is windows\")</div><div># 做一些Windows相关的操作</div><div>ELSE (WIN32)</div><div>MESSAGE(STATUS \"This is not windows\")</div><div># 做一些非Windows相关的操作</div><div>ENDIF(WIN32)<br><div>```</div></div>"
+                            },
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "配合CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS",
+                              "id": 249,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "SET(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)<div>这时就可以写成</div><div>IF(WIN32)</div><div>ELSE()</div><div>ENDIF()</div>"
+                                },
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "配合ELSEIF",
+                              "id": 250,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "IF(WIN32)<div># do something related to WIN32</div><div>ELSEIF(UNIX)</div><div>#do something related to UNIX</div><div>ELSEIF(APPLE)</div><div>#do something related to APPLE</div><div>ENDIF(WIN32)</div>"
+                                },
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "WHILE",
+                  "id": 251,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "WHILE(condition)<div>CMD1(ARGS ...)</div><div>CMD2(ARGS ...)</div><div>ENDWHILE(condition)</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "FOREACH",
+                  "id": 252,
+                  "ideas": {
+                    "1": {
+                      "title": "列表",
+                      "id": 253,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "FOREACH(loop_var arg1 arg2 ...)<div>CMD1(ARGS ...)</div><div>CMD2(ARGS ...)</div><div>ENDFOREACH(loop_var)</div><div><br></div><div>像我们前面使用的AUX_SOURCE_DIRECTORY的例子</div><div>AUX_SOURCE_DIRECTORY(. SRC_LIST)</div><div>FOREACH(F ${SRC_LIST})</div><div>MESSAGE(${F})</div><div>ENDFOREACH(F)</div>"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "范围",
+                      "id": 254,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "FOREACH(loop_var RANGE total)<div>ENDFOREACH(loop_var)</div><div>从0到total以1为步进</div>"
+                        },
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "例子",
+                          "id": 255,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "FOREACH(VAR RANGE 10)<div>MESSAGE(${VAR})</div><div>ENDFOREACH(VAR)</div><div><br></div><div>最终得到的输出是:</div><div>0</div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "范围和步进",
+                      "id": 256,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "FOREACH(loop_var RANGE start stop [step])<div>ENDFOREACH(loop_var)</div><div>从start开始到stop结束, 以step为步进</div>"
+                        },
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "例子",
+                          "id": 257,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "FOREACH(A RANGE 5 15 3)<div>MESSAGE(${A})</div><div>ENDFOREACH(A)</div><div><br></div><div>得到结果</div><div>5</div><div>8</div><div>11</div><div>14</div>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "注意",
+                          "id": 258,
+                          "ideas": {
+                            "1": {
+                              "title": "直到遇到ENDFOREACH指令, 整个语句块才会得到真正的执行",
+                              "id": 259
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7.5": {
+              "title": "基本指令",
+              "id": 208,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "ADD_DEFINITIONS",
+                  "id": 146,
+                  "ideas": {
+                    "1": {
+                      "title": "向C/C++编译器添加-D定义",
+                      "id": 147,
+                      "ideas": {
+                        "1": {
+                          "title": "比如ADD_DEFINITIONS(-DENABLE_DEBUG -DABC)",
+                          "id": 148,
+                          "ideas": {}
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "如果要添加其他的编译器开关, 可以通过CMAKE_C_FLAGS变量和CMAKE_CXX_FLAGS变量设置",
+                      "id": 151
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "ADD_DEPENDENCIES",
+                  "id": 152,
+                  "ideas": {
+                    "1": {
+                      "title": "定义target依赖的其他target, 确保在编译本target之前, 其他的target已经被构建",
+                      "id": 153
+                    },
+                    "2": {
+                      "title": "ADD_DEPENDENCIES(target-name depend-target1 depend-target2 ...)",
+                      "id": 154
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "ADD_EXECUTABLE",
+                  "id": 155,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "ADD_LIBRARY",
+                  "id": 156,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "ADD_SUBDIRECTORY",
+                  "id": 157,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "ADD_TEST",
+                  "id": 158,
+                  "ideas": {
+                    "1": {
+                      "title": "ADD_TEST(testname Exename arg1 arg2 ...)",
+                      "id": 163,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "testname 是自定义的test名称, Exename可以是构建的目标也可以是外部脚本等等",
+                          "id": 164,
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "后面连接传递给可执行文件的参数",
+                          "id": 165,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "如果没有在同一个CMakeLists.txt中打开ENABLE_TESTING()指令, 任何ADD_TEST都是无效的",
+                      "id": 166
+                    },
+                    "3": {
+                      "title": "例子",
+                      "id": 167,
+                      "ideas": {
+                        "1": {
+                          "title": "我们前面的hello-world例子, 可以在工程主CMakeLists.txt中添加ADD_TEST(mytet ${PROJECT_BINARY_DIR}/bin/main) ENABLE_TESTING()",
+                          "id": 168
+                        },
+                        "2": {
+                          "title": "生成Makefile后, 就可以运行make test来执行测试了",
+                          "id": 169
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "ENABLE_TESTING",
+                  "id": 159,
+                  "ideas": {
+                    "1": {
+                      "title": "用来控制Makefile是否构建test目标, 涉及工程所有目录.",
+                      "id": 160
+                    },
+                    "2": {
+                      "title": "语法很简单, 没有任何参数, ENABLE_TESTING()",
+                      "id": 161
+                    },
+                    "3": {
+                      "title": "一般情况这个指令放在工程的主CMakeLists.txt中",
+                      "id": 162
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "8": {
+                  "title": "AUX_SOURCE_DIRECTORY",
+                  "id": 170,
+                  "ideas": {
+                    "1": {
+                      "title": "基本语法是: AUX_SOURCE_DIRECTORY(dir VARIABLE)",
+                      "id": 171
+                    },
+                    "2": {
+                      "title": "作用是发现一个目录下所有的源代码文件并将列表存储在一个变量中, 这个指令临时被用来自动构建源文件列表. 因为目前cmake还不能自动发现新添加的源文件",
+                      "id": 172
+                    },
+                    "3": {
+                      "title": "例子",
+                      "id": 173,
+                      "ideas": {},
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<div>```</div>AUX_SOURCE_DIRECTORY(. SRC_LIST)<div>ADD_EXECUTABLE(main ${SRC_LIST})</div><div>```</div>"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "你也可以通过后面提到的FOREACH指令来处理这个LIST",
+                      "id": 176
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "9": {
+                  "title": "CMAKE_MINIMUM_REQUIRED",
+                  "id": 177,
+                  "ideas": {
+                    "1": {
+                      "title": "语法: CMAKE_MINIMUM_REQUIRED(VERSION versionNumber [FATAL_ERROR])",
+                      "id": 178
+                    },
+                    "2": {
+                      "title": "例子",
+                      "id": 179,
+                      "ideas": {
+                        "1": {
+                          "title": "CMAKE_MINIMUM_REQUIRED(VERSION 2.5 FATAL_ERROR)",
+                          "id": 180,
+                          "ideas": {
+                            "1": {
+                              "title": "如果cmake版本小于2.5, 则出现严重错误, 整个过程中止.",
+                              "id": 181
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "10": {
+                  "title": "EXEC_PROGRAM",
+                  "id": 182,
+                  "ideas": {
+                    "1": {
+                      "title": "在CMakeLists.txt处理过程中执行命令, 并不会在生成的Makefile中执行",
+                      "id": 183
+                    },
+                    "2": {
+                      "title": "用于在指定的目录运行某个程序, 通过ARGS添加参数, 如果要获取输出和返回值, 可通过OUTPUT_VARIABLE和RETURN_VALUE分别定义两个变量",
+                      "id": 184
+                    },
+                    "3": {
+                      "title": "这个指令可以帮助你在CMakeLists.txt处理过程中支持任何命令, 比如根据系统情况去修改代码文件等等.",
+                      "id": 185
+                    },
+                    "4": {
+                      "title": "例子",
+                      "id": 186,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "我们要在src目录执行ls命令, 并把结果和返回值存下来<div>可以直接在src/CMakeLists.txt中添加:</div><div><br></div><div>```</div><div>EXEC_PROGRAM(ls ARGS \"*.c\" OUTPUT_VARIABLE LS_OUTPUT RETURN_VALUE LS_RVALUE)</div><div>IF( not LS_RVALUE)</div><div>MESSAGE(STATUS \"ls result: \" ${LS_OUTPUT})</div><div>ENDIF(net LS_RVALUE)</div><div>```</div><div><br></div><div>在cmake生成Makefile的过程中, 就会执行ls命令, 如果返回0, 则说明成功执行, 那么就输出ls *.c的结果.</div>"
+                        },
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "11": {
+                  "title": "FILE",
+                  "id": 187,
+                  "ideas": {
+                    "1": {
+                      "title": "文件操作指令",
+                      "id": 188
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "12": {
+                  "title": "INCLUDE",
+                  "id": 189,
+                  "ideas": {
+                    "1": {
+                      "title": "用来载入CMakeLists.txt文件, 也用于载入预定义的cmake模块,",
+                      "id": 190
+                    },
+                    "2": {
+                      "title": "OPTIONAL参数的作用是文件不存在也不会产生错误",
+                      "id": 191
+                    },
+                    "3": {
+                      "title": "你可以指定载入一个文件, 如果定义的是一个模块, 那么将在CMAKE_MODULE_PATH中搜索这个模块并载入",
+                      "id": 192
+                    },
+                    "4": {
+                      "title": "载入的内容将在处理到INCLUDE语句时直接执行",
+                      "id": 193
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "INCLUDE(file [OPTIONAL])<div>INCLUDE(module [OPTIONAL])</div>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
           }
         },
         "3": {
-          "title": "Multiple arguments",
-          "id": 34,
+          "title": "Find模块的使用",
+          "id": 260,
           "ideas": {
             "1": {
-              "title": "set command",
-              "id": 35
-            }
-          }
-        },
-        "4": {
-          "title": "System environment variables and Windows registry values can be accessed directly in CMake.",
-          "id": 36,
-          "ideas": {
-            "1": {
-              "title": "access system environment variables",
-              "id": 37,
+              "title": "系统预定义的Find模块",
+              "id": 261,
               "ideas": {
                 "1": {
-                  "title": "$ENV{VAR}",
-                  "id": 38
+                  "title": "系统中提供了其他各种模块, 一般情况需要使用INCLUDE指令显式的调用, FIND_PACKAGE指令是一个特例, 可以直接调用预定义的模块",
+                  "id": 263
+                },
+                "2": {
+                  "title": "对于系统预定义的Find<name>.cmake模块, 使用方法一般如curl例子所示",
+                  "id": 264
+                },
+                "3": {
+                  "title": "每一个模块都会定义以下几个变量",
+                  "id": 265,
+                  "ideas": {
+                    "1": {
+                      "title": "<name>_FOUND",
+                      "id": 266
+                    },
+                    "2": {
+                      "title": "<name>_INCLUDE_DIR or <name>_INCLUDES",
+                      "id": 267
+                    },
+                    "3": {
+                      "title": "<name>_LIBRARY or <name>_LIBRARIES",
+                      "id": 268
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "你可以通过<name>_FOUND来判断模块是否被找到, 如果没有找到, 按照工程的需要关闭某些特性, 给出提醒或者中止编译, curl的例子就是报出致命错误并终止构建",
+                  "id": 269
+                },
+                "5": {
+                  "title": "如果<name>_FOUND为真, 则将<name>_INCLUDE_DIR加入INCLUDE_DIRECTORIES, 将<name>_LIBRARY加入TARGET_LINK_LIBRARIES中",
+                  "id": 272
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
             "2": {
-              "title": "reference registry entries",
-              "id": 39,
-              "ideas": {
-                "1": {
-                  "title": "[HKEY_CURRENT_USER\\\\Software\\\\paath1\\\\path2; key]",
-                  "id": 40
-                }
-              }
+              "title": "自己编写Find模块",
+              "id": 262
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
           }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "20": {
+      "title": "practice code",
+      "id": 270,
+      "ideas": {
+        "1": {
+          "title": "https://github.com/Akagi201/learning-cmake",
+          "id": 271
         }
       }
     }
