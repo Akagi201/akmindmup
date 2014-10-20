@@ -1,5 +1,5 @@
 {
-  "title": "FFmpeg",
+  "title": "learning ffmpeg",
   "id": 1,
   "formatVersion": 2,
   "ideas": {
@@ -1471,8 +1471,7 @@
             }
           },
           "attr": {
-            "style": {},
-            "collapsed": true
+            "style": {}
           }
         }
       },
@@ -1844,177 +1843,82 @@
       "ideas": {
         "1": {
           "title": "FFmpeg基础库编程开发 -- czc1009",
-          "id": 308
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "21": {
-      "title": "第一章 多媒体概念介绍",
-      "id": 81,
-      "ideas": {
-        "1": {
-          "title": "1.1 视频格式",
-          "id": 82,
+          "id": 308,
           "ideas": {
             "1": {
-              "title": "适合本地播放的本地影像视频",
-              "id": 83
-            },
-            "2": {
-              "title": "适合在网络中播放的网络流媒体影像视频",
-              "id": 84
-            },
-            "3": {
-              "title": "原始视频数据",
-              "id": 85,
+              "title": "第一章 多媒体概念介绍",
+              "id": 81,
               "ideas": {
                 "1": {
-                  "title": "usb摄像头输出格式",
-                  "id": 86,
-                  "ideas": {
-                    "4": {
-                      "title": "没有编码的原始数据",
-                      "id": 90,
-                      "ideas": {
-                        "1": {
-                          "title": "RGB24",
-                          "id": 87,
-                          "attr": {
-                            "style": {}
-                          }
-                        },
-                        "2": {
-                          "title": "YUV2",
-                          "id": 88,
-                          "attr": {
-                            "style": {}
-                          }
-                        },
-                        "3": {
-                          "title": "YV2",
-                          "id": 89,
-                          "attr": {
-                            "style": {}
-                          }
-                        }
-                      }
-                    },
-                    "5": {
-                      "title": "经过编码的数据",
-                      "id": 91,
-                      "ideas": {
-                        "1": {
-                          "title": "MJPEG",
-                          "id": 92
-                        },
-                        "2": {
-                          "title": "H.264",
-                          "id": 93
-                        }
-                      }
-                    }
-                  }
-                },
-                "2": {
-                  "title": "摄像头捕捉的数据也是可以设置的",
-                  "id": 94,
+                  "title": "1.1 视频格式",
+                  "id": 82,
                   "ideas": {
                     "1": {
-                      "title": "win下的cap来设置",
-                      "id": 95
-                    }
-                  }
-                }
-              },
-              "attr": {
-                "collapsed": true,
-                "style": {}
-              }
-            },
-            "4": {
-              "title": "常见格式",
-              "id": 96,
-              "ideas": {
-                "1": {
-                  "title": "MPEG/MPG/DAT",
-                  "id": 97,
-                  "ideas": {
-                    "1": {
-                      "title": "MPEG",
-                      "id": 98,
-                      "ideas": {
-                        "1": {
-                          "title": "运动图像专家组",
-                          "id": 99
-                        },
-                        "2": {
-                          "title": "Motion Picture Experts Group",
-                          "id": 100
-                        },
-                        "3": {
-                          "title": "这类格式包括了MPEG-1, MPEG-2和MPEG-4在内的多种视频格式",
-                          "id": 101
-                        },
-                        "4": {
-                          "title": "MPEG系列变种已成为国际上影响最大的多媒体技术标准, 其中MPEG-1和MPEG-2是采用相同原理为基础的预测编码, 变换编码, 熵编码及运动补偿等第一代数据压缩编码技术",
-                          "id": 112,
-                          "attr": {
-                            "style": {}
-                          }
-                        }
-                      },
-                      "attr": {
-                        "style": {},
-                        "collapsed": true
-                      }
+                      "title": "适合本地播放的本地影像视频",
+                      "id": 83
                     },
                     "2": {
-                      "title": "MPEG-1",
-                      "id": 102,
+                      "title": "适合在网络中播放的网络流媒体影像视频",
+                      "id": 84
+                    },
+                    "3": {
+                      "title": "原始视频数据",
+                      "id": 85,
                       "ideas": {
                         "1": {
-                          "title": "广泛地应用在VCD的制作和一些视频片段下载的网络应用上面",
-                          "id": 103
-                        },
-                        "2": {
-                          "title": "大部分的VCD都是用MPEG1格式压缩的",
-                          "id": 104,
+                          "title": "usb摄像头输出格式",
+                          "id": 86,
                           "ideas": {
-                            "1": {
-                              "title": "刻录软件自动将MPEG1转换为DAT格式",
-                              "id": 105
+                            "4": {
+                              "title": "没有编码的原始数据",
+                              "id": 90,
+                              "ideas": {
+                                "1": {
+                                  "title": "RGB24",
+                                  "id": 87,
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                },
+                                "2": {
+                                  "title": "YUV2",
+                                  "id": 88,
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                },
+                                "3": {
+                                  "title": "YV2",
+                                  "id": 89,
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                }
+                              }
+                            },
+                            "5": {
+                              "title": "经过编码的数据",
+                              "id": 91,
+                              "ideas": {
+                                "1": {
+                                  "title": "MJPEG",
+                                  "id": 92
+                                },
+                                "2": {
+                                  "title": "H.264",
+                                  "id": 93
+                                }
+                              }
                             }
                           }
                         },
-                        "3": {
-                          "title": "可以把一部120分钟长的电影压缩到1.2 GB左右大小",
-                          "id": 106
-                        }
-                      },
-                      "attr": {
-                        "collapsed": true,
-                        "style": {}
-                      }
-                    },
-                    "3": {
-                      "title": "MPEG-2",
-                      "id": 107,
-                      "ideas": {
-                        "1": {
-                          "title": "应用在DVD的制作, 同时在一些HDTV(高清晰电视广播)和一些高要求视频编辑处理上也相当多应用",
-                          "id": 108
-                        },
                         "2": {
-                          "title": "把一部120分钟长的电影压缩到5-8GB",
-                          "id": 110,
+                          "title": "摄像头捕捉的数据也是可以设置的",
+                          "id": 94,
                           "ideas": {
                             "1": {
-                              "title": "MPEG2的图像质量是MPEG1无法比拟的",
-                              "id": 111
+                              "title": "win下的cap来设置",
+                              "id": 95
                             }
                           }
                         }
@@ -2025,365 +1929,774 @@
                       }
                     },
                     "4": {
-                      "title": "MPEG-4",
-                      "id": 113,
+                      "title": "常见格式",
+                      "id": 96,
                       "ideas": {
                         "1": {
-                          "title": "ISO / IEC 14496",
-                          "id": 114
-                        },
-                        "2": {
-                          "title": "基于第二代压缩编码技术指定的国际标准",
-                          "id": 115
-                        },
-                        "3": {
-                          "title": "它以视听媒体对象为基本单元，采用基于内容的压缩编码，以实现数字视音频、图形合成应用及交互式多媒体的集成\n",
-                          "id": 116
-                        }
-                      }
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "2": {
-                  "title": "AVI",
-                  "id": 117,
-                  "ideas": {
-                    "1": {
-                      "title": "音视频交错(Audio Video Interleaved)",
-                      "id": 118
-                    },
-                    "2": {
-                      "title": "由微软公司发表的视频格式",
-                      "id": 119,
-                      "ideas": {
-                        "1": {
-                          "title": "在视频领域可以说是最悠久的格式之一",
-                          "id": 120
-                        }
-                      }
-                    },
-                    "3": {
-                      "title": "调用方便, 图像质量好, 压缩标准可任意选择",
-                      "id": 121
-                    },
-                    "4": {
-                      "title": "应用最广泛, 也是应用时间最长的格式之一",
-                      "id": 122
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "3": {
-                  "title": "MOV",
-                  "id": 123,
-                  "ideas": {
-                    "1": {
-                      "title": "QuickTime",
-                      "id": 124,
-                      "ideas": {
-                        "1": {
-                          "title": "原本是Apple公司用于Mac计算机上的一种图像视频处理软件",
-                          "id": 125
-                        }
-                      }
-                    },
-                    "2": {
-                      "title": "QuickTime提供2种标准图像和数字视频格式",
-                      "id": 126,
-                      "ideas": {
-                        "1": {
-                          "title": "可以支持静态的*.PIC和*.JPG图像格式",
-                          "id": 127
-                        },
-                        "2": {
-                          "title": "动态基于Indeo压缩法的*.MOV和基于MPEG压缩法的*.MPG视频格式",
-                          "id": 128,
-                          "ideas": {}
-                        }
-                      }
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "4": {
-                  "title": "ASF",
-                  "id": 130,
-                  "ideas": {
-                    "1": {
-                      "title": "Advanced Streaming Format高级流格式",
-                      "id": 131
-                    },
-                    "2": {
-                      "title": "微软为了和Real Player竞争开发出的一种可以直接在网络上观看视频节目的文件压缩格式",
-                      "id": 132
-                    },
-                    "3": {
-                      "title": "MPEG4压缩算法",
-                      "id": 133,
-                      "ideas": {}
-                    },
-                    "4": {
-                      "title": "图像质量比VCD差一点点, 比同是视频\"流\"格式的RAM格式要好",
-                      "id": 135
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "5": {
-                  "title": "WMV",
-                  "id": 136,
-                  "ideas": {
-                    "1": {
-                      "title": "独立于编码方式的在Internet上实时传播多媒体的技术标准",
-                      "id": 137
-                    },
-                    "2": {
-                      "title": "微软希望利用他取代QuickTIme之类技术标准以及WAV, AVI之类的文件扩展名",
-                      "id": 138
-                    },
-                    "3": {
-                      "title": "优点",
-                      "id": 139,
-                      "ideas": {
-                        "1": {
-                          "title": "可扩充的媒体类型",
-                          "id": 140
-                        },
-                        "2": {
-                          "title": "本地或网络回放",
-                          "id": 141
-                        },
-                        "3": {
-                          "title": "可伸缩的媒体类型",
-                          "id": 142
-                        },
-                        "4": {
-                          "title": "流的优先级化",
-                          "id": 143
-                        },
-                        "5": {
-                          "title": "多语言支持",
-                          "id": 144
-                        },
-                        "6": {
-                          "title": "扩展性",
-                          "id": 145
-                        }
-                      }
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "6": {
-                  "title": "NAVI",
-                  "id": 146,
-                  "ideas": {
-                    "1": {
-                      "title": "New AVI",
-                      "id": 147
-                    },
-                    "2": {
-                      "title": "一个名为Shadow Realm的地下组织发展起来的一种新视频格式",
-                      "id": 148
-                    },
-                    "3": {
-                      "title": "由微软ASF压缩算法修改而来(并不是想象中的AVI)",
-                      "id": 149,
-                      "ideas": {
-                        "1": {
-                          "title": "视频格式追求的无非时压缩率和图像质量",
-                          "id": 150
-                        }
-                      },
-                      "attr": {
-                        "collapsed": true,
-                        "style": {}
-                      }
-                    },
-                    "4": {
-                      "title": "NAVI是一种去掉视频流特性的改良型ASF格式",
-                      "id": 151
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "7": {
-                  "title": "3GP",
-                  "id": 152,
-                  "ideas": {
-                    "1": {
-                      "title": "3G流媒体的视频编码格式",
-                      "id": 153,
-                      "ideas": {
-                        "1": {
-                          "title": "主要为了配合3G网络的高传输速度而开发的",
-                          "id": 154,
-                          "ideas": {}
-                        },
-                        "2": {
-                          "title": "目前手机中最为常见的一种视频格式",
-                          "id": 156
-                        }
-                      },
-                      "attr": {
-                        "collapsed": true,
-                        "style": {}
-                      }
-                    },
-                    "2": {
-                      "title": "\"第三代合作伙伴项目\"(3GPP)制定的一种多媒体标准",
-                      "id": 157
-                    },
-                    "3": {
-                      "title": "核心包括",
-                      "id": 158,
-                      "ideas": {
-                        "1": {
-                          "title": "高级音频编码(AAC)",
-                          "id": 159
-                        },
-                        "2": {
-                          "title": "自适应多速率(AMR)",
-                          "id": 160
-                        },
-                        "3": {
-                          "title": "MPEG-4和H.263视频编码解码器",
-                          "id": 161
-                        }
-                      },
-                      "attr": {
-                        "collapsed": true,
-                        "style": {}
-                      }
-                    },
-                    "4": {
-                      "title": "目前大部分支持视频拍摄的手机都支持3GPP格式的视频播放",
-                      "id": 162
-                    },
-                    "5": {
-                      "title": "特点",
-                      "id": 163,
-                      "ideas": {
-                        "1": {
-                          "title": "网速占用较少",
-                          "id": 164
-                        },
-                        "2": {
-                          "title": "画质较差",
-                          "id": 165
-                        }
-                      }
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "8": {
-                  "title": "REAL VIDEO",
-                  "id": 166,
-                  "ideas": {
-                    "1": {
-                      "title": "RA, RAM",
-                      "id": 167
-                    },
-                    "2": {
-                      "title": "一开始就是定位在视频流应用方面的",
-                      "id": 168,
-                      "ideas": {
-                        "1": {
-                          "title": "可以说是视频流技术的始创者",
-                          "id": 169
-                        }
-                      }
-                    },
-                    "3": {
-                      "title": "可以在用56K MODEM拨号上网的条件实现不间断的视频播放",
-                      "id": 170,
-                      "ideas": {
-                        "1": {
-                          "title": "图像质量比MPEG2, DIVX差",
-                          "id": 171
-                        },
-                        "2": {
-                          "title": "是ASF的有力竞争者",
-                          "id": 172
-                        }
-                      }
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "9": {
-                  "title": "MKV",
-                  "id": 173,
-                  "ideas": {
-                    "1": {
-                      "title": "可在一个文件中集成多条不同类型的音轨和字幕轨",
-                      "id": 174
-                    },
-                    "2": {
-                      "title": "视频编码的自由度非常大",
-                      "id": 175,
-                      "ideas": {
-                        "1": {
-                          "title": "DivX",
-                          "id": 176
-                        },
-                        "2": {
-                          "title": "XviD",
-                          "id": 177
-                        },
-                        "3": {
-                          "title": "3IVX",
-                          "id": 178
-                        },
-                        "7": {
-                          "title": "流式视频",
-                          "id": 182,
+                          "title": "MPEG/MPG/DAT",
+                          "id": 97,
                           "ideas": {
                             "1": {
-                              "title": "RealVideo",
-                              "id": 179,
+                              "title": "MPEG",
+                              "id": 98,
+                              "ideas": {
+                                "1": {
+                                  "title": "运动图像专家组",
+                                  "id": 99
+                                },
+                                "2": {
+                                  "title": "Motion Picture Experts Group",
+                                  "id": 100
+                                },
+                                "3": {
+                                  "title": "这类格式包括了MPEG-1, MPEG-2和MPEG-4在内的多种视频格式",
+                                  "id": 101
+                                },
+                                "4": {
+                                  "title": "MPEG系列变种已成为国际上影响最大的多媒体技术标准, 其中MPEG-1和MPEG-2是采用相同原理为基础的预测编码, 变换编码, 熵编码及运动补偿等第一代数据压缩编码技术",
+                                  "id": 112,
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                }
+                              },
                               "attr": {
-                                "style": {}
+                                "style": {},
+                                "collapsed": true
                               }
                             },
                             "2": {
-                              "title": "QuickTime",
-                              "id": 180,
+                              "title": "MPEG-1",
+                              "id": 102,
+                              "ideas": {
+                                "1": {
+                                  "title": "广泛地应用在VCD的制作和一些视频片段下载的网络应用上面",
+                                  "id": 103
+                                },
+                                "2": {
+                                  "title": "大部分的VCD都是用MPEG1格式压缩的",
+                                  "id": 104,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "刻录软件自动将MPEG1转换为DAT格式",
+                                      "id": 105
+                                    }
+                                  }
+                                },
+                                "3": {
+                                  "title": "可以把一部120分钟长的电影压缩到1.2 GB左右大小",
+                                  "id": 106
+                                }
+                              },
                               "attr": {
+                                "collapsed": true,
                                 "style": {}
                               }
                             },
                             "3": {
-                              "title": "WMV",
-                              "id": 181,
+                              "title": "MPEG-2",
+                              "id": 107,
+                              "ideas": {
+                                "1": {
+                                  "title": "应用在DVD的制作, 同时在一些HDTV(高清晰电视广播)和一些高要求视频编辑处理上也相当多应用",
+                                  "id": 108
+                                },
+                                "2": {
+                                  "title": "把一部120分钟长的电影压缩到5-8GB",
+                                  "id": 110,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "MPEG2的图像质量是MPEG1无法比拟的",
+                                      "id": 111
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "4": {
+                              "title": "MPEG-4",
+                              "id": 113,
+                              "ideas": {
+                                "1": {
+                                  "title": "ISO / IEC 14496",
+                                  "id": 114
+                                },
+                                "2": {
+                                  "title": "基于第二代压缩编码技术指定的国际标准",
+                                  "id": 115
+                                },
+                                "3": {
+                                  "title": "它以视听媒体对象为基本单元，采用基于内容的压缩编码，以实现数字视音频、图形合成应用及交互式多媒体的集成\n",
+                                  "id": 116
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "AVI",
+                          "id": 117,
+                          "ideas": {
+                            "1": {
+                              "title": "音视频交错(Audio Video Interleaved)",
+                              "id": 118
+                            },
+                            "2": {
+                              "title": "由微软公司发表的视频格式",
+                              "id": 119,
+                              "ideas": {
+                                "1": {
+                                  "title": "在视频领域可以说是最悠久的格式之一",
+                                  "id": 120
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "调用方便, 图像质量好, 压缩标准可任意选择",
+                              "id": 121
+                            },
+                            "4": {
+                              "title": "应用最广泛, 也是应用时间最长的格式之一",
+                              "id": 122
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "MOV",
+                          "id": 123,
+                          "ideas": {
+                            "1": {
+                              "title": "QuickTime",
+                              "id": 124,
+                              "ideas": {
+                                "1": {
+                                  "title": "原本是Apple公司用于Mac计算机上的一种图像视频处理软件",
+                                  "id": 125
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "QuickTime提供2种标准图像和数字视频格式",
+                              "id": 126,
+                              "ideas": {
+                                "1": {
+                                  "title": "可以支持静态的*.PIC和*.JPG图像格式",
+                                  "id": 127
+                                },
+                                "2": {
+                                  "title": "动态基于Indeo压缩法的*.MOV和基于MPEG压缩法的*.MPG视频格式",
+                                  "id": 128,
+                                  "ideas": {}
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "ASF",
+                          "id": 130,
+                          "ideas": {
+                            "1": {
+                              "title": "Advanced Streaming Format高级流格式",
+                              "id": 131
+                            },
+                            "2": {
+                              "title": "微软为了和Real Player竞争开发出的一种可以直接在网络上观看视频节目的文件压缩格式",
+                              "id": 132
+                            },
+                            "3": {
+                              "title": "MPEG4压缩算法",
+                              "id": 133,
+                              "ideas": {}
+                            },
+                            "4": {
+                              "title": "图像质量比VCD差一点点, 比同是视频\"流\"格式的RAM格式要好",
+                              "id": 135
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "5": {
+                          "title": "WMV",
+                          "id": 136,
+                          "ideas": {
+                            "1": {
+                              "title": "独立于编码方式的在Internet上实时传播多媒体的技术标准",
+                              "id": 137
+                            },
+                            "2": {
+                              "title": "微软希望利用他取代QuickTIme之类技术标准以及WAV, AVI之类的文件扩展名",
+                              "id": 138
+                            },
+                            "3": {
+                              "title": "优点",
+                              "id": 139,
+                              "ideas": {
+                                "1": {
+                                  "title": "可扩充的媒体类型",
+                                  "id": 140
+                                },
+                                "2": {
+                                  "title": "本地或网络回放",
+                                  "id": 141
+                                },
+                                "3": {
+                                  "title": "可伸缩的媒体类型",
+                                  "id": 142
+                                },
+                                "4": {
+                                  "title": "流的优先级化",
+                                  "id": 143
+                                },
+                                "5": {
+                                  "title": "多语言支持",
+                                  "id": 144
+                                },
+                                "6": {
+                                  "title": "扩展性",
+                                  "id": 145
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "6": {
+                          "title": "NAVI",
+                          "id": 146,
+                          "ideas": {
+                            "1": {
+                              "title": "New AVI",
+                              "id": 147
+                            },
+                            "2": {
+                              "title": "一个名为Shadow Realm的地下组织发展起来的一种新视频格式",
+                              "id": 148
+                            },
+                            "3": {
+                              "title": "由微软ASF压缩算法修改而来(并不是想象中的AVI)",
+                              "id": 149,
+                              "ideas": {
+                                "1": {
+                                  "title": "视频格式追求的无非时压缩率和图像质量",
+                                  "id": 150
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "4": {
+                              "title": "NAVI是一种去掉视频流特性的改良型ASF格式",
+                              "id": 151
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "7": {
+                          "title": "3GP",
+                          "id": 152,
+                          "ideas": {
+                            "1": {
+                              "title": "3G流媒体的视频编码格式",
+                              "id": 153,
+                              "ideas": {
+                                "1": {
+                                  "title": "主要为了配合3G网络的高传输速度而开发的",
+                                  "id": 154,
+                                  "ideas": {}
+                                },
+                                "2": {
+                                  "title": "目前手机中最为常见的一种视频格式",
+                                  "id": 156
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "\"第三代合作伙伴项目\"(3GPP)制定的一种多媒体标准",
+                              "id": 157
+                            },
+                            "3": {
+                              "title": "核心包括",
+                              "id": 158,
+                              "ideas": {
+                                "1": {
+                                  "title": "高级音频编码(AAC)",
+                                  "id": 159
+                                },
+                                "2": {
+                                  "title": "自适应多速率(AMR)",
+                                  "id": 160
+                                },
+                                "3": {
+                                  "title": "MPEG-4和H.263视频编码解码器",
+                                  "id": 161
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "4": {
+                              "title": "目前大部分支持视频拍摄的手机都支持3GPP格式的视频播放",
+                              "id": 162
+                            },
+                            "5": {
+                              "title": "特点",
+                              "id": 163,
+                              "ideas": {
+                                "1": {
+                                  "title": "网速占用较少",
+                                  "id": 164
+                                },
+                                "2": {
+                                  "title": "画质较差",
+                                  "id": 165
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "8": {
+                          "title": "REAL VIDEO",
+                          "id": 166,
+                          "ideas": {
+                            "1": {
+                              "title": "RA, RAM",
+                              "id": 167
+                            },
+                            "2": {
+                              "title": "一开始就是定位在视频流应用方面的",
+                              "id": 168,
+                              "ideas": {
+                                "1": {
+                                  "title": "可以说是视频流技术的始创者",
+                                  "id": 169
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "可以在用56K MODEM拨号上网的条件实现不间断的视频播放",
+                              "id": 170,
+                              "ideas": {
+                                "1": {
+                                  "title": "图像质量比MPEG2, DIVX差",
+                                  "id": 171
+                                },
+                                "2": {
+                                  "title": "是ASF的有力竞争者",
+                                  "id": 172
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "9": {
+                          "title": "MKV",
+                          "id": 173,
+                          "ideas": {
+                            "1": {
+                              "title": "可在一个文件中集成多条不同类型的音轨和字幕轨",
+                              "id": 174
+                            },
+                            "2": {
+                              "title": "视频编码的自由度非常大",
+                              "id": 175,
+                              "ideas": {
+                                "1": {
+                                  "title": "DivX",
+                                  "id": 176
+                                },
+                                "2": {
+                                  "title": "XviD",
+                                  "id": 177
+                                },
+                                "3": {
+                                  "title": "3IVX",
+                                  "id": 178
+                                },
+                                "7": {
+                                  "title": "流式视频",
+                                  "id": 182,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "RealVideo",
+                                      "id": 179,
+                                      "attr": {
+                                        "style": {}
+                                      }
+                                    },
+                                    "2": {
+                                      "title": "QuickTime",
+                                      "id": 180,
+                                      "attr": {
+                                        "style": {}
+                                      }
+                                    },
+                                    "3": {
+                                      "title": "WMV",
+                                      "id": 181,
+                                      "attr": {
+                                        "style": {}
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "3": {
+                              "title": "他是一种全称为Matroska的新型多媒体封装格式",
+                              "id": 183
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "10": {
+                          "title": "FLV",
+                          "id": 184,
+                          "ideas": {
+                            "1": {
+                              "title": "FLASH VIDEO",
+                              "id": 185
+                            },
+                            "2": {
+                              "title": "形成的文件极小, 加载速度极快, 使得网络观看视频文件成为可能",
+                              "id": 186
+                            },
+                            "3": {
+                              "title": "有效解决了",
+                              "id": 187,
+                              "ideas": {
+                                "1": {
+                                  "title": "视频文件导入Flash后, 使导出的SWF文件体积庞大, 不能在网络上很好的使用等缺点",
+                                  "id": 188
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "11": {
+                          "title": "F4V",
+                          "id": 189,
+                          "ideas": {
+                            "1": {
+                              "title": "作为一种更小更清晰, 更利于在网络传播的格式, F4V已经组件取代了传统FLV",
+                              "id": 190,
+                              "ideas": {
+                                "1": {
+                                  "title": "也已经被大多数主流播放器兼容播放, 而不需要通过转换等复杂方式",
+                                  "id": 191
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "F4V是Adobe公司为了迎接高清时代而推出继FLV格式后的支持H.264的F4V流媒体格式.",
+                              "id": 193
+                            },
+                            "3": {
+                              "title": "与FLV主要的区别",
+                              "id": 194,
+                              "ideas": {
+                                "1": {
+                                  "title": "FLV格式采用的是H263编码, 而F4V则支持H.264编码的高清晰视频, 码率最高可达50Mbps",
+                                  "id": 195
+                                },
+                                "2": {
+                                  "title": "F4V和FLV在同等体积的前提下, 能够实现更高的分辨率, 并支持更高比特率, 就是我们所说的更清晰更流畅",
+                                  "id": 197
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "4": {
+                              "title": "很多主流媒体网站上下载的F4V文件后缀却为FLV, 这是F4V格式的另一特点",
+                              "id": 198
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "12": {
+                          "title": "RMVB",
+                          "id": 199,
+                          "ideas": {
+                            "1": {
+                              "title": "前身为RM格式",
+                              "id": 200
+                            },
+                            "2": {
+                              "title": "Real Networks公司所制定的音频视频压缩规范, 根据不同的网络传输速率, 而制定出不同的压缩比率",
+                              "id": 201,
+                              "ideas": {
+                                "1": {
+                                  "title": "从而实现在低速率网络上进行影像数据实时传送和播放",
+                                  "id": 202
+                                },
+                                "2": {
+                                  "title": "具有体积小, 画质也还不错的有点",
+                                  "id": 203
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "3": {
+                              "title": "为了实现更优化的体积和画面质量, Real Networks公司不久又在RM的基础上, 推出了可变比特率编码的RMVB格式",
+                              "id": 204,
                               "attr": {
                                 "style": {}
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "RMVB的诞生，打破了原先RM格式那种平均压缩采样的方式，在保证平均压缩比的基础上，采用浮动比特率编码的方式，将较高的比特率用于复杂的动态画面（如歌舞、飞车、战争等），而在静态画面中则灵活地转为较低的采样率，从而合理地利用了比特率资源，使RMVB最大限度地压缩了影片的大小，最终拥有了近乎完美的接近于DVD品质的视听效果。\n",
+                                  "id": 205
+                                },
+                                "2": {
+                                  "title": "一般而言一部120分钟的dvd体积为4GB，而rmvb格式来压缩，仅400MB左右，而且清晰度流畅度并不比原DVD差太远。\n",
+                                  "id": 206
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "13": {
+                          "title": "WebM",
+                          "id": 207,
+                          "ideas": {
+                            "1": {
+                              "title": "由Google提出, 是一个开放, 免费的媒体文件格式",
+                              "id": 208
+                            },
+                            "2": {
+                              "title": "WebM影片格式其实是以Matroska(即MKV)容器格式为基础开发的新容器格式",
+                              "id": 209,
+                              "ideas": {
+                                "1": {
+                                  "title": "包括了VP8影片轨和Ogg Vorbis音轨",
+                                  "id": 210
+                                },
+                                "2": {
+                                  "title": "Google将其拥有的VP8视频编码技术以类似BSD授权开源, Ogg Vorbis本来就是开放格式",
+                                  "id": 211,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "VP8是Google当年买下一间叫On2的公司的时候取得的Video Codec",
+                                      "id": 213
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {},
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "WebM标准的网络视频更加偏向于开源并且是基于HTML5标准的",
+                              "id": 212
+                            },
+                            "4": {
+                              "title": "Youtube也会支持WebM播放",
+                              "id": 214
+                            },
+                            "5": {
+                              "title": "来自产品界的支持WebM",
+                              "id": 215,
+                              "ideas": {
+                                "1": {
+                                  "title": "Adobe -- Flash Player",
+                                  "id": 216
+                                },
+                                "2": {
+                                  "title": "AMD",
+                                  "id": 217
+                                },
+                                "3": {
+                                  "title": "ARM",
+                                  "id": 218
+                                },
+                                "4": {
+                                  "title": "Broadcom",
+                                  "id": 219
+                                },
+                                "5": {
+                                  "title": "Freescale",
+                                  "id": 220
+                                },
+                                "6": {
+                                  "title": "NVIDIA",
+                                  "id": 221
+                                },
+                                "7": {
+                                  "title": "Qualcomm",
+                                  "id": 222
+                                },
+                                "8": {
+                                  "title": "TI",
+                                  "id": 223
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "6": {
+                              "title": "不支持的",
+                              "id": 224,
+                              "ideas": {
+                                "1": {
+                                  "title": "Intel",
+                                  "id": 225
+                                }
+                              }
+                            },
+                            "7": {
+                              "title": "支持的Browser",
+                              "id": 226,
+                              "ideas": {
+                                "1": {
+                                  "title": "Chrome",
+                                  "id": 227
+                                },
+                                "2": {
+                                  "title": "Firefox",
+                                  "id": 228
+                                },
+                                "3": {
+                                  "title": "Opera",
+                                  "id": 229
+                                },
+                                "4": {
+                                  "title": "IE9",
+                                  "id": 230,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "出厂时仅会支持H.264影片播放",
+                                      "id": 231
+                                    },
+                                    "2": {
+                                      "title": "但如果你另外下载并安装了VP8, 那当然你也可以播放HTML/VP8影片",
+                                      "id": 232
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "1.2 音频格式",
+                  "id": 233,
+                  "ideas": {
+                    "1": {
+                      "title": "在计算机内播放或是处理音频文件, 也就是要对声音文件进行数, 模转换, 这个过程同样由采样和量化构成",
+                      "id": 234
+                    },
+                    "2": {
+                      "title": "人耳所能听到的声音",
+                      "id": 235,
+                      "ideas": {
+                        "1": {
+                          "title": "20Hz ~ 20KHz",
+                          "id": 236
+                        },
+                        "2": {
+                          "title": "20KHz以上人耳是听不到的",
+                          "id": 237,
+                          "ideas": {
+                            "1": {
+                              "title": "因此音频文件格式的最大带宽是20KHz",
+                              "id": 238,
+                              "ideas": {
+                                "1": {
+                                  "title": "故而采样速率需要介于40~50KHz之间",
+                                  "id": 239
+                                },
+                                "2": {
+                                  "title": "而且对每个样本需要更多的量化比特数",
+                                  "id": 240
+                                }
                               }
                             }
                           }
@@ -2395,76 +2708,20 @@
                       }
                     },
                     "3": {
-                      "title": "他是一种全称为Matroska的新型多媒体封装格式",
-                      "id": 183
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "10": {
-                  "title": "FLV",
-                  "id": 184,
-                  "ideas": {
-                    "1": {
-                      "title": "FLASH VIDEO",
-                      "id": 185
-                    },
-                    "2": {
-                      "title": "形成的文件极小, 加载速度极快, 使得网络观看视频文件成为可能",
-                      "id": 186
-                    },
-                    "3": {
-                      "title": "有效解决了",
-                      "id": 187,
+                      "title": "音频数字化的标准是",
+                      "id": 241,
                       "ideas": {
                         "1": {
-                          "title": "视频文件导入Flash后, 使导出的SWF文件体积庞大, 不能在网络上很好的使用等缺点",
-                          "id": 188
-                        }
-                      }
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "11": {
-                  "title": "F4V",
-                  "id": 189,
-                  "ideas": {
-                    "1": {
-                      "title": "作为一种更小更清晰, 更利于在网络传播的格式, F4V已经组件取代了传统FLV",
-                      "id": 190,
-                      "ideas": {
-                        "1": {
-                          "title": "也已经被大多数主流播放器兼容播放, 而不需要通过转换等复杂方式",
-                          "id": 191
-                        }
-                      },
-                      "attr": {
-                        "collapsed": true,
-                        "style": {}
-                      }
-                    },
-                    "2": {
-                      "title": "F4V是Adobe公司为了迎接高清时代而推出继FLV格式后的支持H.264的F4V流媒体格式.",
-                      "id": 193
-                    },
-                    "3": {
-                      "title": "与FLV主要的区别",
-                      "id": 194,
-                      "ideas": {
-                        "1": {
-                          "title": "FLV格式采用的是H263编码, 而F4V则支持H.264编码的高清晰视频, 码率最高可达50Mbps",
-                          "id": 195
+                          "title": "每个样本16位-96dB的信噪比",
+                          "id": 242
                         },
                         "2": {
-                          "title": "F4V和FLV在同等体积的前提下, 能够实现更高的分辨率, 并支持更高比特率, 就是我们所说的更清晰更流畅",
-                          "id": 197
+                          "title": "采用线性脉冲编码调制PCM",
+                          "id": 243
+                        },
+                        "3": {
+                          "title": "每一量化步长都具有相等的长度",
+                          "id": 244
                         }
                       },
                       "attr": {
@@ -2473,188 +2730,250 @@
                       }
                     },
                     "4": {
-                      "title": "很多主流媒体网站上下载的F4V文件后缀却为FLV, 这是F4V格式的另一特点",
-                      "id": 198
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "12": {
-                  "title": "RMVB",
-                  "id": 199,
-                  "ideas": {
-                    "1": {
-                      "title": "前身为RM格式",
-                      "id": 200
-                    },
-                    "2": {
-                      "title": "Real Networks公司所制定的音频视频压缩规范, 根据不同的网络传输速率, 而制定出不同的压缩比率",
-                      "id": 201,
+                      "title": "常见格式",
+                      "id": 245,
                       "ideas": {
                         "1": {
-                          "title": "从而实现在低速率网络上进行影像数据实时传送和播放",
-                          "id": 202
-                        },
-                        "2": {
-                          "title": "具有体积小, 画质也还不错的有点",
-                          "id": 203
-                        }
-                      },
-                      "attr": {
-                        "collapsed": true,
-                        "style": {}
-                      }
-                    },
-                    "3": {
-                      "title": "为了实现更优化的体积和画面质量, Real Networks公司不久又在RM的基础上, 推出了可变比特率编码的RMVB格式",
-                      "id": 204,
-                      "attr": {
-                        "style": {}
-                      },
-                      "ideas": {
-                        "1": {
-                          "title": "RMVB的诞生，打破了原先RM格式那种平均压缩采样的方式，在保证平均压缩比的基础上，采用浮动比特率编码的方式，将较高的比特率用于复杂的动态画面（如歌舞、飞车、战争等），而在静态画面中则灵活地转为较低的采样率，从而合理地利用了比特率资源，使RMVB最大限度地压缩了影片的大小，最终拥有了近乎完美的接近于DVD品质的视听效果。\n",
-                          "id": 205
-                        },
-                        "2": {
-                          "title": "一般而言一部120分钟的dvd体积为4GB，而rmvb格式来压缩，仅400MB左右，而且清晰度流畅度并不比原DVD差太远。\n",
-                          "id": 206
-                        }
-                      }
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "13": {
-                  "title": "WebM",
-                  "id": 207,
-                  "ideas": {
-                    "1": {
-                      "title": "由Google提出, 是一个开放, 免费的媒体文件格式",
-                      "id": 208
-                    },
-                    "2": {
-                      "title": "WebM影片格式其实是以Matroska(即MKV)容器格式为基础开发的新容器格式",
-                      "id": 209,
-                      "ideas": {
-                        "1": {
-                          "title": "包括了VP8影片轨和Ogg Vorbis音轨",
-                          "id": 210
-                        },
-                        "2": {
-                          "title": "Google将其拥有的VP8视频编码技术以类似BSD授权开源, Ogg Vorbis本来就是开放格式",
-                          "id": 211,
+                          "title": "CD",
+                          "id": 246,
                           "ideas": {
                             "1": {
-                              "title": "VP8是Google当年买下一间叫On2的公司的时候取得的Video Codec",
-                              "id": 213
-                            }
-                          }
-                        }
-                      },
-                      "attr": {
-                        "style": {},
-                        "collapsed": true
-                      }
-                    },
-                    "3": {
-                      "title": "WebM标准的网络视频更加偏向于开源并且是基于HTML5标准的",
-                      "id": 212
-                    },
-                    "4": {
-                      "title": "Youtube也会支持WebM播放",
-                      "id": 214
-                    },
-                    "5": {
-                      "title": "来自产品界的支持WebM",
-                      "id": 215,
-                      "ideas": {
-                        "1": {
-                          "title": "Adobe -- Flash Player",
-                          "id": 216
-                        },
-                        "2": {
-                          "title": "AMD",
-                          "id": 217
-                        },
-                        "3": {
-                          "title": "ARM",
-                          "id": 218
-                        },
-                        "4": {
-                          "title": "Broadcom",
-                          "id": 219
-                        },
-                        "5": {
-                          "title": "Freescale",
-                          "id": 220
-                        },
-                        "6": {
-                          "title": "NVIDIA",
-                          "id": 221
-                        },
-                        "7": {
-                          "title": "Qualcomm",
-                          "id": 222
-                        },
-                        "8": {
-                          "title": "TI",
-                          "id": 223
-                        }
-                      },
-                      "attr": {
-                        "collapsed": true,
-                        "style": {}
-                      }
-                    },
-                    "6": {
-                      "title": "不支持的",
-                      "id": 224,
-                      "ideas": {
-                        "1": {
-                          "title": "Intel",
-                          "id": 225
-                        }
-                      }
-                    },
-                    "7": {
-                      "title": "支持的Browser",
-                      "id": 226,
-                      "ideas": {
-                        "1": {
-                          "title": "Chrome",
-                          "id": 227
-                        },
-                        "2": {
-                          "title": "Firefox",
-                          "id": 228
-                        },
-                        "3": {
-                          "title": "Opera",
-                          "id": 229
-                        },
-                        "4": {
-                          "title": "IE9",
-                          "id": 230,
-                          "ideas": {
-                            "1": {
-                              "title": "出厂时仅会支持H.264影片播放",
-                              "id": 231
+                              "title": "音质比较高",
+                              "id": 247
                             },
                             "2": {
-                              "title": "但如果你另外下载并安装了VP8, 那当然你也可以播放HTML/VP8影片",
-                              "id": 232
+                              "title": "*.cda格式, 就是CD音轨",
+                              "id": 248
+                            },
+                            "3": {
+                              "title": "标准CD格式也就是44.1K的采样频率，速率88K/秒，16位量化位数，因为CD音轨可以说是近似无损的，因此它的声音基本上是忠于原声的，因此如果你是一个音响发烧友的话，CD是你的首选。",
+                              "id": 249
+                            },
+                            "4": {
+                              "title": "一个CD音频文件是一个*.cda文件，这只是一个索引信息，并不是真正的包含声音信息，所以不论CD音乐的长短，在电脑上看到的“*.cda文件”都是44字节长。",
+                              "id": 250
+                            },
+                            "5": {
+                              "title": "不能直接的复制CD格式的*.cda文件到硬盘上播放，需要使用象EAC这样的抓音轨软件把CD格式的文件转换成WAV，这个转换过程如果光盘驱动器质量过关而且EAC的参数设置得当的话，可以说是基本上无损抓音频。推荐大家使用这种方法。",
+                              "id": 251
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "WAVE",
+                          "id": 252,
+                          "ideas": {
+                            "1": {
+                              "title": "*.WAV是微软公司开发的一种声音文件格式",
+                              "id": 253,
+                              "ideas": {
+                                "1": {
+                                  "title": "符合PIFFResource Interchange File Format 文件规范\n",
+                                  "id": 254
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "“*.WAV”格式支持MSADPCM、CCITT A LAW等多种压缩算法，支持多种音频位数、采样频率和声道，标准格式的WAV文件和CD格式一样，也是44.1K的采样频率，速率88K/秒，16位量化位数，看到了吧，WAV格式的声音文件质量和CD相差无几，也是目前PC机上广为流行的声音文件格式，几乎所有的音频编辑软件都“认识”WAV格式。",
+                              "id": 255
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "AIFF",
+                          "id": 256,
+                          "ideas": {
+                            "1": {
+                              "title": "Audio Interchange FIle Format",
+                              "id": 257,
+                              "ideas": {
+                                "1": {
+                                  "title": "音频交互文件格式",
+                                  "id": 259
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "AIFF格式和AU格式, 他们都和WAV非常相像, 在大多数音频编辑软件中也都支持它们这几种常见的音乐格式",
+                              "id": 258
+                            },
+                            "3": {
+                              "title": "APPLE公司开发",
+                              "id": 260,
+                              "ideas": {
+                                "1": {
+                                  "title": "被MACINTOSH平台及其应用程序所支持",
+                                  "id": 261
+                                }
+                              }
+                            },
+                            "4": {
+                              "title": "NETSCAPE浏览器中LIVEAUDIO也支持AIFF",
+                              "id": 262
+                            },
+                            "5": {
+                              "title": "AIFF是Apple苹果电脑上面标准音频格式, 属于QuickTime技术的一部分",
+                              "id": 263
+                            },
+                            "6": {
+                              "title": "这一格式的特点就是格式本身与数据的意义无关, 因此受到了Microsoft的青睐，并据此搞出来WAV格式。AIFF虽然是一种很优秀的文件格式，但由于它是苹果电脑上的格式，因此在PC平台上并没有得到很大的流行。",
+                              "id": 264
+                            },
+                            "7": {
+                              "title": "由于AIFF的包容特性，所以它支持许多压缩技术。",
+                              "id": 265
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "AU",
+                          "id": 266,
+                          "ideas": {
+                            "1": {
+                              "title": "AUDIO文件是SUN公司推出的一种数字音频格式",
+                              "id": 267
+                            },
+                            "2": {
+                              "title": "AU文件原先是UNIX操作系统下的数字声音文件",
+                              "id": 268
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "5": {
+                          "title": "MPEG",
+                          "id": 269,
+                          "ideas": {
+                            "1": {
+                              "title": "动态图象专家组的英文缩写",
+                              "id": 271,
+                              "ideas": {
+                                "1": {
+                                  "title": "这个专家组始建于1988年，专门负责为CD建立视频和音频压缩标准",
+                                  "id": 272
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "MPEG音频文件指的是MPEG标准中的声音部分即MPEG音频层",
+                              "id": 273
+                            },
+                            "3": {
+                              "title": "MPEG含有格式包括：MPEG-1、MPEG-2、MPEG-Layer3、MPEG-4",
+                              "id": 274
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "6": {
+                          "title": "MP3",
+                          "id": 275,
+                          "ideas": {
+                            "1": {
+                              "title": "诞生于八十年代的德国，所谓的MP3也就是指的是MPEG标准中的音频部分，也就是MPEG音频层。",
+                              "id": 276
+                            },
+                            "2": {
+                              "title": "根据压缩质量和编码处理的不同分为3层，分别对应“*.mp1\"/“*.mp2”/“*.mp3”这3种声音文件。",
+                              "id": 277
+                            },
+                            "3": {
+                              "title": "MPEG音频文件的压缩是一种有损压缩，MPEG3音频编码具有10：1~12：1的高压缩率，同时基本保持低音频部分不失真，但是牺牲了声音文件中12KHz到16KHz高音频这部分的质量来换取文件的尺寸",
+                              "id": 278
+                            },
+                            "4": {
+                              "title": "相同长度的音乐文件，用*.mp3格式来储存，一般只有*.wav文件的1/10，而音质要次于CD格式或WAV格式的声音文件",
+                              "id": 279
+                            },
+                            "5": {
+                              "title": "因为MP3没有版权保护技术，说白了也就是谁都可以用",
+                              "id": 280
+                            },
+                            "6": {
+                              "title": "MP3格式压缩音乐的采样频率有很多种，可以用64Kbps或更低的采样频率节省空间，也可以用320Kbps的标准达到极高的音质。",
+                              "id": 281
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "7": {
+                          "title": "MPEG-4",
+                          "id": 282
+                        },
+                        "8": {
+                          "title": "MIDI",
+                          "id": 283,
+                          "ideas": {
+                            "1": {
+                              "title": "Musical Instrument Digital Interface",
+                              "id": 284
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "9": {
+                          "title": "WMA",
+                          "id": 285,
+                          "ideas": {
+                            "1": {
+                              "title": "Windows Media Audio",
+                              "id": 286
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "10": {
+                          "title": "RealAudio",
+                          "id": 287
+                        },
+                        "11": {
+                          "title": "VQF",
+                          "id": 288
+                        },
+                        "12": {
+                          "title": "OggVorbis",
+                          "id": 289
+                        },
+                        "13": {
+                          "title": "AMR",
+                          "id": 290,
+                          "ideas": {
+                            "1": {
+                              "title": "Adaptive Multi-Rate",
+                              "id": 291
                             }
                           }
                         }
                       },
                       "attr": {
+                        "collapsed": true,
                         "style": {}
                       }
                     }
@@ -2663,49 +2982,267 @@
                     "collapsed": true,
                     "style": {}
                   }
-                }
-              }
-            }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
-          }
-        },
-        "2": {
-          "title": "1.2 音频格式",
-          "id": 233,
-          "ideas": {
-            "1": {
-              "title": "在计算机内播放或是处理音频文件, 也就是要对声音文件进行数, 模转换, 这个过程同样由采样和量化构成",
-              "id": 234
-            },
-            "2": {
-              "title": "人耳所能听到的声音",
-              "id": 235,
-              "ideas": {
-                "1": {
-                  "title": "20Hz ~ 20KHz",
-                  "id": 236
                 },
-                "2": {
-                  "title": "20KHz以上人耳是听不到的",
-                  "id": 237,
+                "3": {
+                  "title": "1.3 字幕格式",
+                  "id": 292,
                   "ideas": {
                     "1": {
-                      "title": "因此音频文件格式的最大带宽是20KHz",
-                      "id": 238,
+                      "title": "外挂字幕与内嵌字幕",
+                      "id": 293,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "外挂字幕三种格式",
+                      "id": 294,
                       "ideas": {
                         "1": {
-                          "title": "故而采样速率需要介于40~50KHz之间",
-                          "id": 239
+                          "title": "srt格式",
+                          "id": 295
                         },
                         "2": {
-                          "title": "而且对每个样本需要更多的量化比特数",
-                          "id": 240
+                          "title": "sub + idx",
+                          "id": 296
+                        },
+                        "3": {
+                          "title": "ass字幕",
+                          "id": 297
                         }
                       }
                     }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "1.4 采集录制和播放渲染",
+                  "id": 298,
+                  "ideas": {
+                    "1": {
+                      "title": "视频采集",
+                      "id": 299
+                    },
+                    "2": {
+                      "title": "视频渲染",
+                      "id": 300,
+                      "ideas": {
+                        "1": {
+                          "title": "Render",
+                          "id": 301,
+                          "ideas": {
+                            "1": {
+                              "title": "渲染",
+                              "id": 304
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Shade",
+                          "id": 302,
+                          "ideas": {
+                            "1": {
+                              "title": "着色",
+                              "id": 303
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "1.5 编解码器(codec)",
+                  "id": 309,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "1.6 容器和协议",
+                  "id": 310
+                },
+                "7": {
+                  "title": "1.7 常用概念介绍",
+                  "id": 311,
+                  "ideas": {
+                    "1": {
+                      "title": "硬解",
+                      "id": 312
+                    },
+                    "2": {
+                      "title": "IBP帧",
+                      "id": 313
+                    },
+                    "3": {
+                      "title": "GOP",
+                      "id": 314
+                    },
+                    "4": {
+                      "title": "mpeg4视频中IBP的判定",
+                      "id": 315
+                    },
+                    "5": {
+                      "title": "DTS和PTS",
+                      "id": 316
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "第二章 FFmpeg框架",
+              "id": 317,
+              "ideas": {
+                "1": {
+                  "title": "2.1 概述",
+                  "id": 318,
+                  "ideas": {
+                    "1": {
+                      "title": "功能",
+                      "id": 319,
+                      "ideas": {
+                        "1": {
+                          "title": "视频采集",
+                          "id": 320
+                        },
+                        "2": {
+                          "title": "视频格式转换",
+                          "id": 321
+                        },
+                        "3": {
+                          "title": "视频截图",
+                          "id": 322
+                        },
+                        "4": {
+                          "title": "给视频加水印",
+                          "id": 323
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "模块组成",
+                      "id": 324,
+                      "ideas": {
+                        "1": {
+                          "title": "libavformat",
+                          "id": 325
+                        },
+                        "2": {
+                          "title": "libavcodec",
+                          "id": 326
+                        },
+                        "3": {
+                          "title": "libavdevice",
+                          "id": 327
+                        },
+                        "4": {
+                          "title": "libavfilter",
+                          "id": 328
+                        },
+                        "5": {
+                          "title": "libavutil",
+                          "id": 329
+                        },
+                        "6": {
+                          "title": "libavresample",
+                          "id": 330
+                        },
+                        "7": {
+                          "title": "libswscale",
+                          "id": 331
+                        },
+                        "8": {
+                          "title": "libswresample",
+                          "id": 332
+                        },
+                        "9": {
+                          "title": "libpostproc",
+                          "id": 333
+                        },
+                        "10": {
+                          "title": "ffmpeg",
+                          "id": 334
+                        },
+                        "11": {
+                          "title": "ffserver",
+                          "id": 335
+                        },
+                        "12": {
+                          "title": "ffplay",
+                          "id": 336
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "命令集",
+                      "id": 337
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "2.2 媒体播放器三大底层框架",
+                  "id": 338,
+                  "ideas": {
+                    "1": {
+                      "title": "MPC / HC架构",
+                      "id": 339,
+                      "ideas": {
+                        "1": {
+                          "title": "Media Player Classic",
+                          "id": 342
+                        },
+                        "2": {
+                          "title": "KMP",
+                          "id": 343
+                        },
+                        "3": {
+                          "title": "射手播放器",
+                          "id": 344
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "MPlayer架构",
+                      "id": 340
+                    },
+                    "3": {
+                      "title": "VLC架构",
+                      "id": 341,
+                      "ideas": {
+                        "1": {
+                          "title": "模块化开发",
+                          "id": 345
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
                   }
                 }
               },
@@ -2715,146 +3252,32 @@
               }
             },
             "3": {
-              "title": "音频数字化的标准是",
-              "id": 241,
+              "title": "第三章 编译及简单应用",
+              "id": 346,
               "ideas": {
                 "1": {
-                  "title": "每个样本16位-96dB的信噪比",
-                  "id": 242
+                  "title": "3.1 FFMpeg库编译和入门介绍",
+                  "id": 347
                 },
                 "2": {
-                  "title": "采用线性脉冲编码调制PCM",
-                  "id": 243
+                  "title": "3.2 流媒体数据流程讲解",
+                  "id": 348
                 },
                 "3": {
-                  "title": "每一量化步长都具有相等的长度",
-                  "id": 244
-                }
-              },
-              "attr": {
-                "collapsed": true,
-                "style": {}
-              }
-            },
-            "4": {
-              "title": "常见格式",
-              "id": 245,
-              "ideas": {
-                "1": {
-                  "title": "CD",
-                  "id": 246,
-                  "ideas": {
-                    "1": {
-                      "title": "音质比较高",
-                      "id": 247
-                    },
-                    "2": {
-                      "title": "*.cda格式, 就是CD音轨",
-                      "id": 248
-                    },
-                    "3": {
-                      "title": "标准CD格式也就是44.1K的采样频率，速率88K/秒，16位量化位数，因为CD音轨可以说是近似无损的，因此它的声音基本上是忠于原声的，因此如果你是一个音响发烧友的话，CD是你的首选。",
-                      "id": 249
-                    },
-                    "4": {
-                      "title": "一个CD音频文件是一个*.cda文件，这只是一个索引信息，并不是真正的包含声音信息，所以不论CD音乐的长短，在电脑上看到的“*.cda文件”都是44字节长。",
-                      "id": 250
-                    },
-                    "5": {
-                      "title": "不能直接的复制CD格式的*.cda文件到硬盘上播放，需要使用象EAC这样的抓音轨软件把CD格式的文件转换成WAV，这个转换过程如果光盘驱动器质量过关而且EAC的参数设置得当的话，可以说是基本上无损抓音频。推荐大家使用这种方法。",
-                      "id": 251
-                    }
-                  },
-                  "attr": {
-                    "style": {},
-                    "collapsed": true
-                  }
-                },
-                "2": {
-                  "title": "WAVE",
-                  "id": 252,
-                  "ideas": {
-                    "1": {
-                      "title": "*.WAV是微软公司开发的一种声音文件格式",
-                      "id": 253,
-                      "ideas": {
-                        "1": {
-                          "title": "符合PIFFResource Interchange File Format 文件规范\n",
-                          "id": 254
-                        }
-                      }
-                    },
-                    "2": {
-                      "title": "“*.WAV”格式支持MSADPCM、CCITT A LAW等多种压缩算法，支持多种音频位数、采样频率和声道，标准格式的WAV文件和CD格式一样，也是44.1K的采样频率，速率88K/秒，16位量化位数，看到了吧，WAV格式的声音文件质量和CD相差无几，也是目前PC机上广为流行的声音文件格式，几乎所有的音频编辑软件都“认识”WAV格式。",
-                      "id": 255
-                    }
-                  },
-                  "attr": {
-                    "style": {},
-                    "collapsed": true
-                  }
-                },
-                "3": {
-                  "title": "AIFF",
-                  "id": 256,
-                  "ideas": {
-                    "1": {
-                      "title": "Audio Interchange FIle Format",
-                      "id": 257,
-                      "ideas": {
-                        "1": {
-                          "title": "音频交互文件格式",
-                          "id": 259
-                        }
-                      }
-                    },
-                    "2": {
-                      "title": "AIFF格式和AU格式, 他们都和WAV非常相像, 在大多数音频编辑软件中也都支持它们这几种常见的音乐格式",
-                      "id": 258
-                    },
-                    "3": {
-                      "title": "APPLE公司开发",
-                      "id": 260,
-                      "ideas": {
-                        "1": {
-                          "title": "被MACINTOSH平台及其应用程序所支持",
-                          "id": 261
-                        }
-                      }
-                    },
-                    "4": {
-                      "title": "NETSCAPE浏览器中LIVEAUDIO也支持AIFF",
-                      "id": 262
-                    },
-                    "5": {
-                      "title": "AIFF是Apple苹果电脑上面标准音频格式, 属于QuickTime技术的一部分",
-                      "id": 263
-                    },
-                    "6": {
-                      "title": "这一格式的特点就是格式本身与数据的意义无关, 因此受到了Microsoft的青睐，并据此搞出来WAV格式。AIFF虽然是一种很优秀的文件格式，但由于它是苹果电脑上的格式，因此在PC平台上并没有得到很大的流行。",
-                      "id": 264
-                    },
-                    "7": {
-                      "title": "由于AIFF的包容特性，所以它支持许多压缩技术。",
-                      "id": 265
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
+                  "title": "3.3 简单应用",
+                  "id": 349
                 },
                 "4": {
-                  "title": "AU",
-                  "id": 266,
+                  "title": "3.4 SDL(Simple DIrect Layer)",
+                  "id": 350,
                   "ideas": {
                     "1": {
-                      "title": "AUDIO文件是SUN公司推出的一种数字音频格式",
-                      "id": 267
+                      "title": "SDL显示视频",
+                      "id": 351
                     },
                     "2": {
-                      "title": "AU文件原先是UNIX操作系统下的数字声音文件",
-                      "id": 268
+                      "title": "SDL显示音频",
+                      "id": 352
                     }
                   },
                   "attr": {
@@ -2863,336 +3286,132 @@
                   }
                 },
                 "5": {
-                  "title": "MPEG",
-                  "id": 269,
+                  "title": "3.5 ffmpeg程序的使用",
+                  "id": 353,
                   "ideas": {
                     "1": {
-                      "title": "动态图象专家组的英文缩写",
-                      "id": 271,
-                      "ideas": {
-                        "1": {
-                          "title": "这个专家组始建于1988年，专门负责为CD建立视频和音频压缩标准",
-                          "id": 272
-                        }
-                      }
+                      "title": "ffmpeg",
+                      "id": 354
                     },
                     "2": {
-                      "title": "MPEG音频文件指的是MPEG标准中的声音部分即MPEG音频层",
-                      "id": 273
+                      "title": "ffplay",
+                      "id": 355
                     },
                     "3": {
-                      "title": "MPEG含有格式包括：MPEG-1、MPEG-2、MPEG-Layer3、MPEG-4",
-                      "id": 274
+                      "title": "ffprobe",
+                      "id": 356
                     }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
                   }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "第四章 数据结构",
+              "id": 357,
+              "ideas": {
+                "1": {
+                  "title": "4.1 AVCodec结构体",
+                  "id": 358
+                },
+                "2": {
+                  "title": "4.2 AVCodecContext结构体",
+                  "id": 359
+                },
+                "3": {
+                  "title": "4.3 AVInputFormat结构体",
+                  "id": 360
+                },
+                "4": {
+                  "title": "4.4 AVFormatContext结构体",
+                  "id": 361
+                },
+                "5": {
+                  "title": "4.5 MovContext结构体",
+                  "id": 362
                 },
                 "6": {
-                  "title": "MP3",
-                  "id": 275,
-                  "ideas": {
-                    "1": {
-                      "title": "诞生于八十年代的德国，所谓的MP3也就是指的是MPEG标准中的音频部分，也就是MPEG音频层。",
-                      "id": 276
-                    },
-                    "2": {
-                      "title": "根据压缩质量和编码处理的不同分为3层，分别对应“*.mp1\"/“*.mp2”/“*.mp3”这3种声音文件。",
-                      "id": 277
-                    },
-                    "3": {
-                      "title": "MPEG音频文件的压缩是一种有损压缩，MPEG3音频编码具有10：1~12：1的高压缩率，同时基本保持低音频部分不失真，但是牺牲了声音文件中12KHz到16KHz高音频这部分的质量来换取文件的尺寸",
-                      "id": 278
-                    },
-                    "4": {
-                      "title": "相同长度的音乐文件，用*.mp3格式来储存，一般只有*.wav文件的1/10，而音质要次于CD格式或WAV格式的声音文件",
-                      "id": 279
-                    },
-                    "5": {
-                      "title": "因为MP3没有版权保护技术，说白了也就是谁都可以用",
-                      "id": 280
-                    },
-                    "6": {
-                      "title": "MP3格式压缩音乐的采样频率有很多种，可以用64Kbps或更低的采样频率节省空间，也可以用320Kbps的标准达到极高的音质。",
-                      "id": 281
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
+                  "title": "4.6 URLProtocol结构体",
+                  "id": 363
                 },
                 "7": {
-                  "title": "MPEG-4",
-                  "id": 282
+                  "title": "4.7 URLContext结构体",
+                  "id": 364
                 },
                 "8": {
-                  "title": "MIDI",
-                  "id": 283,
-                  "ideas": {
-                    "1": {
-                      "title": "Musical Instrument Digital Interface",
-                      "id": 284
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
+                  "title": "4.8 AVIOContext结构体",
+                  "id": 365
                 },
                 "9": {
-                  "title": "WMA",
-                  "id": 285,
-                  "ideas": {
-                    "1": {
-                      "title": "Windows Media Audio",
-                      "id": 286
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
+                  "title": "4.9 AVStream结构体",
+                  "id": 366
                 },
                 "10": {
-                  "title": "RealAudio",
-                  "id": 287
+                  "title": "4.10 MOVStreamContext结构体",
+                  "id": 367
                 },
                 "11": {
-                  "title": "VQF",
-                  "id": 288
+                  "title": "4.11 AVPacket结构体",
+                  "id": 368
                 },
                 "12": {
-                  "title": "OggVorbis",
-                  "id": 289
+                  "title": "4.12 AVPacketList结构体",
+                  "id": 369
                 },
                 "13": {
-                  "title": "AMR",
-                  "id": 290,
-                  "ideas": {
-                    "1": {
-                      "title": "Adaptive Multi-Rate",
-                      "id": 291
-                    }
-                  }
+                  "title": "4.13 AVFrame结构体",
+                  "id": 370
                 }
               },
               "attr": {
                 "collapsed": true,
                 "style": {}
               }
-            }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
-          }
-        },
-        "3": {
-          "title": "1.3 字幕格式",
-          "id": 292,
-          "ideas": {
-            "1": {
-              "title": "外挂字幕与内嵌字幕",
-              "id": 293,
-              "attr": {
-                "style": {}
-              }
-            },
-            "2": {
-              "title": "外挂字幕三种格式",
-              "id": 294,
-              "ideas": {
-                "1": {
-                  "title": "srt格式",
-                  "id": 295
-                },
-                "2": {
-                  "title": "sub + idx",
-                  "id": 296
-                },
-                "3": {
-                  "title": "ass字幕",
-                  "id": 297
-                }
-              }
-            }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
-          }
-        },
-        "4": {
-          "title": "1.4 采集录制和播放渲染",
-          "id": 298,
-          "ideas": {
-            "1": {
-              "title": "视频采集",
-              "id": 299
-            },
-            "2": {
-              "title": "视频渲染",
-              "id": 300,
-              "ideas": {
-                "1": {
-                  "title": "Render",
-                  "id": 301,
-                  "ideas": {
-                    "1": {
-                      "title": "渲染",
-                      "id": 304
-                    }
-                  }
-                },
-                "2": {
-                  "title": "Shade",
-                  "id": 302,
-                  "ideas": {
-                    "1": {
-                      "title": "着色",
-                      "id": 303
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
-          }
-        },
-        "5": {
-          "title": "1.5 编解码器(codec)",
-          "id": 309,
-          "attr": {
-            "style": {}
-          }
-        },
-        "6": {
-          "title": "1.6 容器和协议",
-          "id": 310
-        },
-        "7": {
-          "title": "1.7 常用概念介绍",
-          "id": 311,
-          "ideas": {
-            "1": {
-              "title": "硬解",
-              "id": 312
-            },
-            "2": {
-              "title": "IBP帧",
-              "id": 313
-            },
-            "3": {
-              "title": "GOP",
-              "id": 314
-            },
-            "4": {
-              "title": "mpeg4视频中IBP的判定",
-              "id": 315
             },
             "5": {
-              "title": "DTS和PTS",
-              "id": 316
-            }
-          }
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "31": {
-      "title": "第二章 FFmpeg框架",
-      "id": 317,
-      "ideas": {
-        "1": {
-          "title": "2.1 概述",
-          "id": 318,
-          "ideas": {
-            "1": {
-              "title": "功能",
-              "id": 319,
+              "title": "第五章 重要模块",
+              "id": 371,
               "ideas": {
                 "1": {
-                  "title": "视频采集",
-                  "id": 320
+                  "title": "5.1 libavutil公共模块",
+                  "id": 372,
+                  "ideas": {
+                    "1": {
+                      "title": "文件列表",
+                      "id": 373
+                    }
+                  }
                 },
                 "2": {
-                  "title": "视频格式转换",
-                  "id": 321
+                  "title": "5.2 libavcodec编解码模块",
+                  "id": 375
                 },
                 "3": {
-                  "title": "视频截图",
-                  "id": 322
+                  "title": "5.3 libavformat容器模块",
+                  "id": 376
                 },
                 "4": {
-                  "title": "给视频加水印",
-                  "id": 323
-                }
-              },
-              "attr": {
-                "collapsed": true,
-                "style": {}
-              }
-            },
-            "2": {
-              "title": "模块组成",
-              "id": 324,
-              "ideas": {
-                "1": {
-                  "title": "libavformat",
-                  "id": 325
-                },
-                "2": {
-                  "title": "libavcodec",
-                  "id": 326
-                },
-                "3": {
-                  "title": "libavdevice",
-                  "id": 327
-                },
-                "4": {
-                  "title": "libavfilter",
-                  "id": 328
+                  "title": "5.4 libswscale视频色彩空间转换",
+                  "id": 377
                 },
                 "5": {
-                  "title": "libavutil",
-                  "id": 329
+                  "title": "5.5 libswresample音频重采样",
+                  "id": 378
                 },
                 "6": {
-                  "title": "libavresample",
-                  "id": 330
+                  "title": "5.6 libavfilter音视频过滤器",
+                  "id": 379
                 },
                 "7": {
-                  "title": "libswscale",
-                  "id": 331
+                  "title": "5.7 libavdevice设备输入和输出容器",
+                  "id": 380
                 },
                 "8": {
-                  "title": "libswresample",
-                  "id": 332
-                },
-                "9": {
-                  "title": "libpostproc",
-                  "id": 333
-                },
-                "10": {
-                  "title": "ffmpeg",
-                  "id": 334
-                },
-                "11": {
-                  "title": "ffserver",
-                  "id": 335
-                },
-                "12": {
-                  "title": "ffplay",
-                  "id": 336
+                  "title": "5.8 libpostproc视频后期处理",
+                  "id": 381
                 }
               },
               "attr": {
@@ -3200,351 +3419,142 @@
                 "style": {}
               }
             },
-            "3": {
-              "title": "命令集",
-              "id": 337
-            }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
-          }
-        },
-        "2": {
-          "title": "2.2 媒体播放器三大底层框架",
-          "id": 338,
-          "ideas": {
-            "1": {
-              "title": "MPC / HC架构",
-              "id": 339,
+            "6": {
+              "title": "第六章 播放器",
+              "id": 382,
               "ideas": {
                 "1": {
-                  "title": "Media Player Classic",
-                  "id": 342
+                  "title": "6.1 视频播放器",
+                  "id": 383,
+                  "ideas": {
+                    "1": {
+                      "title": "ffmpeg库的配置",
+                      "id": 384
+                    },
+                    "2": {
+                      "title": "一个简单的视频播放器",
+                      "id": 385
+                    }
+                  }
                 },
                 "2": {
-                  "title": "KMP",
-                  "id": 343
+                  "title": "6.2 音频播放器",
+                  "id": 386
                 },
                 "3": {
-                  "title": "射手播放器",
-                  "id": 344
+                  "title": "6.3 一个完整的播放器 -- ffplay",
+                  "id": 387
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             },
-            "2": {
-              "title": "MPlayer架构",
-              "id": 340
-            },
-            "3": {
-              "title": "VLC架构",
-              "id": 341,
+            "7": {
+              "title": "第七章 应用开发",
+              "id": 388,
               "ideas": {
                 "1": {
-                  "title": "模块化开发",
-                  "id": 345
+                  "title": "7.1 ffmpeg库的使用: 编码",
+                  "id": 389,
+                  "ideas": {
+                    "1": {
+                      "title": "YUV编码为视频",
+                      "id": 390
+                    }
+                  }
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "8": {
+              "title": "第八章 关键函数介绍",
+              "id": 391,
+              "ideas": {
+                "1": {
+                  "title": "8.1 avformat_open_input",
+                  "id": 392
+                },
+                "2": {
+                  "title": "8.2 avcodec_register_all",
+                  "id": 393
+                },
+                "3": {
+                  "title": "8.3 av_read_frame",
+                  "id": 394
+                },
+                "4": {
+                  "title": "8.4 avcodec_decode_video2",
+                  "id": 395
+                },
+                "5": {
+                  "title": "8.5 transcode_init",
+                  "id": 396
+                },
+                "6": {
+                  "title": "8.6 transcode",
+                  "id": 397
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "第九章 ffmpeg相关工程",
+              "id": 398,
+              "ideas": {
+                "1": {
+                  "title": "9.1 ffdshow",
+                  "id": 399
+                },
+                "2": {
+                  "title": "9.2 LAV filters",
+                  "id": 400
+                },
+                "3": {
+                  "title": "9.3 MPlayer",
+                  "id": 401
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "10": {
+              "title": "第十章 开发实例",
+              "id": 402,
+              "attr": {
+                "style": {}
+              }
+            },
+            "11": {
+              "title": "第十一章 mp4文件封装协议分析",
+              "id": 403,
+              "attr": {
+                "style": {}
+              }
+            },
+            "12": {
+              "title": "第十二章 flv文件格式分析",
+              "id": 404,
+              "attr": {
+                "style": {}
               }
             }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
           }
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
-    },
-    "41": {
-      "title": "第三章 编译及简单应用",
-      "id": 346,
-      "ideas": {
-        "1": {
-          "title": "3.1 FFMpeg库编译和入门介绍",
-          "id": 347
-        },
-        "2": {
-          "title": "3.2 流媒体数据流程讲解",
-          "id": 348
-        },
-        "3": {
-          "title": "3.3 简单应用",
-          "id": 349
-        },
-        "4": {
-          "title": "3.4 SDL(Simple DIrect Layer)",
-          "id": 350,
-          "ideas": {
-            "1": {
-              "title": "SDL显示视频",
-              "id": 351
-            },
-            "2": {
-              "title": "SDL显示音频",
-              "id": 352
-            }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
-          }
-        },
-        "5": {
-          "title": "3.5 ffmpeg程序的使用",
-          "id": 353,
-          "ideas": {
-            "1": {
-              "title": "ffmpeg",
-              "id": 354
-            },
-            "2": {
-              "title": "ffplay",
-              "id": 355
-            },
-            "3": {
-              "title": "ffprobe",
-              "id": 356
-            }
-          }
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "51": {
-      "title": "第四章 数据结构",
-      "id": 357,
-      "ideas": {
-        "1": {
-          "title": "4.1 AVCodec结构体",
-          "id": 358
-        },
-        "2": {
-          "title": "4.2 AVCodecContext结构体",
-          "id": 359
-        },
-        "3": {
-          "title": "4.3 AVInputFormat结构体",
-          "id": 360
-        },
-        "4": {
-          "title": "4.4 AVFormatContext结构体",
-          "id": 361
-        },
-        "5": {
-          "title": "4.5 MovContext结构体",
-          "id": 362
-        },
-        "6": {
-          "title": "4.6 URLProtocol结构体",
-          "id": 363
-        },
-        "7": {
-          "title": "4.7 URLContext结构体",
-          "id": 364
-        },
-        "8": {
-          "title": "4.8 AVIOContext结构体",
-          "id": 365
-        },
-        "9": {
-          "title": "4.9 AVStream结构体",
-          "id": 366
-        },
-        "10": {
-          "title": "4.10 MOVStreamContext结构体",
-          "id": 367
-        },
-        "11": {
-          "title": "4.11 AVPacket结构体",
-          "id": 368
-        },
-        "12": {
-          "title": "4.12 AVPacketList结构体",
-          "id": 369
-        },
-        "13": {
-          "title": "4.13 AVFrame结构体",
-          "id": 370
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "61": {
-      "title": "第五章 重要模块",
-      "id": 371,
-      "ideas": {
-        "1": {
-          "title": "5.1 libavutil公共模块",
-          "id": 372,
-          "ideas": {
-            "1": {
-              "title": "文件列表",
-              "id": 373
-            }
-          }
-        },
-        "2": {
-          "title": "5.2 libavcodec编解码模块",
-          "id": 375
-        },
-        "3": {
-          "title": "5.3 libavformat容器模块",
-          "id": 376
-        },
-        "4": {
-          "title": "5.4 libswscale视频色彩空间转换",
-          "id": 377
-        },
-        "5": {
-          "title": "5.5 libswresample音频重采样",
-          "id": 378
-        },
-        "6": {
-          "title": "5.6 libavfilter音视频过滤器",
-          "id": 379
-        },
-        "7": {
-          "title": "5.7 libavdevice设备输入和输出容器",
-          "id": 380
-        },
-        "8": {
-          "title": "5.8 libpostproc视频后期处理",
-          "id": 381
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "71": {
-      "title": "第六章 播放器",
-      "id": 382,
-      "ideas": {
-        "1": {
-          "title": "6.1 视频播放器",
-          "id": 383,
-          "ideas": {
-            "1": {
-              "title": "ffmpeg库的配置",
-              "id": 384
-            },
-            "2": {
-              "title": "一个简单的视频播放器",
-              "id": 385
-            }
-          }
-        },
-        "2": {
-          "title": "6.2 音频播放器",
-          "id": 386
-        },
-        "3": {
-          "title": "6.3 一个完整的播放器 -- ffplay",
-          "id": 387
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "81": {
-      "title": "第七章 应用开发",
-      "id": 388,
-      "ideas": {
-        "1": {
-          "title": "7.1 ffmpeg库的使用: 编码",
-          "id": 389,
-          "ideas": {
-            "1": {
-              "title": "YUV编码为视频",
-              "id": 390
-            }
-          }
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "91": {
-      "title": "第八章 关键函数介绍",
-      "id": 391,
-      "ideas": {
-        "1": {
-          "title": "8.1 avformat_open_input",
-          "id": 392
-        },
-        "2": {
-          "title": "8.2 avcodec_register_all",
-          "id": 393
-        },
-        "3": {
-          "title": "8.3 av_read_frame",
-          "id": 394
-        },
-        "4": {
-          "title": "8.4 avcodec_decode_video2",
-          "id": 395
-        },
-        "5": {
-          "title": "8.5 transcode_init",
-          "id": 396
-        },
-        "6": {
-          "title": "8.6 transcode",
-          "id": 397
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "101": {
-      "title": "第九章 ffmpeg相关工程",
-      "id": 398,
-      "ideas": {
-        "1": {
-          "title": "9.1 ffdshow",
-          "id": 399
-        },
-        "2": {
-          "title": "9.2 LAV filters",
-          "id": 400
-        },
-        "3": {
-          "title": "9.3 MPlayer",
-          "id": 401
-        }
-      },
-      "attr": {
-        "collapsed": true,
-        "style": {}
-      }
-    },
-    "111": {
-      "title": "第十章 开发实例",
-      "id": 402
-    },
-    "121": {
-      "title": "第十一章 mp4文件封装协议分析",
-      "id": 403
-    },
-    "131": {
-      "title": "第十二章 flv文件格式分析",
-      "id": 404
     },
     "18.5": {
       "title": "Blog",
@@ -4080,6 +4090,40 @@
       "attr": {
         "collapsed": true,
         "style": {}
+      }
+    },
+    "28.5": {
+      "title": "Tutorial",
+      "id": 766,
+      "ideas": {
+        "1": {
+          "title": "http://dranger.com/ffmpeg/ffmpeg.html",
+          "id": 767,
+          "ideas": {
+            "1": {
+              "title": "An ffmpeg and SDL Tutorial",
+              "id": 768
+            },
+            "2": {
+              "title": "How to Write a Video Player in Less Than 1000 Lines",
+              "id": 769
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      }
+    },
+    "38.5": {
+      "title": "Codes",
+      "id": 770,
+      "ideas": {
+        "1": {
+          "title": "https://github.com/Akagi201/learning-ffmpeg",
+          "id": 771
+        }
       }
     }
   },
