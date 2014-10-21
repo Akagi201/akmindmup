@@ -1,0 +1,1250 @@
+{
+  "title": "learning-buildroot",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "about",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "a set of Makefiles and patches that makes it easy to generate a complete embedded Linux system",
+          "id": 3
+        },
+        "2": {
+          "title": "generate",
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "cross-compilation toolchain",
+              "id": 5
+            },
+            "2": {
+              "title": "root filesystem",
+              "id": 6
+            },
+            "3": {
+              "title": "kernel image",
+              "id": 7
+            },
+            "4": {
+              "title": "bootloader image",
+              "id": 8
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "features",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "handle everything",
+              "id": 10,
+              "ideas": {
+                "1": {
+                  "title": "cross-compiling toolchain",
+                  "id": 11
+                },
+                "2": {
+                  "title": "root filesystem generation",
+                  "id": 12
+                },
+                "3": {
+                  "title": "kernel image compilation",
+                  "id": 13
+                },
+                "4": {
+                  "title": "bootloader compilation",
+                  "id": 14
+                },
+                "5": {
+                  "title": "sufficiently flexible that it can also be used for only or serval of these steps",
+                  "id": 15
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "very easy ",
+              "id": 16,
+              "ideas": {
+                "4": {
+                  "title": "configuration interfaces",
+                  "id": 20,
+                  "ideas": {
+                    "1": {
+                      "title": "menuconfig",
+                      "id": 17,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "gconfig",
+                      "id": 18,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "xconfig",
+                      "id": 19,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "serval hundreds of packages",
+              "id": 21,
+              "ideas": {
+                "1": {
+                  "title": "userspace applications",
+                  "id": 22
+                },
+                "2": {
+                  "title": "libraries",
+                  "id": 23,
+                  "ideas": {
+                    "1": {
+                      "title": "X.org stack",
+                      "id": 24
+                    },
+                    "2": {
+                      "title": "Gtk2",
+                      "id": 25
+                    },
+                    "3": {
+                      "title": "Qt",
+                      "id": 26
+                    },
+                    "4": {
+                      "title": "DirectFB",
+                      "id": 27
+                    },
+                    "5": {
+                      "title": "SDL",
+                      "id": 28
+                    },
+                    "6": {
+                      "title": "GStreamer",
+                      "id": 29
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "network-related",
+                  "id": 30
+                },
+                "4": {
+                  "title": "system-related",
+                  "id": 31
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "multiple filesystem types",
+              "id": 33,
+              "ideas": {
+                "1": {
+                  "title": "JFFS2",
+                  "id": 34
+                },
+                "2": {
+                  "title": "UBIFS",
+                  "id": 35
+                },
+                "3": {
+                  "title": "tarballs",
+                  "id": 36
+                },
+                "4": {
+                  "title": "romfs",
+                  "id": 37
+                },
+                "5": {
+                  "title": "cramfs",
+                  "id": 38
+                },
+                "6": {
+                  "title": "squashfs",
+                  "id": 39
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "C lib",
+              "id": 40,
+              "ideas": {
+                "3": {
+                  "title": "re-use your existing cross-compilation toolchain",
+                  "id": 43,
+                  "ideas": {
+                    "1": {
+                      "title": "glibc",
+                      "id": 45
+                    },
+                    "2": {
+                      "title": "eglibc",
+                      "id": 46
+                    },
+                    "3": {
+                      "title": "uClibc",
+                      "id": 47
+                    }
+                  }
+                },
+                "2.5": {
+                  "title": "generate cross-compilation toolchain",
+                  "id": 44,
+                  "ideas": {
+                    "1": {
+                      "title": "(e)glibc",
+                      "id": 41,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "uClibc",
+                      "id": 42,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "simple structure",
+              "id": 48,
+              "ideas": {
+                "1": {
+                  "title": "easy to understand and extend",
+                  "id": 49
+                },
+                "2": {
+                  "title": "relies only on the Makefile language",
+                  "id": 50
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Stable releases are delivered every three months",
+          "id": 51
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "getting started",
+      "id": 52,
+      "ideas": {
+        "1": {
+          "title": "About Buildroot",
+          "id": 55
+        },
+        "2": {
+          "title": "System requirements",
+          "id": 56,
+          "ideas": {
+            "1": {
+              "title": "run on Linux systems",
+              "id": 76
+            },
+            "2": {
+              "title": "Buildroot itself will build most host packages it needs for the compilation",
+              "id": 77
+            },
+            "3": {
+              "title": "Certain standard Linux utilities are expected to be already installed on the host system.",
+              "id": 78
+            },
+            "4": {
+              "title": "Mandatory packages",
+              "id": 79,
+              "ideas": {
+                "1": {
+                  "title": "Build tools",
+                  "id": 80,
+                  "ideas": {
+                    "1": {
+                      "title": "which",
+                      "id": 81
+                    },
+                    "2": {
+                      "title": "sed",
+                      "id": 82
+                    },
+                    "3": {
+                      "title": "make",
+                      "id": 83
+                    },
+                    "4": {
+                      "title": "binutils",
+                      "id": 84
+                    },
+                    "5": {
+                      "title": "build-essential",
+                      "id": 85,
+                      "ideas": {
+                        "1": {
+                          "title": "only for Debian based systems",
+                          "id": 86
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "gcc",
+                      "id": 87
+                    },
+                    "7": {
+                      "title": "g++",
+                      "id": 88
+                    },
+                    "8": {
+                      "title": "bash",
+                      "id": 89
+                    },
+                    "9": {
+                      "title": "patch",
+                      "id": 90
+                    },
+                    "10": {
+                      "title": "gzip",
+                      "id": 91
+                    },
+                    "11": {
+                      "title": "bzip2",
+                      "id": 92
+                    },
+                    "12": {
+                      "title": "perl",
+                      "id": 93
+                    },
+                    "13": {
+                      "title": "tar",
+                      "id": 94
+                    },
+                    "14": {
+                      "title": "cpio",
+                      "id": 95
+                    },
+                    "15": {
+                      "title": "python",
+                      "id": 96
+                    },
+                    "16": {
+                      "title": "unzip",
+                      "id": 97
+                    },
+                    "17": {
+                      "title": "rsync",
+                      "id": 98
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Source fetching tools",
+                  "id": 99,
+                  "ideas": {
+                    "1": {
+                      "title": "wget",
+                      "id": 100
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "Optional packages",
+              "id": 101,
+              "ideas": {
+                "1": {
+                  "title": "Configuration interface dependencies",
+                  "id": 102,
+                  "ideas": {
+                    "1": {
+                      "title": "need to install both runtime and development data",
+                      "id": 103,
+                      "ideas": {
+                        "1": {
+                          "title": "The development packages typically have a -dev or -devel suffix",
+                          "id": 104
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "ncurses5",
+                      "id": 105,
+                      "ideas": {
+                        "1": {
+                          "title": "menuconfig interface",
+                          "id": 106
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "qt4",
+                      "id": 107,
+                      "ideas": {
+                        "1": {
+                          "title": "xconfig interface",
+                          "id": 108
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "glib2, gtk2, glad2",
+                      "id": 109,
+                      "ideas": {
+                        "1": {
+                          "title": "gconfig interface",
+                          "id": 110
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Source fetching tools",
+                  "id": 111,
+                  "ideas": {
+                    "1": {
+                      "title": "bazaar",
+                      "id": 112
+                    },
+                    "2": {
+                      "title": "cvs",
+                      "id": 113
+                    },
+                    "3": {
+                      "title": "git",
+                      "id": 114
+                    },
+                    "4": {
+                      "title": "mercurial",
+                      "id": 115
+                    },
+                    "5": {
+                      "title": "rsync",
+                      "id": 116
+                    },
+                    "6": {
+                      "title": "scp",
+                      "id": 117
+                    },
+                    "7": {
+                      "title": "subversion",
+                      "id": 118
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Java-related packages",
+                  "id": 119,
+                  "ideas": {
+                    "1": {
+                      "title": "if the Java Classpath needs to be built for the target system",
+                      "id": 120
+                    },
+                    "2": {
+                      "title": "javac compiler",
+                      "id": 121
+                    },
+                    "3": {
+                      "title": "jar tool",
+                      "id": 122
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "Documentation generation tools",
+                  "id": 123,
+                  "ideas": {
+                    "1": {
+                      "title": "asciidoc",
+                      "id": 124
+                    },
+                    "2": {
+                      "title": "w3m",
+                      "id": 125
+                    },
+                    "3": {
+                      "title": "python",
+                      "id": 126,
+                      "ideas": {
+                        "1": {
+                          "title": "with the argparse module",
+                          "id": 127,
+                          "ideas": {
+                            "1": {
+                              "title": "automatically present in 2.7+ and 3.2+",
+                              "id": 128
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "dblatex",
+                      "id": 129,
+                      "ideas": {
+                        "1": {
+                          "title": "required for the pdf manual only",
+                          "id": 130
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "Graph generation tools",
+                  "id": 132,
+                  "ideas": {
+                    "1": {
+                      "title": "graphviz",
+                      "id": 133,
+                      "ideas": {
+                        "1": {
+                          "title": "to use graph-depends and <pkg>-graph-depends",
+                          "id": 134
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "python-matplotlib",
+                      "id": 135,
+                      "ideas": {
+                        "1": {
+                          "title": "to use graph-build",
+                          "id": 136
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Getting Buildroot",
+          "id": 57,
+          "ideas": {
+            "1": {
+              "title": "Buildroot releases are made every 3 months",
+              "id": 137,
+              "ideas": {
+                "1": {
+                  "title": "February",
+                  "id": 138
+                },
+                "2": {
+                  "title": "May",
+                  "id": 139
+                },
+                "3": {
+                  "title": "August",
+                  "id": 140
+                },
+                "4": {
+                  "title": "November",
+                  "id": 141
+                }
+              }
+            },
+            "2": {
+              "title": "Release numbers format",
+              "id": 142,
+              "ideas": {
+                "1": {
+                  "title": "YYYY.MM",
+                  "id": 143
+                }
+              }
+            },
+            "3": {
+              "title": "Release tarballs",
+              "id": 144,
+              "ideas": {
+                "2": {
+                  "title": "http://buildroot.org/download",
+                  "id": 146
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Buildroot quick start",
+          "id": 58,
+          "ideas": {
+            "1": {
+              "title": "you can and should build everything as a normal user.",
+              "id": 147
+            },
+            "2": {
+              "title": "By running all commands as a regular user, you protect your system against packages behaving badly during compilation and installation",
+              "id": 148
+            },
+            "3": {
+              "title": "Buildroot has a nice configuration tool similar to",
+              "id": 149,
+              "ideas": {
+                "1": {
+                  "title": "Linux Kernel",
+                  "id": 150
+                },
+                "2": {
+                  "title": "BusyBox",
+                  "id": 151
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "make commands",
+              "id": 152,
+              "ideas": {
+                "1": {
+                  "title": "make menuconfig",
+                  "id": 153,
+                  "ideas": {
+                    "1": {
+                      "title": "original curses-based configuratior",
+                      "id": 157
+                    }
+                  }
+                },
+                "2": {
+                  "title": "make nconfig",
+                  "id": 154,
+                  "ideas": {
+                    "1": {
+                      "title": "new curses-based configurator",
+                      "id": 158
+                    }
+                  }
+                },
+                "3": {
+                  "title": "make xconfig",
+                  "id": 155,
+                  "ideas": {
+                    "1": {
+                      "title": "Qt-based configurator",
+                      "id": 159
+                    }
+                  }
+                },
+                "4": {
+                  "title": "make gconfig",
+                  "id": 156,
+                  "ideas": {
+                    "1": {
+                      "title": "GTK-based configurator",
+                      "id": 160
+                    }
+                  }
+                },
+                "5": {
+                  "title": "All of these \"make\" commands will need to build a configuration utility(including the interface), so you may need to install \"development\" packages for relevant libraries used by the configuration utilities.",
+                  "id": 161
+                },
+                "6": {
+                  "title": "Once everything is configured, the configuration tool generates a .config file that contains the entire configuration.",
+                  "id": 162,
+                  "ideas": {
+                    "1": {
+                      "title": "This file will be read by the top-level Makefile.",
+                      "id": 163
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "To start the build process",
+                  "id": 164,
+                  "ideas": {
+                    "1": {
+                      "title": "make",
+                      "id": 165
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "You should never use make -jN with Buildroot",
+              "id": 166,
+              "ideas": {
+                "1": {
+                  "title": "Top-level parallel make is currently not supported.",
+                  "id": 167
+                },
+                "2": {
+                  "title": "Instead",
+                  "id": 168,
+                  "ideas": {
+                    "1": {
+                      "title": "use the BR2_JLEVEL option to tell Buildroot to run the compilation of each individual package with make -jN",
+                      "id": 169
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "make command will generally perform the following steps",
+              "id": 170,
+              "ideas": {
+                "1": {
+                  "title": "1. download source files(as required)",
+                  "id": 171
+                },
+                "2": {
+                  "title": "2. configure, build and install the cross-compilation toolchain, or simply import an external toolchain",
+                  "id": 173
+                },
+                "3": {
+                  "title": "3. configure, buld and install selected target packages",
+                  "id": 174
+                },
+                "4": {
+                  "title": "4. build a kernel image, if selected",
+                  "id": 175
+                },
+                "5": {
+                  "title": "5. build a bootloader image, if selected",
+                  "id": 176
+                },
+                "6": {
+                  "title": "6. create a root filesystem in selected formats",
+                  "id": 177
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "output/ directory",
+              "id": 178,
+              "ideas": {
+                "1": {
+                  "title": "Buildroot output is stored in a single directory",
+                  "id": 179
+                },
+                "2": {
+                  "title": "images/",
+                  "id": 180,
+                  "ideas": {
+                    "1": {
+                      "title": "where all the images are stored",
+                      "id": 184,
+                      "ideas": {
+                        "1": {
+                          "title": "kernel image",
+                          "id": 185
+                        },
+                        "2": {
+                          "title": "bootloader",
+                          "id": 186
+                        },
+                        "3": {
+                          "title": "root filesystem image",
+                          "id": 187
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "These are the files you need to put on your target system",
+                      "id": 188
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "build/",
+                  "id": 181,
+                  "ideas": {
+                    "1": {
+                      "title": "where all the components are built",
+                      "id": 189,
+                      "ideas": {
+                        "1": {
+                          "title": "tools needed by Buildroot on the host",
+                          "id": 190
+                        },
+                        "2": {
+                          "title": "packages compiled for the target",
+                          "id": 191
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "This directory contains one subdirectory for each of these components.",
+                      "id": 192
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "staging/",
+                  "id": 182,
+                  "ideas": {
+                    "1": {
+                      "title": "contains a hierarchy similar to a root filesystem hierarchy.",
+                      "id": 193
+                    },
+                    "2": {
+                      "title": "This directory contains the headers and libraries of the cross-compilation toolchain and all the userspace packages selected for the target.",
+                      "id": 194
+                    },
+                    "3": {
+                      "title": "This directory is not intended to be the root filesystem for the target",
+                      "id": 195,
+                      "ideas": {
+                        "1": {
+                          "title": "it contains a lot of development files, unstripped binaries and libraries that make it far too big for an embedded system.",
+                          "id": 196
+                        },
+                        "2": {
+                          "title": "These development files are used to compile libraries and applications for the target that depend on other libraries.",
+                          "id": 197
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "target/",
+                  "id": 183,
+                  "ideas": {
+                    "1": {
+                      "title": "contains almost the complete root filesystem for the target",
+                      "id": 198,
+                      "ideas": {
+                        "1": {
+                          "title": "everything needed is present except the device files in /dev/",
+                          "id": 199,
+                          "ideas": {
+                            "1": {
+                              "title": "Buildroot can't create them because Buildroot doesn't run as root and doesn't want to run as root.",
+                              "id": 200
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Also, it doesn't have the correct permissions",
+                          "id": 201,
+                          "ideas": {
+                            "1": {
+                              "title": "e.g. setuid for the busybox binary",
+                              "id": 202
+                            }
+                          },
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Therefore, this directory should not be used on your target.",
+                      "id": 203,
+                      "ideas": {
+                        "1": {
+                          "title": "Instead, you should use one of the images built in the images/ directory.",
+                          "id": 204
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "NFS",
+                      "id": 205,
+                      "ideas": {
+                        "1": {
+                          "title": "If you need an extracted image of the root filesystem for booting over NFS, then use the tarball image generated in images/ and extract it as root.",
+                          "id": 206
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Compared to staging/, target/ contains only the files and libraries needed to run the selected target applications",
+                      "id": 207,
+                      "ideas": {
+                        "1": {
+                          "title": "the development files(headers, etc.) are not present, the binaries are stripped.",
+                          "id": 208
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "host/",
+                  "id": 209,
+                  "ideas": {
+                    "1": {
+                      "title": "contains the installation of tools compiled for the host that are needed for the proper execution of Buildroot, including the cross-compilation toolchain.",
+                      "id": 210
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Community resources",
+          "id": 59,
+          "ideas": {
+            "1": {
+              "title": "Mailing List",
+              "id": 211,
+              "ideas": {
+                "1": {
+                  "title": "the main method of interaction for Buildroot users and developers.",
+                  "id": 212
+                },
+                "2": {
+                  "title": "subscribe",
+                  "id": 213,
+                  "ideas": {
+                    "1": {
+                      "title": "mailing list info page",
+                      "id": 214,
+                      "ideas": {
+                        "1": {
+                          "title": "http://lists.busybox.net/mailman/listinfo/buildroot",
+                          "id": 215
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "mailing list archives",
+                  "id": 216,
+                  "ideas": {
+                    "1": {
+                      "title": "Gmane",
+                      "id": 217,
+                      "ideas": {
+                        "1": {
+                          "title": "http://dir.gmane.org/gmane.comp.lib.uclibc.buildroot",
+                          "id": 218
+                        },
+                        "2": {
+                          "title": " gmane.comp.lib.uclibc.buildroot",
+                          "id": 220
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "IRC",
+              "id": 221,
+              "ideas": {
+                "1": {
+                  "title": "#buildroot@Freenode",
+                  "id": 222
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Bug tracker",
+              "id": 223,
+              "ideas": {
+                "1": {
+                  "title": "mailing list",
+                  "id": 224
+                },
+                "2": {
+                  "title": "Buildroot bugtracker",
+                  "id": 225,
+                  "ideas": {
+                    "1": {
+                      "title": "https://bugs.busybox.net/buglist.cgi?product=buildroot",
+                      "id": 226
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "WIki",
+              "id": 227,
+              "ideas": {
+                "1": {
+                  "title": "http://elinux.org/Buildroot",
+                  "id": 228
+                }
+              }
+            },
+            "5": {
+              "title": "Patchwork",
+              "id": 229,
+              "ideas": {
+                "1": {
+                  "title": "http://patchwork.buildroot.org",
+                  "id": 231
+                }
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "21": {
+      "title": "User guide",
+      "id": 53,
+      "ideas": {
+        "1": {
+          "title": "Buildroot configuration",
+          "id": 60
+        },
+        "2": {
+          "title": "Configuration of other components",
+          "id": 61
+        },
+        "3": {
+          "title": "General Buildroot usage",
+          "id": 62
+        },
+        "4": {
+          "title": "Project-specific customization",
+          "id": 63
+        },
+        "5": {
+          "title": "FAQ & Troubleshooting",
+          "id": 64
+        },
+        "6": {
+          "title": "Known issues",
+          "id": 65
+        },
+        "7": {
+          "title": "Legal notice and licensing",
+          "id": 66
+        },
+        "8": {
+          "title": "Beyond Buildroot",
+          "id": 67
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "31": {
+      "title": "Developer guide",
+      "id": 54,
+      "ideas": {
+        "1": {
+          "title": "How Buildroot works",
+          "id": 68
+        },
+        "2": {
+          "title": "Coding style",
+          "id": 69
+        },
+        "3": {
+          "title": "Adding support for a particular board",
+          "id": 70
+        },
+        "4": {
+          "title": "Adding new packages to Buildroot",
+          "id": 71
+        },
+        "5": {
+          "title": "Patching a package",
+          "id": 72
+        },
+        "6": {
+          "title": "Download infrastructure",
+          "id": 73
+        },
+        "7": {
+          "title": "Debugging Buildroot",
+          "id": 74
+        },
+        "8": {
+          "title": "Contributing to Buildroot",
+          "id": 75
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    }
+  },
+  "links": []
+}
