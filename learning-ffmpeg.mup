@@ -121,6 +121,10 @@
                           "title": "set by  avformat_open_input()",
                           "id": 412
                         },
+                        "3": {
+                          "title": "作为输入容器时, 不能为空, 其中包含了输入文件的音视频流信息, 程序从输入容器读出音视频包进行解码处理",
+                          "id": 804
+                        },
                         "1.5": {
                           "title": "输入数据对的封装格式",
                           "id": 570
@@ -141,6 +145,10 @@
                         "1": {
                           "title": "set by the caller before avformat_write_header()",
                           "id": 413
+                        },
+                        "2": {
+                          "title": "作为输出容器时, 不能为空, 程序把编码好的音视频包写入到输出容器中",
+                          "id": 805
                         }
                       }
                     },
@@ -155,6 +163,10 @@
                         "2": {
                           "title": "输入数据的缓存",
                           "id": 559
+                        },
+                        "3": {
+                          "title": "I/O上下文, 通过对该变量赋值可以改变输入源或输出目的",
+                          "id": 806
                         }
                       }
                     },
@@ -248,8 +260,8 @@
                 }
               },
               "attr": {
-                "collapsed": true,
-                "style": {}
+                "style": {},
+                "collapsed": true
               }
             },
             "3": {
@@ -288,7 +300,13 @@
                       "ideas": {
                         "1": {
                           "title": "缓存开始位置",
-                          "id": 750
+                          "id": 750,
+                          "ideas": {
+                            "1": {
+                              "title": "缓存的起始指针",
+                              "id": 809
+                            }
+                          }
                         },
                         "2": {
                           "title": "在解码的情况下, buffer用于存储ffmpeg读入的数据.",
@@ -302,7 +320,6 @@
                         }
                       },
                       "attr": {
-                        "collapsed": true,
                         "style": {}
                       }
                     },
@@ -313,6 +330,10 @@
                         "1": {
                           "title": "缓存大小(默认32768)",
                           "id": 752
+                        },
+                        "2": {
+                          "title": "缓存的最大值",
+                          "id": 810
                         }
                       }
                     },
@@ -370,11 +391,61 @@
                               }
                             }
                           }
+                        },
+                        "1.5": {
+                          "title": "在回调函数中使用的指针",
+                          "id": 811
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "6": {
+                      "title": "int (*read_packet)(void *opaque, uint8_t *buf, int buf_size);",
+                      "id": 812,
+                      "ideas": {
+                        "1": {
+                          "title": "读文件回调方法",
+                          "id": 813
+                        }
+                      }
+                    },
+                    "7": {
+                      "title": "int (*write_packet)(void *opaque, uint8_t *buf, int buf_size);",
+                      "id": 814,
+                      "ideas": {
+                        "1": {
+                          "title": "写文件回调方法",
+                          "id": 815
+                        }
+                      }
+                    },
+                    "8": {
+                      "title": "int64_t (*seek)(void *opaque, int64_t offset, int whence);",
+                      "id": 816,
+                      "ideas": {
+                        "1": {
+                          "title": "seek文件回调方法",
+                          "id": 817
                         }
                       }
                     }
                   }
+                },
+                "1.5": {
+                  "title": "字节流I/O上下文",
+                  "id": 807
+                },
+                "1.75": {
+                  "title": "AVIOContext里的函数指针不能直接调用, 通常使用avio_alloc_context()函数来设置其中的函数指针",
+                  "id": 808
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             }
           },
@@ -928,7 +999,11 @@
                   "title": "AVPacket",
                   "id": 47,
                   "ideas": {
-                    "1": {
+                    "2": {
+                      "title": "该结构体在读媒体源文件和写输出文件时都需要用到",
+                      "id": 881
+                    },
+                    "12": {
                       "title": "成员",
                       "id": 453,
                       "ideas": {
@@ -999,19 +1074,41 @@
                             "1": {
                               "title": "标识AVPacket所属的视频/音频流",
                               "id": 660
+                            },
+                            "2": {
+                              "title": "包所属流序号",
+                              "id": 882
                             }
                           }
                         },
                         "8": {
                           "title": "结构体虽然比较简单, 但非常常用",
-                          "id": 661
+                          "id": 661,
+                          "ideas": {}
+                        },
+                        "9": {
+                          "title": "以上信息, 如果是在读媒体源文件那么avcodec会初始化, 如果是输出文件, 用户需要对以上信息赋值",
+                          "id": 886
+                        },
+                        "7.5": {
+                          "title": "int duration;",
+                          "id": 883,
+                          "ideas": {
+                            "1": {
+                              "title": "时长",
+                              "id": 884
+                            }
+                          }
                         }
+                      },
+                      "attr": {
+                        "style": {}
                       }
                     }
                   },
                   "attr": {
-                    "collapsed": true,
-                    "style": {}
+                    "style": {},
+                    "collapsed": true
                   }
                 }
               }
@@ -1635,10 +1732,6 @@
           "title": "av_init_packet()",
           "id": 456
         },
-        "15": {
-          "title": "av_read_frame()",
-          "id": 457
-        },
         "16": {
           "title": "av_free_packet()",
           "id": 458
@@ -1650,6 +1743,651 @@
         "18": {
           "title": "avcodec_decode_video2()",
           "id": 460
+        },
+        "19": {
+          "title": "内部函数",
+          "id": 784,
+          "ideas": {
+            "1": {
+              "title": "avcodec_init()",
+              "id": 785,
+              "ideas": {
+                "1": {
+                  "title": "初始化libavcodec, 一般最先调用该函数",
+                  "id": 786
+                },
+                "2": {
+                  "title": "该函数必须在调用libavcodec里的其它函数前调用,一般在程序启动或模块初始化时调用,如果你调用了多次也无所谓,因为后面的调用不会做任何事情.从函数的实现里你可以发现,代码中对多次调用进行了控制.",
+                  "id": 787
+                },
+                "3": {
+                  "title": "该函数是非线程安全的",
+                  "id": 788
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "write_frame()",
+              "id": 819,
+              "ideas": {}
+            }
+          }
+        },
+        "20": {
+          "title": "外部函数",
+          "id": 789,
+          "ideas": {
+            "1": {
+              "title": "av_register_all()",
+              "id": 790,
+              "ideas": {
+                "1": {
+                  "title": "初始化libavformat和注册所有的muxers, demuxers和protocols",
+                  "id": 791
+                },
+                "2": {
+                  "title": "一般在调用avcodec_init后调用该方法",
+                  "id": 792,
+                  "ideas": {
+                    "1": {
+                      "title": "此说法已经过期, 现在是调用avcodec_register_all()",
+                      "id": 793,
+                      "ideas": {
+                        "1": {
+                          "title": "注册多种音视频格式的编解码器, 并注册各种文件的编解复用器",
+                          "id": 795
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "当然, 你也可以不调用该函数, 而通过选择调用特定的方法来提供支持",
+                  "id": 794
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "avformat_alloc_context()",
+              "id": 796,
+              "ideas": {
+                "1": {
+                  "title": "分配一个AVFormatContext结构",
+                  "id": 797
+                },
+                "2": {
+                  "title": "其中负责申请一个AVFormatContext结构的内存, 并进行简单初始化",
+                  "id": 798
+                },
+                "3": {
+                  "title": "avformat_free_context()可以用来释放该结构体里的所有东西以及该结构体本身",
+                  "id": 799,
+                  "ideas": {
+                    "1": {
+                      "title": "也就是说使用avformat_alloc_context()分配的结构, 需要使用avformat_free_context()来释放",
+                      "id": 800
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "avformat_free_context()",
+              "id": 801,
+              "ideas": {
+                "1": {
+                  "title": "释放一个AVFormatContext结构",
+                  "id": 802
+                },
+                "2": {
+                  "title": "使用avformat_alloc_context()分配的结构, 采用该函数进行释放, 除释放AVFormatContext结构本身内存之外, AVFormatContext中指针所指向的内存也会一并释放",
+                  "id": 803
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "avio_alloc_context()",
+              "id": 818,
+              "ideas": {
+                "1": {
+                  "title": "为I/O缓存申请并初始化一个AVIOContext结构, 结束使用时必须使用av_free()进行释放",
+                  "id": 820
+                },
+                "2": {
+                  "title": "unsigned char *buffer",
+                  "id": 821,
+                  "ideas": {
+                    "1": {
+                      "title": "输入/输出缓存内存块, 必须是使用av_malloc()分配的",
+                      "id": 822
+                    }
+                  }
+                },
+                "3": {
+                  "title": "int buffer_size",
+                  "id": 823,
+                  "ideas": {
+                    "1": {
+                      "title": "缓存大小是非常重要的",
+                      "id": 824
+                    }
+                  }
+                },
+                "4": {
+                  "title": "int write_flag",
+                  "id": 825,
+                  "ideas": {
+                    "1": {
+                      "title": "如果缓存为可写则设置为1, 否则设置为0",
+                      "id": 826
+                    }
+                  }
+                },
+                "5": {
+                  "title": "void *opaque",
+                  "id": 827,
+                  "ideas": {
+                    "1": {
+                      "title": "指针, 用于回调时使用",
+                      "id": 828
+                    }
+                  }
+                },
+                "6": {
+                  "title": "int (*read_packet)",
+                  "id": 829,
+                  "ideas": {
+                    "1": {
+                      "title": "读包函数指针",
+                      "id": 830
+                    }
+                  }
+                },
+                "7": {
+                  "title": "int (*write_packet)",
+                  "id": 831,
+                  "ideas": {
+                    "1": {
+                      "title": "写包函数指针",
+                      "id": 832
+                    }
+                  }
+                },
+                "8": {
+                  "title": "int64_t (*seek)",
+                  "id": 834,
+                  "ideas": {
+                    "1": {
+                      "title": "seek文件函数指针",
+                      "id": 835
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "avformat_open_input()",
+              "id": 836,
+              "ideas": {
+                "1": {
+                  "title": "以输入方式打开一个媒体文件, 也即源文件, codecs并没有打开, 只读取了文件的头信息",
+                  "id": 838
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "avformat_close_input()",
+              "id": 837,
+              "ideas": {
+                "1": {
+                  "title": "关闭使用avformat_open_input()打开的输入文件容器, 但并不关心他的codecs",
+                  "id": 839
+                },
+                "2": {
+                  "title": "使用avformat_close_input()关闭后, 就不再需要使用avformat_free_context进行释放了",
+                  "id": 840
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "avformat_find_stream_info()",
+              "id": 841,
+              "ideas": {
+                "1": {
+                  "title": "通过读取媒体文件中的包来获取媒体文件中的流信息, 对于没有头信息的文件如(mpeg)是非常有用的",
+                  "id": 842
+                },
+                "2": {
+                  "title": "该函数通常重算类似mpeg-2帧模式的真实帧率, 该函数并未改变逻辑文件的position",
+                  "id": 843
+                },
+                "3": {
+                  "title": "也就是把媒体文件中的音视频流等信息读出来, 保存在容器中, 以便解码时使用",
+                  "id": 844
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "8": {
+              "title": "avcodec_find_decoder()",
+              "id": 845,
+              "ideas": {
+                "1": {
+                  "title": "通过code ID查找一个已经注册的音视频解码器",
+                  "id": 846
+                },
+                "2": {
+                  "title": "查找解码器之前, 必须先调用av_register_all()注册所有支持的解码器",
+                  "id": 847
+                },
+                "3": {
+                  "title": "查找成功返回解码器指针, 否则返回NULL",
+                  "id": 848
+                },
+                "4": {
+                  "title": "音视频解码器保存在一个链表中, 查找过程中, 函数从头到尾遍历链表, 通过比较解码器的ID来查找",
+                  "id": 849
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "avcodec_find_decoder_by_name()",
+              "id": 850,
+              "ideas": {
+                "1": {
+                  "title": "通过一个指定的名称查找一个已经注册的音视频解码器",
+                  "id": 851
+                },
+                "2": {
+                  "title": "查找解码器之前, 必须先调用av_register_all注册所有支持的解码器",
+                  "id": 852
+                },
+                "3": {
+                  "title": "查找成功返回解码器指针, 否则返回NULL",
+                  "id": 853
+                },
+                "4": {
+                  "title": "音视频解码器保存在一个链表上, 查找过程中, 函数从头到尾遍历链表, 通过比较解码器的name来查找",
+                  "id": 854
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "10": {
+              "title": "avcodec_find_encoder()",
+              "id": 855,
+              "ideas": {
+                "1": {
+                  "title": "通过CodecID查找一个已经注册的音视频编码器",
+                  "id": 856
+                },
+                "2": {
+                  "title": "查找编码器之前, 必须先调用av_register_all注册所有支持的编码器",
+                  "id": 857
+                },
+                "3": {
+                  "title": "查找成功返回编码器指针, 否则返回NULL",
+                  "id": 858
+                },
+                "4": {
+                  "title": "音视频编码器保存在一个链表中, 查找过程中, 函数从头到尾遍历链表, 通过比较编码器的ID来查找",
+                  "id": 859
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "avcodec_find_encoder_by_name()",
+              "id": 860,
+              "ideas": {
+                "1": {
+                  "title": "通过一个指定的名称查找一个已经注册的音视频编码器",
+                  "id": 861
+                },
+                "2": {
+                  "title": "查找编码器之前, 必须先调用av_register_all注册所有支持的编码器",
+                  "id": 862
+                },
+                "3": {
+                  "title": "查找成功返回编码器指针, 否则返回NULL",
+                  "id": 863
+                },
+                "4": {
+                  "title": "音视频编码器保存在一个链表中, 查找过程中, 函数从头到尾遍历链表, 通过比较编码器的名称来查找",
+                  "id": 864
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "avcodec_open2()\n",
+              "id": 865,
+              "ideas": {
+                "1": {
+                  "title": "使用给定的AVCodec初始化AVCodecContext",
+                  "id": 866
+                },
+                "2": {
+                  "title": "该方法在编码和解码时都会用到",
+                  "id": 867
+                },
+                "3": {
+                  "title": "返回0时成功, 打开作为输出时, 参数设置不对的话, 调用会失败",
+                  "id": 868
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "av_guess_format()",
+              "id": 869,
+              "ideas": {
+                "1": {
+                  "title": "返回一个已经注册的最合适的输出格式",
+                  "id": 870
+                },
+                "2": {
+                  "title": "可以通过const char *short_name获取, 如\"mpeg\"",
+                  "id": 871
+                },
+                "3": {
+                  "title": "也可以通过const char *filename获取, 如\"input.mp4\"",
+                  "id": 872
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "avformat_new_stream()",
+              "id": 873,
+              "ideas": {
+                "1": {
+                  "title": "为媒体文件添加一个流, 一般为作为输出的媒体文件容器添加音视频流",
+                  "id": 874
+                },
+                "2": {
+                  "title": "再打开源文件时用户一般不需要直接调用该方法",
+                  "id": 875
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "av_dump_format()",
+              "id": 876,
+              "ideas": {
+                "1": {
+                  "title": "作用是检查下初始化过程中设置的参数是否符合规范",
+                  "id": 877
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "avformat_write_header()",
+              "id": 878,
+              "ideas": {
+                "1": {
+                  "title": "把流头信息写入到媒体文件中",
+                  "id": 879
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "av_init_packet()",
+              "id": 887,
+              "ideas": {
+                "1": {
+                  "title": "使用默认值初始化AVPacket",
+                  "id": 888
+                },
+                "2": {
+                  "title": "定义AVPacket对象后, 请使用av_init_packet()进行初始化",
+                  "id": 889
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "18": {
+              "title": "av_free_packet()",
+              "id": 890,
+              "ideas": {
+                "1": {
+                  "title": "释放AVPacket对象",
+                  "id": 891
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "19": {
+              "title": "av_read_frame()",
+              "id": 457,
+              "ideas": {
+                "1": {
+                  "title": "读取码流中的音频若干帧或者视频一帧",
+                  "id": 772,
+                  "ideas": {
+                    "1": {
+                      "title": "从输入源文件容器中读取一个AVPacket数据包",
+                      "id": 892
+                    }
+                  }
+                },
+                "2": {
+                  "title": "例子",
+                  "id": 773,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "解码视频的时候, 每解码一个视频帧, 需要先调用av_read_frame()获得一帧视频的压缩数据, 然后才能对该数据进行解码",
+                      "id": 774,
+                      "ideas": {
+                        "1": {
+                          "title": "例如, H.264中一帧压缩数据通常对应一个NAL",
+                          "id": 775,
+                          "ideas": {}
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "通过av_read_packet()读取一个包, 需要说明的是此函数必须是包含整数帧的, 不存在半帧的情况",
+                  "id": 777
+                },
+                "4": {
+                  "title": "以ts流为例, 是读取一个完整的PES包(一个完整PES包包含若干视频或者音频ES包)",
+                  "id": 778,
+                  "ideas": {
+                    "1": {
+                      "title": "读取完毕后, 通过av_parser_parse2()分析出视频一帧(或者音频若干帧)",
+                      "id": 779,
+                      "ideas": {
+                        "1": {
+                          "title": "返回, 下次进入循环的时候, 如果上次的数据没有完全取完, 则st = s->cur_st; 不会是NULL, 即再此进入av_parser_parse2()流程, 而不是下面的av_read_packet()流程",
+                          "id": 780,
+                          "ideas": {
+                            "1": {
+                              "title": "这样就保证了, 如果读取一次包含了N帧视频数据(以视频为例), 则调用av_read_frame()N次都不会去读数据, 而是返回第一次读取的数据, 直到全部解析完毕",
+                              "id": 781
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "1.5": {
+                  "title": "该函数读出的包并不每次都是有效的, 对于读出的包我们都应该进行相应的解码(视频/音频解码)",
+                  "id": 893
+                },
+                "1.75": {
+                  "title": "在返回值>=0时, 循环调用该函数进行读取, 循环调用之前请调用av_free_packet函数清理AVPacket",
+                  "id": 894
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "20": {
+              "title": "avcodec_decode_video2()",
+              "id": 895,
+              "ideas": {
+                "1": {
+                  "title": "解码视频流AVPacket",
+                  "id": 896
+                },
+                "2": {
+                  "title": "使用av_read_frame读取媒体流后, 需要进行判断, 如果为视频流则调用该函数解码",
+                  "id": 897
+                },
+                "3": {
+                  "title": "返回结果<0时, 失败, 此时程序应该退出检查原因",
+                  "id": 898
+                },
+                "4": {
+                  "title": "返回>=0时正常, 假设读取包为: AVPacket vPacket返回值为int vLen; 每次解码正常时, 对vPacket做",
+                  "id": 899,
+                  "ideas": {
+                    "1": {
+                      "title": "vPacket.size -= vLen;",
+                      "id": 900
+                    },
+                    "2": {
+                      "title": "vPacket.data += vLen;",
+                      "id": 901
+                    }
+                  }
+                },
+                "5": {
+                  "title": "如果vPacket.size == 0, 则继续读下一流包, 否则继续调度该方法进行解码, 直到vPacket.size == 0",
+                  "id": 903
+                },
+                "6": {
+                  "title": "返回got_picture_ptr > 0时, 表示解码到了AVFrame *picture, 其后可以对picture进程处理",
+                  "id": 904
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "21": {
+              "title": "avcodec_decode_audio3()",
+              "id": 905,
+              "ideas": {
+                "1": {
+                  "title": "解码音频流AVPacket",
+                  "id": 906
+                },
+                "2": {
+                  "title": "使用av_read_frame()读取媒体流后需要进行判断, 如果为音频流则调用该函数解码",
+                  "id": 907
+                },
+                "3": {
+                  "title": "返回结果<0时失败, 此时程序应该退出检查原因",
+                  "id": 908
+                },
+                "4": {
+                  "title": "返回>=0时正常, 假设读取包为: AVPacket vPacket返回值int vLen;每次解码正常时, 对vPacket做",
+                  "id": 909,
+                  "ideas": {
+                    "1": {
+                      "title": "vPacket.size -= vLen;",
+                      "id": 910
+                    },
+                    "2": {
+                      "title": "vPacket.data += vLen;",
+                      "id": 911
+                    },
+                    "3": {
+                      "title": "如果vPacket.size == 0, 则继续读下一流包, 否则继续调度该方法进行解码, 直到vPacket.size == 0",
+                      "id": 912
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         }
       },
       "attr": {
@@ -4124,6 +4862,27 @@
           "title": "https://github.com/Akagi201/learning-ffmpeg",
           "id": 771
         }
+      }
+    },
+    "9.75": {
+      "title": "使用ffmpeg类库编程",
+      "id": 782,
+      "ideas": {
+        "1": {
+          "title": "头文件包含方法",
+          "id": 783,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "由于FFmpeg是用C编写的, 所以在C++程序中引入头文件要extern \"C\"<div><br></div><div>```</div><div><div>extern \"C\" {</div><div>#include \"libavcodec/avcodec.h\"</div><div>#include \"libavformat/avformat.h\"</div><div>#include \"libavutil/avutil.h\"</div><div>#include \"libavutil/mem.h\"</div><div>#include \"libavutil/fifo.h\"</div><div>#include \"libswscale/swscale.h\"</div><div>};</div></div><div>```</div>"
+            },
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
       }
     }
   },
