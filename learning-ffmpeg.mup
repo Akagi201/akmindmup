@@ -4355,7 +4355,8 @@
             }
           },
           "attr": {
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "3": {
@@ -4402,6 +4403,10 @@
                 }
               }
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
           }
         },
         "4": {
@@ -4416,6 +4421,10 @@
               "title": "struct AVPacketList *packet_buffer_end;",
               "id": 481
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
           }
         },
         "5": {
@@ -4450,6 +4459,10 @@
                 }
               }
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
           }
         },
         "6": {
@@ -4460,6 +4473,10 @@
               "title": "首先也是创建一个AVFormatContext, 需要调用avformat_alloc_output_context2",
               "id": 489
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
           }
         },
         "7": {
@@ -4822,11 +4839,17 @@
                 }
               }
             }
+          },
+          "attr": {
+            "style": {}
           }
+        },
+        "8": {
+          "title": "avconv.c",
+          "id": 913
         }
       },
       "attr": {
-        "collapsed": true,
         "style": {}
       }
     },

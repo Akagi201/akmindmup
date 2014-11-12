@@ -1,0 +1,892 @@
+{
+  "title": "learning-libuv",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Introduction",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Who this book is for",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "A system programmer",
+              "id": 12,
+              "ideas": {
+                "1": {
+                  "title": "low-level programs",
+                  "id": 13,
+                  "ideas": {
+                    "1": {
+                      "title": "daemons",
+                      "id": 14
+                    },
+                    "2": {
+                      "title": "network services and clients",
+                      "id": 15
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "A node.js module writer",
+              "id": 16
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Background",
+          "id": 17,
+          "ideas": {
+            "1": {
+              "title": "kernel event notification",
+              "id": 18,
+              "ideas": {
+                "1": {
+                  "title": "linux",
+                  "id": 19,
+                  "ideas": {
+                    "1": {
+                      "title": "kqueue",
+                      "id": 21
+                    },
+                    "2": {
+                      "title": "(e)poll",
+                      "id": 22
+                    }
+                  }
+                },
+                "2": {
+                  "title": "win",
+                  "id": 20,
+                  "ideas": {
+                    "1": {
+                      "title": "IOCP",
+                      "id": 23
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "The first independently release version of libuv was 0.10.2",
+              "id": 25
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Code",
+          "id": 26,
+          "ideas": {
+            "1": {
+              "title": "https://github.com/nikhilm/uvbook",
+              "id": 27
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "Basics of libuv",
+      "id": 3,
+      "ideas": {
+        "1": {
+          "title": "Event loops",
+          "id": 28,
+          "ideas": {
+            "1": {
+              "title": "In event-driven programming, an application expresses interest in certain events and respond to them when they occur.",
+              "id": 40
+            },
+            "2": {
+              "title": "The responsibility of gathering events from the operating system or monitoring other sources of events is handled by libuv, and the user can register callbacks to be invoked when an event occurs.",
+              "id": 41
+            },
+            "3": {
+              "title": "The event-loop usually keeps running forever.",
+              "id": 42
+            },
+            "4": {
+              "title": "some examples of events",
+              "id": 43,
+              "ideas": {
+                "1": {
+                  "title": "File is ready for writing",
+                  "id": 44
+                },
+                "2": {
+                  "title": "A socket has data ready to be read",
+                  "id": 45
+                },
+                "3": {
+                  "title": "A timer has timed out",
+                  "id": 46
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "Solve blocking roadblock",
+              "id": 47,
+              "ideas": {
+                "1": {
+                  "title": "use threads",
+                  "id": 48,
+                  "ideas": {
+                    "1": {
+                      "title": "Each blocking I/O operation is started in a separate thread (or in a thread pool)",
+                      "id": 49
+                    },
+                    "2": {
+                      "title": "When the blocking function gets invoked in the thread, the processor can schedule another thread to run, which actually needs the CPU.",
+                      "id": 50
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "asynchronous, non-blocking",
+                  "id": 51,
+                  "ideas": {
+                    "1": {
+                      "title": "Most modern operating systems provide event notification subsystems",
+                      "id": 52,
+                      "ideas": {
+                        "1": {
+                          "title": "For example, a normal read call on a socket would block until the sender actually sent something.",
+                          "id": 53,
+                          "ideas": {
+                            "1": {
+                              "title": "Instead, the application can request the operating system to watch the socket and put an event notification in the queue.",
+                              "id": 54,
+                              "ideas": {
+                                "1": {
+                                  "title": "The application can inspect the events at its convenience(perhaps doing some number crunching before to use the processor to the maximum) and grab the data",
+                                  "id": 55
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "It is asynchronous because",
+                      "id": 56,
+                      "ideas": {
+                        "1": {
+                          "title": "the application expressed interest at one point, then used the data at another point(in time and space)",
+                          "id": 57
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "It is non-blocking because",
+                      "id": 59,
+                      "ideas": {
+                        "1": {
+                          "title": "the application process was free to do other tasks.",
+                          "id": 60
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Due to the way our computer hardware works, with the thread as the basic unit of the processor, libuv and OSes will usually run background/worker threads and/or polling to perform tasks in a non-blocking manner.",
+                      "id": 61
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "Default loop",
+              "id": 62,
+              "ideas": {
+                "1": {
+                  "title": "A default loop is provided by libuv and can be accessed using uv_default_loop()",
+                  "id": 63
+                },
+                "2": {
+                  "title": "You should use this loop if you only want a single loop.",
+                  "id": 64
+                },
+                "3": {
+                  "title": "node.js uses the default loop as its main loop.",
+                  "id": 65
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<div>in pseudocode</div><div><br></div><div>```</div><div>while there are still events to process:</div><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>e = get the next event</div><div>if there is a callback associated with e:</div></blockquote></div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>call the callback</div></blockquote></div></blockquote><div>```</div>"
+            },
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "3": {
+          "title": "Error handling",
+          "id": 66,
+          "ideas": {
+            "1": {
+              "title": "libuv functions which may fail return -1 on error.",
+              "id": 67
+            },
+            "2": {
+              "title": "The error code itself is set on the event loop as last_err",
+              "id": 68,
+              "ideas": {
+                "1": {
+                  "title": "Use uv_last_error(loop) to get a uv_err_t which has a code member with the error code.",
+                  "id": 69,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "code is an enumeration of UV_*",
+                  "id": 70
+                }
+              }
+            },
+            "3": {
+              "title": "get teh description of the error",
+              "id": 71,
+              "ideas": {
+                "1": {
+                  "title": "uv_strerror(uv_err_t)",
+                  "id": 72
+                },
+                "2": {
+                  "title": "uv_err_name(uv_err_t)",
+                  "id": 73
+                }
+              }
+            },
+            "4": {
+              "title": "Async callbacks have a status argument as the last argument.",
+              "id": 74,
+              "ideas": {
+                "1": {
+                  "title": "Use this instead of the return value.",
+                  "id": 75
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Watchers",
+          "id": 76,
+          "ideas": {
+            "1": {
+              "title": "Watchers are how  users of libuv express interest in particular events.",
+              "id": 77
+            },
+            "2": {
+              "title": "Watchers are opaque structs named as uv_TYPE_t where type signifies what the watcher is used for.",
+              "id": 78
+            },
+            "3": {
+              "title": "All watcher structs are subclasses of uv_handle_t and often referred to as handles in libuv and in this text.",
+              "id": 79
+            },
+            "4": {
+              "title": "Watchers are setup by a corresponding",
+              "id": 80,
+              "ideas": {
+                "1": {
+                  "title": "uv_TYPE_init(uv_TYPE_t *)",
+                  "id": 81
+                },
+                "2": {
+                  "title": "Some watcher initialization functions require the loop as a first argument.",
+                  "id": 82
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "A watcher is set to actually listen for events by invoking",
+              "id": 83,
+              "ideas": {
+                "1": {
+                  "title": "uv_TYPE_start(uv_TYPE_t *, callback)",
+                  "id": 84
+                }
+              }
+            },
+            "6": {
+              "title": "and stopped by calling the corresponding",
+              "id": 85,
+              "ideas": {
+                "1": {
+                  "title": "uv_TYPE_stop(uv_TYPE_t *)",
+                  "id": 86
+                }
+              }
+            },
+            "7": {
+              "title": "Callbacks are functions which are called by libuv whenever an event the watcher is interested in has taken place.",
+              "id": 87
+            },
+            "8": {
+              "title": "Application specific logic will usually be implemented in the callback.",
+              "id": 88
+            },
+            "9": {
+              "title": "Idling",
+              "id": 90,
+              "attr": {}
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "0.5": {
+          "title": "Feature",
+          "id": 32,
+          "attr": {
+            "style": {},
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "enforces an asynchronous, event-driven style of programming.",
+              "id": 33
+            },
+            "2": {
+              "title": "Its core job is to provide an event loop and callback based notifications of I/O and other activities.",
+              "id": 34
+            },
+            "3": {
+              "title": "libuv offers core utilities",
+              "id": 35,
+              "ideas": {
+                "1": {
+                  "title": "timers",
+                  "id": 36
+                },
+                "2": {
+                  "title": "non-blocking network support",
+                  "id": 37
+                },
+                "3": {
+                  "title": "asynchronous file system access",
+                  "id": 38
+                },
+                "4": {
+                  "title": "child processes",
+                  "id": 39
+                }
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "21": {
+      "title": "Filesystem",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "Simple filesystem read/write is achieved using the uv_fs_* functions and the uv_fs_t struct",
+          "id": 91
+        },
+        "2": {
+          "title": "The libuv filesystem operations are different from socket operations.",
+          "id": 92,
+          "ideas": {
+            "1": {
+              "title": "Socket operations use the non-blocking operations provided by the operating system.",
+              "id": 93
+            },
+            "2": {
+              "title": "Filesystem operations use blocking functions internally, but invoke these functions in a thread pool and notify watchers registered with the event loop when application interaction is required.",
+              "id": 94
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "All filesystem functions have two forms",
+          "id": 95,
+          "ideas": {
+            "1": {
+              "title": "synchronous",
+              "id": 96,
+              "ideas": {
+                "1": {
+                  "title": "automatically get called(and block) if no callback is specified.",
+                  "id": 98,
+                  "ideas": {
+                    "1": {
+                      "title": "The return value of functions is the equivalent Unix return value(usually 0 on success, -1 on error)",
+                      "id": 99
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "asynchronous",
+              "id": 97,
+              "ideas": {
+                "1": {
+                  "title": "called when a callback is passed and the return value is 0",
+                  "id": 100
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Reading  / Writing files",
+          "id": 101,
+          "ideas": {
+            "1": {
+              "title": "file descriptor is obtained",
+              "id": 102,
+              "ideas": {
+                "1": {
+                  "title": "uv_fs_open",
+                  "id": 103
+                }
+              }
+            },
+            "2": {
+              "title": "file descriptor is closed",
+              "id": 104,
+              "ideas": {
+                "1": {
+                  "title": "uv_fs_close",
+                  "id": 105
+                }
+              }
+            },
+            "3": {
+              "title": "The result field of a uv_fs_t is the file descriptor in case of the uv_fs_open callback.",
+              "id": 108
+            },
+            "4": {
+              "title": "uv_fs_req_cleanup() function must be called to free internal memory allocations in libuv",
+              "id": 109
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Filesystem operations",
+          "id": 110
+        },
+        "6": {
+          "title": "Buffers and Streams",
+          "id": 111
+        },
+        "7": {
+          "title": "File change events",
+          "id": 112
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "Networking",
+      "id": 5,
+      "ideas": {
+        "1": {
+          "title": "TCP",
+          "id": 113
+        },
+        "2": {
+          "title": "UDP",
+          "id": 114
+        },
+        "3": {
+          "title": "Querying DNS",
+          "id": 115
+        },
+        "4": {
+          "title": "Network interfaces",
+          "id": 116
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "41": {
+      "title": "Threads",
+      "id": 6,
+      "ideas": {
+        "1": {
+          "title": "Core thread operatjions",
+          "id": 117
+        },
+        "2": {
+          "title": "Synchronization Primitives",
+          "id": 118
+        },
+        "3": {
+          "title": "libuv work queue",
+          "id": 119
+        },
+        "4": {
+          "title": "Inter-thread communication",
+          "id": 120
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "51": {
+      "title": "Processes",
+      "id": 7,
+      "ideas": {
+        "1": {
+          "title": "Spawning child processes",
+          "id": 121
+        },
+        "2": {
+          "title": "Changing process parameters",
+          "id": 122,
+          "ideas": {
+            "1": {
+              "title": "Before the child process is launched you can control the execution environment using fields in uv_process_options_t.",
+              "id": 145
+            },
+            "2": {
+              "title": "Change ex ecution directory",
+              "id": 146,
+              "ideas": {
+                "1": {
+                  "title": "Set uv_process_options_t.cwd to the corresponding directory",
+                  "id": 147
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Set environment variables",
+              "id": 148,
+              "ideas": {
+                "1": {
+                  "title": "uv_process_options_t.env is a null-terminated array of strings, each of the form VAR=VALUE used to set up the environment variables for the process.",
+                  "id": 149
+                },
+                "2": {
+                  "title": "Set this to NULL to inherit the environment from the parent(this) process.",
+                  "id": 150
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "Options flags",
+              "id": 151,
+              "ideas": {
+                "1": {
+                  "title": "Setting uv_process_options.flags to a bitwise OR of the following flags, modifies the child process behaviour",
+                  "id": 152,
+                  "ideas": {
+                    "1": {
+                      "title": "UV_PROCESS_SETUID",
+                      "id": 154,
+                      "ideas": {
+                        "1": {
+                          "title": "sets the child's execution user ID to uv_process_options_t.uid",
+                          "id": 155
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "UV_PROCESS_SETGID",
+                      "id": 156,
+                      "ideas": {
+                        "1": {
+                          "title": "sets the child's execution group ID to uv_process_options_t.gid",
+                          "id": 157
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Changing the UID/GID is only supported on Unix, uv_spawn will fail on Windows with UV_ENOTSUP",
+                  "id": 158,
+                  "ideas": {
+                    "1": {
+                      "title": "UV_PROCESS_WINDOWS_VERBATIM_ARGUMENTS",
+                      "id": 159,
+                      "ideas": {
+                        "1": {
+                          "title": "No quoting or escaping of uv_process_options_t.args is done on Windows. Ignored on Unix.",
+                          "id": 160
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "UV_PROCESS_DETACHED",
+                      "id": 161,
+                      "ideas": {
+                        "1": {
+                          "title": "Starts the child process in a new session, which will keep running after the parent process exits.",
+                          "id": 162
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Detaching processes",
+          "id": 123,
+          "ideas": {
+            "1": {
+              "title": "Passing the flag UV_PROCESS_DETACHED can be used to launch daumons, or child processes which are independent of the parent so that the parent exiting does not affect it.",
+              "id": 163
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Sending signals to processes",
+          "id": 124,
+          "ideas": {
+            "1": {
+              "title": "libuv wraps the standard kill(2) system call on Unix and implements one  with similar semantics on Windows, with one caveat",
+              "id": 164,
+              "ideas": {
+                "1": {
+                  "title": "with one caveat, all of SIGTERM, SIGINT and SIGKILL, lead to termination of the process",
+                  "id": 165
+                }
+              }
+            },
+            "2": {
+              "title": "For processes started using libuv, you may use uv_process_kill instead, which accepts the uv_process_t watcher as the first argument, rather than the pid.",
+              "id": 166
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "Signals",
+          "id": 125
+        },
+        "6": {
+          "title": "Child Process I/O",
+          "id": 126
+        },
+        "7": {
+          "title": "Pipes",
+          "id": 127
+        },
+        "0.5": {
+          "title": "libuv offers considerable child process management, abstracting the platform differences and allowing communication with the child processes using streams or named pipes",
+          "id": 139
+        },
+        "0.75": {
+          "title": "A multi-process model with messages may also be easier to reason about compared to one with threads and shared memory.",
+          "id": 140,
+          "attr": {
+            "style": {}
+          }
+        },
+        "0.875": {
+          "title": "A common refrain against event-based programs is that they cannot take advantage of multiple cores in modern computers.",
+          "id": 141,
+          "ideas": {
+            "1": {
+              "title": "In a multi-threaded program the kernel can perform scheduling and assign different threads to different cores, improving performance.",
+              "id": 142
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "0.9375": {
+          "title": "But an event loop has only one thread.",
+          "id": 143,
+          "ideas": {
+            "1": {
+              "title": "The workaround can be to launch multiple processes instead, with each process running an event loop, and each process getting assigned to a separate CPU core.",
+              "id": 144
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {}
+      }
+    },
+    "61": {
+      "title": "Advanced event loops",
+      "id": 8,
+      "ideas": {
+        "1": {
+          "title": "Stopping an event loop",
+          "id": 128
+        },
+        "2": {
+          "title": "Embedding libuv's event loop in other libraries",
+          "id": 129
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "71": {
+      "title": "Utilities",
+      "id": 9,
+      "ideas": {
+        "1": {
+          "title": "Timers",
+          "id": 130
+        },
+        "2": {
+          "title": "Event loop reference count",
+          "id": 131
+        },
+        "3": {
+          "title": "Idle watcher pattern",
+          "id": 132
+        },
+        "4": {
+          "title": "Passing data to worker thread",
+          "id": 133
+        },
+        "5": {
+          "title": "External I/O with polling",
+          "id": 134
+        },
+        "6": {
+          "title": "Check & Prepare watchers",
+          "id": 135
+        },
+        "7": {
+          "title": "Loading libraries",
+          "id": 136
+        },
+        "8": {
+          "title": "TTY",
+          "id": 137
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "81": {
+      "title": "About",
+      "id": 10,
+      "ideas": {
+        "1": {
+          "title": "Licensing",
+          "id": 138
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    }
+  },
+  "links": []
+}
