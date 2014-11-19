@@ -87,7 +87,7 @@
           }
         },
         "12": {
-          "title": "Lesson2 Build analysis environment",
+          "title": "Lesson2 Build development environment",
           "id": 3,
           "ideas": {
             "1": {
@@ -172,7 +172,8 @@
         }
       },
       "attr": {
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "11": {
@@ -234,6 +235,10 @@
           "title": "SDK",
           "id": 74
         }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
       }
     },
     "-10": {
@@ -245,7 +250,8 @@
           -173,
           1
         ],
-        "style": {}
+        "style": {},
+        "collapsed": true
       },
       "ideas": {
         "1": {
@@ -357,7 +363,8 @@
         }
       },
       "attr": {
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "-21": {
@@ -372,6 +379,10 @@
           "title": "Pcduino",
           "id": 68
         }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
       }
     },
     "-31": {
@@ -386,6 +397,10 @@
           "title": "aircrack-ng",
           "id": 71
         }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
       }
     },
     "-10.5": {
@@ -421,6 +436,216 @@
         "4": {
           "title": "config scripting",
           "id": 87
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "0.5": {
+      "title": "Chapter0 Using OpenWrt",
+      "id": 95,
+      "attr": {
+        "style": {},
+        "collapsed": true
+      },
+      "ideas": {
+        "1": {
+          "title": "OpenWrt linux-2.6",
+          "id": 96
+        },
+        "2": {
+          "title": "OpenWrt linux-3.8",
+          "id": 97,
+          "ideas": {
+            "1": {
+              "title": "基本操作",
+              "id": 98,
+              "ideas": {
+                "1": {
+                  "title": "打开管理页面",
+                  "id": 99,
+                  "ideas": {
+                    "1": {
+                      "title": "初次配置, 需要使用网线连接电脑和路由器, 使用电脑通过wifi连接路由器(默认无密码)",
+                      "id": 100,
+                      "ideas": {
+                        "1": {
+                          "title": "电脑使用静态IP或者DHCP获取IP地址",
+                          "id": 101
+                        },
+                        "2": {
+                          "title": "路由器的IP地址: 192.168.8.1",
+                          "id": 102
+                        },
+                        "3": {
+                          "title": "默认用户名/密码",
+                          "id": 103,
+                          "ideas": {
+                            "1": {
+                              "title": "root : admin",
+                              "id": 104
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "不建议使用IE浏览器",
+                      "id": 105,
+                      "ideas": {
+                        "1": {
+                          "title": "不能正确显示页面内容",
+                          "id": 106
+                        },
+                        "2": {
+                          "title": "配置不能被保存",
+                          "id": 107
+                        },
+                        "3": {
+                          "title": "网页升级不能正常进行",
+                          "id": 108
+                        },
+                        "4": {
+                          "title": "图表不能显示",
+                          "id": 109,
+                          "ideas": {
+                            "1": {
+                              "title": "可以安装SVG  VIEW",
+                              "id": 110,
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "修改管理密码",
+                  "id": 111,
+                  "ideas": {
+                    "1": {
+                      "title": "管理页面 -> 系统 -> 管理权 -> 路由密码",
+                      "id": 112
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "网页恢复出厂设置",
+                  "id": 113,
+                  "ideas": {
+                    "1": {
+                      "title": "如果恢复出厂设置后, 路由器电源灯不停地快闪, 路由器不能进入工作状态, 可以拔掉电源, 30秒后再插上",
+                      "id": 114
+                    },
+                    "2": {
+                      "title": "路由器启动大概需要1分钟时间",
+                      "id": 115
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "按reset恢复出厂设置",
+                  "id": 116,
+                  "ideas": {
+                    "1": {
+                      "title": "工作状态下, 按\"RESET\"按钮10秒, 按到无线灯灭, 路由器会恢复出厂设置",
+                      "id": 117
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "管理界面重启",
+                  "id": 118,
+                  "ideas": {
+                    "1": {
+                      "title": "管理界面 -> 系统 -> 重启 -> 执行重启",
+                      "id": 119
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "ssh",
+                  "id": 120,
+                  "ideas": {
+                    "1": {
+                      "title": "用户名/密码",
+                      "id": 121,
+                      "ideas": {
+                        "1": {
+                          "title": "root / admin",
+                          "id": 122
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "切换页面语言",
+                  "id": 123,
+                  "ideas": {
+                    "1": {
+                      "title": "管理界面 -> 系统 -> 系统 -> 语言和界面 -> 选择语言 -> 保存应用",
+                      "id": 124
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "8": {
+                  "title": "显示状态",
+                  "id": 125,
+                  "ideas": {
+                    "1": {
+                      "title": "状态 -> 实时信息",
+                      "id": 126
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         }
       }
     }
