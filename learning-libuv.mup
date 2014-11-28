@@ -31,7 +31,6 @@
                 }
               },
               "attr": {
-                "collapsed": true,
                 "style": {}
               }
             },
@@ -41,8 +40,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "2": {
@@ -50,7 +49,7 @@
           "id": 17,
           "ideas": {
             "1": {
-              "title": "kernel event notification",
+              "title": "kernel event notification mechanism",
               "id": 18,
               "ideas": {
                 "1": {
@@ -85,7 +84,6 @@
             }
           },
           "attr": {
-            "collapsed": true,
             "style": {}
           }
         },
@@ -101,8 +99,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "11": {
@@ -120,10 +118,6 @@
             "2": {
               "title": "The responsibility of gathering events from the operating system or monitoring other sources of events is handled by libuv, and the user can register callbacks to be invoked when an event occurs.",
               "id": 41
-            },
-            "3": {
-              "title": "The event-loop usually keeps running forever.",
-              "id": 42
             },
             "4": {
               "title": "some examples of events",
@@ -143,8 +137,8 @@
                 }
               },
               "attr": {
-                "collapsed": true,
-                "style": {}
+                "style": {},
+                "collapsed": true
               }
             },
             "5": {
@@ -223,8 +217,8 @@
                 }
               },
               "attr": {
-                "collapsed": true,
-                "style": {}
+                "style": {},
+                "collapsed": true
               }
             },
             "6": {
@@ -245,7 +239,24 @@
                 }
               },
               "attr": {
-                "collapsed": true,
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "2.5": {
+              "title": "This event loop is encapsulated by uv_run()",
+              "id": 167,
+              "ideas": {
+                "1": {
+                  "title": "the end-all function when using libuv",
+                  "id": 168
+                }
+              }
+            },
+            "4.5": {
+              "title": "The event-loop usually keeps running forever.",
+              "id": 42,
+              "attr": {
                 "style": {}
               }
             }
@@ -310,8 +321,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "4": {
@@ -379,12 +390,14 @@
             "9": {
               "title": "Idling",
               "id": 90,
-              "attr": {}
+              "attr": {
+                "style": {}
+              }
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "0.5": {
@@ -423,14 +436,18 @@
                   "title": "child processes",
                   "id": 39
                 }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
               }
             }
           }
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "21": {
@@ -455,8 +472,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "3": {
@@ -491,8 +508,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "4": {
@@ -529,26 +546,198 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "5": {
           "title": "Filesystem operations",
-          "id": 110
+          "id": 110,
+          "ideas": {
+            "1": {
+              "title": "unlink",
+              "id": 169
+            },
+            "2": {
+              "title": "rmdir",
+              "id": 170
+            },
+            "3": {
+              "title": "stat",
+              "id": 171
+            },
+            "4": {
+              "title": "have intuitive argument order",
+              "id": 172
+            },
+            "5": {
+              "title": "returning result in uv_fs_t.result",
+              "id": 173
+            },
+            "6": {
+              "title": "Callbacks should free the  uv_fs_t argument using uv_fs_req_cleanup()",
+              "id": 174
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "6": {
           "title": "Buffers and Streams",
-          "id": 111
+          "id": 111,
+          "ideas": {
+            "1": {
+              "title": "The basic I/O tool in libuv is the stream(uv_stream_t)",
+              "id": 175,
+              "ideas": {
+                "1": {
+                  "title": "TCP sockets",
+                  "id": 177
+                },
+                "2": {
+                  "title": "UDP sockets",
+                  "id": 178
+                },
+                "3": {
+                  "title": "pipes for file I/O",
+                  "id": 179
+                },
+                "4": {
+                  "title": "IPC",
+                  "id": 180
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "operate stream",
+              "id": 181,
+              "ideas": {
+                "1": {
+                  "title": "uv_read_start",
+                  "id": 182,
+                  "ideas": {
+                    "1": {
+                      "title": "keep reading from a stream",
+                      "id": 185
+                    }
+                  }
+                },
+                "2": {
+                  "title": "uv_read_stop",
+                  "id": 183
+                },
+                "3": {
+                  "title": "uv_write",
+                  "id": 184
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "discrete unit of data is the buffer",
+              "id": 186,
+              "ideas": {
+                "1": {
+                  "title": "uv_buf_t",
+                  "id": 187
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "7": {
           "title": "File change events",
-          "id": 112
+          "id": 112,
+          "ideas": {
+            "1": {
+              "title": "libuv wraps common file change notification libraries",
+              "id": 188,
+              "ideas": {
+                "1": {
+                  "title": "Linux",
+                  "id": 189,
+                  "ideas": {
+                    "1": {
+                      "title": "inotify",
+                      "id": 190
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Darwin",
+                  "id": 191,
+                  "ideas": {
+                    "1": {
+                      "title": "FSEvents",
+                      "id": 192
+                    }
+                  }
+                },
+                "3": {
+                  "title": "BSDs",
+                  "id": 193,
+                  "ideas": {
+                    "1": {
+                      "title": "kqueue",
+                      "id": 194
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Windows",
+                  "id": 195,
+                  "ideas": {
+                    "1": {
+                      "title": "ReadDirectoryChangesW",
+                      "id": 197
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Solaris",
+                  "id": 198,
+                  "ideas": {
+                    "1": {
+                      "title": "event ports",
+                      "id": 199
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Cygwin",
+                  "id": 200,
+                  "ideas": {
+                    "1": {
+                      "title": "unsupported",
+                      "id": 201
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "31": {
@@ -557,11 +746,156 @@
       "ideas": {
         "1": {
           "title": "TCP",
-          "id": 113
+          "id": 113,
+          "ideas": {
+            "1": {
+              "title": "Server",
+              "id": 202,
+              "ideas": {
+                "1": {
+                  "title": "uv_tcp_init",
+                  "id": 203
+                },
+                "2": {
+                  "title": "uv_tcp_bind",
+                  "id": 204
+                },
+                "3": {
+                  "title": "uv_listen",
+                  "id": 205
+                },
+                "4": {
+                  "title": "uv_accept",
+                  "id": 206
+                },
+                "5": {
+                  "title": "stream operations",
+                  "id": 207
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Client",
+              "id": 208,
+              "ideas": {
+                "1": {
+                  "title": "uv_tcp_connect",
+                  "id": 209,
+                  "ideas": {
+                    "1": {
+                      "title": "bind/listen/accept",
+                      "id": 210
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "2": {
           "title": "UDP",
-          "id": 114
+          "id": 114,
+          "ideas": {
+            "1": {
+              "title": "UDP Options",
+              "id": 212,
+              "ideas": {
+                "1": {
+                  "title": "Time-to-live",
+                  "id": 213,
+                  "ideas": {
+                    "1": {
+                      "title": "uv_udp_set_ttl",
+                      "id": 214
+                    }
+                  }
+                },
+                "2": {
+                  "title": "IPv6 stack only",
+                  "id": 215,
+                  "ideas": {
+                    "2": {
+                      "title": "uv_udp_bind6",
+                      "id": 217,
+                      "ideas": {
+                        "1": {
+                          "title": "UV_UDP_IPV6ONLY",
+                          "id": 216,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Multicast",
+                  "id": 218,
+                  "ideas": {
+                    "1": {
+                      "title": "(un)subscribe to a multicast group",
+                      "id": 219,
+                      "ideas": {
+                        "1": {
+                          "title": "uv_udp_open",
+                          "id": 220,
+                          "ideas": {
+                            "1": {
+                              "title": "membership",
+                              "id": 222,
+                              "ideas": {
+                                "1": {
+                                  "title": "UV_JOIN_GROUP",
+                                  "id": 223
+                                },
+                                "2": {
+                                  "title": "UV_LEAVE_GROUP",
+                                  "id": 224
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "local loopback",
+                      "id": 225,
+                      "ideas": {
+                        "1": {
+                          "title": "uv_udp_set_multicast_loop",
+                          "id": 226
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "TTL",
+                      "id": 227,
+                      "ideas": {
+                        "1": {
+                          "title": "uv_udp_set_multicast_ttl",
+                          "id": 228
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "3": {
           "title": "Querying DNS",
@@ -573,8 +907,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "41": {
@@ -582,12 +916,39 @@
       "id": 6,
       "ideas": {
         "1": {
-          "title": "Core thread operatjions",
-          "id": 117
+          "title": "Core thread operations",
+          "id": 117,
+          "ideas": {}
         },
         "2": {
           "title": "Synchronization Primitives",
-          "id": 118
+          "id": 118,
+          "ideas": {
+            "1": {
+              "title": "Mutexes",
+              "id": 235
+            },
+            "2": {
+              "title": "Locks",
+              "id": 236
+            },
+            "3": {
+              "title": "semaphores",
+              "id": 237
+            },
+            "4": {
+              "title": "condition variables",
+              "id": 238
+            },
+            "5": {
+              "title": "barriers",
+              "id": 239
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "3": {
           "title": "libuv work queue",
@@ -596,11 +957,45 @@
         "4": {
           "title": "Inter-thread communication",
           "id": 120
+        },
+        "0.5": {
+          "title": "features",
+          "id": 229,
+          "attr": {
+            "style": {},
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "two predominant thread libraries",
+              "id": 230,
+              "ideas": {
+                "1": {
+                  "title": "Windows threads implementation",
+                  "id": 231
+                },
+                "2": {
+                  "title": "pthreads",
+                  "id": 232
+                }
+              }
+            },
+            "2": {
+              "title": "assumption",
+              "id": 233,
+              "ideas": {
+                "1": {
+                  "title": "There is only one event loop, running in one thread(the main thread)",
+                  "id": 234
+                }
+              }
+            }
+          }
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "51": {
@@ -609,7 +1004,29 @@
       "ideas": {
         "1": {
           "title": "Spawning child processes",
-          "id": 121
+          "id": 121,
+          "ideas": {
+            "1": {
+              "title": "Since uv_spawn uses execvp internally, there is no need to supply the full path.",
+              "id": 240
+            },
+            "2": {
+              "title": "The arguments array has to be one larger than the number of arguments, with the last element being NULL.",
+              "id": 241
+            },
+            "3": {
+              "title": "After the call to uv_spawn, uv_process_t.pid will contain the process ID of the child process.",
+              "id": 242
+            },
+            "4": {
+              "title": "The exit callback will be invoked with the exit status and the type of signal which caused the exit.",
+              "id": 243
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "2": {
           "title": "Changing process parameters",
@@ -620,16 +1037,15 @@
               "id": 145
             },
             "2": {
-              "title": "Change ex ecution directory",
+              "title": "Change execution directory",
               "id": 146,
               "ideas": {
                 "1": {
-                  "title": "Set uv_process_options_t.cwd to the corresponding directory",
+                  "title": "uv_process_options_t.cwd",
                   "id": 147
                 }
               },
               "attr": {
-                "collapsed": true,
                 "style": {}
               }
             },
@@ -637,17 +1053,12 @@
               "title": "Set environment variables",
               "id": 148,
               "ideas": {
-                "1": {
-                  "title": "uv_process_options_t.env is a null-terminated array of strings, each of the form VAR=VALUE used to set up the environment variables for the process.",
-                  "id": 149
-                },
-                "2": {
-                  "title": "Set this to NULL to inherit the environment from the parent(this) process.",
-                  "id": 150
+                "3": {
+                  "title": "uv_process_options_t.env",
+                  "id": 244
                 }
               },
               "attr": {
-                "collapsed": true,
                 "style": {}
               }
             },
@@ -709,57 +1120,102 @@
                 }
               },
               "attr": {
-                "collapsed": true,
-                "style": {}
+                "style": {},
+                "collapsed": true
               }
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "3": {
           "title": "Detaching processes",
           "id": 123,
           "ideas": {
-            "1": {
-              "title": "Passing the flag UV_PROCESS_DETACHED can be used to launch daumons, or child processes which are independent of the parent so that the parent exiting does not affect it.",
-              "id": 163
+            "2": {
+              "title": "daemon",
+              "id": 245
+            },
+            "3": {
+              "title": "UV_PROCESS_DETACHED",
+              "id": 246
+            },
+            "4": {
+              "title": "uv_unref()",
+              "id": 247,
+              "ideas": {
+                "1": {
+                  "title": "more fire-and-forget",
+                  "id": 248
+                }
+              }
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "4": {
           "title": "Sending signals to processes",
           "id": 124,
           "ideas": {
-            "1": {
-              "title": "libuv wraps the standard kill(2) system call on Unix and implements one  with similar semantics on Windows, with one caveat",
-              "id": 164,
+            "1.5": {
+              "title": "Unix",
+              "id": 249,
               "ideas": {
                 "1": {
-                  "title": "with one caveat, all of SIGTERM, SIGINT and SIGKILL, lead to termination of the process",
-                  "id": 165
+                  "title": "kill",
+                  "id": 251
                 }
               }
             },
-            "2": {
-              "title": "For processes started using libuv, you may use uv_process_kill instead, which accepts the uv_process_t watcher as the first argument, rather than the pid.",
-              "id": 166
+            "1.75": {
+              "title": "windows",
+              "id": 250,
+              "ideas": {
+                "1": {
+                  "title": "one caveat",
+                  "id": 252,
+                  "ideas": {
+                    "1": {
+                      "title": "All of SIGTERM, SIGINT and SIGKILL lead to termination of the process.",
+                      "id": 253,
+                      "ideas": {}
+                    }
+                  }
+                }
+              }
+            },
+            "1.875": {
+              "title": "uv_kill",
+              "id": 255
+            },
+            "1.9375": {
+              "title": "uv_process_kill",
+              "id": 256
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "5": {
           "title": "Signals",
-          "id": 125
+          "id": 125,
+          "ideas": {
+            "1": {
+              "title": "the API deliver signals to all handlers on all running event loops!",
+              "id": 257
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
         },
         "6": {
           "title": "Child Process I/O",
@@ -767,7 +1223,21 @@
         },
         "7": {
           "title": "Pipes",
-          "id": 127
+          "id": 127,
+          "ideas": {
+            "1": {
+              "title": "Parent-child IPC",
+              "id": 258
+            },
+            "2": {
+              "title": "Arbitrary process IPC",
+              "id": 259
+            },
+            "3": {
+              "title": "Sending file descriptors over pipes",
+              "id": 260
+            }
+          }
         },
         "0.5": {
           "title": "libuv offers considerable child process management, abstracting the platform differences and allowing communication with the child processes using streams or named pipes",
@@ -828,8 +1298,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "71": {
@@ -870,8 +1340,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "81": {
@@ -884,8 +1354,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     }
   },

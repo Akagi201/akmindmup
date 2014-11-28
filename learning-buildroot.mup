@@ -33,8 +33,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "3": {
@@ -270,8 +270,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "4": {
@@ -280,8 +280,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "11": {
@@ -1167,7 +1167,136 @@
       "ideas": {
         "1": {
           "title": "Buildroot configuration",
-          "id": 60
+          "id": 60,
+          "ideas": {
+            "1": {
+              "title": "Cross-compilation toolchain",
+              "id": 232,
+              "ideas": {
+                "4": {
+                  "title": "components",
+                  "id": 240,
+                  "ideas": {
+                    "1": {
+                      "title": "compiler",
+                      "id": 233,
+                      "ideas": {
+                        "1": {
+                          "title": "gcc",
+                          "id": 234
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "binary utils like assembler and linker",
+                      "id": 235,
+                      "ideas": {
+                        "1": {
+                          "title": "binutils",
+                          "id": 236
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "C standard library",
+                      "id": 237,
+                      "ideas": {
+                        "1": {
+                          "title": "GNU Libc",
+                          "id": 238
+                        },
+                        "2": {
+                          "title": "uClibc",
+                          "id": 239
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4.5": {
+                  "title": "host compilation toolchain",
+                  "id": 242
+                },
+                "4.75": {
+                  "title": "Buildroot provides two solutions for the cross-compilation toolchain",
+                  "id": 243,
+                  "ideas": {
+                    "1": {
+                      "title": "internal toolchain backend",
+                      "id": 241,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Buildroot toolchain",
+                          "id": 244
+                        },
+                        "2": {
+                          "title": "This backend supports serveral C libraries",
+                          "id": 249,
+                          "ideas": {
+                            "1": {
+                              "title": "uClibc",
+                              "id": 250
+                            },
+                            "2": {
+                              "title": "glibc",
+                              "id": 251
+                            },
+                            "3": {
+                              "title": "eglibc",
+                              "id": 252
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "external toolchain backend",
+                      "id": 245,
+                      "ideas": {
+                        "1": {
+                          "title": "External toolchain",
+                          "id": 246
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Toolchain Type",
+                      "id": 247,
+                      "ideas": {
+                        "1": {
+                          "title": "Toolchain menu",
+                          "id": 248
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         "2": {
           "title": "Configuration of other components",
@@ -1199,8 +1328,7 @@
         }
       },
       "attr": {
-        "style": {},
-        "collapsed": true
+        "style": {}
       }
     },
     "31": {
