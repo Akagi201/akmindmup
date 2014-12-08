@@ -1511,11 +1511,544 @@
         },
         "2": {
           "title": "Using libcurl",
-          "id": 4
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "C API http://curl.haxx.se/libcurl/c/",
+              "id": 281,
+              "ideas": {
+                "1": {
+                  "title": "libcurl-tutorial http://curl.haxx.se/libcurl/c/libcurl-tutorial.html",
+                  "id": 292,
+                  "ideas": {
+                    "1": {
+                      "title": "Global Preparation",
+                      "id": 293,
+                      "ideas": {
+                        "1": {
+                          "title": "shoudl be done exactly once for your program's entire life time",
+                          "id": 294
+                        },
+                        "2": {
+                          "title": "curl_global_init()",
+                          "id": 295,
+                          "ideas": {
+                            "1": {
+                              "title": "CURL_GLOBAL_ALL",
+                              "id": 296,
+                              "ideas": {
+                                "1": {
+                                  "title": "initialize all known internal sub modules",
+                                  "id": 297
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "CURL_GLOBAL_WIN32",
+                              "id": 298
+                            },
+                            "3": {
+                              "title": "CURL_GLOBAL_SSL",
+                              "id": 299
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "default protection mechanism",
+                          "id": 300,
+                          "ideas": {
+                            "1": {
+                              "title": "if curl_global_init hasn't been called by the time curl_easy_perform is caled",
+                              "id": 301,
+                              "ideas": {
+                                "1": {
+                                  "title": "libcurl runs the function itself with a guessed bit pattern",
+                                  "id": 303
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "when the program no longer uses libcurl",
+                          "id": 304,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_global_cleanup",
+                              "id": 305
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Features libcurl provides",
+                      "id": 306,
+                      "ideas": {
+                        "1": {
+                          "title": "best-practice to determine libcurl features at run-time rather than build-time",
+                          "id": 330
+                        },
+                        "2": {
+                          "title": "curl_version_info",
+                          "id": 331
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Two Interfaces",
+                      "id": 307,
+                      "ideas": {
+                        "1": {
+                          "title": "easy interface",
+                          "id": 332,
+                          "ideas": {
+                            "1": {
+                              "title": "prefix",
+                              "id": 333,
+                              "ideas": {
+                                "1": {
+                                  "title": "curl_easy",
+                                  "id": 334
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "do single transfers with a synchronous and blocking function call",
+                              "id": 335
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "multi interface",
+                          "id": 337,
+                          "ideas": {
+                            "1": {
+                              "title": "allows multiple simultaneous transfers in a single thread",
+                              "id": 336,
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          },
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "Handle the Easy libcurl",
+                      "id": 308,
+                      "ideas": {
+                        "1": {
+                          "title": "one handle for each easy session",
+                          "id": 338
+                        },
+                        "2": {
+                          "title": "one handle for every thread",
+                          "id": 339
+                        },
+                        "3": {
+                          "title": "get an easy handle",
+                          "id": 340,
+                          "ideas": {
+                            "1": {
+                              "title": "easyhandle = curl_easy_init();",
+                              "id": 341
+                            },
+                            "2": {
+                              "title": "A handle is just a logic entity for the upcomming transfer or series of transfers",
+                              "id": 343
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "set properties and options for this handle",
+                          "id": 342,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_easy_setopt",
+                              "id": 344
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "5": {
+                          "title": "blank all previously set options for a single easy handle",
+                          "id": 345,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_easy_reset",
+                              "id": 346
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "6": {
+                          "title": "make a clone of an easy handle",
+                          "id": 347,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_easy duphandle",
+                              "id": 348
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "7": {
+                          "title": "URL: most basic properties to set in the handle",
+                          "id": 349,
+                          "ideas": {
+                            "1": {
+                              "title": "CURLOPT_URL",
+                              "id": 350
+                            },
+                            "2": {
+                              "title": "curl_easy_setopt(handle, CURLOPT_URL, \"http://domain.com\");",
+                              "id": 351
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "8": {
+                          "title": "redirect stdout",
+                          "id": 352,
+                          "ideas": {
+                            "1": {
+                              "title": "prototype",
+                              "id": 353,
+                              "ideas": {
+                                "1": {
+                                  "title": "size_t write_data(void *buffer, size_t size, size_t nmemb, void *userp);",
+                                  "id": 354
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "curl_easy_setopt(easyhandle, CURLOPT_WRITEFUNCTION, write_data);",
+                              "id": 355
+                            },
+                            "3": {
+                              "title": "curl_easy_setopt(easyhandle, CURLOPT_WRITEDATA, &internal_struct);",
+                              "id": 356
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "9": {
+                          "title": "actual transfer",
+                          "id": 358,
+                          "ideas": {
+                            "1": {
+                              "title": "success = curl_easy_perform(easyhandle);",
+                              "id": 359
+                            }
+                          }
+                        },
+                        "10": {
+                          "title": "error message",
+                          "id": 360,
+                          "ideas": {
+                            "2": {
+                              "title": "return code",
+                              "id": 362
+                            },
+                            "12": {
+                              "title": "CURLOPT_ERRORBUFFER",
+                              "id": 361,
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          }
+                        },
+                        "11": {
+                          "title": "It is even preferred that you re-use an existing handle if you intend to make another transfer.",
+                          "id": 363,
+                          "ideas": {
+                            "1": {
+                              "title": "libcurl will then attempt to re-use the previous connection",
+                              "id": 364
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "5": {
+                      "title": "Multi-threading Issues",
+                      "id": 309,
+                      "ideas": {
+                        "1": {
+                          "title": "The first basic rule is that you must never simultaneously share a libcurl handle(be it easy or multi or whatever) between multiple threads.",
+                          "id": 365,
+                          "ideas": {
+                            "1": {
+                              "title": "Only use one handle in one thread at any time.",
+                              "id": 367
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "6": {
+                      "title": "When It Doesn't Work",
+                      "id": 310,
+                      "ideas": {
+                        "1": {
+                          "title": "CURLOPT_VERBOSE",
+                          "id": 368
+                        },
+                        "2": {
+                          "title": "CURLOPT_DEBUGFUNCTION",
+                          "id": 369
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "7": {
+                      "title": "Upload Data to a Remote Site",
+                      "id": 311
+                    },
+                    "8": {
+                      "title": "Passwords",
+                      "id": 312
+                    },
+                    "9": {
+                      "title": "HTTP Authentication",
+                      "id": 313
+                    },
+                    "10": {
+                      "title": "HTTP POSTing",
+                      "id": 314
+                    },
+                    "11": {
+                      "title": "Showing Progress",
+                      "id": 315
+                    },
+                    "12": {
+                      "title": "libcurl with C++",
+                      "id": 316
+                    },
+                    "13": {
+                      "title": "Proxies",
+                      "id": 317
+                    },
+                    "14": {
+                      "title": "Persistence Is The Way to Happiness",
+                      "id": 318
+                    },
+                    "15": {
+                      "title": "HTTP Headers Used by libcurl",
+                      "id": 319
+                    },
+                    "16": {
+                      "title": "Customizing Operations",
+                      "id": 320
+                    },
+                    "17": {
+                      "title": "Cookies Without Chocolate Chips",
+                      "id": 321
+                    },
+                    "18": {
+                      "title": "FTP Peculiarities We Need",
+                      "id": 322
+                    },
+                    "19": {
+                      "title": "Headers Equal Fun",
+                      "id": 323
+                    },
+                    "20": {
+                      "title": "Post Transfer Information",
+                      "id": 324
+                    },
+                    "21": {
+                      "title": "Security Considerations",
+                      "id": 325
+                    },
+                    "22": {
+                      "title": "The multi Interface",
+                      "id": 327
+                    },
+                    "23": {
+                      "title": "SSL, Certificates and Other Tricks",
+                      "id": 328
+                    },
+                    "24": {
+                      "title": "Sharing Data Between Easy Handles",
+                      "id": 329
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "examples: http://curl.haxx.se/libcurl/c/example.html",
+                  "id": 370,
+                  "ideas": {
+                    "1": {
+                      "title": "curl/docs/examples/",
+                      "id": 371
+                    }
+                  }
+                },
+                "3": {
+                  "title": "libcurl-multi http://curl.haxx.se/libcurl/c/libcurl-multi.html",
+                  "id": 372,
+                  "ideas": {
+                    "1": {
+                      "title": "man libcurl-multi",
+                      "id": 376
+                    }
+                  }
+                },
+                "2.5": {
+                  "title": "libcurl-easy http://curl.haxx.se/libcurl/c/libcurl-easy.html",
+                  "id": 374,
+                  "ideas": {
+                    "1": {
+                      "title": "man libcurl-easy",
+                      "id": 375
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "curl-config is our friend",
+              "id": 282,
+              "ideas": {
+                "1": {
+                  "title": "compiler flags",
+                  "id": 283,
+                  "ideas": {
+                    "1": {
+                      "title": "curl-config --cflags",
+                      "id": 284
+                    }
+                  }
+                },
+                "2": {
+                  "title": "linker options",
+                  "id": 285,
+                  "ideas": {
+                    "1": {
+                      "title": "curl-config --libs",
+                      "id": 286
+                    }
+                  }
+                },
+                "3": {
+                  "title": "SSL support",
+                  "id": 287,
+                  "ideas": {
+                    "1": {
+                      "title": "curl-config --feature | grep SSL",
+                      "id": 288
+                    }
+                  }
+                },
+                "4": {
+                  "title": "libcurl version",
+                  "id": 289,
+                  "ideas": {
+                    "1": {
+                      "title": "curl-config --version",
+                      "id": 290
+                    }
+                  }
+                },
+                "5": {
+                  "title": "man curl-config",
+                  "id": 291
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            }
+          }
         },
         "3": {
-          "title": "Hacking on curl/libcurl",
-          "id": 5
+          "title": "Hacking on curl/libcurl http://curl.haxx.se/dev/",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "runtests http://curl.haxx.se/dev/runtests.html",
+              "id": 377
+            },
+            "2": {
+              "title": "testcurl http://curl.haxx.se/dev/testcurl.html",
+              "id": 378
+            },
+            "0.5": {
+              "title": "internals http://curl.haxx.se/dev/internals.html",
+              "id": 379,
+              "attr": {
+                "position": [
+                  163.5,
+                  -59.75,
+                  1
+                ],
+                "style": {}
+              }
+            }
+          }
         }
       }
     }
