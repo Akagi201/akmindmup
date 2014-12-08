@@ -1,0 +1,404 @@
+{
+  "title": "learning-gtest",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Primer",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Introduction: Why Google C++ Testing Framework?",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "independent and repeatable",
+              "id": 4,
+              "ideas": {
+                "1": {
+                  "title": "Gtest isolates the tests by running each of them on a different object.",
+                  "id": 5
+                }
+              }
+            },
+            "2": {
+              "title": "Tests should be well organized and relect the structure of the tested code.",
+              "id": 6
+            },
+            "3": {
+              "title": "Tests should be portable and reusable.",
+              "id": 7
+            },
+            "4": {
+              "title": "When tests fail, they should provide as much information about the problem as possible.",
+              "id": 8
+            },
+            "5": {
+              "title": "The testing framework should liberate test writers from housekeeping chores and let them focus on the test content.",
+              "id": 9
+            },
+            "6": {
+              "title": "Tests should be fast",
+              "id": 10
+            },
+            "7": {
+              "title": "based on the popular xUnit architecture",
+              "id": 12
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "2": {
+          "title": "Setting up a New Test Project",
+          "id": 13,
+          "ideas": {
+            "1": {
+              "title": "To write a test program using Google Test, you need to compile Google Test into a library and link your test with it.",
+              "id": 14
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "Basic Concepts",
+          "id": 15,
+          "ideas": {
+            "1": {
+              "title": "assertion",
+              "id": 16,
+              "ideas": {
+                "1": {
+                  "title": "result",
+                  "id": 17,
+                  "ideas": {
+                    "1": {
+                      "title": "success",
+                      "id": 18
+                    },
+                    "2": {
+                      "title": "nonfatal failure",
+                      "id": 19
+                    },
+                    "3": {
+                      "title": "fatal failure",
+                      "id": 20,
+                      "ideas": {
+                        "1": {
+                          "title": "aborts the current function",
+                          "id": 21
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Tests use assertions to verify the tested code's behavior.",
+              "id": 22
+            },
+            "3": {
+              "title": "A test case contains one or many tests.",
+              "id": 23
+            },
+            "4": {
+              "title": "A test program can contain multiple test cases.",
+              "id": 24
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "Assertions",
+          "id": 25,
+          "ideas": {
+            "1": {
+              "title": "Google Test assertions are macros that resemble function calls.",
+              "id": 26
+            },
+            "2": {
+              "title": "You test a class or function by making assertions about its behavior.",
+              "id": 27
+            },
+            "3": {
+              "title": "ASSERT_*",
+              "id": 28,
+              "ideas": {
+                "1": {
+                  "title": "fatal failures",
+                  "id": 29
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "EXPECT_*",
+              "id": 30,
+              "ideas": {
+                "1": {
+                  "title": "nonfatal failures",
+                  "id": 31
+                },
+                "2": {
+                  "title": "preferred",
+                  "id": 32
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "Basic Assertions",
+              "id": 33,
+              "ideas": {
+                "1": {
+                  "title": "Fatal assertion",
+                  "id": 34,
+                  "ideas": {
+                    "1": {
+                      "title": "ASSERT_TRUE(condition);",
+                      "id": 35
+                    },
+                    "2": {
+                      "title": "ASSERT_FALSE(condition);",
+                      "id": 36
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Nonfatal assertion",
+                  "id": 37,
+                  "ideas": {
+                    "1": {
+                      "title": "EXPECT_TRUE(condition);",
+                      "id": 38
+                    },
+                    "2": {
+                      "title": "EXPECT_FALSE(condition);",
+                      "id": 39
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Verifies",
+                  "id": 40,
+                  "ideas": {
+                    "1": {
+                      "title": "condition is true",
+                      "id": 41
+                    },
+                    "2": {
+                      "title": "condition is false",
+                      "id": 42
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "Binary Comparison",
+              "id": 44,
+              "ideas": {
+                "1": {
+                  "title": "Fatal assertion",
+                  "id": 45,
+                  "ideas": {
+                    "1": {
+                      "title": "ASSERT_EQ(expected, actual);",
+                      "id": 48
+                    },
+                    "2": {
+                      "title": "ASSERT_NE(val1, val2);",
+                      "id": 49
+                    },
+                    "3": {
+                      "title": "ASSERT_LT(val1, val2);",
+                      "id": 50
+                    },
+                    "4": {
+                      "title": "ASSERT_LE(val1, val2);",
+                      "id": 51
+                    },
+                    "5": {
+                      "title": "ASSERT_GT(val1, val2);",
+                      "id": 52
+                    },
+                    "6": {
+                      "title": "ASSERT_GE(val1, val2);",
+                      "id": 53
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Nonfatal assertion",
+                  "id": 46,
+                  "ideas": {
+                    "1": {
+                      "title": "EXPECT_EQ(expected, actual);",
+                      "id": 54
+                    },
+                    "2": {
+                      "title": "EXPECT_NE(val1, val2);",
+                      "id": 55
+                    },
+                    "3": {
+                      "title": "EXPECT_LT(val1, val2);",
+                      "id": 56
+                    },
+                    "4": {
+                      "title": "EXPECT_LE(val1, val2);",
+                      "id": 57
+                    },
+                    "5": {
+                      "title": "EXPECT_GT(val1, val2);",
+                      "id": 58
+                    },
+                    "6": {
+                      "title": "EXPECT_GE(val1, val2);",
+                      "id": 59
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Verifies",
+                  "id": 47,
+                  "ideas": {
+                    "1": {
+                      "title": "expected == actual",
+                      "id": 60
+                    },
+                    "2": {
+                      "title": "val1 != val2",
+                      "id": 61
+                    },
+                    "3": {
+                      "title": "val1 < val2",
+                      "id": 62
+                    },
+                    "4": {
+                      "title": "val1 <= val2",
+                      "id": 63
+                    },
+                    "5": {
+                      "title": "val1 > val2",
+                      "id": 64
+                    },
+                    "6": {
+                      "title": "val1 >= val2",
+                      "id": 65
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "String Comparison",
+              "id": 66,
+              "ideas": {
+                "1": {
+                  "title": "Fatal assertion",
+                  "id": 67,
+                  "ideas": {
+                    "1": {
+                      "title": "ASSERT_STREQ(expected_str, actual_str);",
+                      "id": 69
+                    },
+                    "2": {
+                      "title": "ASSERT_STRNE(str1, str2);",
+                      "id": 70
+                    },
+                    "3": {
+                      "title": "ASSERT_STRCASEEQ(expected_str, actual_str);",
+                      "id": 71
+                    },
+                    "4": {
+                      "title": "ASSERT_STRCASENE(str1, str2);",
+                      "id": 72
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Nonfatal assertion",
+                  "id": 68,
+                  "ideas": {
+                    "1": {
+                      "title": "EXPECT_STREQ(expected_str, actual_str);",
+                      "id": 73
+                    },
+                    "2": {
+                      "title": "EXPECT_STRNE(str1, str2);",
+                      "id": 74
+                    },
+                    "3": {
+                      "title": "EXPECT_STRCASEEQ(expected_str, actual_str);",
+                      "id": 75
+                    },
+                    "4": {
+                      "title": "EXPECT_STRCASENE(str1, str2);",
+                      "id": 76
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "5": {
+          "title": "Simple Tests",
+          "id": 79
+        }
+      }
+    }
+  },
+  "links": []
+}

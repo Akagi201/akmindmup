@@ -1,0 +1,1524 @@
+{
+  "title": "learning-curl",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "docs",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Using the Curl Tool",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "manpage",
+              "id": 6,
+              "ideas": {
+                "1": {
+                  "title": "curl",
+                  "id": 49,
+                  "ideas": {
+                    "1": {
+                      "title": "curl [options] [URL...]",
+                      "id": 7,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "The command is designed to work without user interaction",
+                      "id": 8,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "useful tricks",
+                      "id": 37,
+                      "ideas": {
+                        "1": {
+                          "title": "proxy support",
+                          "id": 39
+                        },
+                        "2": {
+                          "title": "user authentication",
+                          "id": 40
+                        },
+                        "3": {
+                          "title": "FTP upload",
+                          "id": 41
+                        },
+                        "4": {
+                          "title": "HTTP post",
+                          "id": 42
+                        },
+                        "5": {
+                          "title": "SSL connections",
+                          "id": 43
+                        },
+                        "6": {
+                          "title": "cookies",
+                          "id": 44
+                        },
+                        "7": {
+                          "title": "file transfer resume",
+                          "id": 45
+                        },
+                        "8": {
+                          "title": "Metalink",
+                          "id": 46
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "5": {
+                      "title": "URL syntax is procotol-dependent",
+                      "id": 47,
+                      "ideas": {
+                        "1": {
+                          "title": "RFC 3986",
+                          "id": 48
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "3.5": {
+                      "title": "show supported protocols",
+                      "id": 98,
+                      "ideas": {
+                        "1": {
+                          "title": "supported protocols",
+                          "id": 9,
+                          "ideas": {
+                            "1": {
+                              "title": "DICT",
+                              "id": 14
+                            },
+                            "2": {
+                              "title": "FILE",
+                              "id": 15
+                            },
+                            "3": {
+                              "title": "FTP",
+                              "id": 16
+                            },
+                            "4": {
+                              "title": "FTPS",
+                              "id": 17
+                            },
+                            "5": {
+                              "title": "GOPHER",
+                              "id": 18
+                            },
+                            "6": {
+                              "title": "HTTP",
+                              "id": 19
+                            },
+                            "7": {
+                              "title": "HTTPS",
+                              "id": 20
+                            },
+                            "8": {
+                              "title": "IMAP",
+                              "id": 21
+                            },
+                            "9": {
+                              "title": "IMAPS",
+                              "id": 22
+                            },
+                            "10": {
+                              "title": "LDAP",
+                              "id": 23
+                            },
+                            "11": {
+                              "title": "LDAPS",
+                              "id": 24
+                            },
+                            "12": {
+                              "title": "POP3",
+                              "id": 25
+                            },
+                            "13": {
+                              "title": "POP3S",
+                              "id": 26
+                            },
+                            "14": {
+                              "title": "RTMP",
+                              "id": 27
+                            },
+                            "15": {
+                              "title": "RTSP",
+                              "id": 28
+                            },
+                            "16": {
+                              "title": "SCP",
+                              "id": 29
+                            },
+                            "17": {
+                              "title": "SFTP",
+                              "id": 30
+                            },
+                            "18": {
+                              "title": "SMB",
+                              "id": 31
+                            },
+                            "19": {
+                              "title": "SMBS",
+                              "id": 32
+                            },
+                            "20": {
+                              "title": "SMTP",
+                              "id": 33
+                            },
+                            "21": {
+                              "title": "SMTPS",
+                              "id": 34
+                            },
+                            "22": {
+                              "title": "TLENET",
+                              "id": 35
+                            },
+                            "23": {
+                              "title": "TFTP",
+                              "id": 36
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "curl --version",
+                          "id": 99
+                        },
+                        "3": {
+                          "title": "curl-config --protocols",
+                          "id": 100
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "libcurl",
+                  "id": 50,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "libcurl has a global constant environment that you must set up and maintain while using libcurl.",
+                      "id": 55,
+                      "ideas": {
+                        "1": {
+                          "title": "at the start",
+                          "id": 56,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_global_init",
+                              "id": 58
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "at the end",
+                          "id": 57,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_global_cleanup",
+                              "id": 59
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "transfer files",
+                      "id": 60,
+                      "ideas": {
+                        "1": {
+                          "title": "create an \"easy handle\"",
+                          "id": 61,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_easy_init",
+                              "id": 62
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "set your desired set of options in that handle",
+                          "id": 63,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_easy_setopt",
+                              "id": 64
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "reset options",
+                          "id": 65,
+                          "ideas": {
+                            "1": {
+                              "title": "curl_easy_reset",
+                              "id": 66
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "actually transfer data",
+                          "id": 67,
+                          "ideas": {
+                            "1": {
+                              "title": "\"easy\" interface",
+                              "id": 68,
+                              "ideas": {
+                                "1": {
+                                  "title": "synchronous",
+                                  "id": 70
+                                },
+                                "2": {
+                                  "title": "curl_easy_perform",
+                                  "id": 71
+                                },
+                                "3": {
+                                  "title": "man libcurl-easy",
+                                  "id": 72
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "\"multi\" interface",
+                              "id": 69,
+                              "ideas": {
+                                "1": {
+                                  "title": "asynchronous",
+                                  "id": 73,
+                                  "ideas": {}
+                                },
+                                "2": {
+                                  "title": "you call and that performs only a little piece of the transfer on each invoke.",
+                                  "id": 75
+                                },
+                                "3": {
+                                  "title": "do things while the transfer is in progress",
+                                  "id": 76
+                                },
+                                "4": {
+                                  "title": "select() on libcurl",
+                                  "id": 77
+                                },
+                                "5": {
+                                  "title": "download multiple files simultaneously using a single thread",
+                                  "id": 78
+                                },
+                                "6": {
+                                  "title": "man libcurl-multi",
+                                  "id": 79
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true,
+                                "style": {}
+                              }
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "you can have multiple easy handles share certain data, even if they are used in different threads.",
+                          "id": 80,
+                          "ideas": {
+                            "1": {
+                              "title": "This magic is setup using the share interface",
+                              "id": 81
+                            },
+                            "2": {
+                              "title": "man libcurl-share",
+                              "id": 82
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "linking with libcurl",
+                      "id": 83,
+                      "ideas": {
+                        "1": {
+                          "title": "unix-like",
+                          "id": 84,
+                          "ideas": {
+                            "1": {
+                              "title": "curl-config",
+                              "id": 85,
+                              "ideas": {
+                                "1": {
+                                  "title": "curl-config --libs",
+                                  "id": 86
+                                },
+                                "2": {
+                                  "title": "man curl-config",
+                                  "id": 87
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "pkg-config",
+                              "id": 88
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "libcurl symbol names",
+                      "id": 89,
+                      "ideas": {
+                        "1": {
+                          "title": "All public functions in the libcurl interface are prefixed with 'curl_'",
+                          "id": 90
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "5": {
+                      "title": "Theads",
+                      "id": 91,
+                      "ideas": {
+                        "1": {
+                          "title": "Never call curl-functions simultaneously using the same handle from serveral threads",
+                          "id": 92
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "6": {
+                      "title": "persistent connections",
+                      "id": 93,
+                      "ideas": {
+                        "1": {
+                          "title": "libcurl can re-use the same connection for several transfers, if the conditions are right.",
+                          "id": 94
+                        },
+                        "2": {
+                          "title": "To allow libcurl to take full advantage of persistent connections, you should do as many of your file transfers as possible using the same handle.",
+                          "id": 96
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "7": {
+                      "title": "golbal constants",
+                      "id": 97,
+                      "ideas": {
+                        "1": {
+                          "title": "cur_global_init",
+                          "id": 101
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "libcurl-easy",
+                  "id": 51
+                },
+                "4": {
+                  "title": "libcurl-multi",
+                  "id": 52
+                },
+                "5": {
+                  "title": "libcurl-share",
+                  "id": 53
+                },
+                "6": {
+                  "title": "libcurl-tutorial",
+                  "id": 54
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Using cURL to automate HTTP jobs",
+              "id": 102,
+              "ideas": {
+                "1": {
+                  "title": "HTTP Scripting",
+                  "id": 103,
+                  "ideas": {
+                    "1": {
+                      "title": "Background",
+                      "id": 117
+                    },
+                    "2": {
+                      "title": "The HTTP Protocol",
+                      "id": 118
+                    },
+                    "3": {
+                      "title": "See the Protocol",
+                      "id": 120,
+                      "ideas": {
+                        "1": {
+                          "title": "-v / --verbose",
+                          "id": 121
+                        },
+                        "2": {
+                          "title": "--trace",
+                          "id": 122
+                        },
+                        "3": {
+                          "title": "--trace-ascii",
+                          "id": 123
+                        },
+                        "4": {
+                          "title": "example",
+                          "id": 124,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --trace-ascii debugdump.txt http://www.example.com/",
+                              "id": 125
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "See the Timing",
+                      "id": 126,
+                      "ideas": {
+                        "1": {
+                          "title": "--trace-time",
+                          "id": 127
+                        },
+                        "2": {
+                          "title": "example",
+                          "id": 128,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --trace-ascii d.txt --trace-time http://example.com/",
+                              "id": 129
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "5": {
+                      "title": "See the Response",
+                      "id": 130,
+                      "ideas": {
+                        "1": {
+                          "title": "by default",
+                          "id": 132,
+                          "ideas": {
+                            "1": {
+                              "title": "sends the response to stdout",
+                              "id": 133
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "redirect",
+                          "id": 134,
+                          "ideas": {
+                            "1": {
+                              "title": "-o / -O",
+                              "id": 135
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "URL",
+                  "id": 104,
+                  "ideas": {
+                    "1": {
+                      "title": "Spec",
+                      "id": 136,
+                      "ideas": {
+                        "1": {
+                          "title": "RFC3986",
+                          "id": 137
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Host",
+                      "id": 138,
+                      "ideas": {
+                        "1": {
+                          "title": "DNS /  `/etc/hosts`",
+                          "id": 139
+                        },
+                        "2": {
+                          "title": "Point out a different IP for a host name",
+                          "id": 140,
+                          "ideas": {
+                            "1": {
+                              "title": "--resolve",
+                              "id": 141
+                            },
+                            "2": {
+                              "title": "curl --resolve www.example.org:80:127.0.0.1 http://www.example.org",
+                              "id": 142
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Port number",
+                      "id": 143,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 144,
+                          "ideas": {
+                            "1": {
+                              "title": "curl http://www.example.org:1234",
+                              "id": 145
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "local proxy",
+                          "id": 146,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --proxy http://proxy.example.org:4321 http://remote.example.org",
+                              "id": 147
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "User name and password",
+                      "id": 148,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 149,
+                          "ideas": {
+                            "1": {
+                              "title": "curl http://user:password@example.org",
+                              "id": 150
+                            },
+                            "2": {
+                              "title": "curl -u user:password http://example.org",
+                              "id": 151
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "Not  requested by user-oriented web sites",
+                          "id": 152,
+                          "ideas": {
+                            "1": {
+                              "title": "forms",
+                              "id": 153
+                            },
+                            "2": {
+                              "title": "cookies",
+                              "id": 154
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Path part",
+                      "id": 155
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Fetch a page",
+                  "id": 105,
+                  "ideas": {
+                    "1": {
+                      "title": "GET",
+                      "id": 156,
+                      "ideas": {
+                        "1": {
+                          "title": "All HTTP replies contain a set of response headers that are normally hidden",
+                          "id": 157
+                        },
+                        "2": {
+                          "title": "curl -i / --include",
+                          "id": 158
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "HEAD",
+                      "id": 159,
+                      "ideas": {
+                        "1": {
+                          "title": "-l / --head",
+                          "id": 160
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "HTML forms",
+                  "id": 106,
+                  "ideas": {
+                    "1": {
+                      "title": "Forms explained",
+                      "id": 161
+                    },
+                    "2": {
+                      "title": "GET",
+                      "id": 162,
+                      "ideas": {
+                        "2": {
+                          "title": "The GET method makes all input field names get displayed in the URL field of your browser.",
+                          "id": 166
+                        },
+                        "12": {
+                          "title": "example",
+                          "id": 163,
+                          "ideas": {
+                            "1": {
+                              "title": "curl \"http://www.hotmail.com/when/junk.cgi?birthyear=1905&press=OK\"",
+                              "id": 164
+                            }
+                          },
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "POST",
+                      "id": 165,
+                      "ideas": {
+                        "1": {
+                          "title": "client sends the data separated from the URL",
+                          "id": 167
+                        },
+                        "2": {
+                          "title": "example",
+                          "id": 168,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --data \"birthyear=1805&press=%2-OK%20\" http://www.example.com/when.cgi",
+                              "id": 169
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "Content-Type application/x-www-form-urlencoded",
+                          "id": 170,
+                          "ideas": {
+                            "1": {
+                              "title": "space must encode to %20",
+                              "id": 171
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "url-encode POST",
+                          "id": 172,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --data-urlencode \"name=I am Daniel\" http://www.example.com",
+                              "id": 173
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "File Upload POST",
+                      "id": 174,
+                      "ideas": {
+                        "1": {
+                          "title": "RFC1867",
+                          "id": 175,
+                          "ideas": {
+                            "1": {
+                              "title": "RFC1867-posting",
+                              "id": 176
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "example",
+                          "id": 177,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --form upload=@localfile --form press=OK [URL]",
+                              "id": 178
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "5": {
+                      "title": "HIdden Fileds",
+                      "id": 179,
+                      "ideas": {
+                        "1": {
+                          "title": "all the same",
+                          "id": 180
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "6": {
+                      "title": "Figure Out What A POST Looks Like",
+                      "id": 181
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "HTTP upload",
+                  "id": 107,
+                  "ideas": {
+                    "1": {
+                      "title": "PUT",
+                      "id": 182,
+                      "ideas": {
+                        "1": {
+                          "title": "The best way to upload data to a HTTP server is to use PUT",
+                          "id": 183
+                        },
+                        "2": {
+                          "title": "exaple",
+                          "id": 184,
+                          "ideas": {
+                            "1": {
+                              "title": "Put a file to a HTTP server",
+                              "id": 185,
+                              "ideas": {
+                                "1": {
+                                  "title": "curl --upload-file uploadfile http://www.example.com/receive.cgi",
+                                  "id": 186
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "HTTP Authentication",
+                  "id": 108,
+                  "ideas": {
+                    "1": {
+                      "title": "Basic Authentication",
+                      "id": 187,
+                      "ideas": {
+                        "1": {
+                          "title": "the type curl uses by default",
+                          "id": 204
+                        },
+                        "2": {
+                          "title": "*plain* *text*",
+                          "id": 205
+                        },
+                        "3": {
+                          "title": "example",
+                          "id": 206,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --user name:password http://www.example.com",
+                              "id": 207
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Other Authentication",
+                      "id": 188,
+                      "ideas": {
+                        "1": {
+                          "title": "server require a different authentication method",
+                          "id": 208,
+                          "ideas": {
+                            "1": {
+                              "title": "check the headers returned by the server",
+                              "id": 209
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "--ntlm",
+                          "id": 210
+                        },
+                        "3": {
+                          "title": "--digest",
+                          "id": 211
+                        },
+                        "4": {
+                          "title": "--negotiate",
+                          "id": 212
+                        },
+                        "5": {
+                          "title": "--anyauth",
+                          "id": 213
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Proxy Authentication",
+                      "id": 189,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 214,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --proxy-user proxyuser:proxypassword curl.haxx.se",
+                              "id": 215
+                            },
+                            "2": {
+                              "title": "--proxy-ntlm",
+                              "id": 216
+                            },
+                            "3": {
+                              "title": "--proxy-digest",
+                              "id": 217
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "Hiding credentials",
+                      "id": 190,
+                      "ideas": {}
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "More HTTP Headers",
+                  "id": 109,
+                  "ideas": {
+                    "1": {
+                      "title": "Referer",
+                      "id": 191,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 219,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --referer http://www.example.com http://www.example.com",
+                              "id": 220
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "User Agent",
+                      "id": 192,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 221
+                        },
+                        "2": {
+                          "title": "IE5 on  Windows 2000",
+                          "id": 222,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --user-agent \"Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)\" [URL]",
+                              "id": 223
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Netscape 4.73 on old Linux",
+                          "id": 224,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --user-agent \"Mozilla/4.73 [en] (X11; U; Linux 2.2.15 i686)\" [URL]",
+                              "id": 225
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Redirects",
+                  "id": 110,
+                  "ideas": {
+                    "1": {
+                      "title": "Location header",
+                      "id": 193,
+                      "attr": {
+                        "position": [
+                          89.5,
+                          -55,
+                          1
+                        ],
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "The header that tells the browser to redirect is Location",
+                          "id": 227,
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "example",
+                          "id": 228,
+                          "ideas": {
+                            "1": {
+                              "title": "curl -L/--location http://www.example.com",
+                              "id": 230
+                            },
+                            "2": {
+                              "title": "If you use curl to POST to a site that immediately redirects you to another page, you can safely use --location(-L) and --data/--form together.",
+                              "id": 231,
+                              "ideas": {
+                                "1": {
+                                  "title": "Curl will only use POST in the first request, and then revert to GET in the following operations",
+                                  "id": 232
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Other redirects",
+                      "id": 194,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Browser typically support at least two other ways of redirects that curl doesn't",
+                          "id": 233,
+                          "ideas": {
+                            "1": {
+                              "title": "the HTML may contain a meta refresh tag that asks the browser to load a specific URL after a set number of seconds",
+                              "id": 234
+                            },
+                            "2": {
+                              "title": "it may use javascript to do it",
+                              "id": 235
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Cookies",
+                  "id": 111,
+                  "ideas": {
+                    "1": {
+                      "title": "Cookie Basics",
+                      "id": 195,
+                      "ideas": {
+                        "1": {
+                          "title": "client side state control",
+                          "id": 236
+                        },
+                        "2": {
+                          "title": "Cookies are just names with associated contents",
+                          "id": 237
+                        },
+                        "3": {
+                          "title": "The cookies are sent to the client by the server.",
+                          "id": 238
+                        },
+                        "4": {
+                          "title": "The server tells the client for what path and host name it wants the cookie sent back, and it also sends an expiration data and a few more properties.",
+                          "id": 239
+                        },
+                        "5": {
+                          "title": "When a client communicates with a server with a name and path as previously specified in a received cookit, the client sends back the cookies and their contents to the server, unless of course they are expired.",
+                          "id": 240
+                        },
+                        "6": {
+                          "title": "Many applications and servers use this method to connect a series of requests into a single logical session.",
+                          "id": 241
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Cookie options",
+                      "id": 196,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 242,
+                          "ideas": {
+                            "1": {
+                              "title": "curl --cookie \"name=Daniel\" http://www.example.com",
+                              "id": 243
+                            },
+                            "2": {
+                              "title": "curl --dump-header headers_and_cookies http://www.example.com",
+                              "id": 248
+                            },
+                            "3": {
+                              "title": "curl --cookie stroed_cookies_in_file http://www.example.com",
+                              "id": 249
+                            },
+                            "4": {
+                              "title": "curl --cookie nada --location http://www.example.com",
+                              "id": 250
+                            },
+                            "5": {
+                              "title": "curl --cookie cookies.txt --cookie-jar newcookies.txt http://www.example.com",
+                              "id": 251
+                            }
+                          },
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "Cookies are sent as common HTTP headers.",
+                          "id": 245,
+                          "ideas": {
+                            "1": {
+                              "title": "This is practical as it allow curl to record cookies simply by recording headers.",
+                              "id": 246
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "HTTPS",
+                  "id": 112,
+                  "ideas": {
+                    "1": {
+                      "title": "HTTPS is HTTP secure",
+                      "id": 197,
+                      "ideas": {
+                        "1": {
+                          "title": "HTTP over SSL",
+                          "id": 252
+                        },
+                        "2": {
+                          "title": "SSL",
+                          "id": 253,
+                          "ideas": {
+                            "1": {
+                              "title": "TLS as the latest version of the standard",
+                              "id": 254
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "example",
+                          "id": 255,
+                          "ideas": {
+                            "1": {
+                              "title": "curl https://secure.example.com",
+                              "id": 256
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Certificates",
+                      "id": 198,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 257,
+                          "ideas": {
+                            "1": {
+                              "title": "use a certificate with curl",
+                              "id": 258,
+                              "ideas": {
+                                "1": {
+                                  "title": "curl --cert mycert.pem https://secure.example.com",
+                                  "id": 259
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "--insecure / -k",
+                          "id": 260,
+                          "ideas": {
+                            "1": {
+                              "title": "ignore that the server can't be verified",
+                              "id": 261
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "SSLCERTS",
+                          "id": 262,
+                          "ideas": {
+                            "1": {
+                              "title": "http://curl.haxx.se/docs/sslcerts.html",
+                              "id": 263
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "Custom Request Elements",
+                  "id": 113,
+                  "ideas": {
+                    "1": {
+                      "title": "Modify method and headers",
+                      "id": 199,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 264,
+                          "ideas": {
+                            "1": {
+                              "title": "change the POST request to a PROPFIND and send the data as \"Content-Type:text/xml\"(instead of the default Content-Type)",
+                              "id": 265,
+                              "ideas": {
+                                "1": {
+                                  "title": "curl  --data \"<xml>\" --header \"Content-Type: text/xml\" --request PROPFIND url.com",
+                                  "id": 266
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "delete a default header by providing one without content.",
+                              "id": 267,
+                              "ideas": {
+                                "1": {
+                                  "title": "curl --header \"Host:\" http://www.example.com",
+                                  "id": 268
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "add headers the same way",
+                              "id": 269,
+                              "ideas": {
+                                "1": {
+                                  "title": "curl --header \"Destination: http://nowhere\" http://example.com",
+                                  "id": 270
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "More on changed methods",
+                      "id": 200,
+                      "ideas": {
+                        "1": {
+                          "title": "example",
+                          "id": 271,
+                          "ideas": {
+                            "1": {
+                              "title": "curl -X POST http://example.org",
+                              "id": 272
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "Web Login",
+                  "id": 114,
+                  "ideas": {
+                    "1": {
+                      "title": "Some login tricks",
+                      "id": 201
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "13": {
+                  "title": "Debug",
+                  "id": 115,
+                  "ideas": {
+                    "1": {
+                      "title": "Some debug tricks",
+                      "id": 203
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "14": {
+                  "title": "References",
+                  "id": 116,
+                  "ideas": {
+                    "1": {
+                      "title": "RFC2616",
+                      "id": 273,
+                      "ideas": {
+                        "1": {
+                          "title": "HTTP protocol",
+                          "id": 277
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "RFC3986",
+                      "id": 274,
+                      "ideas": {
+                        "1": {
+                          "title": "URL",
+                          "id": 278
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "RFC1867",
+                      "id": 275,
+                      "ideas": {
+                        "1": {
+                          "title": "HTTP post upload format",
+                          "id": 279
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "RFC6525",
+                      "id": 276,
+                      "ideas": {
+                        "1": {
+                          "title": "HTTP cookie",
+                          "id": 280
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Using libcurl",
+          "id": 4
+        },
+        "3": {
+          "title": "Hacking on curl/libcurl",
+          "id": 5
+        }
+      }
+    }
+  },
+  "links": []
+}
