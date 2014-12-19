@@ -616,8 +616,8 @@
                         }
                       },
                       "attr": {
-                        "collapsed": true,
-                        "style": {}
+                        "style": {},
+                        "collapsed": true
                       }
                     },
                     "2": {
@@ -631,11 +631,15 @@
                         "2": {
                           "title": "describe the transport addresses, compression, and packetization schemes to be used by senders and receivers in multicast sessions.",
                           "id": 348
+                        },
+                        "1.5": {
+                          "title": "within announcements",
+                          "id": 357
                         }
                       },
                       "attr": {
-                        "collapsed": true,
-                        "style": {}
+                        "style": {},
+                        "collapsed": true
                       }
                     },
                     "3": {
@@ -645,6 +649,60 @@
                         "1": {
                           "title": "Session Initiation Protocol",
                           "id": 350
+                        },
+                        "2": {
+                          "title": "finding participants",
+                          "id": 358
+                        },
+                        "3": {
+                          "title": "initiating a multicast session with a specific set of participants",
+                          "id": 359
+                        },
+                        "4": {
+                          "title": "call control",
+                          "id": 360
+                        },
+                        "5": {
+                          "title": "negotiation",
+                          "id": 361
+                        },
+                        "6": {
+                          "title": "extensive negotiation",
+                          "id": 362
+                        },
+                        "7": {
+                          "title": "control feature",
+                          "id": 363
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "RTP",
+                      "id": 351,
+                      "ideas": {
+                        "1": {
+                          "title": "developed by the IETF in the period 1992-1996, building on NVP-II and the protocol used in the original vat tool",
+                          "id": 352
+                        },
+                        "2": {
+                          "title": "media delivery",
+                          "id": 353
+                        },
+                        "3": {
+                          "title": "membership management",
+                          "id": 354
+                        },
+                        "4": {
+                          "title": "lip synchronization",
+                          "id": 355
+                        },
+                        "5": {
+                          "title": "reception quality reporting",
+                          "id": 356
                         }
                       },
                       "attr": {
@@ -652,11 +710,82 @@
                         "style": {}
                       }
                     }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
                   }
                 },
                 "3": {
                   "title": "ITU Standards",
-                  "id": 41
+                  "id": 41,
+                  "ideas": {
+                    "1": {
+                      "title": "ISDN",
+                      "id": 364,
+                      "ideas": {
+                        "1": {
+                          "title": "Integrated Services Digital Network",
+                          "id": 365,
+                          "ideas": {
+                            "1": {
+                              "title": "the digital version of the plain old telephone system",
+                              "id": 366
+                            },
+                            "2": {
+                              "title": "an associated set of video conferencing standards",
+                              "id": 367
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "H.320",
+                          "id": 368,
+                          "ideas": {
+                            "1": {
+                              "title": "used circuit-switched links",
+                              "id": 369
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "pioneer many of the compression algorightms",
+                          "id": 370,
+                          "ideas": {
+                            "1": {
+                              "title": "H.261 video",
+                              "id": 371
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "H.323",
+                      "id": 372,
+                      "ideas": {
+                        "1": {
+                          "title": "H.320 suitable for LAN",
+                          "id": 374
+                        },
+                        "2": {
+                          "title": "provide a non-guaranteed quality of service",
+                          "id": 375
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
                 },
                 "4": {
                   "title": "Audio / Video Streaming",
