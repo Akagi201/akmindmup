@@ -1,0 +1,149 @@
+{
+  "title": "clean-code-handbook",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "chapter0: foreword",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Clean Code Handbook: 50 Common Interview Questions",
+          "id": 12
+        },
+        "2": {
+          "title": "serve as the perfect companion for LeetCode Online Judge(OJ)",
+          "id": 13
+        },
+        "3": {
+          "title": "Code it now",
+          "id": 14,
+          "ideas": {
+            "1": {
+              "title": "Code it now",
+              "id": 15,
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "\n\n\n\n\n\n\n\n\n\n\n9dom822q\n\n\n",
+              "id": 16,
+              "ideas": {
+                "1": {
+                  "title": "\n\n\n\n\n\n\n\n\n\n\n9dom822q\n\n\n",
+                  "id": 17,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "three levels of difficulty",
+          "id": 18,
+          "ideas": {
+            "1": {
+              "title": "Easy",
+              "id": 19
+            },
+            "2": {
+              "title": "Medium",
+              "id": 20
+            },
+            "3": {
+              "title": "Hard",
+              "id": 21
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "three frequency rating",
+          "id": 22,
+          "ideas": {
+            "1": {
+              "title": "Low",
+              "id": 23
+            },
+            "2": {
+              "title": "Medium",
+              "id": 24
+            },
+            "3": {
+              "title": "High",
+              "id": 25
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "Each question is accompanied with as many approaches as possible",
+          "id": 26
+        },
+        "7": {
+          "title": "Most code in this eBook fall between 20 ~ 30 lines of code.",
+          "id": 27
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "chapter1: array / string",
+      "id": 3,
+      "ideas": {
+        "1": {
+          "title": "1. Two Sum",
+          "id": 28
+        }
+      }
+    },
+    "21": {
+      "title": "chapter2: math",
+      "id": 4
+    },
+    "31": {
+      "title": "chapter3: linked list",
+      "id": 5
+    },
+    "41": {
+      "title": "chapter4: binary tree",
+      "id": 6
+    },
+    "51": {
+      "title": "chapter5:  bit manipulation",
+      "id": 7
+    },
+    "61": {
+      "title": "chapter6: misc",
+      "id": 8
+    },
+    "71": {
+      "title": "chapter7: stack",
+      "id": 9
+    },
+    "81": {
+      "title": "chapter8: dynamic programming",
+      "id": 10
+    },
+    "91": {
+      "title": "chapter9: binary search",
+      "id": 11
+    }
+  }
+}
