@@ -15,36 +15,6 @@
           "title": "serve as the perfect companion for LeetCode Online Judge(OJ)",
           "id": 13
         },
-        "3": {
-          "title": "Code it now",
-          "id": 14,
-          "ideas": {
-            "1": {
-              "title": "Code it now",
-              "id": 15,
-              "attr": {
-                "style": {}
-              }
-            },
-            "2": {
-              "title": "\n\n\n\n\n\n\n\n\n\n\n9dom822q\n\n\n",
-              "id": 16,
-              "ideas": {
-                "1": {
-                  "title": "\n\n\n\n\n\n\n\n\n\n\n9dom822q\n\n\n",
-                  "id": 17,
-                  "attr": {
-                    "style": {}
-                  }
-                }
-              }
-            }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
-          }
-        },
         "4": {
           "title": "three levels of difficulty",
           "id": 18,
@@ -63,8 +33,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "5": {
@@ -85,8 +55,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "6": {
@@ -99,7 +69,6 @@
         }
       },
       "attr": {
-        "collapsed": true,
         "style": {}
       }
     },
@@ -111,6 +80,10 @@
           "title": "1. Two Sum",
           "id": 28
         }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
       }
     },
     "21": {
@@ -145,5 +118,6 @@
       "title": "chapter9: binary search",
       "id": 11
     }
-  }
+  },
+  "links": []
 }
