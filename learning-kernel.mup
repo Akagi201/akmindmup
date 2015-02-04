@@ -1,0 +1,328 @@
+{
+  "title": "learning-kernel",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Linux内核分析",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "授课老师",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "孟宁",
+              "id": 4
+            }
+          }
+        },
+        "2": {
+          "title": "课程概述",
+          "id": 5,
+          "ideas": {},
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "本课程从理解计算机硬件的核心工作机制(存储程序计算机和函数调用堆栈)和用户态程序如何通过系统调用陷入内核(中断异常)入手, 通过上下两个方向双向夹击的策略, 并利用实际可运行程序的反汇编代码从实践的角度理解操作系统内核, 然后开始分析Linux内核源代码, 从系统调用陷入内核, 进程调度与进程切换, 最后返回到用户态进程, 通过仔细分析梳理这一过程, 并推广到硬件中断, 缺页异常等内核执行路径, 最终能从本质上把握Linux内核的实质, 乃至在头脑中演绎Linux系统的运行过程."
+            },
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "第一周 存储程序计算机(以32位X86为例)",
+      "id": 7,
+      "ideas": {
+        "1": {
+          "title": "存储程序计算机工作模型",
+          "id": 9
+        },
+        "2": {
+          "title": "32位X86汇编基础",
+          "id": 10
+        },
+        "3": {
+          "title": "反汇编一个简单的C程序",
+          "id": 11
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "21": {
+      "title": "第二周 函数调用堆栈和中断",
+      "id": 12,
+      "ideas": {
+        "1": {
+          "title": "函数调用堆栈",
+          "id": 14
+        },
+        "2": {
+          "title": "利用反汇编代码分析一个带函数调用的C程序的执行过程",
+          "id": 15
+        },
+        "3": {
+          "title": "如何打断当前正在执行的程序? -- 中断",
+          "id": 16
+        },
+        "4": {
+          "title": "保护现场和恢复现场",
+          "id": 17
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "第三周 利用mykernel实验模拟硬件平台",
+      "id": 18,
+      "ideas": {
+        "1": {
+          "title": "借助LInux内核部分源代码模拟存储程序计算机工作模型及时钟中断",
+          "id": 19
+        },
+        "2": {
+          "title": "在模拟硬件平台上实现多个进程及时间片轮转调度",
+          "id": 20
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "41": {
+      "title": "第四周 Linux系统架构和执行过程概览, 内核源代码导读",
+      "id": 21,
+      "ideas": {
+        "1": {
+          "title": "Linux系统架构",
+          "id": 22
+        },
+        "2": {
+          "title": "Linux执行过程概览",
+          "id": 23
+        },
+        "3": {
+          "title": "Linux内核源代码导读",
+          "id": 25
+        },
+        "4": {
+          "title": "构造一个简单的Linux系统",
+          "id": 26
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "51": {
+      "title": "第五周 程序和进程",
+      "id": 27,
+      "ideas": {
+        "1": {
+          "title": "程序的编译, 链接和可执行文件格式",
+          "id": 28
+        },
+        "2": {
+          "title": "进程的描述和程序的装载",
+          "id": 29
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "61": {
+      "title": "第六周 利用汇编指令触发系统调用",
+      "id": 30,
+      "ideas": {
+        "1": {
+          "title": "使用库函数触发一个系统调用",
+          "id": 31
+        },
+        "2": {
+          "title": "C代码中嵌入汇编代码的写法",
+          "id": 32
+        },
+        "3": {
+          "title": "使用嵌入式汇编代码触发同一个系统调用",
+          "id": 33
+        },
+        "4": {
+          "title": "系统调用在内核代码中的处理过程",
+          "id": 34
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "71": {
+      "title": "第七周 进程的执行和进程的切换",
+      "id": 35,
+      "ideas": {
+        "1": {
+          "title": "用户态堆栈和内核态堆栈",
+          "id": 36
+        },
+        "2": {
+          "title": "进程上下文的保存和恢复",
+          "id": 37
+        },
+        "3": {
+          "title": "进程切换的关键代码switch_to分析",
+          "id": 38
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "81": {
+      "title": "第八周 Linux内核的实质和Linux系统的一般执行过程",
+      "id": 39,
+      "ideas": {
+        "1": {
+          "title": "内核执行路径的集合 -- 中断(异常)处理过程的集合",
+          "id": 40
+        },
+        "2": {
+          "title": "Linux系统的一般执行过程",
+          "id": 41
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "91": {
+      "title": "参考资料",
+      "id": 42,
+      "ideas": {
+        "1": {
+          "title": " [深入理解Linux内核]第三版",
+          "id": 43,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {}
+        },
+        "2": {
+          "title": "程序员的自我修养: 链接, 装载与库",
+          "id": 45
+        },
+        "3": {
+          "title": "部分自编讲义",
+          "id": 46,
+          "ideas": {
+            "1": {
+              "title": "http://teamtrac.ustcsz.edu.cn/wiki/Linux2014",
+              "id": 47,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "6": {
+          "title": "GLIBC, the GNU C Library",
+          "id": 54,
+          "attr": {
+            "style": {}
+          }
+        },
+        "7": {
+          "title": "GCC编译背后(第二部分: 汇编和链接)",
+          "id": 53,
+          "attr": {
+            "style": {}
+          }
+        },
+        "8": {
+          "title": "http://savannah.nongnu.org/projects/sysvinit",
+          "id": 57,
+          "attr": {
+            "style": {}
+          }
+        },
+        "9": {
+          "title": "http://www.linuxfromscratch.org",
+          "id": 56,
+          "attr": {
+            "style": {}
+          }
+        },
+        "10": {
+          "title": "http://www.oldlinux.org/index_cn.html",
+          "id": 52,
+          "attr": {
+            "style": {}
+          }
+        },
+        "11": {
+          "title": "Linux的进程详解",
+          "id": 51,
+          "attr": {
+            "style": {}
+          }
+        },
+        "12": {
+          "title": "ELF文件格式分析",
+          "id": 59,
+          "attr": {
+            "style": {}
+          }
+        },
+        "13": {
+          "title": "UNIX/LINUX平台可执行文件加载过程",
+          "id": 58,
+          "attr": {
+            "style": {}
+          }
+        },
+        "15": {
+          "title": "The Linux® Networking Architecture: Design and Implementation of Network Protocols in the Linux Kernel",
+          "id": 61,
+          "attr": {
+            "style": {}
+          }
+        },
+        "16": {
+          "title": "Linux and glibc API changes",
+          "id": 62,
+          "attr": {
+            "style": {}
+          }
+        },
+        "17": {
+          "title": "LinuxStart",
+          "id": 50,
+          "attr": {
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    }
+  },
+  "links": []
+}
