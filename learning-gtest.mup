@@ -43,7 +43,17 @@
             },
             "7": {
               "title": "based on the popular xUnit architecture",
-              "id": 12
+              "id": 12,
+              "ideas": {
+                "1": {
+                  "title": "JUnit",
+                  "id": 80
+                },
+                "2": {
+                  "title": "PyUnit",
+                  "id": 81
+                }
+              }
             }
           },
           "attr": {
@@ -61,8 +71,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         },
         "3": {
@@ -99,259 +109,62 @@
                 }
               },
               "attr": {
-                "collapsed": true,
-                "style": {}
+                "style": {},
+                "collapsed": true
               }
             },
             "2": {
               "title": "Tests use assertions to verify the tested code's behavior.",
               "id": 22
             },
-            "3": {
+            "12": {
               "title": "A test case contains one or many tests.",
-              "id": 23
+              "id": 82,
+              "ideas": {
+                "1": {
+                  "title": "When multiple tests in a test case need to share common objects and subroutines, you can put them into a test fixture class.",
+                  "id": 83
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
             },
-            "4": {
+            "22": {
               "title": "A test program can contain multiple test cases.",
-              "id": 24
-            }
-          },
-          "attr": {
-            "collapsed": true,
-            "style": {}
-          }
-        },
-        "4": {
-          "title": "Assertions",
-          "id": 25,
-          "ideas": {
-            "1": {
-              "title": "Google Test assertions are macros that resemble function calls.",
-              "id": 26
-            },
-            "2": {
-              "title": "You test a class or function by making assertions about its behavior.",
-              "id": 27
-            },
-            "3": {
-              "title": "ASSERT_*",
-              "id": 28,
-              "ideas": {
-                "1": {
-                  "title": "fatal failures",
-                  "id": 29
-                }
-              },
+              "id": 84,
               "attr": {
-                "collapsed": true,
                 "style": {}
               }
             },
-            "4": {
-              "title": "EXPECT_*",
-              "id": 30,
+            "23": {
+              "title": "Assertions",
+              "id": 25,
               "ideas": {
                 "1": {
-                  "title": "nonfatal failures",
-                  "id": 31
+                  "title": "Google Test assertions are macros that resemble function calls.",
+                  "id": 26
                 },
                 "2": {
-                  "title": "preferred",
-                  "id": 32
-                }
-              },
-              "attr": {
-                "collapsed": true,
-                "style": {}
-              }
-            },
-            "5": {
-              "title": "Basic Assertions",
-              "id": 33,
-              "ideas": {
-                "1": {
-                  "title": "Fatal assertion",
-                  "id": 34,
-                  "ideas": {
-                    "1": {
-                      "title": "ASSERT_TRUE(condition);",
-                      "id": 35
-                    },
-                    "2": {
-                      "title": "ASSERT_FALSE(condition);",
-                      "id": 36
-                    }
-                  }
-                },
-                "2": {
-                  "title": "Nonfatal assertion",
-                  "id": 37,
-                  "ideas": {
-                    "1": {
-                      "title": "EXPECT_TRUE(condition);",
-                      "id": 38
-                    },
-                    "2": {
-                      "title": "EXPECT_FALSE(condition);",
-                      "id": 39
-                    }
-                  }
+                  "title": "You test a class or function by making assertions about its behavior.",
+                  "id": 27
                 },
                 "3": {
-                  "title": "Verifies",
-                  "id": 40,
+                  "title": "ASSERT_*",
+                  "id": 28,
                   "ideas": {
                     "1": {
-                      "title": "condition is true",
-                      "id": 41
+                      "title": "fatal failures",
+                      "id": 29
                     },
                     "2": {
-                      "title": "condition is false",
-                      "id": 42
-                    }
-                  }
-                }
-              },
-              "attr": {
-                "collapsed": true,
-                "style": {}
-              }
-            },
-            "6": {
-              "title": "Binary Comparison",
-              "id": 44,
-              "ideas": {
-                "1": {
-                  "title": "Fatal assertion",
-                  "id": 45,
-                  "ideas": {
-                    "1": {
-                      "title": "ASSERT_EQ(expected, actual);",
-                      "id": 48
-                    },
-                    "2": {
-                      "title": "ASSERT_NE(val1, val2);",
-                      "id": 49
+                      "title": "abort the current function",
+                      "id": 85
                     },
                     "3": {
-                      "title": "ASSERT_LT(val1, val2);",
-                      "id": 50
-                    },
-                    "4": {
-                      "title": "ASSERT_LE(val1, val2);",
-                      "id": 51
-                    },
-                    "5": {
-                      "title": "ASSERT_GT(val1, val2);",
-                      "id": 52
-                    },
-                    "6": {
-                      "title": "ASSERT_GE(val1, val2);",
-                      "id": 53
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "2": {
-                  "title": "Nonfatal assertion",
-                  "id": 46,
-                  "ideas": {
-                    "1": {
-                      "title": "EXPECT_EQ(expected, actual);",
-                      "id": 54
-                    },
-                    "2": {
-                      "title": "EXPECT_NE(val1, val2);",
-                      "id": 55
-                    },
-                    "3": {
-                      "title": "EXPECT_LT(val1, val2);",
-                      "id": 56
-                    },
-                    "4": {
-                      "title": "EXPECT_LE(val1, val2);",
-                      "id": 57
-                    },
-                    "5": {
-                      "title": "EXPECT_GT(val1, val2);",
-                      "id": 58
-                    },
-                    "6": {
-                      "title": "EXPECT_GE(val1, val2);",
-                      "id": 59
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                },
-                "3": {
-                  "title": "Verifies",
-                  "id": 47,
-                  "ideas": {
-                    "1": {
-                      "title": "expected == actual",
-                      "id": 60
-                    },
-                    "2": {
-                      "title": "val1 != val2",
-                      "id": 61
-                    },
-                    "3": {
-                      "title": "val1 < val2",
-                      "id": 62
-                    },
-                    "4": {
-                      "title": "val1 <= val2",
-                      "id": 63
-                    },
-                    "5": {
-                      "title": "val1 > val2",
-                      "id": 64
-                    },
-                    "6": {
-                      "title": "val1 >= val2",
-                      "id": 65
-                    }
-                  },
-                  "attr": {
-                    "collapsed": true,
-                    "style": {}
-                  }
-                }
-              },
-              "attr": {
-                "collapsed": true,
-                "style": {}
-              }
-            },
-            "7": {
-              "title": "String Comparison",
-              "id": 66,
-              "ideas": {
-                "1": {
-                  "title": "Fatal assertion",
-                  "id": 67,
-                  "ideas": {
-                    "1": {
-                      "title": "ASSERT_STREQ(expected_str, actual_str);",
-                      "id": 69
-                    },
-                    "2": {
-                      "title": "ASSERT_STRNE(str1, str2);",
-                      "id": 70
-                    },
-                    "3": {
-                      "title": "ASSERT_STRCASEEQ(expected_str, actual_str);",
-                      "id": 71
-                    },
-                    "4": {
-                      "title": "ASSERT_STRCASENE(str1, str2);",
-                      "id": 72
+                      "title": "possibly skipping clean-up code, it may cause a space leak.",
+                      "id": 87
                     }
                   },
                   "attr": {
@@ -359,25 +172,242 @@
                     "collapsed": true
                   }
                 },
-                "2": {
-                  "title": "Nonfatal assertion",
-                  "id": 68,
+                "4": {
+                  "title": "EXPECT_*",
+                  "id": 30,
                   "ideas": {
                     "1": {
-                      "title": "EXPECT_STREQ(expected_str, actual_str);",
-                      "id": 73
+                      "title": "nonfatal failures",
+                      "id": 31
                     },
                     "2": {
-                      "title": "EXPECT_STRNE(str1, str2);",
-                      "id": 74
+                      "title": "preferred",
+                      "id": 32
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Basic Assertions",
+                  "id": 33,
+                  "ideas": {
+                    "1": {
+                      "title": "Fatal assertion",
+                      "id": 34,
+                      "ideas": {
+                        "1": {
+                          "title": "ASSERT_TRUE(condition);",
+                          "id": 35
+                        },
+                        "2": {
+                          "title": "ASSERT_FALSE(condition);",
+                          "id": 36
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Nonfatal assertion",
+                      "id": 37,
+                      "ideas": {
+                        "1": {
+                          "title": "EXPECT_TRUE(condition);",
+                          "id": 38
+                        },
+                        "2": {
+                          "title": "EXPECT_FALSE(condition);",
+                          "id": 39
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Binary Comparison",
+                  "id": 44,
+                  "ideas": {
+                    "1": {
+                      "title": "Fatal assertion",
+                      "id": 45,
+                      "ideas": {
+                        "1": {
+                          "title": "ASSERT_EQ(expected, actual);",
+                          "id": 48
+                        },
+                        "2": {
+                          "title": "ASSERT_NE(val1, val2);",
+                          "id": 49
+                        },
+                        "3": {
+                          "title": "ASSERT_LT(val1, val2);",
+                          "id": 50
+                        },
+                        "4": {
+                          "title": "ASSERT_LE(val1, val2);",
+                          "id": 51
+                        },
+                        "5": {
+                          "title": "ASSERT_GT(val1, val2);",
+                          "id": 52
+                        },
+                        "6": {
+                          "title": "ASSERT_GE(val1, val2);",
+                          "id": 53
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Nonfatal assertion",
+                      "id": 46,
+                      "ideas": {
+                        "1": {
+                          "title": "EXPECT_EQ(expected, actual);",
+                          "id": 54
+                        },
+                        "2": {
+                          "title": "EXPECT_NE(val1, val2);",
+                          "id": 55
+                        },
+                        "3": {
+                          "title": "EXPECT_LT(val1, val2);",
+                          "id": 56
+                        },
+                        "4": {
+                          "title": "EXPECT_LE(val1, val2);",
+                          "id": 57
+                        },
+                        "5": {
+                          "title": "EXPECT_GT(val1, val2);",
+                          "id": 58
+                        },
+                        "6": {
+                          "title": "EXPECT_GE(val1, val2);",
+                          "id": 59
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
                     },
                     "3": {
-                      "title": "EXPECT_STRCASEEQ(expected_str, actual_str);",
-                      "id": 75
+                      "title": "You should put the expression you want to test int the position of actual, and put its expected value in expected",
+                      "id": 91,
+                      "ideas": {
+                        "1": {
+                          "title": "as Google Test's failure messages are optimized for this convention",
+                          "id": 92
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
                     },
                     "4": {
-                      "title": "EXPECT_STRCASENE(str1, str2);",
-                      "id": 76
+                      "title": "compare c++ sting object",
+                      "id": 93
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "String Comparison",
+                  "id": 66,
+                  "ideas": {
+                    "1": {
+                      "title": "Fatal assertion",
+                      "id": 67,
+                      "ideas": {
+                        "1": {
+                          "title": "ASSERT_STREQ(expected_str, actual_str);",
+                          "id": 69
+                        },
+                        "2": {
+                          "title": "ASSERT_STRNE(str1, str2);",
+                          "id": 70
+                        },
+                        "3": {
+                          "title": "ASSERT_STRCASEEQ(expected_str, actual_str);",
+                          "id": 71
+                        },
+                        "4": {
+                          "title": "ASSERT_STRCASENE(str1, str2);",
+                          "id": 72
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Nonfatal assertion",
+                      "id": 68,
+                      "ideas": {
+                        "1": {
+                          "title": "EXPECT_STREQ(expected_str, actual_str);",
+                          "id": 73
+                        },
+                        "2": {
+                          "title": "EXPECT_STRNE(str1, str2);",
+                          "id": 74
+                        },
+                        "3": {
+                          "title": "EXPECT_STRCASEEQ(expected_str, actual_str);",
+                          "id": 75
+                        },
+                        "4": {
+                          "title": "EXPECT_STRCASENE(str1, str2);",
+                          "id": 76
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "compare c string",
+                      "id": 94
+                    },
+                    "4": {
+                      "title": "compare wide C strings(wchar_t *)",
+                      "id": 95
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4.5": {
+                  "title": "custom failure message",
+                  "id": 89,
+                  "ideas": {
+                    "1": {
+                      "title": "simply stream it into the macro using the << operator, or a sequence of such operators.",
+                      "id": 90,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "```<div><div>ASSERT_EQ(x.size(), y.size()) &lt;&lt; \"Vectors x and y are of unequal length\";</div><div><br></div><div>for (int i = 0; i &lt; x.size(); ++i) {</div><div>&nbsp; EXPECT_EQ(x[i], y[i]) &lt;&lt; \"Vectors x and y differ at index \" &lt;&lt; i;</div><div>}</div><div><br></div><div>```</div></div>"
+                        },
+                        "style": {}
+                      }
                     }
                   },
                   "attr": {
@@ -385,6 +415,10 @@
                     "style": {}
                   }
                 }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
               }
             }
           },
@@ -395,8 +429,468 @@
         },
         "5": {
           "title": "Simple Tests",
-          "id": 79
+          "id": 79,
+          "ideas": {
+            "1": {
+              "title": "TEST(test_case_name, test_name) macro",
+              "id": 96,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>```</div><div>TEST(test_case_name, test_name) {</div><div>&nbsp; // test body</div><div>}</div><div>```</div>"
+                },
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "These are ordinary C++ functions that don't return a value.",
+                  "id": 97
+                },
+                "2": {
+                  "title": "Both test_case_name and test_name should not contain underscore(_)",
+                  "id": 102
+                },
+                "3": {
+                  "title": "A test's full name consists of its containing test case and its individual name.",
+                  "id": 103
+                },
+                "4": {
+                  "title": "Tests from different test cases can have the same individual name.",
+                  "id": 104
+                }
+              }
+            },
+            "2": {
+              "title": "In this function",
+              "id": 98,
+              "ideas": {
+                "1": {
+                  "title": "any valid C++ statements",
+                  "id": 99
+                },
+                "2": {
+                  "title": "gtest assertions to check values",
+                  "id": 100
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "The test's result is determined by the assertions.",
+              "id": 101,
+              "attr": {
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "example",
+              "id": 105,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "```<div><div>int Factorial(int n); // Returns the factorial of n</div><div><br></div><div>// Tests factorial of 0.</div><div>TEST(FactorialTest, HandlesZeroInput) {</div><div>&nbsp; EXPECT_EQ(1, Factorial(0));</div><div>}</div><div><br></div><div>// Tests factorial of positive numbers.</div><div>TEST(FactorialTest, HandlesPositiveInput) {</div><div>&nbsp; EXPECT_EQ(1, Factorial(1));</div><div>&nbsp; EXPECT_EQ(2, Factorial(2));</div><div>&nbsp; EXPECT_EQ(6, Factorial(3));</div><div>}</div><div><br></div><div>```</div></div>"
+                },
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "gtest groups the test results by test cases, so logically-related tests should be in the same test case.",
+                  "id": 106,
+                  "ideas": {
+                    "1": {
+                      "title": "In other words, the first argument to their TEST() should be the same.",
+                      "id": 107
+                    }
+                  }
+                },
+                "2": {
+                  "title": "in the example, two tests, HandlesZeroInput and HandlesPositiveInput",
+                  "id": 108,
+                  "ideas": {
+                    "1": {
+                      "title": "belong to the same test case FactorialTest",
+                      "id": 109
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "Test Fixtures: Using the Same Data Configuration for Multiple Tests",
+          "id": 110,
+          "ideas": {
+            "1": {
+              "title": "two or more tests that operate on similar data, you can use a test fixture.",
+              "id": 111,
+              "ideas": {
+                "1": {
+                  "title": "reuse the same configuration of objects for several different tests.",
+                  "id": 113
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Create a fixture",
+              "id": 114,
+              "ideas": {
+                "1": {
+                  "title": "Derive a class from ::testing::Test",
+                  "id": 115
+                },
+                "2": {
+                  "title": "Inside the class, declare any objects you plan to use.",
+                  "id": 116
+                },
+                "3": {
+                  "title": "Write a default constructor or SetUp() function to prepare the objects for each test.",
+                  "id": 117
+                },
+                "4": {
+                  "title": "Write a destructor or TearDown() function",
+                  "id": 118
+                },
+                "5": {
+                  "title": "define subroutines for your tests to share.",
+                  "id": 119
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "TEST_F(test_case_name, test_name)",
+              "id": 120,
+              "ideas": {
+                "1": {
+                  "title": "allows you to access objects and subroutines in the test fixture",
+                  "id": 121,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "test_case_name must be the name of the test fixture class",
+                  "id": 122,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "you must first define a test fixture class before using it in a TEST_F()",
+                      "id": 123
+                    }
+                  }
+                },
+                "3": {
+                  "title": "example",
+                  "id": 124,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "```<div><div>template &lt;typename E&gt; // E is the element type.</div><div>class Queue {</div><div>&nbsp;public:</div><div>&nbsp; Queue();</div><div>&nbsp; void Enqueue(const E&amp; element);</div><div>&nbsp; E* Dequeue(); // Returns NULL if the queue is empty.</div><div>&nbsp; size_t size() const;</div><div>&nbsp; // ...</div><div>};</div><div><br></div><div>class QueueTest : public ::testing::Test {</div><div>&nbsp;protected:</div><div>&nbsp; virtual void SetUp() {</div><div>&nbsp; &nbsp; q1_.Enqueue(1);</div><div>&nbsp; &nbsp; q2_.Enqueue(2);</div><div>&nbsp; &nbsp; q2_.Enqueue(3);</div><div>&nbsp; }</div><div><br></div><div>&nbsp; // virtual void TearDown() {}</div><div><br></div><div>&nbsp; Queue&lt;int&gt; q0_;</div><div>&nbsp; Queue&lt;int&gt; q1_;</div><div>&nbsp; Queue&lt;int&gt; q2_;</div><div>};</div><div><br></div><div>TEST_F(QueueTest, IsEmptyInitially) {</div><div>&nbsp; EXPECT_EQ(0, q0_.size());</div><div>}</div><div><br></div><div>TEST_F(QueueTest, DequeueWorks) {</div><div>&nbsp; int* n = q0_.Dequeue();</div><div>&nbsp; EXPECT_EQ(NULL, n);</div><div><br></div><div>&nbsp; n = q1_.Dequeue();</div><div>&nbsp; ASSERT_TRUE(n != NULL);</div><div>&nbsp; EXPECT_EQ(1, *n);</div><div>&nbsp; EXPECT_EQ(0, q1_.size());</div><div>&nbsp; delete n;</div><div><br></div><div>&nbsp; n = q2_.Dequeue();</div><div>&nbsp; ASSERT_TRUE(n != NULL);</div><div>&nbsp; EXPECT_EQ(2, *n);</div><div>&nbsp; EXPECT_EQ(1, q2_.size());</div><div>&nbsp; delete n;</div><div>}</div><div><br></div><div>```</div></div>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "7": {
+          "title": "Writing the main() Function",
+          "id": 126,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "```<div><div>#include \"this/package/foo.h\"</div><div>#include \"gtest/gtest.h\"</div><div><br></div><div>namespace {</div><div><br></div><div>// The fixture for testing class Foo.</div><div>class FooTest : public ::testing::Test {</div><div>&nbsp;protected:</div><div>&nbsp; // You can remove any or all of the following functions if its body</div><div>&nbsp; // is empty.</div><div><br></div><div>&nbsp; FooTest() {</div><div>&nbsp; &nbsp; // You can do set-up work for each test here.</div><div>&nbsp; }</div><div><br></div><div>&nbsp; virtual ~FooTest() {</div><div>&nbsp; &nbsp; // You can do clean-up work that doesn't throw exceptions here.</div><div>&nbsp; }</div><div><br></div><div>&nbsp; // If the constructor and destructor are not enough for setting up</div><div>&nbsp; // and cleaning up each test, you can define the following methods:</div><div><br></div><div>&nbsp; virtual void SetUp() {</div><div>&nbsp; &nbsp; // Code here will be called immediately after the constructor (right</div><div>&nbsp; &nbsp; // before each test).</div><div>&nbsp; }</div><div><br></div><div>&nbsp; virtual void TearDown() {</div><div>&nbsp; &nbsp; // Code here will be called immediately after each test (right</div><div>&nbsp; &nbsp; // before the destructor).</div><div>&nbsp; }</div><div><br></div><div>&nbsp; // Objects declared here can be used by all tests in the test case for Foo.</div><div>};</div><div><br></div><div>// Tests that the Foo::Bar() method does Abc.</div><div>TEST_F(FooTest, MethodBarDoesAbc) {</div><div>&nbsp; const string input_filepath = \"this/package/testdata/myinputfile.dat\";</div><div>&nbsp; const string output_filepath = \"this/package/testdata/myoutputfile.dat\";</div><div>&nbsp; Foo f;</div><div>&nbsp; EXPECT_EQ(0, f.Bar(input_filepath, output_filepath));</div><div>}</div><div><br></div><div>// Tests that Foo does Xyz.</div><div>TEST_F(FooTest, DoesXyz) {</div><div>&nbsp; // Exercises the Xyz feature of Foo.</div><div>}</div><div><br></div><div>} &nbsp;// namespace</div><div><br></div><div>int main(int argc, char **argv) {</div><div>&nbsp; ::testing::InitGoogleTest(&amp;argc, argv);</div><div>&nbsp; return RUN_ALL_TESTS();</div><div>}</div><div>```</div></div>"
+            },
+            "style": {},
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "::testing::InitGoogleTest(&argc, argv);",
+              "id": 127,
+              "ideas": {
+                "1": {
+                  "title": "parses the command line for Google Test flags, and removes all recognized flags.",
+                  "id": 128
+                },
+                "2": {
+                  "title": "this function must be called before calling RUN_ALL_TESTS(), or the flags won't be properly initialized.",
+                  "id": 129
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          }
+        },
+        "5.5": {
+          "title": "important",
+          "id": 125,
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<span style=\"color: rgb(0, 0, 0); font-family: arial, sans-serif; font-size: 13.1199998855591px; line-height: 16.3999996185303px;\">You must not ignore the return value of&nbsp;</span><tt style=\"font-family: Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', monospace; font-size: 12.2016000747681px; max-width: 66em; color: rgb(0, 0, 0); line-height: 16.3999996185303px;\">RUN_ALL_TESTS()</tt><span style=\"color: rgb(0, 0, 0); font-family: arial, sans-serif; font-size: 13.1199998855591px; line-height: 16.3999996185303px;\">, or&nbsp;</span><tt style=\"font-family: Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', monospace; font-size: 12.2016000747681px; max-width: 66em; color: rgb(0, 0, 0); line-height: 16.3999996185303px;\">gcc</tt><span style=\"color: rgb(0, 0, 0); font-family: arial, sans-serif; font-size: 13.1199998855591px; line-height: 16.3999996185303px;\">&nbsp;will give you a compiler error. The rationale for this design is that the automated testing service determines whether a test has passed based on its exit code, not on its stdout/stderr output; thus your&nbsp;</span><tt style=\"font-family: Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', monospace; font-size: 12.2016000747681px; max-width: 66em; color: rgb(0, 0, 0); line-height: 16.3999996185303px;\">main()</tt><span style=\"color: rgb(0, 0, 0); font-family: arial, sans-serif; font-size: 13.1199998855591px; line-height: 16.3999996185303px;\">function must return the value of&nbsp;</span><tt style=\"font-family: Monaco, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Lucida Console', monospace; font-size: 12.2016000747681px; max-width: 66em; color: rgb(0, 0, 0); line-height: 16.3999996185303px;\">RUN_ALL_TESTS()</tt><span style=\"color: rgb(0, 0, 0); font-family: arial, sans-serif; font-size: 13.1199998855591px; line-height: 16.3999996185303px;\">.</span>"
+            },
+            "style": {}
+          }
         }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "6": {
+      "title": "AdvancedGuide ",
+      "id": 153,
+      "attr": {
+        "style": {},
+        "collapsed": true
+      },
+      "ideas": {
+        "1": {
+          "title": "More Assertions",
+          "id": 154
+        },
+        "2": {
+          "title": "Teaching Google Test How to Print Your Values",
+          "id": 155
+        },
+        "3": {
+          "title": "Death Tests",
+          "id": 156
+        },
+        "4": {
+          "title": "Using Assertions in Sub-routines",
+          "id": 157
+        },
+        "5": {
+          "title": "Logging Additional Information",
+          "id": 158
+        },
+        "6": {
+          "title": "Sharing Resources Between Tests in the Same Test Case",
+          "id": 159
+        },
+        "7": {
+          "title": "Global Set-Up and Tear-Down",
+          "id": 160
+        },
+        "8": {
+          "title": "Value Parameterized Tests",
+          "id": 161
+        },
+        "9": {
+          "title": "Typed Tests",
+          "id": 162
+        },
+        "10": {
+          "title": "Type-Parameterized Tests",
+          "id": 163
+        },
+        "11": {
+          "title": "Testing Private Code",
+          "id": 164
+        },
+        "12": {
+          "title": "Catching Failures",
+          "id": 165
+        },
+        "13": {
+          "title": "Getting the Current Test's Name",
+          "id": 166
+        },
+        "14": {
+          "title": "Extending Google Test by Handling Test Events",
+          "id": 167
+        },
+        "15": {
+          "title": "Running Test Programs: Advanced Options",
+          "id": 168
+        },
+        "16": {
+          "title": "Fusing Google Test Source Files",
+          "id": 169
+        },
+        "17": {
+          "title": "Where to Go from Here",
+          "id": 170
+        }
+      }
+    },
+    "11": {
+      "title": "Samples",
+      "id": 130,
+      "ideas": {
+        "2": {
+          "title": "well-commented",
+          "id": 152
+        },
+        "12": {
+          "title": "gtest/samples",
+          "id": 131,
+          "ideas": {
+            "1": {
+              "title": "Sample1",
+              "id": 132,
+              "ideas": {
+                "1": {
+                  "title": "shows the basic steps of using Google Test to test C++ functions",
+                  "id": 133
+                }
+              },
+              "attr": {
+                "position": [
+                  113.5,
+                  -98,
+                  1
+                ],
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Sample2",
+              "id": 134,
+              "ideas": {
+                "1": {
+                  "title": "shows a more complex unit test for a class with multiple member functions.",
+                  "id": 135
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Sample3",
+              "id": 136,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "uses a test fixture.",
+                  "id": 137
+                }
+              }
+            },
+            "4": {
+              "title": "Sample4",
+              "id": 138,
+              "ideas": {
+                "1": {
+                  "title": "is another basic example of using Google Test.",
+                  "id": 139
+                }
+              }
+            },
+            "5": {
+              "title": "Sample5",
+              "id": 140,
+              "ideas": {
+                "1": {
+                  "title": "teaches how to reuse a test fixture in multiple test cases by deriving sub-fixtures from it.",
+                  "id": 141
+                }
+              }
+            },
+            "6": {
+              "title": "Sample6",
+              "id": 142,
+              "ideas": {
+                "1": {
+                  "title": "demonstrates type-parameterized tests.",
+                  "id": 143
+                }
+              }
+            },
+            "7": {
+              "title": "Sample7",
+              "id": 144,
+              "ideas": {
+                "1": {
+                  "title": "teaches the basics of value-parameterized tests.",
+                  "id": 145
+                }
+              }
+            },
+            "8": {
+              "title": "Sample8",
+              "id": 146,
+              "ideas": {
+                "1": {
+                  "title": "shows using Combine() in value-parameterized tests.",
+                  "id": 147
+                }
+              }
+            },
+            "9": {
+              "title": "Sample9",
+              "id": 148,
+              "attr": {
+                "position": [
+                  114.5,
+                  583,
+                  2
+                ],
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "shows use of the listener API to modify Google Test's console output and the use of its reflection API to inspect test results.",
+                  "id": 149
+                }
+              }
+            },
+            "10": {
+              "title": "Sample10",
+              "id": 150,
+              "ideas": {
+                "1": {
+                  "title": "shows use of the listener API to implement a primitive memory leak checker.",
+                  "id": 151
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
       }
     }
   },
