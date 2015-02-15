@@ -1,0 +1,151 @@
+{
+  "title": "learning-flv",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "doc",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "video_file_format_spec_v10_1.pdf",
+          "id": 3
+        },
+        "2": {
+          "title": "该文档的Annex E列出了FLV的详细封装格式",
+          "id": 4
+        }
+      }
+    },
+    "11": {
+      "title": "Annex E. The FLV File Format",
+      "id": 5,
+      "ideas": {
+        "1": {
+          "title": "E.1 Overview",
+          "id": 6
+        },
+        "2": {
+          "title": "E.2 The FLV header",
+          "id": 7
+        },
+        "3": {
+          "title": "E.3 The FLV File Body",
+          "id": 8
+        },
+        "4": {
+          "title": "E.4 FLV Tag Definition",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "E.4.1 FLV Tag",
+              "id": 10,
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "E.4.2 Audio Tags",
+              "id": 11,
+              "ideas": {
+                "1": {
+                  "title": "E.4.2.1 AUDIODATA",
+                  "id": 12,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "E.4.2.2 AACAUDIODATA",
+                  "id": 14
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "E.4.3 Video Tags",
+              "id": 15,
+              "ideas": {
+                "1": {
+                  "title": "E.4.3.1 VIDEODATA",
+                  "id": 16
+                },
+                "2": {
+                  "title": "E.4.3.2 AVCVIDEOPACKET",
+                  "id": 17
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "E.4.4 Data Tags",
+              "id": 18,
+              "ideas": {
+                "1": {
+                  "title": "E.4.4.1 SCRIPTDATA",
+                  "id": 19
+                },
+                "2": {
+                  "title": "E.4.4.2 SCRIPTDATAVALUE",
+                  "id": 20
+                },
+                "3": {
+                  "title": "E.4.4.3 SCRIPTDATADATE",
+                  "id": 21
+                },
+                "4": {
+                  "title": "E.4.4.4 SCRIPTDATAECMAARRAY",
+                  "id": 22
+                },
+                "5": {
+                  "title": "E.4.4.5 SCRIPTDATALONGSTRING",
+                  "id": 23
+                },
+                "6": {
+                  "title": "E.4.4.6 SCRIPTDATAOBJECT",
+                  "id": 24
+                },
+                "7": {
+                  "title": "E.4.4.7 SCRIPTDATAOBJECTEND",
+                  "id": 25
+                },
+                "8": {
+                  "title": "E.4.4.8 SCRIPTDATAOBJECTPROPERTY",
+                  "id": 26
+                },
+                "9": {
+                  "title": "E.4.4.9 SCRIPTDATASTRICTARRAY",
+                  "id": 27
+                },
+                "10": {
+                  "title": "E.4.4.10 SCRIPTDATASTRING",
+                  "id": 28
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "E.5 onMetaData",
+              "id": 30
+            },
+            "6": {
+              "title": "E.6 XMP Metadata in FLV",
+              "id": 31
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      }
+    }
+  }
+}
