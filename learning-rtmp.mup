@@ -1,0 +1,759 @@
+{
+  "title": "learning-rtmp",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "RFC",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "English",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "rtmp_specification_1.0.pdf",
+              "id": 5
+            }
+          }
+        },
+        "2": {
+          "title": "Chinese",
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "rtmp规范翻译1.0.docx",
+              "id": 6
+            }
+          }
+        }
+      },
+      "attr": {
+        "position": [
+          115.5,
+          -86.5,
+          1
+        ],
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "101": {
+      "title": "Real Time Messaging Chunk Stream Protocol",
+      "id": 82,
+      "ideas": {
+        "1": {
+          "title": "1. Introduction",
+          "id": 7,
+          "ideas": {
+            "1": {
+              "title": "1.1 Terminology",
+              "id": 9
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "2. Definitions",
+          "id": 10,
+          "attr": {
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "3. Byte Order, Alignment, and Time Format",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "big-endian",
+              "id": 38
+            },
+            "2": {
+              "title": "在无特别说明的情况下, RTMP块流中的所有数据都是按字节对齐的.",
+              "id": 39
+            },
+            "3": {
+              "title": "时间戳",
+              "id": 40,
+              "ideas": {
+                "1": {
+                  "title": "整数表示",
+                  "id": 41
+                },
+                "2": {
+                  "title": "毫秒为单位的相对时间",
+                  "id": 42,
+                  "ideas": {
+                    "1": {
+                      "title": "相对于一个未规定的起始时间",
+                      "id": 43
+                    },
+                    "2": {
+                      "title": "一般, 每个块流的时间戳都是从0开始",
+                      "id": 44
+                    }
+                  }
+                },
+                "3": {
+                  "title": "时间戳必须是单调递增的, 且线性增长",
+                  "id": 45
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "4. Message Format",
+          "id": 12,
+          "ideas": {
+            "1": {
+              "title": "时间戳",
+              "id": 46,
+              "ideas": {
+                "1": {
+                  "title": "4 byte",
+                  "id": 47
+                }
+              }
+            },
+            "2": {
+              "title": "长度",
+              "id": 48,
+              "ideas": {
+                "1": {
+                  "title": "消息负载的长度",
+                  "id": 49
+                },
+                "2": {
+                  "title": "3 byte",
+                  "id": 50
+                }
+              }
+            },
+            "3": {
+              "title": "类型ID",
+              "id": 51,
+              "ideas": {
+                "1": {
+                  "title": "事实上, RTMP块流协议不需要用本字段的值来区分类型",
+                  "id": 52
+                }
+              }
+            },
+            "4": {
+              "title": "消息流ID",
+              "id": 53,
+              "ideas": {
+                "1": {
+                  "title": "这个值在块头中占4个直接, 并且使用小字节序",
+                  "id": 54
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "5. Handshake",
+          "id": 13,
+          "ideas": {
+            "1": {
+              "title": "5.1 Handshake sequence",
+              "id": 19
+            },
+            "2": {
+              "title": "5.2 C0 and S0 Format",
+              "id": 20,
+              "ideas": {
+                "1": {
+                  "title": "1 byte",
+                  "id": 55
+                },
+                "2": {
+                  "title": "version",
+                  "id": 56,
+                  "ideas": {
+                    "1": {
+                      "title": "3",
+                      "id": 57
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "5.3 C1 and S1 Format",
+              "id": 21,
+              "ideas": {
+                "1": {
+                  "title": "1536 byte",
+                  "id": 58
+                },
+                "2": {
+                  "title": "time",
+                  "id": 59,
+                  "ideas": {
+                    "1": {
+                      "title": "4 byte",
+                      "id": 60
+                    },
+                    "2": {
+                      "title": "该时间戳应该是发送这个数据块的断点的后续块的时间起始点, 可以是0或其他的任何值",
+                      "id": 61
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "zero",
+                  "id": 62,
+                  "ideas": {
+                    "1": {
+                      "title": "4 byte",
+                      "id": 63
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "随机数据",
+                  "id": 64,
+                  "ideas": {
+                    "1": {
+                      "title": "1528 byte",
+                      "id": 65
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "5.4 C2 and S2 Format",
+              "id": 22,
+              "ideas": {
+                "1": {
+                  "title": "1536 byte",
+                  "id": 66
+                },
+                "2": {
+                  "title": "时间",
+                  "id": 67,
+                  "ideas": {
+                    "1": {
+                      "title": "4 byte",
+                      "id": 69
+                    },
+                    "2": {
+                      "title": "包含对等端发送的时间",
+                      "id": 71
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "时间2",
+                  "id": 68,
+                  "ideas": {
+                    "1": {
+                      "title": "4 byte",
+                      "id": 70
+                    },
+                    "2": {
+                      "title": "包含先前发送的并被对端读取的包的时间戳",
+                      "id": 72
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "随机回复",
+                  "id": 73,
+                  "ideas": {
+                    "1": {
+                      "title": "1528 bytes",
+                      "id": 74
+                    },
+                    "2": {
+                      "title": "包含对端发送的随机数据字段",
+                      "id": 75
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "5.5 Handshake Diagram",
+              "id": 23
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "6": {
+          "title": "6. Chunking",
+          "id": 14,
+          "ideas": {
+            "1": {
+              "title": "6.1 Chunk Format",
+              "id": 24,
+              "ideas": {
+                "1": {
+                  "title": "6.1.1 Chunk Basic Header",
+                  "id": 26,
+                  "ideas": {
+                    "1": {
+                      "title": "编码块流ID",
+                      "id": 80
+                    },
+                    "2": {
+                      "title": "块类型",
+                      "id": 81
+                    }
+                  }
+                },
+                "2": {
+                  "title": "6.1.2 Chunk Message Header",
+                  "id": 27,
+                  "ideas": {
+                    "1": {
+                      "title": "6.1.2.1 Type 0",
+                      "id": 28
+                    },
+                    "2": {
+                      "title": "6.1.2.2 Type 1",
+                      "id": 29
+                    },
+                    "3": {
+                      "title": "6.1.2.3 Type 2",
+                      "id": 30
+                    },
+                    "4": {
+                      "title": "6.1.2.4 Type 3",
+                      "id": 31
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "6.2 Examples",
+              "id": 25,
+              "ideas": {
+                "1": {
+                  "title": "6.2.1 Example 1",
+                  "id": 32
+                },
+                "2": {
+                  "title": "6.2.2 Example 2",
+                  "id": 33
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "0.5": {
+              "title": "每个块流承载来自一个消息流的一类消息",
+              "id": 76,
+              "attr": {
+                "style": {}
+              }
+            },
+            "0.75": {
+              "title": "块的大小是可配置的",
+              "id": 77,
+              "ideas": {
+                "1": {
+                  "title": "最大块是65525 bytes",
+                  "id": 78
+                },
+                "2": {
+                  "title": "最小块是128 bytes",
+                  "id": 79
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "7": {
+          "title": "7. Protocol Control Messages",
+          "id": 15,
+          "ideas": {
+            "1": {
+              "title": "7.1 Set Chunk Size",
+              "id": 34
+            },
+            "2": {
+              "title": "7.2 Abort Message",
+              "id": 35
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "8": {
+          "title": "8. References",
+          "id": 17,
+          "ideas": {
+            "1": {
+              "title": "8.1 Normative References",
+              "id": 36
+            },
+            "2": {
+              "title": "8.2 Informative References",
+              "id": 37
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "9": {
+          "title": "9. Acknowledgments",
+          "id": 18,
+          "attr": {
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "111": {
+      "title": "RTMP Message Formats",
+      "id": 83,
+      "ideas": {
+        "1": {
+          "title": "1.  Introduction",
+          "id": 84,
+          "ideas": {
+            "1": {
+              "title": "1.1 Terminology",
+              "id": 85
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "2. Definitions",
+          "id": 86
+        },
+        "3": {
+          "title": "3. Byte Order,  Alignment, and Time Format",
+          "id": 87
+        },
+        "4": {
+          "title": "4. RTMP Message Format",
+          "id": 88,
+          "ideas": {
+            "1": {
+              "title": "4.1 Message Header",
+              "id": 90
+            },
+            "2": {
+              "title": "4.2 Message Payload",
+              "id": 92
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "5. Protocol Control Messages",
+          "id": 93,
+          "ideas": {
+            "1": {
+              "title": "5.1 Set Chunk Size",
+              "id": 94
+            },
+            "2": {
+              "title": "5.2 Abort Message",
+              "id": 95
+            },
+            "3": {
+              "title": "5.3 Acknowledgement",
+              "id": 96
+            },
+            "4": {
+              "title": "5.4 User Control Message",
+              "id": 97
+            },
+            "5": {
+              "title": "5.5 Window Acknowledgement Size",
+              "id": 98
+            },
+            "6": {
+              "title": "5.6 Set Peer Bandwidth",
+              "id": 99
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "6": {
+          "title": "6. References",
+          "id": 100,
+          "ideas": {
+            "1": {
+              "title": "6.1 Normative References",
+              "id": 101
+            },
+            "2": {
+              "title": "6.2 Informative References",
+              "id": 102
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "121": {
+      "title": "RTMP Commands Messages",
+      "id": 103,
+      "ideas": {
+        "1": {
+          "title": "1. Introduction",
+          "id": 104
+        },
+        "2": {
+          "title": "2. Definitions",
+          "id": 105
+        },
+        "3": {
+          "title": "3. Types of Messages",
+          "id": 106,
+          "ideas": {
+            "1": {
+              "title": "3.1 Command message",
+              "id": 108
+            },
+            "2": {
+              "title": "3.2 Data message",
+              "id": 109
+            },
+            "3": {
+              "title": "3.3 Shared object message",
+              "id": 110
+            },
+            "4": {
+              "title": "3.4 Audio message",
+              "id": 111
+            },
+            "5": {
+              "title": "3.5 Video message",
+              "id": 112
+            },
+            "6": {
+              "title": "3.6 Aggregate message",
+              "id": 113
+            },
+            "7": {
+              "title": "3.7 User Control message",
+              "id": 114
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "4. Types of commands",
+          "id": 107,
+          "ideas": {
+            "1": {
+              "title": "4.1 NetConnection commands",
+              "id": 115,
+              "ideas": {
+                "1": {
+                  "title": "4.1.1 connect",
+                  "id": 116
+                },
+                "2": {
+                  "title": "4.1.2 Call",
+                  "id": 119
+                },
+                "3": {
+                  "title": "4.1.3 createStream",
+                  "id": 120
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "4.2 NetStream comands",
+              "id": 121,
+              "ideas": {
+                "1": {
+                  "title": "4.2.1 play",
+                  "id": 122
+                },
+                "2": {
+                  "title": "4.2.2 play2",
+                  "id": 123
+                },
+                "3": {
+                  "title": "4.2.3 deleteStream",
+                  "id": 124
+                },
+                "4": {
+                  "title": "4.2.4 receiveAudio",
+                  "id": 125
+                },
+                "5": {
+                  "title": "4.2.5 receiveVideo",
+                  "id": 126
+                },
+                "6": {
+                  "title": "4.2.6 Publish",
+                  "id": 127
+                },
+                "7": {
+                  "title": "4.2.7 seek",
+                  "id": 128
+                },
+                "8": {
+                  "title": "4.2.8 pause",
+                  "id": 129
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "5": {
+          "title": "5. Message exchange example",
+          "id": 130,
+          "ideas": {
+            "1": {
+              "title": "5.1 Publish recorded video",
+              "id": 131
+            },
+            "2": {
+              "title": "5.2 Broadcasting a shared object message",
+              "id": 132
+            },
+            "3": {
+              "title": "5.3 Publish MetaData from recorded stream",
+              "id": 133
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "6": {
+          "title": "6. References",
+          "id": 134,
+          "ideas": {
+            "1": {
+              "title": "Normative References",
+              "id": 135
+            },
+            "2": {
+              "title": "Informative References",
+              "id": 136
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "7": {
+          "title": "7. Acknowledgements",
+          "id": 137
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    }
+  }
+}
