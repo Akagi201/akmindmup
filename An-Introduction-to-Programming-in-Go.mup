@@ -1,0 +1,322 @@
+{
+  "title": "An Introduction to Programming in Go",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "1. Getting Started",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Files and Folders",
+          "id": 17
+        },
+        "2": {
+          "title": "The Terminal",
+          "id": 18
+        },
+        "3": {
+          "title": "Text Editors",
+          "id": 19
+        },
+        "4": {
+          "title": "Go Tools",
+          "id": 20
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "2. Your First Program",
+      "id": 3,
+      "ideas": {
+        "1": {
+          "title": "How to Read a Go Program",
+          "id": 22
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "21": {
+      "title": "3. Types",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "Numbers",
+          "id": 23
+        },
+        "2": {
+          "title": "Strings",
+          "id": 24
+        },
+        "3": {
+          "title": "Booleans",
+          "id": 25
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "4. Variables",
+      "id": 5,
+      "ideas": {
+        "1": {
+          "title": "How to Name a Variable",
+          "id": 26
+        },
+        "2": {
+          "title": "Scope",
+          "id": 27
+        },
+        "3": {
+          "title": "Constants",
+          "id": 28
+        },
+        "4": {
+          "title": "Defining Multiple Variables",
+          "id": 29
+        },
+        "5": {
+          "title": "An Example Program",
+          "id": 30
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "41": {
+      "title": "5. Control Structures",
+      "id": 7,
+      "ideas": {
+        "1": {
+          "title": "For",
+          "id": 31
+        },
+        "2": {
+          "title": "If",
+          "id": 32
+        },
+        "3": {
+          "title": "Switch",
+          "id": 33
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "51": {
+      "title": "6. Arrays, Slices and Maps",
+      "id": 8,
+      "ideas": {
+        "1": {
+          "title": "Arrays",
+          "id": 34
+        },
+        "2": {
+          "title": "Slices",
+          "id": 35
+        },
+        "3": {
+          "title": "Maps",
+          "id": 36
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "61": {
+      "title": "7. Functions",
+      "id": 9,
+      "ideas": {
+        "1": {
+          "title": "Your Second Function",
+          "id": 37
+        },
+        "2": {
+          "title": "Returning Multiple Values",
+          "id": 38
+        },
+        "3": {
+          "title": "Variadic Functions",
+          "id": 39
+        },
+        "4": {
+          "title": "Closure",
+          "id": 40
+        },
+        "5": {
+          "title": "Recursion",
+          "id": 41
+        },
+        "6": {
+          "title": "Defer, Panic & Recover",
+          "id": 42
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "71": {
+      "title": "8. Pointers",
+      "id": 10,
+      "ideas": {
+        "1": {
+          "title": "The * and & operators",
+          "id": 43
+        },
+        "2": {
+          "title": "new",
+          "id": 44
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "81": {
+      "title": "9. Structures and Interfaces",
+      "id": 11,
+      "ideas": {
+        "1": {
+          "title": "Structs",
+          "id": 45
+        },
+        "2": {
+          "title": "Methods",
+          "id": 46
+        },
+        "3": {
+          "title": "Interfaces",
+          "id": 47
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "91": {
+      "title": "10. Concurrency",
+      "id": 12,
+      "ideas": {
+        "1": {
+          "title": "Goroutines",
+          "id": 48
+        },
+        "2": {
+          "title": "Channels",
+          "id": 49
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "101": {
+      "title": "11. Packages",
+      "id": 13,
+      "ideas": {
+        "1": {
+          "title": "Creating Packages",
+          "id": 50
+        },
+        "2": {
+          "title": "Documentation",
+          "id": 51
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "111": {
+      "title": "12. Testing",
+      "id": 14
+    },
+    "121": {
+      "title": "13. The Core Packages",
+      "id": 15,
+      "ideas": {
+        "1": {
+          "title": "Strings",
+          "id": 52
+        },
+        "2": {
+          "title": "Input / Output",
+          "id": 53
+        },
+        "3": {
+          "title": "Files & Folders",
+          "id": 54
+        },
+        "4": {
+          "title": "Errors",
+          "id": 55
+        },
+        "5": {
+          "title": "Containers & Sort",
+          "id": 56
+        },
+        "6": {
+          "title": "Hashes & Cryptography",
+          "id": 57
+        },
+        "7": {
+          "title": "Servers",
+          "id": 58
+        },
+        "8": {
+          "title": "Parsing Command Line Arguments",
+          "id": 59
+        },
+        "9": {
+          "title": "Synchronization Primitives",
+          "id": 60
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "131": {
+      "title": "14. Next Steps",
+      "id": 16,
+      "ideas": {
+        "1": {
+          "title": "Study the Masters",
+          "id": 61
+        },
+        "2": {
+          "title": "Make Something",
+          "id": 62
+        },
+        "3": {
+          "title": "Team Up",
+          "id": 63
+        }
+      }
+    }
+  },
+  "links": []
+}
