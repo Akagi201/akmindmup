@@ -25,8 +25,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "11": {
@@ -35,11 +35,106 @@
       "ideas": {
         "1": {
           "title": "How to Read a Go Program",
-          "id": 22
+          "id": 22,
+          "ideas": {
+            "1": {
+              "title": "whitespace",
+              "id": 64,
+              "ideas": {
+                "1": {
+                  "title": "bacause you can't see them",
+                  "id": 65
+                },
+                "2": {
+                  "title": "newlines",
+                  "id": 66
+                },
+                "3": {
+                  "title": "spaces",
+                  "id": 67
+                },
+                "4": {
+                  "title": "tabs",
+                  "id": 68
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "packages",
+              "id": 69,
+              "ideas": {
+                "1": {
+                  "title": "Go's way of organizing and reusing code",
+                  "id": 70
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "two types of Go programs",
+              "id": 71,
+              "ideas": {
+                "1": {
+                  "title": "executables",
+                  "id": 72
+                },
+                "2": {
+                  "title": "libraries",
+                  "id": 73
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "string literal",
+              "id": 74,
+              "ideas": {}
+            },
+            "5": {
+              "title": "comment",
+              "id": 76,
+              "ideas": {
+                "1": {
+                  "title": "// xxxx",
+                  "id": 77
+                },
+                "2": {
+                  "title": "/* xxxxxx */",
+                  "id": 78
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "Println",
+              "id": 79,
+              "ideas": {
+                "1": {
+                  "title": "Print Line",
+                  "id": 80
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
         }
       },
       "attr": {
-        "collapsed": true,
         "style": {}
       }
     },
@@ -315,6 +410,10 @@
           "title": "Team Up",
           "id": 63
         }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
       }
     }
   },
