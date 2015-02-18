@@ -135,7 +135,8 @@
         }
       },
       "attr": {
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "21": {
@@ -144,20 +145,222 @@
       "ideas": {
         "1": {
           "title": "Numbers",
-          "id": 23
+          "id": 23,
+          "ideas": {
+            "1": {
+              "title": "integers",
+              "id": 83,
+              "ideas": {
+                "1": {
+                  "title": "uint8, uint16, uint32, uint64, int8, int16, int32, int64",
+                  "id": 85
+                },
+                "2": {
+                  "title": "byte == uint8",
+                  "id": 86
+                },
+                "3": {
+                  "title": "rune == int32",
+                  "id": 87
+                },
+                "4": {
+                  "title": "machine dependent",
+                  "id": 88,
+                  "ideas": {
+                    "1": {
+                      "title": "uint",
+                      "id": 89
+                    },
+                    "2": {
+                      "title": "int",
+                      "id": 90
+                    },
+                    "3": {
+                      "title": "uintptr",
+                      "id": 91
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "floating-point numbers",
+              "id": 84,
+              "ideas": {
+                "1": {
+                  "title": "not a number",
+                  "id": 92,
+                  "ideas": {
+                    "1": {
+                      "title": "NaN",
+                      "id": 93,
+                      "ideas": {
+                        "1": {
+                          "title": "0/0",
+                          "id": 94
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "positive and negative infinity",
+                  "id": 95,
+                  "ideas": {
+                    "1": {
+                      "title": "+∞",
+                      "id": 97
+                    },
+                    "2": {
+                      "title": "−∞",
+                      "id": 98
+                    }
+                  }
+                },
+                "3": {
+                  "title": "float32",
+                  "id": 99,
+                  "ideas": {
+                    "1": {
+                      "title": "single precision",
+                      "id": 101
+                    }
+                  }
+                },
+                "4": {
+                  "title": "float64",
+                  "id": 100,
+                  "ideas": {
+                    "1": {
+                      "title": "double precision",
+                      "id": 102
+                    }
+                  }
+                },
+                "5": {
+                  "title": "complex number",
+                  "id": 103,
+                  "ideas": {
+                    "1": {
+                      "title": "complex64",
+                      "id": 104
+                    },
+                    "2": {
+                      "title": "complex128",
+                      "id": 105
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "2": {
           "title": "Strings",
-          "id": 24
+          "id": 24,
+          "ideas": {
+            "1": {
+              "title": "String literals can be created using double quotes \"Hello\" or back ticks `Hello World`",
+              "id": 106,
+              "ideas": {
+                "1": {
+                  "title": "double quotes",
+                  "id": 107,
+                  "ideas": {
+                    "1": {
+                      "title": "cannot contain newlines and allow special escape sequences",
+                      "id": 109
+                    }
+                  }
+                },
+                "2": {
+                  "title": "back ticks",
+                  "id": 108
+                }
+              }
+            },
+            "2": {
+              "title": "concatenation",
+              "id": 110,
+              "ideas": {
+                "1": {
+                  "title": "+",
+                  "id": 111
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "3": {
           "title": "Booleans",
-          "id": 25
+          "id": 25,
+          "ideas": {
+            "1": {
+              "title": "named after George Boole",
+              "id": 112
+            },
+            "2": {
+              "title": "a special 1 bit integer type",
+              "id": 113
+            },
+            "3": {
+              "title": "logical operators",
+              "id": 114,
+              "ideas": {
+                "1": {
+                  "title": "&&",
+                  "id": 115
+                },
+                "2": {
+                  "title": "||",
+                  "id": 116
+                },
+                "3": {
+                  "title": "!",
+                  "id": 117
+                }
+              }
+            }
+          }
+        },
+        "0.5": {
+          "title": "type vs token vs set",
+          "id": 81,
+          "attr": {
+            "style": {},
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "set is similar to type",
+              "id": 82
+            }
+          }
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "31": {
