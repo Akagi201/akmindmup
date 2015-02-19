@@ -467,15 +467,86 @@
         },
         "2": {
           "title": "Slices",
-          "id": 35
+          "id": 35,
+          "ideas": {
+            "1": {
+              "title": "Slices are always associated with some array, and although they can never be longer than the array, they can be smaller.",
+              "id": 128
+            },
+            "2": {
+              "title": "Slice Functions",
+              "id": 129,
+              "ideas": {
+                "1": {
+                  "title": "append",
+                  "id": 130
+                },
+                "2": {
+                  "title": "copy",
+                  "id": 131
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "3": {
           "title": "Maps",
-          "id": 36
+          "id": 36,
+          "ideas": {
+            "1": {
+              "title": "an unordered collection of key-value pairs",
+              "id": 132
+            },
+            "2": {
+              "title": "associative  array",
+              "id": 133
+            },
+            "3": {
+              "title": "hash table",
+              "id": 134
+            },
+            "4": {
+              "title": "dictionary",
+              "id": 135
+            },
+            "5": {
+              "title": "maps are used to look up a value by its associated key",
+              "id": 137
+            },
+            "6": {
+              "title": "var x map[string] int",
+              "id": 138,
+              "ideas": {
+                "1": {
+                  "title": "x is a map of strings to ints",
+                  "id": 139
+                }
+              }
+            },
+            "7": {
+              "title": "a map returns the zero value for the value type for an element that doesn't exist",
+              "id": 140
+            },
+            "8": {
+              "title": "map[string]map[string]string",
+              "id": 142,
+              "ideas": {
+                "1": {
+                  "title": "z = f(x, y)",
+                  "id": 143
+                }
+              }
+            }
+          }
         }
       },
       "attr": {
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "61": {
