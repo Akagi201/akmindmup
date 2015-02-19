@@ -369,7 +369,49 @@
       "ideas": {
         "1": {
           "title": "How to Name a Variable",
-          "id": 26
+          "id": 26,
+          "ideas": {
+            "1": {
+              "title": "creating a new variable with a starting value",
+              "id": 118,
+              "ideas": {
+                "1": {
+                  "title": ":=",
+                  "id": 119
+                }
+              }
+            },
+            "2": {
+              "title": "Generally you should use this shorter form whenever possbile",
+              "id": 120
+            },
+            "3": {
+              "title": "lower camel case",
+              "id": 123,
+              "ideas": {
+                "1": {
+                  "title": "mixed case",
+                  "id": 124
+                },
+                "2": {
+                  "title": "bumpy caps",
+                  "id": 125
+                },
+                "3": {
+                  "title": "camel back",
+                  "id": 126
+                },
+                "4": {
+                  "title": "hump back",
+                  "id": 127
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "2": {
           "title": "Scope",
@@ -389,8 +431,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "41": {
@@ -411,8 +453,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "51": {
@@ -433,7 +475,6 @@
         }
       },
       "attr": {
-        "collapsed": true,
         "style": {}
       }
     },
