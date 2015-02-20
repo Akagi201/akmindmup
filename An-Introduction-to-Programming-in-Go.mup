@@ -559,7 +559,27 @@
         },
         "2": {
           "title": "Returning Multiple Values",
-          "id": 38
+          "id": 38,
+          "ideas": {
+            "1": {
+              "title": "Multiple values are often used to reurn an error value along with the result, or a boolean to indicate success",
+              "id": 144,
+              "ideas": {
+                "1": {
+                  "title": "x, err := f()",
+                  "id": 145
+                },
+                "2": {
+                  "title": "x, ok = f()",
+                  "id": 146
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
         },
         "3": {
           "title": "Variadic Functions",
@@ -579,8 +599,8 @@
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "71": {
