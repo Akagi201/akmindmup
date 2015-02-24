@@ -735,7 +735,13 @@
       "ideas": {
         "1": {
           "title": "Study the Masters",
-          "id": 61
+          "id": 61,
+          "ideas": {
+            "1": {
+              "title": "http://golang.org/src/pkg",
+              "id": 147
+            }
+          }
         },
         "2": {
           "title": "Make Something",
@@ -743,12 +749,18 @@
         },
         "3": {
           "title": "Team Up",
-          "id": 63
+          "id": 63,
+          "ideas": {
+            "1": {
+              "title": "golang-nuts",
+              "id": 148
+            }
+          }
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     }
   },
