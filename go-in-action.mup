@@ -1,0 +1,243 @@
+{
+  "title": "go-in-action",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "11": {
+      "title": "welcome",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "MEAP",
+          "id": 2,
+          "ideas": {
+            "1": {
+              "title": "Manning Author Online Forum",
+              "id": 3
+            },
+            "2": {
+              "title": "https://forums.manning.com/forums/go-in-action",
+              "id": 14
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "examples code",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "https://github.com/goinaction/code",
+              "id": 6
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "goal",
+          "id": 7,
+          "ideas": {
+            "1": {
+              "title": "not just to introduce you to the Go language, but to share our experiences using Go in high-volume production environments.",
+              "id": 8
+            }
+          }
+        },
+        "4": {
+          "title": "Most of the chapters will be broken into two parts",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "Part I",
+              "id": 10,
+              "ideas": {
+                "1": {
+                  "title": "the concepts that power the language",
+                  "id": 11
+                }
+              }
+            },
+            "2": {
+              "title": "Part II",
+              "id": 12,
+              "ideas": {
+                "1": {
+                  "title": "how to apply those concepts in your projects",
+                  "id": 13
+                }
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "21": {
+      "title": "1. Introducing Go",
+      "id": 15,
+      "ideas": {
+        "1": {
+          "title": "1.1 Why Do We Need Another Programming Language?",
+          "id": 29,
+          "ideas": {
+            "1": {
+              "title": "1.1.1 Choosing Static vs. Dynamic Languages",
+              "id": 30
+            },
+            "2": {
+              "title": "1.1.2 How Will Your Language Handle Concurrency",
+              "id": 31
+            },
+            "3": {
+              "title": "1.1.3 Are The Batteries Included?",
+              "id": 32
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "1.2 Solving Modern Programming Challenges With Go",
+          "id": 33,
+          "ideas": {
+            "1": {
+              "title": "1.2.1 Programs Compile Quickly",
+              "id": 34
+            },
+            "2": {
+              "title": "1.2.2 Concurrency is Bult  In",
+              "id": 35,
+              "ideas": {
+                "1": {
+                  "title": "GOROUTINES",
+                  "id": 36
+                },
+                "2": {
+                  "title": "CHANNELS",
+                  "id": 37
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "1.2.3 Go's Type System Enables Code Reuse",
+              "id": 38,
+              "ideas": {
+                "1": {
+                  "title": "Types are simple",
+                  "id": 39
+                },
+                "2": {
+                  "title": "Go interfaces model small behaviors",
+                  "id": 40
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "1.2.4 Memory Management Is Easy",
+              "id": 41
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "1.3 Hello, Go",
+          "id": 42,
+          "attr": {
+            "style": {},
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "1.3.1 Introducing the Go Playground",
+              "id": 43
+            }
+          }
+        },
+        "4": {
+          "title": "1.4 Introducing Kiev",
+          "id": 44
+        },
+        "5": {
+          "title": "1.5 Summary and Best Practices",
+          "id": 45
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "2. Go Quick Start",
+      "id": 16
+    },
+    "41": {
+      "title": "3. Packaging and Tooling",
+      "id": 17
+    },
+    "51": {
+      "title": "4. Arrays, Slices and Maps",
+      "id": 18
+    },
+    "61": {
+      "title": "5. Building User Defined Types",
+      "id": 19
+    },
+    "71": {
+      "title": "6. Concurrency",
+      "id": 20
+    },
+    "81": {
+      "title": "7. Concurrency Patterns",
+      "id": 21
+    },
+    "91": {
+      "title": "8. Standard Library",
+      "id": 22
+    },
+    "101": {
+      "title": "9. Writing Network Applications in Go",
+      "id": 23
+    },
+    "111": {
+      "title": "10. Debugging and Tessting Go Programs",
+      "id": 24
+    },
+    "121": {
+      "title": "11. Reflection",
+      "id": 25
+    },
+    "131": {
+      "title": "12. Making Your Applications More Performant",
+      "id": 26
+    },
+    "141": {
+      "title": "13. Interoperating with C Libraries",
+      "id": 27
+    },
+    "151": {
+      "title": "14. Using Go for Devops",
+      "id": 28
+    }
+  }
+}
