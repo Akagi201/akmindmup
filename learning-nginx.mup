@@ -1,0 +1,294 @@
+{
+  "title": "learning-nginx",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "11": {
+      "title": "实战Nginx",
+      "id": 4,
+      "ideas": {
+        "1": {
+          "title": "blog",
+          "id": 2,
+          "ideas": {
+            "1": {
+              "title": "http://zyan.cc/",
+              "id": 3
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "第1章 Nginx简介",
+          "id": 5
+        },
+        "3": {
+          "title": "第2章 Nginx服务器的安装与配置",
+          "id": 6
+        },
+        "4": {
+          "title": "第3章 Nginx的基本配置与优化",
+          "id": 7
+        },
+        "5": {
+          "title": "第4章 Nginx与PHP(FastCGI)的安装, 配置与优化",
+          "id": 8
+        },
+        "6": {
+          "title": "第5章 Nginx与JSP, ASP.NET, Perl的安装与配置",
+          "id": 9
+        },
+        "7": {
+          "title": "第6章 Nginx HTTP负载均衡和反向代理的配置与优化",
+          "id": 10
+        },
+        "8": {
+          "title": "第7章 Nginx的Rewrite规则编写实例",
+          "id": 11
+        },
+        "9": {
+          "title": "第8章 Nginx模块开发",
+          "id": 12
+        },
+        "10": {
+          "title": "第9章 Nginx的Web缓存服务与新浪网的开源NCACHE模块",
+          "id": 13
+        },
+        "11": {
+          "title": "第10章 Nginx在国内知名网站中的应用案例",
+          "id": 14
+        },
+        "12": {
+          "title": "第11章 Nginx的非典型应用实例",
+          "id": 15
+        },
+        "13": {
+          "title": "第12章 Nginx的核心模块",
+          "id": 16
+        },
+        "14": {
+          "title": "第13章 Nginx的标准HTTP模块",
+          "id": 17
+        },
+        "15": {
+          "title": "第14章 Nginx的其他HTTP模块",
+          "id": 18
+        },
+        "16": {
+          "title": "第15章 Nginx的邮件模块",
+          "id": 19
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "16": {
+      "title": "Nginx开发从入门到精通",
+      "id": 29,
+      "ideas": {
+        "1": {
+          "title": "http://tengine.taobao.org/book/",
+          "id": 30
+        },
+        "2": {
+          "title": "https://github.com/taobao/nginx-book",
+          "id": 38
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "深入理解Nginx模块开发与架构解析",
+      "id": 39
+    },
+    "41": {
+      "title": "Nginx网站架构",
+      "id": 20,
+      "ideas": {
+        "4": {
+          "title": "01 Nginx的架构和安装",
+          "id": 24,
+          "ideas": {
+            "1": {
+              "title": "反向代理",
+              "id": 22,
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "负载均衡",
+              "id": 23,
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "淘宝Nginx",
+              "id": 26,
+              "ideas": {
+                "1": {
+                  "title": "Tengine",
+                  "id": 27,
+                  "ideas": {
+                    "1": {
+                      "title": "http://tengine.taobao.org/",
+                      "id": 28
+                    }
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "Nginx请求的连接方法",
+              "id": 43
+            },
+            "5": {
+              "title": "安装",
+              "id": 44,
+              "ideas": {
+                "1": {
+                  "title": "zlib",
+                  "id": 45,
+                  "ideas": {
+                    "1": {
+                      "title": "Nginx提供gzip模块, 需要zlib库支持",
+                      "id": 46
+                    }
+                  }
+                },
+                "2": {
+                  "title": "openssl",
+                  "id": 48,
+                  "ideas": {
+                    "1": {
+                      "title": "Nginx提供ssl功能",
+                      "id": 49
+                    }
+                  }
+                },
+                "3": {
+                  "title": "pcre",
+                  "id": 50,
+                  "ideas": {
+                    "1": {
+                      "title": "支持地址重写rewrite功能",
+                      "id": 51
+                    }
+                  }
+                }
+              }
+            },
+            "0.5": {
+              "title": "http://www.netcraft.com/",
+              "id": 21,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "5": {
+          "title": "02  Nginx虚拟主机及相关配置",
+          "id": 52
+        },
+        "6": {
+          "title": "03 Nginx地址重写",
+          "id": 53
+        },
+        "7": {
+          "title": "04 Nginx日志管理和限速",
+          "id": 54
+        },
+        "8": {
+          "title": "05 Nginx反向代理和负载均衡",
+          "id": 55
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "18.5": {
+      "title": "slide",
+      "id": 31,
+      "ideas": {
+        "2": {
+          "title": "Nginx Internals",
+          "id": 33,
+          "ideas": {
+            "1": {
+              "title": "http://www.slideshare.net/joshzhu/nginx-internals",
+              "id": 32,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
+      }
+    },
+    "19.75": {
+      "title": "blog",
+      "id": 34,
+      "ideas": {
+        "1": {
+          "title": "http://www.zhuzhaoyuan.com/",
+          "id": 35
+        },
+        "2": {
+          "title": "http://taohui.org.cn/",
+          "id": 40
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "20.375": {
+      "title": "nginx on The Architecture of Open Source Applications",
+      "id": 36,
+      "ideas": {
+        "1": {
+          "title": "http://www.aosabook.org/en/nginx.html",
+          "id": 37
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "17.25": {
+      "title": "agentzh的Nginx教程",
+      "id": 41,
+      "ideas": {
+        "1": {
+          "title": "http://openresty.org/download/agentzh-nginx-tutorials-zhcn.html",
+          "id": 42
+        }
+      },
+      "attr": {
+        "style": {},
+        "collapsed": true
+      }
+    }
+  }
+}
