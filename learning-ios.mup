@@ -563,7 +563,29 @@
             },
             "4": {
               "title": "2.4 Xcode快捷键常用功能",
-              "id": 100
+              "id": 100,
+              "ideas": {
+                "1": {
+                  "title": "代码提示",
+                  "id": 105,
+                  "ideas": {
+                    "1": {
+                      "title": "Esc",
+                      "id": 106
+                    }
+                  }
+                },
+                "2": {
+                  "title": "移动行",
+                  "id": 107,
+                  "ideas": {
+                    "1": {
+                      "title": "cmd + alt + [,]",
+                      "id": 108
+                    }
+                  }
+                }
+              }
             },
             "5": {
               "title": "2.6 Xcode中创建OS X窗体程序项目",
@@ -583,8 +605,8 @@
             }
           },
           "attr": {
-            "collapsed": true,
-            "style": {}
+            "style": {},
+            "collapsed": true
           }
         }
       }
