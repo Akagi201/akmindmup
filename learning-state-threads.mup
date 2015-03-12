@@ -1,0 +1,29 @@
+{
+  "title": "learning-state-threads",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Introductory paper",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "Introduction",
+          "id": 6
+        }
+      }
+    },
+    "11": {
+      "title": "Complete reference",
+      "id": 3
+    },
+    "21": {
+      "title": "Programming notes",
+      "id": 4
+    },
+    "31": {
+      "title": "FAQ",
+      "id": 5
+    }
+  }
+}

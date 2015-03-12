@@ -1,0 +1,50 @@
+{
+  "title": "learning-raspberry-pi",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "爱上Raspberry Pi",
+      "id": 2,
+      "ideas": {
+        "2": {
+          "title": "官网",
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "http://www.iraspberrypi.com/",
+              "id": 7
+            }
+          }
+        },
+        "12": {
+          "title": "Raspberry Pi",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "树莓派",
+              "id": 4
+            },
+            "2": {
+              "title": "RPi",
+              "id": 5
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "13": {
+          "title": "裸机开发",
+          "id": 8,
+          "ideas": {
+            "1": {
+              "title": "http://www.cl.cam.ac.uk/projects/raspberrypi/tutorials/os/",
+              "id": 9
+            }
+          }
+        }
+      }
+    }
+  }
+}
