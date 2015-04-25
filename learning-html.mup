@@ -1,0 +1,471 @@
+{
+  "title": "learning-html",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "html结构",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "doctype",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "Struct",
+              "id": 6
+            },
+            "2": {
+              "title": "Transtional",
+              "id": 7
+            },
+            "3": {
+              "title": "frameset",
+              "id": 8
+            }
+          }
+        },
+        "2": {
+          "title": "head",
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "title",
+              "id": 9
+            },
+            "2": {
+              "title": "meta charset",
+              "id": 10
+            }
+          }
+        },
+        "3": {
+          "title": "body",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "各种div及html标签",
+              "id": 11
+            }
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "11": {
+      "title": "div布局",
+      "id": 12,
+      "ideas": {
+        "1": {
+          "title": "布局原则",
+          "id": 13,
+          "ideas": {
+            "1": {
+              "title": "从上到下",
+              "id": 16
+            },
+            "2": {
+              "title": "从左到右",
+              "id": 17
+            },
+            "3": {
+              "title": "从大到小",
+              "id": 18
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "盒子模型",
+          "id": 14,
+          "ideas": {
+            "1": {
+              "title": "宽高",
+              "id": 19,
+              "ideas": {
+                "1": {
+                  "title": "width",
+                  "id": 20
+                },
+                "2": {
+                  "title": "height",
+                  "id": 21
+                }
+              }
+            },
+            "2": {
+              "title": "margin",
+              "id": 22
+            },
+            "3": {
+              "title": "border",
+              "id": 23
+            },
+            "4": {
+              "title": "padding",
+              "id": 24
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "3": {
+          "title": "浮动布局",
+          "id": 15,
+          "ideas": {
+            "1": {
+              "title": "浮动概念",
+              "id": 25
+            },
+            "2": {
+              "title": "浮动清除",
+              "id": 26
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "21": {
+      "title": "css效果",
+      "id": 27,
+      "ideas": {
+        "1": {
+          "title": "选择器",
+          "id": 28,
+          "ideas": {
+            "1": {
+              "title": "id选择器",
+              "id": 30
+            },
+            "2": {
+              "title": "类选择器",
+              "id": 31
+            },
+            "3": {
+              "title": "标签",
+              "id": 32
+            },
+            "4": {
+              "title": "派生选择器",
+              "id": 33
+            },
+            "5": {
+              "title": "伪类选择器",
+              "id": 34
+            },
+            "6": {
+              "title": "通配选择器",
+              "id": 35
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "控制效果",
+          "id": 29,
+          "ideas": {
+            "1": {
+              "title": "段落控制",
+              "id": 36,
+              "ideas": {
+                "1": {
+                  "title": "text-indent 首行缩进",
+                  "id": 38
+                },
+                "2": {
+                  "title": "text-align: 水平文字方向",
+                  "id": 39
+                },
+                "3": {
+                  "title": "text-decoration: 文本装饰线",
+                  "id": 40
+                },
+                "4": {
+                  "title": "letter-spacing: 字符间距",
+                  "id": 41
+                },
+                "5": {
+                  "title": "text-transform: 字母大小写转换",
+                  "id": 42
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "文字控制",
+              "id": 37,
+              "ideas": {
+                "1": {
+                  "title": "color: 颜色",
+                  "id": 43
+                },
+                "2": {
+                  "title": "font-style: 文字样式",
+                  "id": 44
+                },
+                "3": {
+                  "title": "font-weight: 文字粗细",
+                  "id": 45
+                },
+                "4": {
+                  "title": "font-size: 文字大小",
+                  "id": 46
+                },
+                "5": {
+                  "title": "line-height: 行高",
+                  "id": 47
+                },
+                "6": {
+                  "title": "font-family: 字体",
+                  "id": 48
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "背景控制",
+              "id": 49,
+              "ideas": {
+                "1": {
+                  "title": "background-color: 背景色",
+                  "id": 50
+                },
+                "2": {
+                  "title": "background-image: 背景图片",
+                  "id": 51
+                },
+                "3": {
+                  "title": "background-repeat: 背景图重复",
+                  "id": 52
+                },
+                "4": {
+                  "title": "background-attachment: 背景图粘贴方式",
+                  "id": 53
+                },
+                "5": {
+                  "title": "background-position: 背景图位置",
+                  "id": 54
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "3": {
+          "title": "引入方式",
+          "id": 55,
+          "ideas": {
+            "1": {
+              "title": "页内style标签",
+              "id": 57
+            },
+            "2": {
+              "title": "外部css文件",
+              "id": 58
+            },
+            "3": {
+              "title": "行内style标签",
+              "id": 59
+            },
+            "4": {
+              "title": "import导入",
+              "id": 60
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "初始化",
+          "id": 56,
+          "ideas": {
+            "1": {
+              "title": "原因: 浏览器对于元素有默认css参数, 且可能不一致",
+              "id": 61
+            },
+            "2": {
+              "title": "后果: 浏览器之间显示效果不一样",
+              "id": 62
+            },
+            "3": {
+              "title": "办法: 统一对常用元素常用css参数, 手动设定统一效果",
+              "id": 63
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    },
+    "31": {
+      "title": "html标签",
+      "id": 64,
+      "ideas": {
+        "1": {
+          "title": "无语义标签",
+          "id": 65,
+          "ideas": {
+            "1": {
+              "title": "div",
+              "id": 67,
+              "ideas": {
+                "1": {
+                  "title": "块状元素, 布局分块用",
+                  "id": 69
+                }
+              }
+            },
+            "2": {
+              "title": "span",
+              "id": 68,
+              "ideas": {
+                "1": {
+                  "title": "内联元素, 选择文字用",
+                  "id": 70
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "有语义标签",
+          "id": 66,
+          "ideas": {
+            "1": {
+              "title": "h1-h6",
+              "id": 71,
+              "ideas": {
+                "1": {
+                  "title": "标题",
+                  "id": 72
+                }
+              }
+            },
+            "2": {
+              "title": "p",
+              "id": 73,
+              "ideas": {
+                "1": {
+                  "title": "段落",
+                  "id": 80
+                }
+              }
+            },
+            "3": {
+              "title": "img",
+              "id": 74,
+              "ideas": {
+                "1": {
+                  "title": "图片",
+                  "id": 81
+                }
+              }
+            },
+            "4": {
+              "title": "embed",
+              "id": 75,
+              "ideas": {
+                "1": {
+                  "title": "视频",
+                  "id": 82
+                }
+              }
+            },
+            "5": {
+              "title": "a",
+              "id": 76,
+              "ideas": {
+                "1": {
+                  "title": "超链接和锚点",
+                  "id": 83
+                }
+              }
+            },
+            "6": {
+              "title": "ul",
+              "id": 77,
+              "ideas": {
+                "1": {
+                  "title": "无序列表",
+                  "id": 84
+                }
+              }
+            },
+            "7": {
+              "title": "ol",
+              "id": 78,
+              "ideas": {
+                "1": {
+                  "title": "有序列表",
+                  "id": 85
+                }
+              }
+            },
+            "8": {
+              "title": "table",
+              "id": 79,
+              "ideas": {
+                "1": {
+                  "title": "表格",
+                  "id": 86
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        }
+      },
+      "attr": {
+        "collapsed": true,
+        "style": {}
+      }
+    }
+  }
+}

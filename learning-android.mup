@@ -1,0 +1,35 @@
+{
+  "title": "learning-android",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Android Studio",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "历史",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "Google IO",
+              "id": 4
+            },
+            "2": {
+              "title": "IntelliJ IDEA",
+              "id": 5
+            }
+          }
+        },
+        "2": {
+          "title": "定位",
+          "id": 6
+        },
+        "3": {
+          "title": "安装配置",
+          "id": 7
+        }
+      }
+    }
+  }
+}
