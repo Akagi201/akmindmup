@@ -1,0 +1,180 @@
+{
+  "title": "learning-python",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "11": {
+      "title": "Pyramid Web开发入门",
+      "id": 3,
+      "ideas": {
+        "1": {
+          "title": "1. Pyton基础和入门介绍",
+          "id": 2,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "什么是Web开发",
+              "id": 4
+            },
+            "2": {
+              "title": "Web开发的历史",
+              "id": 5
+            },
+            "3": {
+              "title": "Web开发技术简介",
+              "id": 6,
+              "ideas": {
+                "1": {
+                  "title": "PHP",
+                  "id": 7
+                },
+                "2": {
+                  "title": "Java",
+                  "id": 8,
+                  "ideas": {
+                    "1": {
+                      "title": "Sprint",
+                      "id": 9
+                    },
+                    "2": {
+                      "title": "Structs",
+                      "id": 10
+                    },
+                    "3": {
+                      "title": "Hibernate",
+                      "id": 11
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": ".Net",
+                  "id": 12
+                },
+                "4": {
+                  "title": "Python",
+                  "id": 13
+                },
+                "5": {
+                  "title": "Erlang",
+                  "id": 14
+                },
+                "6": {
+                  "title": "JavaScript",
+                  "id": 15
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "Python与Web开发",
+              "id": 16,
+              "ideas": {
+                "1": {
+                  "title": "开发速度快",
+                  "id": 17
+                },
+                "2": {
+                  "title": "功能强大",
+                  "id": 18
+                },
+                "3": {
+                  "title": "学习成本低",
+                  "id": 19
+                },
+                "4": {
+                  "title": "开发框架多且功能完善",
+                  "id": 20
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "一些例子",
+              "id": 21,
+              "ideas": {
+                "1": {
+                  "title": "Google的全套服务都使用Python开发",
+                  "id": 23
+                },
+                "2": {
+                  "title": "Dropbox采用Pyramid开发框架开发",
+                  "id": 25
+                },
+                "3": {
+                  "title": "豆瓣采用Quixote框架作为其网站基础",
+                  "id": 26
+                },
+                "4": {
+                  "title": "Instagram采用Django框架开发",
+                  "id": 27
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "web 框架",
+              "id": 28,
+              "ideas": {
+                "1": {
+                  "title": "Pyramid",
+                  "id": 29,
+                  "ideas": {
+                    "1": {
+                      "title": "来自Repoze.bfg, 简洁, 功能强大",
+                      "id": 33
+                    }
+                  }
+                },
+                "2": {
+                  "title": "SQLAlchemy",
+                  "id": 30,
+                  "ideas": {
+                    "1": {
+                      "title": "Python世界最著名的ORM引擎",
+                      "id": 35
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Deform",
+                  "id": 31,
+                  "ideas": {
+                    "1": {
+                      "title": "用于创建和验证表单",
+                      "id": 36
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Chameleon",
+                  "id": 32,
+                  "ideas": {
+                    "1": {
+                      "title": "模板引擎",
+                      "id": 34
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
