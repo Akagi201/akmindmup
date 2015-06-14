@@ -64,7 +64,8 @@
         }
       },
       "attr": {
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "21": {
@@ -72,7 +73,7 @@
       "id": 12,
       "ideas": {
         "1": {
-          "title": "目前是Beta3版本, 需要什么条件才能安装呢?",
+          "title": "2.1 目前是Beta3版本, 需要什么条件才能安装呢?",
           "id": 13,
           "ideas": {
             "1": {
@@ -82,27 +83,97 @@
             "2": {
               "title": "Developer Account",
               "id": 17
+            },
+            "3": {
+              "title": "开发者账号注册",
+              "id": 30
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
           }
         },
-        "2": {
-          "title": "开发者账号注册",
-          "id": 14
-        },
         "3": {
-          "title": "下载和安装XCode6 & iOS SDK",
+          "title": "2.2 下载和安装XCode6 & iOS SDK",
           "id": 15,
           "ideas": {
             "1": {
               "title": "运行第一个自己的HelloWorld程序",
               "id": 18
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "2.3 工欲善其事必先利其器-Playground",
+          "id": 31,
+          "ideas": {
+            "1": {
+              "title": "Xcode的新Playground的作用",
+              "id": 32
+            },
+            "2": {
+              "title": "Playground的设计结构",
+              "id": 33
+            },
+            "3": {
+              "title": "建立方式2种",
+              "id": 34,
+              "ideas": {
+                "1": {
+                  "title": "直接创建",
+                  "id": 36
+                },
+                "2": {
+                  "title": "在一个项目里创建",
+                  "id": 37
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "演示",
+              "id": 35,
+              "ideas": {
+                "1": {
+                  "title": "常量变量",
+                  "id": 38
+                },
+                "2": {
+                  "title": "循环控制及数据变化走向",
+                  "id": 39
+                },
+                "3": {
+                  "title": "图形预览",
+                  "id": 40
+                }
+              }
+            },
+            "5": {
+              "title": "优点和缺点的总结",
+              "id": 41
+            }
+          },
+          "attr": {
+            "attachment": {
+              "contentType": "text/html",
+              "content": "## 学习目标<div>* 掌握Playground的使用</div><div><br></div><div>## 重点难点</div><div>* Playground的熟练使用</div><div>* Playground的优缺点</div><div><br></div><div>## 课后练习</div><div>* 进行本课程的演示练习</div>"
+            },
+            "style": {},
+            "collapsed": true
           }
         }
       },
       "attr": {
-        "collapsed": true,
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     },
     "31": {
@@ -114,7 +185,7 @@
           "id": 20,
           "ideas": {
             "1": {
-              "title": "常量",
+              "title": "3.1 常量/变量",
               "id": 22,
               "ideas": {
                 "1": {
@@ -133,27 +204,394 @@
                   "title": "输出",
                   "id": 29
                 }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 学会Swift中的常量变量命名和赋值.</div><div><br></div><div>## 重点难点</div><div>* 了解Swift的命名规则.</div><div><br></div><div>## 课后练习</div><div>* 建立一个强类型的Float常量, 并且赋值4.3.</div><div>* 将上一步的变量常量进行运算, 并且输出.</div>"
+                },
+                "style": {},
+                "collapsed": true
               }
             },
             "2": {
-              "title": "注释",
+              "title": "3.2 注释和分号",
               "id": 23
             },
-            "3": {
-              "title": "分号的使用",
-              "id": 24
-            },
             "4": {
-              "title": "基本数据类型",
-              "id": 25
+              "title": "3.3 基本数据类型",
+              "id": 25,
+              "ideas": {
+                "1": {
+                  "title": "整数",
+                  "id": 42,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "Int, UInt, Int8, Int16, Int32, Int64, UInt8, UInt16, UInt32, UInt64"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "可选类型",
+                      "id": 50
+                    },
+                    "2": {
+                      "title": "nil",
+                      "id": 51,
+                      "ideas": {
+                        "1": {
+                          "title": "nil和OC中nil的区别",
+                          "id": 52
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "浮点数",
+                  "id": 43
+                },
+                "3": {
+                  "title": "数值形字面量",
+                  "id": 44,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "* 一个十进制数, 没有前缀<div>* 一个二进制数, 前缀是0b</div><div>* 一个八进制数, 前缀是0o</div><div>* 一个十六进制数, 前缀是0x</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "类型转换",
+                  "id": 45
+                },
+                "5": {
+                  "title": "类型别名",
+                  "id": 46
+                },
+                "6": {
+                  "title": "布尔值",
+                  "id": 47
+                },
+                "38": {
+                  "title": "元组(Tuples)",
+                  "id": 48,
+                  "attr": {
+                    "style": {},
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "为何会设计元祖这个概念?<div><br></div><div>函数要返回复杂的数据类型, 简化他, 不用结构体,或者类, 使用元组</div>"
+                    }
+                  }
+                },
+                "48": {
+                  "title": "字符和字符串",
+                  "id": 49,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "## 课程目标<div>* Swift的字符和字符串学习</div><div><br></div><div>## 重点难点</div><div>* 理解Swift字符串是值类型</div><div>* 什么是值类型和引用类型?</div><div><br></div><div>## 课后练习<br>* 课程Demo</div>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "为何字符串也是基本类型呢, 因为Swift中字符串是值类型",
+                      "id": 71
+                    },
+                    "2": {
+                      "title": "什么是值类型? 什么是引用类型?",
+                      "id": 72
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 学会基本类型使用: 整数, 浮点, 布尔</div><div><br></div><div>## 重点难点</div><div><br></div><div>## 课后练习</div><div>* 课程Demo</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "3.5 集合类型CollectionType",
+              "id": 62,
+              "ideas": {
+                "1": {
+                  "title": "数组Arrays",
+                  "id": 63,
+                  "ideas": {
+                    "1": {
+                      "title": "数组定义",
+                      "id": 65
+                    },
+                    "2": {
+                      "title": "数组访问",
+                      "id": 66
+                    },
+                    "3": {
+                      "title": "遍历数组",
+                      "id": 67
+                    }
+                  }
+                },
+                "2": {
+                  "title": "字典(Dictionaries)",
+                  "id": 64,
+                  "ideas": {
+                    "1": {
+                      "title": "字典定义",
+                      "id": 68
+                    },
+                    "2": {
+                      "title": "字典取值",
+                      "id": 69
+                    },
+                    "3": {
+                      "title": "字典遍历",
+                      "id": 70
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "Dictionary&lt;KeyType, ValueType&gt;<div><br></div><div>KeyType唯一限制是可哈希(Hash)的, 保证唯一性, 基本类型都是可以的.</div>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "Array: 可变; 不要求唯一性, 一维到多维.<div>Dictionary: 不可变; 要求Key唯一, 二维.</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "3.7 函数(Functions)",
+              "id": 88,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 学会使用Swift中的函数, 清晰的定义函数, 调用函数, 了解函数各类参数和返回值特点.</div><div><br></div><div>## 重点难点</div><div>* 对inout参数理解, 函数类型和函数嵌套的理解, 对比别的语言.</div><div><br></div><div>## 课后练习</div><div>* 课程Demo</div>"
+                },
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "函数定义与调用",
+                  "id": 89
+                },
+                "2": {
+                  "title": "函数参数与返回值",
+                  "id": 90,
+                  "ideas": {
+                    "1": {
+                      "title": "多参数",
+                      "id": 92
+                    },
+                    "2": {
+                      "title": "无参数和无返回值",
+                      "id": 93
+                    },
+                    "3": {
+                      "title": "多返回值",
+                      "id": 94
+                    }
+                  }
+                },
+                "3": {
+                  "title": "函数参数名称",
+                  "id": 91,
+                  "ideas": {
+                    "1": {
+                      "title": "普通参数",
+                      "id": 95
+                    },
+                    "2": {
+                      "title": "外部参数名称",
+                      "id": 96,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "ExternalParam Param: Type"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "默认参数",
+                      "id": 97
+                    },
+                    "4": {
+                      "title": "默认值参数的外部参数",
+                      "id": 98
+                    },
+                    "5": {
+                      "title": "可变参数",
+                      "id": 99
+                    },
+                    "6": {
+                      "title": "输入输出参数",
+                      "id": 100
+                    }
+                  }
+                }
+              }
             }
+          },
+          "attr": {
+            "style": {},
+            "position": [
+              136.5,
+              -136.5,
+              1
+            ]
           }
         },
         "2": {
           "title": "2. 面向过程-算法",
-          "id": 21
+          "id": 21,
+          "ideas": {
+            "1": {
+              "title": "3.4 基本运算符",
+              "id": 54,
+              "ideas": {
+                "1": {
+                  "title": "赋值运算符",
+                  "id": 56
+                },
+                "2": {
+                  "title": "数值运算符",
+                  "id": 57
+                },
+                "3": {
+                  "title": "比较运算符",
+                  "id": 58
+                },
+                "4": {
+                  "title": "三元运算符",
+                  "id": 59,
+                  "ideas": {
+                    "1": {
+                      "title": "? :",
+                      "id": 61
+                    }
+                  }
+                },
+                "5": {
+                  "title": "逻辑运算符",
+                  "id": 60
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 了解Swift的基本运算符</div><div><br></div><div>## 重点难点</div><div><br></div><div>## 课后练习</div><div>* 掌握课程Demo即可</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "3.6 控制流(Control Flow)",
+              "id": 55,
+              "ideas": {
+                "1": {
+                  "title": "循环",
+                  "id": 73,
+                  "ideas": {
+                    "1": {
+                      "title": "for in",
+                      "id": 76
+                    },
+                    "2": {
+                      "title": "for 条件递增",
+                      "id": 77
+                    },
+                    "3": {
+                      "title": "while",
+                      "id": 78
+                    },
+                    "4": {
+                      "title": "repeat while",
+                      "id": 79
+                    }
+                  }
+                },
+                "2": {
+                  "title": "条件语句",
+                  "id": 74,
+                  "ideas": {
+                    "1": {
+                      "title": "if then",
+                      "id": 80
+                    },
+                    "2": {
+                      "title": "switch case",
+                      "id": 81,
+                      "ideas": {
+                        "1": {
+                          "title": "区间匹配和元组",
+                          "id": 82
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "控制传递",
+                  "id": 75,
+                  "ideas": {
+                    "1": {
+                      "title": "continue",
+                      "id": 83
+                    },
+                    "2": {
+                      "title": "break",
+                      "id": 84
+                    },
+                    "3": {
+                      "title": "fallthrough",
+                      "id": 85
+                    },
+                    "4": {
+                      "title": "label",
+                      "id": 86
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 了解Swift的循环, 判断, 条件语句</div><div><br></div><div>## 重点难点</div><div><br></div><div>## 课后练习</div><div>* 掌握课程Demo即可</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "3": {
+          "title": "3. 面向对象-数据结构",
+          "id": 53,
+          "ideas": {}
         }
+      },
+      "attr": {
+        "style": {}
       }
     }
-  }
+  },
+  "links": []
 }
