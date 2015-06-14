@@ -384,7 +384,8 @@
                   "contentType": "text/html",
                   "content": "## 课程目标<div>* 学会使用Swift中的函数, 清晰的定义函数, 调用函数, 了解函数各类参数和返回值特点.</div><div><br></div><div>## 重点难点</div><div>* 对inout参数理解, 函数类型和函数嵌套的理解, 对比别的语言.</div><div><br></div><div>## 课后练习</div><div>* 课程Demo</div>"
                 },
-                "style": {}
+                "style": {},
+                "collapsed": true
               },
               "ideas": {
                 "1": {
@@ -407,6 +408,10 @@
                       "title": "多返回值",
                       "id": 94
                     }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
                   }
                 },
                 "3": {
@@ -444,8 +449,147 @@
                       "title": "输入输出参数",
                       "id": 100
                     }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "函数类型",
+                  "id": 101,
+                  "ideas": {
+                    "1": {
+                      "title": "在Swift中函数是有类型一说的",
+                      "id": 102,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "func addTwoInts(a: Int, b: Int) -&gt; Int {<div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>return a + b</div></blockquote></div><div>}</div><div>函数类型是(int, int)-&gt;int</div><div>其他返回类型, 比如 () -&gt; ()</div>"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "相同类型函数可以赋值",
+                      "id": 103
+                    },
+                    "3": {
+                      "title": "函数类型作为参数和返回值",
+                      "id": 104
+                    },
+                    "4": {
+                      "title": "嵌套函数(Nested Functions)",
+                      "id": 105
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "## 课程目标<div>* 学习函数的高级内容, 包括函数类型, 函数类型参数和返回值, 嵌套函数等.</div><div><br></div><div>## 重点难点</div><div>* 理解为何会有函数类型的概念, 函数类型参数和返回值用在哪儿.</div><div><br></div><div>## 课后练习</div><div>* 课程Demo</div>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "函数嵌套",
+                  "id": 106
+                }
+              }
+            },
+            "7": {
+              "title": "3.8 闭包(Closures)",
+              "id": 107,
+              "ideas": {
+                "1": {
+                  "title": "语法表达式",
+                  "id": 108,
+                  "ideas": {
+                    "1": {
+                      "title": "作为上下文推断类型",
+                      "id": 109,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "sort(names, {s1, s2 in return s1 &gt; s2})"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "单行表达式隐式返回",
+                      "id": 110,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "sort(names, {s1, s2 in s1 &gt; s2})"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "参数名称缩写",
+                      "id": 111,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "sort(names, {$0 &gt; $1})"
+                        },
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
                   }
                 }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 闭包表达式的学习, 掌握基本使用, 能看懂代码.</div><div><br></div><div>## 重点难点</div><div>* 闭包的表达式使用, 能看懂</div><div>* 闭包是引用类型</div><div><br></div><div>## 课后练习</div><div>* 课程Demo(sort)</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "3.9 枚举(Enumerations)",
+              "id": 112,
+              "ideas": {
+                "1": {
+                  "title": "枚举语法",
+                  "id": 113,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "enum Name{<div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>case Value1</div><div>case Value2</div></blockquote></div><div>}</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "匹配枚举值和Swift语句",
+                  "id": 114
+                },
+                "3": {
+                  "title": "实例值",
+                  "id": 115
+                },
+                "4": {
+                  "title": "原始值",
+                  "id": 116
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 枚举表达式</div><div><br></div><div>## 重点难点</div><div>* 实例值</div><div>* 原始值</div><div><br></div><div>## 课后练习</div><div>* 课程Demo</div>"
+                },
+                "style": {},
+                "collapsed": true
               }
             }
           },
@@ -455,7 +599,8 @@
               136.5,
               -136.5,
               1
-            ]
+            ],
+            "collapsed": true
           }
         },
         "2": {
@@ -580,16 +725,266 @@
                 "collapsed": true
               }
             }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
           }
         },
         "3": {
           "title": "3. 面向对象-数据结构",
           "id": 53,
-          "ideas": {}
+          "ideas": {
+            "1": {
+              "title": "3.10 类(Class)",
+              "id": 117,
+              "ideas": {
+                "1": {
+                  "title": "类的定义",
+                  "id": 119
+                },
+                "2": {
+                  "title": "类是值类型还是引用类型",
+                  "id": 120,
+                  "ideas": {
+                    "1": {
+                      "title": "是引用类型",
+                      "id": 134
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "恒等式",
+                  "id": 121,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "恒等式是判断两个变量或者常量是否引用同一个实例<div><br></div><div>===</div><div>!==</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "关于指针",
+                  "id": 122,
+                  "ideas": {
+                    "1": {
+                      "title": "没有指针类型, 但引用实际上是指针",
+                      "id": 135
+                    },
+                    "2": {
+                      "title": "没有提供指针的语法",
+                      "id": 136
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "类的构造",
+                  "id": 123,
+                  "ideas": {
+                    "1": {
+                      "title": "构造函数 init",
+                      "id": 137
+                    },
+                    "2": {
+                      "title": "析构函数 deinit不带参数和括号",
+                      "id": 138
+                    },
+                    "3": {
+                      "title": "给属性赋初值",
+                      "id": 139
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "类的继承(inheritance)",
+                  "id": 124,
+                  "ideas": {
+                    "1": {
+                      "title": "子类继承父类的定义",
+                      "id": 125
+                    },
+                    "2": {
+                      "title": "构造函数修改以及访问父类的属性和方法",
+                      "id": 126
+                    },
+                    "3": {
+                      "title": "重写(Overriding)",
+                      "id": 127,
+                      "ideas": {
+                        "1": {
+                          "title": "重写方法",
+                          "id": 128,
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "重写属性",
+                          "id": 130
+                        },
+                        "3": {
+                          "title": "重写属性观察器",
+                          "id": 131
+                        },
+                        "4": {
+                          "title": "防止重写",
+                          "id": 132
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 对比别的语言, 学会Swift的类的写法</div><div><br></div><div>## 重点难点</div><div>* Swift中的类不用写在一个单独的文件里</div><div>* Swift中磊和结构体的异同点</div><div><br></div><div>## 课后练习</div><div>* 编写自己的类</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "3.11 结构体(Structure)",
+              "id": 118,
+              "ideas": {
+                "1": {
+                  "title": "结构体的定义",
+                  "id": 133
+                },
+                "2": {
+                  "title": "结构体的构造函数",
+                  "id": 140
+                },
+                "3": {
+                  "title": "结构体是值类型",
+                  "id": 141
+                },
+                "4": {
+                  "title": "了解结构体和类的选择",
+                  "id": 142,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "## 相同点<div>1. 都是有内部变量和函数</div><div>2. 都可以有内部下标方式去取属性</div><div>3. 都可以有初始化函数</div><div>4. 都可以用协议</div><div><br></div><div>## 不同点</div><div>1. 类有继承</div><div>2. 类可以多重引用</div><div>3. 类有析构</div><div><br></div><div>简单的用struct, 复杂的用class</div>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 对比别的语言, 学会Swift的结构的写法</div><div><br></div><div>## 重点难点</div><div>* Swift中类和结构体的异同点</div><div>* 结构体是值类型</div><div><br></div><div>## 课后练习</div><div>* 编写自己的类</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "3.12 协议(Protocol)",
+              "id": 143,
+              "ideas": {
+                "1": {
+                  "title": "语法",
+                  "id": 145,
+                  "ideas": {
+                    "1": {
+                      "title": "属性和方法的定义及实现",
+                      "id": 149
+                    },
+                    "2": {
+                      "title": "有父类的时候",
+                      "id": 150
+                    }
+                  }
+                },
+                "2": {
+                  "title": "协议类型",
+                  "id": 146,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "## 使用场景<div>* 作为函数, 方法或构造器中的参数类型, 返回值类型</div><div>* 作为常量, 变量, 属性的类型</div><div>* 作为数组, 字典或其他容器中的元素类型</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "协议继承",
+                  "id": 147
+                },
+                "4": {
+                  "title": "协议合成",
+                  "id": 148
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 课程目标<div>* 了解协议的概念, 熟悉语法</div><div><br></div><div>## 重点难点</div><div><br></div><div>## 课后练习</div><div>* 编写自己的协议</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "3.13 泛型",
+              "id": 151,
+              "ideas": {
+                "1": {
+                  "title": "函数泛型",
+                  "id": 152
+                },
+                "2": {
+                  "title": "类泛型",
+                  "id": 153
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "## 泛型所解决的问题<div>这里是一个标准的, 非泛型函数</div><div><br></div><div>func swapTwoInts(inout a: Int, inout b: Int) {</div><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>let temporaryA = a</div><div>a = b</div><div>b = temporaryA</div></blockquote></div><div>}</div>"
+                },
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true,
+            "style": {}
+          }
+        },
+        "4": {
+          "title": "4. 面向对象-算法",
+          "id": 144,
+          "attr": {}
         }
       },
       "attr": {
-        "style": {}
+        "style": {},
+        "collapsed": true
       }
     }
   },
